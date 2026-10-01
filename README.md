@@ -511,15 +511,23 @@ Full lineage: [`docs/data_provenance.md`](docs/data_provenance.md) and [`docs/fi
 
 ## 17. 👥 Contributors
 
+
+### Team Members
+
 | # | Name |
 | :-: | :-- |
 | 1 | R B SHANJU VIKASHINI |
 | 2 | K VISHAL GOKUL BHORA |
 | 3 | PRASHANTHI SARUKKAI S |
 | 4 | KISHORE S |
-| 5 | S KAVIN |
-| 6 | MOHESH S |
-| 7 | ARJUN R K |
+| 5 | MOHESH S |
+| 6 | ARJUN R K |
+
+### Industry Mentor
+
+| Name |
+| :-- |
+| S KAVIN (VOXY HEALTH)|
 
 ---
 
