@@ -1,0 +1,7 @@
+hazard_code,hazard_class,cropland_km2,builtup_km2,tree_cover_km2,shrubland_km2,grassland_km2,bare_/_sparse_vegetation_km2,permanent_water_bodies_km2,herbaceous_wetland_km2
+1,H1,0.86,0.1,0.76,0.0,0.16,0.0,0.0,0.0
+2,H2,0.74,0.1,0.61,0.02,0.12,0.0,0.0,0.0
+3,H3,2.1,0.37,2.03,0.0,0.39,0.02,0.05,0.0
+4,H4,2.59,0.45,2.05,0.0,0.43,0.01,0.0,0.0
+5,H5,7.98,1.31,7.59,0.07,1.24,0.01,0.04,0.0
+6,H6,25.39,5.53,32.96,0.06,4.73,0.24,1.03,0.0

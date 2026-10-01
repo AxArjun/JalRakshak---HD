@@ -1,0 +1,31 @@
+{
+  "milestone": "M6",
+  "title": "DualSPHysics Near-Field Local Coordinate Transform Specification",
+  "model_classification": "2D_UNIT_WIDTH_NEAR_FIELD_SPH_SCREENING_MODEL",
+  "global_crs": "EPSG:32643",
+  "global_datum": "WGS 84 / UTM Zone 43N",
+  "units": "metres",
+  "local_origin": {
+    "chainage_m": 0.0,
+    "easting_m": 730450.1,
+    "northing_m": 1269149.74,
+    "elevation_ref_m_msl": 0.0,
+    "description": "Breach origin at dam toe (s = 0.0 m)"
+  },
+  "downstream_extent_m": 1500.0,
+  "sampling_step_m": 10.0,
+  "total_profile_nodes": 151,
+  "vertical_reference": {
+    "datum": "MSL (Mean Sea Level)",
+    "z_min_bed_msl": 243.257,
+    "z_max_bed_msl": 262.894,
+    "reservoir_frl_msl": 280.42,
+    "breach_invert_est_msl": 262.894
+  },
+  "transform_equations": {
+    "x_sph": "downstream_chainage_m (s)",
+    "y_sph": "0.0 (2D unit-width simulation plane)",
+    "z_sph": "z_elevation_m_msl",
+    "inverse_mapping": "Interpolate (easting, northing) from chainage_m in nearfield_bed_profile.csv"
+  }
+}

@@ -1,0 +1,127 @@
+
+
+ <GENCASE>  Copyright (c) 2025 by Dr Jose M. Dominguez
+ All rights reserved.
+
+ GenCase is a free tool for DualSPHysics simulations.
+ DualSPHysics project is an international collaboration between
+ University of Vigo (Spain) and University of Manchester (UK).
+
+ Redistribution and use in binary form, without modification, are
+ permitted provided that the following conditions are met:
+ * Redistributions in binary form must reproduce the above copyright
+   notice, this list of conditions and the following disclaimer in the
+   documentation and/or other materials provided with the distribution.
+ * Redistributions or modifications of source code are not permitted 
+   unless expressly authorised, and must retain the above copyright 
+   notice, this list of conditions and the following disclaimer.
+ * Neither the name of the GenCase nor the names of its contributors
+   may be used to endorse or promote products derived from this software
+   without specific prior written permission.
+
+ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER BE LIABLE FOR ANY
+ DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES
+ (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+ LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND
+ ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+ (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF
+ THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+GenCase v5.4.354.01 (07-04-2025)
+=================================
+OmpThreads: 16
+
+[LoadXMLInit]
+List: MAIN
+
+Total operations: 8
+[LoadXMLInit-End  time:0.048s]
+
+[Draw]
+List of available variables: Gravity_x=[0]  Gravity_y=[0]  Gravity_z=[-9.81]  Rhop0=[1000]  VResId=[0]  Dp=[4]  PosMin_x=[-432]  PosMin_y=[0]  PosMin_z=[232]  PosMax_x=[1530]  PosMax_y=[0]  PosMax_z=[295.4]  CaseName=["CaseBhavani"]  Data2D=[1]  Data2DPosy=[0]  H=[6.78823]  MassBound=[16000]  MassFluid=[16000]
+
+Mk size: 1 bytes
+Case limits: (-432,0,232) - (1530,0,295.4)
+Distance between points (Dp): 4
+Reference position (x): 0
+Case domain: (0,0,0)-(489,0,14)
+Domain points: 490 x 1 x 15 = 7,350
+Case parts: 1 x 15z
+Memory: 0.00 GiB  0.01 MiB  (7,350)
+
+> MAIN
+<MAIN (Operations= 5+3+0 = 8)
+
+Triangles: 944 (0 ignored)
+[Draw-End  time:0.033s]
+
+[LoadsXMLConfig]
+Execution parameters.
+Initials configuration.
+Floating bodies configuration.
+Properties configuration.
+Predefined motion configuration.
+[LoadsXMLConfig-End  time:0.000s]
+
+[PreparePoints]
+Computing Vtk-Cells data...  (time:0.000s)
+BitSizeTot: 16 (2 + 9+1+4)
+Points loaded: 2,768
+Sorting points by Z...
+Sorting points by Mk...
+Computing Grid-points...  (time:0.000s)
+
+List of Points:
+Points -> Fixed-Boundary particles:
+  block[  0] (mk: 10):     18  -->      18
+  block[  1] (mk: 11):   2350  -->    2350
+Points -> Fluid particles:
+  block[  2] (mk:  1):    400  -->     400
+
+Particle summary:
+  Fixed....: 2,368  id:(0-2367)   MKs:2 (10-11)
+  Moving...: 0
+  Floating.: 0
+  Fluid....: 400  id:(2368-2767)   MKs:1 (1)
+
+Total particles: 2,768 (bound=2368 (fx=2368 mv=0 ft=0) fluid=400)
+Total MK blocks: 3 (bound=2 (fx=2 mv=0 ft=0) fluid=1)
+
+Maximum depth: 17.526 (fixed)
+Speed of system: 12.192 (fixed)
+Speed of sound: max(coefsound*speedsystem,10*sqrt(g*depth))
+Speed of sound: 243.84 max(243.84,131.122)
+Speed of sound: 243.84 (automatic)
+
+Coefh:1.200000 (hdp:1.697056)
+
+[PreparePoints-End  time:0.001s]
+
+[SaveCase2D]
+C:\JalRakshak-HD\data\sph\BHV_BASE_NEARFIELD\dp40_out/CaseBhavani_MkCells.vtk  (time:0.001s, shapes:15, points:60)
+C:\JalRakshak-HD\data\sph\BHV_BASE_NEARFIELD\dp40_out/CaseBhavani.bi4<double>  (time:0.001s)
+C:\JalRakshak-HD\data\sph\BHV_BASE_NEARFIELD\dp40_out/CaseBhavani_All.vtk  (time: 0.001s)
+C:\JalRakshak-HD\data\sph\BHV_BASE_NEARFIELD\dp40_out/CaseBhavani_Bound.vtk  (time: 0.001s)
+C:\JalRakshak-HD\data\sph\BHV_BASE_NEARFIELD\dp40_out/CaseBhavani_Fluid.vtk  (time: 0.001s)
+C:\JalRakshak-HD\data\sph\BHV_BASE_NEARFIELD\dp40_out/CaseBhavani.xml  (time:0.017s)
+ 
+Geometry file copied: bed_profile.stl (xml row:45)
+
+Save files time: 0.022s
+
+Particle limits:
+  X range: -404 to 1500 [m]
+  Y range: 0 to 0 [m]
+  Z range: 236 to 284 [m]
+
+[SaveCase2D-End  time:0.024s]
+
+
+Time of execution: 0.106 sec. (16 threads)
+
+Finished execution (code=0).
+

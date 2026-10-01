@@ -1,0 +1,1 @@
+"""JalRakshak-HD application module."""

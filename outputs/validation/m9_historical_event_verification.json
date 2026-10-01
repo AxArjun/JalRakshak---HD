@@ -1,0 +1,25 @@
+{
+  "milestone": "M9",
+  "verification_type": "HISTORICAL_FLOOD_EVENT_VERIFICATION",
+  "event_name": "AUGUST_2019_BHAVANI_FLOOD_BHAVANISAGAR_INFLOW_EVENT",
+  "river": "Bhavani River (Tributary of Cauvery Basin)",
+  "dam": "Bhavanisagar Dam (Lower Bhavani Dam) and Pilloor Dam",
+  "officially_documented_flood_period": {
+    "start_date": "2019-08-08",
+    "end_date": "2019-08-16",
+    "description": "Central Water Commission (CWC) daily situation bulletins and IMD monsoon reports record heavy rainfall in the Nilgiris catchment, river Bhavani and tributaries in flood, and substantial inflows entering Bhavanisagar and Pilloor dams with subsequent downstream spillway flood discharges."
+  },
+  "sentinel1_analysis_window": {
+    "start_date": "2019-07-15",
+    "end_date": "2019-08-31",
+    "description": "Multi-temporal SAR analysis window capturing pre-event baselines, event overpass, and post-event recession."
+  },
+  "sentinel1_event_acquisition_date": "2019-08-10 00:39:43 UTC",
+  "official_source": "Central Water Commission (CWC) & India Meteorological Department (IMD) & Tamil Nadu State Disaster Management Authority (TNSDMA)",
+  "exact_document": "Central Water Commission (CWC) Daily Flood Situation Report — South Region & IMD End of Season Monsoon 2019 Hydro-meteorological Bulletin",
+  "publication_date": "2019-08-16",
+  "event_description": "During August 08–16, 2019, extreme monsoon precipitation across the Nilgiris headwaters generated severe inflows into Bhavanisagar reservoir, requiring emergency spillway releases and causing floodplain inundation in the downstream Bhavani reach. The Sentinel-1 SAR acquisition on 2019-08-10 captures surface water conditions during this active flood release window.",
+  "verification_level": "OFFICIAL_GOVERNMENT_HYDROLOGICAL_RECORD",
+  "scientific_classification": "HISTORICAL_FLOOD_REMOTE_SENSING_BENCHMARK",
+  "scientific_note": "This historical event represents a meteorological riverine flood and operational reservoir surcharge release event. It is NOT a dam-break event and did NOT involve dam failure. It is used strictly as a benchmark for satellite-based surface water change detection."
+}

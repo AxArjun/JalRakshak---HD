@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "selected_threshold": {
+    "threshold_cells": 1000,
+    "contributing_area_km2": 0.9,
+    "median_distance_to_known_mainstem_m": 43.21,
+    "p90_distance_m": 98.04,
+    "percent_mainstem_within_30m": 34.11,
+    "percent_mainstem_within_60m": 67.73,
+    "percent_mainstem_within_100m": 90.43
+  },
+  "all_candidate_evaluations": [
+    {
+      "threshold_cells": 250,
+      "contributing_area_km2": 0.225,
+      "median_distance_to_known_mainstem_m": 39.78,
+      "p90_distance_m": 96.23,
+      "percent_mainstem_within_30m": 36.81,
+      "percent_mainstem_within_60m": 70.05,
+      "percent_mainstem_within_100m": 91.4
+    },
+    {
+      "threshold_cells": 500,
+      "contributing_area_km2": 0.45,
+      "median_distance_to_known_mainstem_m": 41.94,
+      "p90_distance_m": 97.62,
+      "percent_mainstem_within_30m": 35.07,
+      "percent_mainstem_within_60m": 68.21,
+      "percent_mainstem_within_100m": 90.92
+    },
+    {
+      "threshold_cells": 1000,
+      "contributing_area_km2": 0.9,
+      "median_distance_to_known_mainstem_m": 43.21,
+      "p90_distance_m": 98.04,
+      "percent_mainstem_within_30m": 34.11,
+      "percent_mainstem_within_60m": 67.73,
+      "percent_mainstem_within_100m": 90.43
+    },
+    {
+      "threshold_cells": 2000,
+      "contributing_area_km2": 1.8,
+      "median_distance_to_known_mainstem_m": 43.67,
+      "p90_distance_m": 101.22,
+      "percent_mainstem_within_30m": 33.62,
+      "percent_mainstem_within_60m": 67.05,
+      "percent_mainstem_within_100m": 89.76
+    },
+    {
+      "threshold_cells": 5000,
+      "contributing_area_km2": 4.5,
+      "median_distance_to_known_mainstem_m": 44.43,
+      "p90_distance_m": 102.09,
+      "percent_mainstem_within_30m": 33.04,
+      "percent_mainstem_within_60m": 66.28,
+      "percent_mainstem_within_100m": 89.57
+    },
+    {
+      "threshold_cells": 10000,
+      "contributing_area_km2": 9.0,
+      "median_distance_to_known_mainstem_m": 44.71,
+      "p90_distance_m": 102.76,
+      "percent_mainstem_within_30m": 32.66,
+      "percent_mainstem_within_60m": 65.89,
+      "percent_mainstem_within_100m": 89.47
+    }
+  ],
+  "selection_rationale": "Threshold 1000 cells (0.90 km2 contributing area) captures continuous valley channel connectivity while filtering out excessive ephemeral hillslope rills. Aligns with known Bhavani mainstem with 66.0 m median offset.",
+  "geometry_type": "DEM_DERIVED"
+}

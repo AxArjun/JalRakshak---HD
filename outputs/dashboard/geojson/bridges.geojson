@@ -1,0 +1,592 @@
+{
+  "type": "FeatureCollection",
+  "name": "bridges",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_130075002",
+        "bridge_id": "BR-130075002",
+        "osm_id": 130075002,
+        "bridge_name": "Karattadipalayam - Bungalowpudur Road",
+        "name": "Karattadipalayam - Bungalowpudur Road",
+        "road": "secondary",
+        "highway": "secondary",
+        "latitude": 11.497767,
+        "longitude": 77.409233,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 166.0,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_06 (Bhavani)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.409233,
+          11.497767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_240303459",
+        "bridge_id": "BR-240303459",
+        "osm_id": 240303459,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "trunk",
+        "highway": "trunk",
+        "latitude": 11.503301,
+        "longitude": 77.245659,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 111.9,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_03 (Kodiveri)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.245659,
+          11.503301
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_555413880",
+        "bridge_id": "BR-555413880",
+        "osm_id": 555413880,
+        "bridge_name": "Kodivery Dam Road",
+        "name": "Kodivery Dam Road",
+        "road": "secondary",
+        "highway": "secondary",
+        "latitude": 11.472199,
+        "longitude": 77.297316,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 36.7,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.297316,
+          11.472199
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_555413885",
+        "bridge_id": "BR-555413885",
+        "osm_id": 555413885,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "unclassified",
+        "highway": "unclassified",
+        "latitude": 11.47698,
+        "longitude": 77.299365,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 25.6,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.299365,
+          11.47698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_583603495",
+        "bridge_id": "BR-583603495",
+        "osm_id": 583603495,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "tertiary",
+        "highway": "tertiary",
+        "latitude": 11.480207,
+        "longitude": 77.154504,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 229.7,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_01 (Bhavanisagar)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.154504,
+          11.480207
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_631230370",
+        "bridge_id": "BR-631230370",
+        "osm_id": 631230370,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "unclassified",
+        "highway": "unclassified",
+        "latitude": 11.490728,
+        "longitude": 77.365342,
+        "hazard_class": "DRY",
+        "hazard_code": 0,
+        "exposed_length_m": 5.2,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_05 (Kalingarayanpalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.365342,
+          11.490728
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_631230375",
+        "bridge_id": "BR-631230375",
+        "osm_id": 631230375,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "tertiary",
+        "highway": "tertiary",
+        "latitude": 11.485904,
+        "longitude": 77.30503,
+        "hazard_class": "H5",
+        "hazard_code": 5,
+        "exposed_length_m": 33.0,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.30503,
+          11.485904
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_634000778",
+        "bridge_id": "BR-634000778",
+        "osm_id": 634000778,
+        "bridge_name": "Sathy - Periyakodivery - Kadambur Road",
+        "name": "Sathy - Periyakodivery - Kadambur Road",
+        "road": "secondary",
+        "highway": "secondary",
+        "latitude": 11.489589,
+        "longitude": 77.300679,
+        "hazard_class": "H5",
+        "hazard_code": 5,
+        "exposed_length_m": 73.1,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.300679,
+          11.489589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_634003430",
+        "bridge_id": "BR-634003430",
+        "osm_id": 634003430,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "unclassified",
+        "highway": "unclassified",
+        "latitude": 11.490642,
+        "longitude": 77.386617,
+        "hazard_class": "H3",
+        "hazard_code": 3,
+        "exposed_length_m": 22.4,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_06 (Bhavani)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.386617,
+          11.490642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_634005120",
+        "bridge_id": "BR-634005120",
+        "osm_id": 634005120,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "tertiary",
+        "highway": "tertiary",
+        "latitude": 11.495535,
+        "longitude": 77.363509,
+        "hazard_class": "DRY",
+        "hazard_code": 0,
+        "exposed_length_m": 101.3,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_05 (Kalingarayanpalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.363509,
+          11.495535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_640592681",
+        "bridge_id": "BR-640592681",
+        "osm_id": 640592681,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "trunk",
+        "highway": "trunk",
+        "latitude": 11.50895,
+        "longitude": 77.230774,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 46.0,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_03 (Kodiveri)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.230774,
+          11.50895
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_966247490",
+        "bridge_id": "BR-966247490",
+        "osm_id": 966247490,
+        "bridge_name": "Puliyampatti - Bhavanisagar - Bannari Road",
+        "name": "Puliyampatti - Bhavanisagar - Bannari Road",
+        "road": "primary",
+        "highway": "primary",
+        "latitude": 11.47329,
+        "longitude": 77.115252,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 139.6,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_01 (Bhavanisagar)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.115252,
+          11.47329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_966250310",
+        "bridge_id": "BR-966250310",
+        "osm_id": 966250310,
+        "bridge_name": "Sathy - Kothamangalam Road",
+        "name": "Sathy - Kothamangalam Road",
+        "road": "secondary",
+        "highway": "secondary",
+        "latitude": 11.499481,
+        "longitude": 77.205198,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 44.4,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_02 (Sathyamangalam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.205198,
+          11.499481
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1000692329",
+        "bridge_id": "BR-1000692329",
+        "osm_id": 1000692329,
+        "bridge_name": "Kodivery Dam Road",
+        "name": "Kodivery Dam Road",
+        "road": "secondary",
+        "highway": "secondary",
+        "latitude": 11.474499,
+        "longitude": 77.295429,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 23.8,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.295429,
+          11.474499
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1000692331",
+        "bridge_id": "BR-1000692331",
+        "osm_id": 1000692331,
+        "bridge_name": "Kodivery Dam Road",
+        "name": "Kodivery Dam Road",
+        "road": "secondary",
+        "highway": "secondary",
+        "latitude": 11.47421,
+        "longitude": 77.296726,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 50.1,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.296726,
+          11.47421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1263299356",
+        "bridge_id": "BR-1263299356",
+        "osm_id": 1263299356,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "footway",
+        "highway": "footway",
+        "latitude": 11.454766,
+        "longitude": 77.302848,
+        "hazard_class": "H5",
+        "hazard_code": 5,
+        "exposed_length_m": 6.0,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.302848,
+          11.454766
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1341664169",
+        "bridge_id": "BR-1341664169",
+        "osm_id": 1341664169,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "unclassified",
+        "highway": "unclassified",
+        "latitude": 11.495323,
+        "longitude": 77.392804,
+        "hazard_class": "H4",
+        "hazard_code": 4,
+        "exposed_length_m": 29.5,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_06 (Bhavani)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.392804,
+          11.495323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1343268199",
+        "bridge_id": "BR-1343268199",
+        "osm_id": 1343268199,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "unclassified",
+        "highway": "unclassified",
+        "latitude": 11.509759,
+        "longitude": 77.231747,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 9.6,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_03 (Kodiveri)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.231747,
+          11.509759
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1343268203",
+        "bridge_id": "BR-1343268203",
+        "osm_id": 1343268203,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "unclassified",
+        "highway": "unclassified",
+        "latitude": 11.510589,
+        "longitude": 77.231709,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 10.7,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_03 (Kodiveri)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.231709,
+          11.510589
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "id": "bridge_1369830099",
+        "bridge_id": "BR-1369830099",
+        "osm_id": 1369830099,
+        "bridge_name": "Unnamed Road",
+        "name": "Unnamed Road",
+        "road": "trunk",
+        "highway": "trunk",
+        "latitude": 11.503248,
+        "longitude": 77.245572,
+        "hazard_class": "H6",
+        "hazard_code": 6,
+        "exposed_length_m": 109.3,
+        "arrival_time_hr": 1.0,
+        "arrival_time": "1.00 hr",
+        "response_zone": "ZONE_03 (Kodiveri)",
+        "source": "OpenStreetMap / M8 HADR Bridge Screening",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.245572,
+          11.503248
+        ]
+      }
+    }
+  ]
+}

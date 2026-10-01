@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-09-25T12:47:55.968697+00:00",
+  "selected_coordinate": {
+    "latitude": 11.47083,
+    "longitude": 77.11389,
+    "crs": "EPSG:4326 (WGS 84)",
+    "feature_type": "Dam administration & spillway approach control complex"
+  },
+  "selected_source": {
+    "authority": "Central Water Commission (CWC) NRLD State Catalog & Tamil Nadu WRD Bhavanisagar Project Records",
+    "url": "https://cwc.gov.in/national-register-large-dams",
+    "retrieval_date": "2026-09-25",
+    "verification_level": "SECONDARY_VERIFIED",
+    "reason_for_level": "Coordinates originate from CWC / TNWRD state project registry summaries and published basin monographs. Because raw CWC point shapefile with unique cryptographic identifier is not independently downloadable via open REST endpoint, this field is rigorously classified as SECONDARY_VERIFIED rather than AUTHORITATIVE_VERIFIED."
+  },
+  "alternative_coordinates": [
+    {
+      "name": "OpenStreetMap Dam Spillway Crest Centerline",
+      "source": "OpenStreetMap (OSM Way 304402636 / Relation 3831804)",
+      "url": "https://www.openstreetmap.org/relation/3831804",
+      "latitude": 11.47326,
+      "longitude": 77.11547,
+      "feature_represented": "Active masonry spillway crest axis midpoint",
+      "source_type": "Community Vetted Open GIS Data",
+      "distance_from_selected_m": 319.33
+    },
+    {
+      "name": "Bhavanisagar Dam Embankment Main Axis Centroid",
+      "source": "Survey of India / CartoDEM Feature Vector",
+      "url": "https://bhuvan.nrsc.gov.in",
+      "latitude": 11.47,
+      "longitude": 77.11,
+      "feature_represented": "8.78 km earthen embankment structural mid-reach",
+      "source_type": "Government Satellite / Topographic Map Interpretation",
+      "distance_from_selected_m": 434.26
+    }
+  ],
+  "distance_m": 319.33,
+  "interpretation": "The selected coordinate (11.47083 N, 77.11389 E) is separated by 319.33 metres from the OSM digitized masonry spillway crest axis (11.47326 N, 77.11547 E). Given that Bhavanisagar Dam is an 8,780-metre composite structure comprising a central masonry spillway flanked by extensive earthen embankments, a ~319 m spatial span is entirely within the physical structural footprint of the dam complex and well inside the computational domain.",
+  "final_coordinate": {
+    "latitude": 11.47083,
+    "longitude": 77.11389,
+    "crs": "EPSG:4326"
+  },
+  "final_coordinate_reason": "Preserved as the primary reference anchor point for model domain initialization and upstream boundary coupling, with the spillway crest axis explicitly documented for near-field SPH mesh generation.",
+  "verification_level": "SECONDARY_VERIFIED"
+}

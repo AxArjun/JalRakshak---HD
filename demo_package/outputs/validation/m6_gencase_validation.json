@@ -1,0 +1,79 @@
+{
+  "milestone": "M6",
+  "title": "DualSPHysics GenCase Particle Resolution & Domain Generation Manifest",
+  "generated_at": "2026-09-25T15:20:00Z",
+  "model_classification": "2D_UNIT_WIDTH_NEAR_FIELD_SPH_SCREENING_MODEL",
+  "resolution_study": [
+    {
+      "fixed_boundary_particles": 2368,
+      "fluid_particles": 400,
+      "total_particles": 2768,
+      "memory_estimate_mib": 0.01,
+      "x_range": [
+        -404.0,
+        1500.0
+      ],
+      "z_range": [
+        236.0,
+        284.0
+      ],
+      "dp_m": 4.0,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "fixed_boundary_particles": 2029,
+      "fluid_particles": 1800,
+      "total_particles": 3829,
+      "memory_estimate_mib": 0.03,
+      "x_range": [
+        -404.0,
+        1500.0
+      ],
+      "z_range": [
+        238.0,
+        286.0
+      ],
+      "dp_m": 2.0,
+      "returncode": 0,
+      "status": "PASS"
+    },
+    {
+      "fixed_boundary_particles": 4182,
+      "fluid_particles": 6800,
+      "total_particles": 10982,
+      "memory_estimate_mib": 0.12,
+      "x_range": [
+        -404.0,
+        1500.0
+      ],
+      "z_range": [
+        237.0,
+        285.0
+      ],
+      "dp_m": 1.0,
+      "returncode": 0,
+      "status": "PASS"
+    }
+  ],
+  "selected_production_configuration": {
+    "dp_m": 1.0,
+    "boundary_particles": 4182,
+    "fluid_particles": 6800,
+    "total_particles": 10982,
+    "x_range_m": [
+      -404.0,
+      1500.0
+    ],
+    "z_range_m": [
+      237.0,
+      285.0
+    ],
+    "memory_estimate_mib": 0.12,
+    "upstream_reservoir_length_m": 400.0,
+    "downstream_channel_length_m": 1500.0,
+    "bed_source": "NASA SRTM 30m Projected DEM (nearfield_bed_profile.csv)",
+    "safety_limit_particles": 1500000,
+    "compliance": "PASS_BELOW_LIMIT"
+  }
+}

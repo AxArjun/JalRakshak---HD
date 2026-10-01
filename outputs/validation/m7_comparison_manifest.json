@@ -1,0 +1,80 @@
+{
+  "manifest_version": "1.0.0",
+  "milestone": "M7 \u2014 Cross-Solver Near-Field Comparison and Hybrid Coupling Design",
+  "project": "JalRakshak-HD (SIH PS 26161)",
+  "study_site": "Bhavanisagar Dam / Lower Bhavani Dam, Tamil Nadu",
+  "crs": "EPSG:32643",
+  "m5_source_files": [
+    "outputs/simulations/dflowfm/BHV_BASE/Bhavanisagar_DamBreak_map.nc",
+    "outputs/simulations/dflowfm/BHV_BASE/Bhavanisagar_DamBreak_his.nc",
+    "outputs/simulations/dflowfm/BHV_BASE/max_water_depth.tif",
+    "outputs/simulations/dflowfm/BHV_BASE/max_velocity.tif",
+    "outputs/simulations/dflowfm/BHV_BASE/arrival_time.tif"
+  ],
+  "m6_source_files": [
+    "outputs/simulations/sph/BHV_BASE_NEARFIELD/gauge_results.csv",
+    "outputs/simulations/sph/BHV_BASE_NEARFIELD/front_propagation.csv",
+    "data/sph/BHV_BASE_NEARFIELD/production_out/csv/PartFluid_*.csv"
+  ],
+  "common_spatial_framework": {
+    "centerline_file": "data/comparison/common_nearfield_centerline.gpkg",
+    "gauges_file": "data/comparison/common_gauges.gpkg",
+    "extent_m": [
+      0.0,
+      1500.0
+    ],
+    "chainages_m": [
+      100.0,
+      250.0,
+      500.0,
+      1000.0,
+      1500.0
+    ]
+  },
+  "forcing_differences": {
+    "dflow_fm": "Continuous time-varying discharge boundary representing the complete BHV_BASE hydrograph (30 hr, Qpeak=18,742.38 m3/s at t=14,095.59 s)",
+    "dualsphysics": "Finite initialized peak-state fluid block (H=17.526 m, L=400 m, unit-width release, duration=600 s)",
+    "forcing_equivalence": false
+  },
+  "comparison_variables": [
+    "peak_water_depth_m",
+    "peak_velocity_mps",
+    "arrival_time_s",
+    "depth_at_peak_velocity_m",
+    "froude_number"
+  ],
+  "normalization_method": "h_star = h / h_100m, u_star = u / u_100m, x_star = chainage / 1500m",
+  "timing_limitation": "Fundamentally different time references; no percentage timing error calculated; treated as SCENARIO_RESPONSE_CONTEXT",
+  "resolution_status": {
+    "m5_mesh": "82,309 faces (~100 m nominal)",
+    "m6_particle": "dp=1.0 m, PARTICLE_RESOLUTION_SENSITIVITY NOT_STABILIZED"
+  },
+  "trend_assessment": {
+    "depth_trend": "PARTIALLY_CONSISTENT",
+    "velocity_trend": "DIVERGENT_TREND",
+    "velocity_trend_explanation": "SPH shows strong attenuation after the near-dam jet region, whereas D-Flow depth-averaged peak velocity increases farther downstream in the sampled reach. This is not solver error because forcing and dimensional formulations are non-equivalent."
+  },
+  "front_propagation_status": {
+    "sph_final_front_position_m": 1280.41,
+    "sph_final_front_time_s": 600.0,
+    "sph_1500m_status": "NOT_REACHED_WITHIN_600_S",
+    "notes": "SPH front reached 1280.41 m by 600 s and the 1500 m station was NOT_REACHED_WITHIN_600_S. It was slowing substantially but was still advancing."
+  },
+  "handoff_evaluation": {
+    "recommended_future_handoff_candidate": "500 m",
+    "direct_coupling_ready": false,
+    "overall_coupling_readiness": "NOT_READY"
+  },
+  "coupling_assessment": {
+    "geometry_compatibility": "PARTIAL",
+    "coordinate_compatibility": "READY",
+    "time_reference_compatibility": "NOT_READY",
+    "flow_width_compatibility": "NOT_READY",
+    "forcing_compatibility": "NOT_READY",
+    "bathymetry_compatibility": "PARTIAL",
+    "resolution_compatibility": "NOT_READY",
+    "direct_discharge_coupling_ready": false,
+    "overall_status": "NOT_READY",
+    "coupling_role": "DESIGN_ONLY"
+  }
+}

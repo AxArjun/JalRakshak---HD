@@ -1,0 +1,14 @@
+osm_id,name,category,facility_type,hazard_class,hazard_code,x_utm,y_utm
+4878919825,Arulmighu Masan Badrakaliamman Thirukovil,community_assembly,place_of_worship,H6,6,743695.8,1272874.1
+6914280112,"Holy Cross Hospital, Erode",healthcare,hospital,H5,5,733154.7,1271311.6
+6914880511,Vijaya Hospital,healthcare,hospital,H6,6,745221.4,1272797.3
+6927339310,Amudha Poly Clinic & Hospital,healthcare,hospital,H6,6,745062.3,1272815.6
+6933800596,Emmanuvel Hospital,healthcare,hospital,H6,6,745105.9,1272925.9
+6934188961,Shyamala Hospital,healthcare,hospital,H6,6,744174.9,1272640.8
+6934347088,Anush Hospital,healthcare,hospital,H6,6,744882.4,1272272.5
+6934773648,KGR Surgical Nursing Home,healthcare,clinic,H6,6,744923.8,1272782.7
+6935170181,Pee Vee Hospital,healthcare,hospital,H5,5,744751.8,1271788.3
+6936696217,Udhayam Hospital,healthcare,hospital,H6,6,745076.7,1272934.3
+7843519086,Assisi Hospital,healthcare,hospital,H5,5,751460.6,1268251.1
+13895096201,Ondimuniappan temple,community_assembly,place_of_worship,H4,4,762809.4,1272586.9
+1236850097,Saratha International School,education,school,H6,6,751290.7,1267198.9

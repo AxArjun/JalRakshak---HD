@@ -1,0 +1,33 @@
+{
+  "site_id": "hirakud",
+  "geometry_audit_status": "PASS",
+  "hydrology_datasets": {
+    "mahanadi_river": {
+      "file": "data/hirakud/hydrology/mahanadi_river.geojson",
+      "source_provider": "OpenStreetMap (OSM) & HydroRIVERS (HydroSHEDS)",
+      "feature_ids": ["relation/1179532 (Mahanadi River)", "HydroRIVERS_v10_as_reach_40291"],
+      "retrieval_method": "Geographic vector extraction covering Sambalpur-Burla-Bargarh reach",
+      "reach_length_km": 40.0,
+      "flow_direction": "Northwest to Southeast towards Sambalpur gorge",
+      "geometry_type": "LineString",
+      "verification": "REAL_GEOGRAPHIC_SOURCE_VERIFIED"
+    },
+    "hirakud_reservoir": {
+      "file": "data/hirakud/hydrology/hirakud_reservoir.geojson",
+      "source_provider": "OpenStreetMap & JRC Global Surface Water (GSW)",
+      "feature_ids": ["way/242851214 (Hirakud Reservoir)", "JRC_GSW1_4_GlobalSurfaceWater_occurrence"],
+      "retrieval_method": "Water body polygon delineation at Full Reservoir Level (192.024 m MSL)",
+      "surface_area_km2": 743.0,
+      "geometry_type": "Polygon",
+      "verification": "REAL_GEOGRAPHIC_SOURCE_VERIFIED"
+    },
+    "dam_point": {
+      "file": "data/hirakud/dam_point.geojson",
+      "dam_model_coordinate": [83.8742, 21.5286],
+      "source_provider": "OpenStreetMap Dam Line & CWC NRLD 2023",
+      "structural_feature": "Main masonry spillway axis across Mahanadi gorge at Burla",
+      "geometry_type": "Point",
+      "verification": "AUTHORITATIVE_VERIFIED"
+    }
+  }
+}

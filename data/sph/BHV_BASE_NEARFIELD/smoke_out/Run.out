@@ -1,0 +1,297 @@
+
+
+ <DUALSPHYSICS5> Copyright (c) 2025 by
+ Dr Jose M. Dominguez Alonso, Prof. Alejandro Crespo,
+ Dr Georgios Fourtakas, Prof. Benedict Rogers,
+ Dr Renato Vacondio, Dr Corrado Altomare,
+ Dr Angelo Tafuni, Dr Orlando Garcia Feal,
+ Dr Ivan Martinez Estevez, Dr Joseph O'Connor,
+ Dr Aaron English, Dr Francesco Ricci,
+ Prof. Moncho Gomez Gesteira, Prof. Peter Stansby
+
+ EPHYSLAB Environmental Physics Laboratory, Universidade de Vigo
+ School of Mechanical, Aerospace and Civil Engineering, University of Manchester
+
+ DualSPHysics is free software: you can redistribute it and/or
+ modify it under the terms of the GNU Lesser General Public License
+ as published by the Free Software Foundation, either version 2.1 of
+ the License, or (at your option) any later version.
+
+ DualSPHysics is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU Lesser General Public License for more details.
+
+ You should have received a copy of the GNU Lesser General Public License
+ along with DualSPHysics. If not, see <http://www.gnu.org/licenses/>.
+
+ Free download source files and documentation from DualSPHysics website (http://dual.sphysics.org).
+ Full list of developers and contributors is available at https://dual.sphysics.org/developers
+ Properly cite the use of DualSPHysics (Dominguez et al., 2022) (https://dual.sphysics.org/references).
+
+
+DualSPHysics5 v5.4.355 (08-04-2025)
+====================================
+Threads by host for parallel execution: 16
+[Initialising JSphCpuSingle  25-09-2026 20:47:52]
+ProgramFile=".../bin/windows/DualSPHysics5.4CPU_win64.exe"
+Available features: Project Chrono coupling, MoorDynPlus coupling, Wave generation, FlexStruc, mDBC no-slip, OpenMP execution.
+ExecutionDir=".../data/sph/BHV_BASE_NEARFIELD"
+XmlFile=".../BHV_BASE_NEARFIELD/smoke_out/CaseBhavani.xml"
+OutputDir=".../sph/BHV_BASE_NEARFIELD/smoke_out"
+OutputDataDir=".../BHV_BASE_NEARFIELD/smoke_out/data"
+XML-App: GenCase v5.4.354.01 (07-04-2025)
+
+*** WARNING: The XML option 'PartsOutMax' is deprecated. Use 'MinFluidStop' option.
+
+**Basic case configuration is loaded
+**Special case configuration is loaded
+Loading initial state of particles...
+Loaded particles: 10,982
+MapRealPos(border)=(-404.085,-0.0848528,236.915)-(1500.08,0.0848528,285.085)
+MapRealPos(final)=(-404.085,-0.0848528,236.915)-(1530.08,0.0848528,292.31)
+**Initial state of particles is loaded
+**2D-Simulation parameters:
+CaseName="CaseBhavani"
+RunName="CaseBhavani"
+Simulate2DPosY=0
+SavePosDouble=False
+SvExtraParts=""
+SaveFtAce=False
+SvTimers=True
+Boundary="DBC"
+StepAlgorithm="Verlet"
+  VerletSteps=40
+Kernel="Wendland"
+  Wendland.awen=0.1934028
+  Wendland.bwenh=-0.3357928
+Viscosity="Artificial"
+  Visco=0.02
+  ViscoBoundFactor=1
+DensityDiffusion="Fourtakas et al 2019 (inner)"
+  DensityDiffusionValue=0.1
+Shifting="None"
+RigidAlgorithm="None"
+FloatingCount=0
+CaseNp=10,982
+CaseNbound=4,182
+CaseNfixed=4,182
+CaseNmoving=0
+CaseNfloat=0
+CaseNfluid=6,800
+PeriodicActive="None"
+Dp=1
+KernelH=1.697056  (CoefficientH=1.2; H/Dp=1.69706)
+KernelSize=3.394113
+CteB=8493992
+Gamma=7
+RhopZero=1000
+Cs0=243.8399967191601
+CFLnumber=0.2
+DtIni=0.006959712583338466
+DtMin=0.0003479856343523132
+DtAllParticles=False
+MassFluid=1000
+MassBound=1000
+TimeMax=30
+TimePart=1
+Gravity=(0,0,-9.81)
+RhopOut=True
+RhopOutMin=700
+RhopOutMax=1300
+WrnPartsOut=True
+MinFluidStop=0
+NpfMinimum=0
+CellMode="Full"
+ScellDiv=1
+MapCells=(570,1,17)  (9,690 cells)
+CellDomFixed=False
+DomCells=(570,1,17)  (9,690 cells)
+DomCellCode="1+15_7_9"
+**CellDiv: Requested cpu memory for 11,659 particles (over-allocation: 1.06X): 0.4 MiB (1 times).
+**CellDiv: Requested CPU memory for 9,690 cells (over-allocation: 10.01X): 0.1 MiB (1 times).
+ 
+RunMode="Pos-Double - OpenMP(Threads:16)"
+ 
+Particle summary:
+  Fixed....: 4,182  id:(0-4181)   MKs:2 (10-11)
+  Moving...: 0
+  Floating.: 0
+  Fluid....: 6,800  id:(4182-10981)   MKs:1 (1)
+
+Total particles: 10,982 (bound=4182 (fx=4182 mv=0 ft=0) fluid=6800)
+Total MK blocks: 3 (bound=2 (fx=2 mv=0 ft=0) fluid=1)
+ 
+Initialization configuration:
+Initialize_0
+  Operation: FluidVel
+  MkFluid..: 0 (6800 particles)
+  Constant velocity: 4.877
+ 
+GaugeSystem configuration:
+Guage_0: 'G_100m'
+  Type.......: SWL
+  Compute....: 0 - 30   dt:1
+  Output.....: 0 - 30   dt:1
+  SaveVtkPart: True
+  DomainCells: (147,0,0)-(149,1,16)   mode:fixed
+  MassLimit..: 400
+  GaugePoints: (100,0,235)-(100,0,290)
+  PointDp....: 0.5
+Guage_1: 'G_250m'
+  Type.......: SWL
+  Compute....: 0 - 30   dt:1
+  Output.....: 0 - 30   dt:1
+  SaveVtkPart: True
+  DomainCells: (191,0,0)-(193,1,16)   mode:fixed
+  MassLimit..: 400
+  GaugePoints: (250,0,235)-(250,0,290)
+  PointDp....: 0.5
+Guage_2: 'G_500m'
+  Type.......: SWL
+  Compute....: 0 - 30   dt:1
+  Output.....: 0 - 30   dt:1
+  SaveVtkPart: True
+  DomainCells: (265,0,0)-(267,1,16)   mode:fixed
+  MassLimit..: 400
+  GaugePoints: (500,0,235)-(500,0,290)
+  PointDp....: 0.5
+Guage_3: 'G_1000m'
+  Type.......: SWL
+  Compute....: 0 - 30   dt:1
+  Output.....: 0 - 30   dt:1
+  SaveVtkPart: True
+  DomainCells: (412,0,0)-(414,1,16)   mode:fixed
+  MassLimit..: 400
+  GaugePoints: (1000,0,235)-(1000,0,290)
+  PointDp....: 0.5
+Guage_4: 'G_1500m'
+  Type.......: SWL
+  Compute....: 0 - 30   dt:1
+  Output.....: 0 - 30   dt:1
+  SaveVtkPart: True
+  DomainCells: (559,0,0)-(561,1,16)   mode:fixed
+  MassLimit..: 400
+  GaugePoints: (1500,0,235)-(1500,0,290)
+  PointDp....: 0.5
+ 
+
+Initial allocated memory in CPU: 1,354,148 (1.29 MiB)  (6 particle arrays)
+Part_0000        10,982 (100.0%) particles successfully stored
+
+[WARNINGS]
+1. The XML option 'PartsOutMax' is deprecated. Use 'MinFluidStop' option.
+
+[Initialising simulation (v142dh0r)  25-09-2026 20:47:52]
+PART   PartTime   TotalSteps   Steps    Particles    Cells        Time/Sec   Finish time        
+=====  =========  ===========  =======  ===========  ===========  =========  ===================
+**Updated allocated memory in CPU: 1,620,788 (1.55 MiB)  (10 particle arrays)
+00001   1.000228          765      765       10,982          992       1.63  25-09-2026 20:48:41
+**Updated allocated memory in CPU: 1,887,428 (1.80 MiB)  (11 particle arrays)
+00002   2.000642        1,534      769       10,982        1,048       1.49  25-09-2026 20:48:39
+00003   3.001216        2,328      794       10,982        1,096       1.56  25-09-2026 20:48:39
+00004   4.000723        3,111      783       10,982        1,287       1.54  25-09-2026 20:48:39
+00005   5.000530        3,991      880       10,982        1,350       1.74  25-09-2026 20:48:39
+00006   6.000466        4,825      834       10,982        1,404       1.67  25-09-2026 20:48:40
+00007   7.000917        5,615      790       10,982        1,458       1.56  25-09-2026 20:48:40
+00008   8.000668        6,384      769       10,982        1,690       1.57  25-09-2026 20:48:40
+00009   9.000613        7,223      839       10,982        1,750       1.70  25-09-2026 20:48:40
+00010   10.00002        8,055      832       10,982        1,820       1.65  25-09-2026 20:48:41
+00011   11.00058        8,994      939       10,982        1,880       1.93  25-09-2026 20:48:42
+00012   12.00051        9,950      956       10,982        2,145       2.04  25-09-2026 20:48:43
+00013   13.00071       10,953    1,003       10,982        2,222       2.08  25-09-2026 20:48:44
+00014   14.00093       11,963    1,010       10,982        2,484       2.14  25-09-2026 20:48:44
+00015   15.00050       12,935      972       10,982        2,556       2.10  25-09-2026 20:48:45
+00016   16.00037       13,872      937       10,982        2,628       1.94  25-09-2026 20:48:45
+00017   17.00027       14,834      962       10,982        2,700       2.06  25-09-2026 20:48:46
+00018   18.00029       15,839    1,005       10,982        2,530       2.06  25-09-2026 20:48:46
+00019   19.00040       16,797      958       10,982        2,574       2.13  25-09-2026 20:48:47
+00020   20.00055       17,763      966       10,982        2,629       2.01  25-09-2026 20:48:47
+00021   21.00028       18,653      890       10,982        2,684       1.97  25-09-2026 20:48:47
+00022   22.00047       19,517      864       10,982        2,750       1.82  25-09-2026 20:48:47
+00023   23.00094       20,404      887       10,982        2,783       1.89  25-09-2026 20:48:47
+00024   24.00049       21,263      859       10,982        3,072       1.92  25-09-2026 20:48:48
+00025   25.00082       22,104      841       10,982        3,108       1.80  25-09-2026 20:48:48
+00026   26.00026       22,947      843       10,982        2,882       1.86  25-09-2026 20:48:48
+00027   27.00062       23,787      840       10,982        3,180       1.80  25-09-2026 20:48:47
+00028   28.00053       24,624      837       10,982        3,216       1.78  25-09-2026 20:48:47
+00029   29.00047       25,460      836       10,982        2,992       1.93  25-09-2026 20:48:47
+00030   30.00099       26,282      822       10,982        3,025       1.69  25-09-2026 20:48:48
+
+[Simulation finished  25-09-2026 20:48:48]
+Particles of simulation (initial): 10,982
+DTs adjusted to DtMin............: 0
+Excluded particles...............: 0
+Total Runtime....................: 55.278324 sec.
+Simulation Runtime...............: 55.253365 sec.
+Runtime per physical second......: 1.841718 sec.
+Steps per second.................: 475.663330
+Steps of simulation..............: 26,282
+PART files.......................: 31
+Maximum number of particles......: 10,982
+Maximum number of cells..........: 3,288
+CPU Memory.......................: 1,887,428 (1.80 MiB)
+ 
+[CPU Timers]
+VA-Init..........................: 0.024928 sec.
+NL-Limits........................: 0.888910 sec.
+NL-MakeSort......................: 1.741809 sec.
+NL-SortData......................: 1.813543 sec.
+NL-OutCheck......................: 0 sec.
+CF-PreForces.....................: 6.685031 sec.
+CF-PreMDBC.......................: 0 sec.
+CF-Forces........................: 36.003222 sec.
+SU-Shifting......................: 0 sec.
+SU-ComputeStep...................: 7.732679 sec.
+SU-Floating......................: 0 sec.
+SU-Motion........................: 0 sec.
+SU-Periodic......................: 0 sec.
+SU-ResizeNp......................: 0 sec.
+SU-SavePart......................: 0.265854 sec.
+SU-Chrono........................: 0 sec.
+SU-Moorings......................: 0 sec.
+SU-InOut.........................: 0 sec.
+SU-Gauges........................: 0.075030 sec.
+SU-FlexStruc.....................: 0 sec.
+ 
+[Output files]
+- CfgGauge_InitPoints.vtk..............: Saves points used for gauge calculations (by JGaugeSystem).
+- CfgInit_Domain.vtk...................: Saves the limits of the case and the simulation domain limits.
+- CfgInit_MapCells.vtk.................: Saves the cell division of the simulation domain.
+- GaugesSWL_G_1000m.csv................: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- GaugesSWL_G_100m.csv.................: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- GaugesSWL_G_1500m.csv................: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- GaugesSWL_G_250m.csv.................: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- GaugesSWL_G_500m.csv.................: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- Run.csv..............................: One line CSV file with execution parameters and other simulation data.
+- Run.out..............................: Log file of the simulation.
+- RunPARTs.csv.........................: Saves extra information of simulated PARTs.
+- data/PartInfo.ibi4...................: Binary file with execution information for each instant (input for PartInfo program).
+- data/PartOut_???.obi4................: Binary file with particles excluded during simulation (input for PartVtkOut program).
+- data/Part_????.bi4...................: Binary file with particle data in different instants.
+- data/Part_Head.ibi4..................: Binary file with basic information of simulation data.
+- gaugesvtks/GaugesSWL_G_1000m_????.vtk: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- gaugesvtks/GaugesSWL_G_100m_????.vtk.: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- gaugesvtks/GaugesSWL_G_1500m_????.vtk: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- gaugesvtks/GaugesSWL_G_250m_????.vtk.: Saves SWL data measured from fluid particles (by JGaugeSwl).
+- gaugesvtks/GaugesSWL_G_500m_????.vtk.: Saves SWL data measured from fluid particles (by JGaugeSwl).
+ 
+[WARNINGS]
+1. The XML option 'PartsOutMax' is deprecated. Use 'MinFluidStop' option.
+ 
+[References]
+- Official solver reference DualSPHysics v5.0: J.M. Dominguez, G. Fourtakas,
+    C. Altomare, R.B. Canelas, A. Tafuni, O. Garcia-Feal, I. Martinez-Estevez,
+    A. Mokos, R. Vacondio, A.J.C. Crespo, B.D. Rogers, P.K. Stansby, M. Gomez-Gesteira.
+    2022. DualSPHysics: from fluid dynamics to multiphysics problems.
+    Computational Particle Mechanics, 9:867-895. doi: https://doi.org/10.1007/s40571-021-00404-2
+
+- Optimised CPU multi-core and GPU implementation (Dominguez et al., 2013  https://doi.org/10.1016/j.cpc.2012.10.015)
+- Dynamic boundary conditions (Crespo et al., 2007  https://doi.org/10.3970/cmc.2007.005.173)
+- Density diffusion Term: Fourtakas (Fourtakas et al., 2019  https://doi.org/10.1016/j.compfluid.2019.06.009)
+- Viscosity: Artificial (Monaghan, 1992  https://doi.org/10.1146/annurev.aa.30.090192.002551)
+- Kernel: Quintic Wendland (Wendland, 1995  https://doi.org/10.1007/BF02123482)
+- Time integration scheme: Verlet (Verlet, 1967  https://doi.org/10.1103/PhysRev.159.98)
+
+Finished execution (code=0).
+

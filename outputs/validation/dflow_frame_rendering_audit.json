@@ -1,0 +1,168 @@
+{
+  "total_frames_audited": 8,
+  "total_simulation_frames": 181,
+  "status": "PASS",
+  "rendering_mode": "FILLED_DEPTH",
+  "audit_records": [
+    {
+      "frame": 0,
+      "time": "T+00h 00m",
+      "wet_face_count": 2,
+      "wet_area_km2": 0.02,
+      "max_depth_m": 2.489,
+      "nontransparent_pixels": 2,
+      "transparent_pixels": 83731,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 6,
+      "time": "T+01h 00m",
+      "wet_face_count": 175,
+      "wet_area_km2": 1.75,
+      "max_depth_m": 11.03,
+      "nontransparent_pixels": 175,
+      "transparent_pixels": 83558,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 18,
+      "time": "T+03h 00m",
+      "wet_face_count": 1354,
+      "wet_area_km2": 13.54,
+      "max_depth_m": 20.713,
+      "nontransparent_pixels": 1354,
+      "transparent_pixels": 82379,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 36,
+      "time": "T+06h 00m",
+      "wet_face_count": 4449,
+      "wet_area_km2": 44.49,
+      "max_depth_m": 21.821,
+      "nontransparent_pixels": 4449,
+      "transparent_pixels": 79284,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 72,
+      "time": "T+12h 00m",
+      "wet_face_count": 10016,
+      "wet_area_km2": 100.16,
+      "max_depth_m": 20.458,
+      "nontransparent_pixels": 10016,
+      "transparent_pixels": 73717,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 90,
+      "time": "T+15h 00m",
+      "wet_face_count": 9894,
+      "wet_area_km2": 98.94,
+      "max_depth_m": 19.544,
+      "nontransparent_pixels": 9894,
+      "transparent_pixels": 73839,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 144,
+      "time": "T+24h 00m",
+      "wet_face_count": 8903,
+      "wet_area_km2": 89.03,
+      "max_depth_m": 14.853,
+      "nontransparent_pixels": 8903,
+      "transparent_pixels": 74830,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame": 180,
+      "time": "T+30h 00m",
+      "wet_face_count": 7827,
+      "wet_area_km2": 78.27,
+      "max_depth_m": 12.184,
+      "nontransparent_pixels": 7827,
+      "transparent_pixels": 75906,
+      "fill_rendering": "FILLED_DEPTH",
+      "bounds": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    }
+  ]
+}

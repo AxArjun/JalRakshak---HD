@@ -1,0 +1,17 @@
+{
+  "project": "JalRakshak-HD",
+  "version": "v1.0-SIH",
+  "storage_breakdown_mb": {
+    "raw_data": 48.51,
+    "processed_data": 0.19,
+    "dflow_netcdf": 0.0,
+    "sph_outputs": 0.0,
+    "simulation_frames": 0.0,
+    "dashboard_assets": 25.39,
+    "frontend_dist": 0.86,
+    "demo_package": 0.44,
+    "total_project_core_mb": 4788.96
+  },
+  "unit": "Megabytes (MB)",
+  "timestamp": "2026-10-01T15:06:15Z"
+}

@@ -1,0 +1,9 @@
+[Boundary]
+quantity = dischargebnd
+locationFile = upstream_breach_boundary.pli
+forcingFile = BHV_BASE.bc
+
+[Boundary]
+quantity = riemannbnd
+locationFile = downstream_boundary.pli
+forcingFile = downstream_boundary.bc

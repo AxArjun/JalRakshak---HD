@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "hirakud_reservoir",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "Hirakud Reservoir", "frl_m": 192.024 }, "geometry": { "type": "Polygon", "coordinates": [ [ [ 83.8694, 21.57 ], [ 83.84, 21.6 ], [ 83.75, 21.65 ], [ 83.71, 21.68 ], [ 83.75, 21.69 ], [ 83.82, 21.63 ], [ 83.8694, 21.57 ] ] ] } }
+]
+}

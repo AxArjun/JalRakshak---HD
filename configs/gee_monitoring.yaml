@@ -1,0 +1,57 @@
+# JalRakshak-HD: Earth Engine Near-Real-Time (NRT) Flood Monitoring Configuration
+# Milestone: M9 — Google Earth Engine Flood Observation Pipeline
+
+sentinel1:
+  asset: "COPERNICUS/S1_GRD"
+  preferred_mode: "IW"
+  polarization:
+    - "VV"
+    - "VH"
+  lookback_days: 15
+  reference_window_days: 45
+  minimum_aoi_coverage: 90.0
+  orbit_consistency_required: true
+  speckle_filter:
+    method: "BOX_KERNEL"
+    radius_m: 30
+  detection:
+    primary_method: "BACKSCATTER_CHANGE_DETECTION"
+    secondary_method: "ABSOLUTE_LOW_BACKSCATTER_SCREENING"
+    vv_water_threshold_db: -15.5
+    vh_water_threshold_db: -23.0
+    change_threshold_db: -3.0
+  terrain_mask:
+    source_dem: "SRTM_30M"
+    max_slope_degrees: 5.0
+    citation: "UN-SPIDER (2019) & Martinis et al. (2015)"
+
+sentinel2:
+  asset: "COPERNICUS/S2_SR_HARMONIZED"
+  cloud_probability_source: "CLOUDY_PIXEL_PERCENTAGE"
+  max_cloud_fraction: 30.0
+  index: "MNDWI"
+  mndwi_threshold: 0.0
+
+rainfall:
+  source: "UCSB-CHG/CHIRPS/DAILY"
+  spatial_resolution_deg: 0.05
+  context_window_days: 14
+
+baseline:
+  jrc_asset: "JRC/GSW1_4/GlobalSurfaceWater"
+  occurrence_threshold_percent: 50.0
+  description: "Historical recurrent water baseline (JRC GSW occurrence >= 50% across 1984–2021 Landsat record)"
+  monthly_history_asset: "JRC/GSW1_4/MonthlyHistory"
+
+aoi:
+  name: "Bhavanisagar Downstream Corridor"
+  crs: "EPSG:32643"
+  bbox_wgs84:
+    west: 77.10
+    south: 11.42
+    east: 77.45
+    north: 11.55
+
+alerts:
+  enabled: false
+  reason: "M9 is a screening observation and NRT readiness milestone; live public alerts are disabled."

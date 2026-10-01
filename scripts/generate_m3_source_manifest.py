@@ -1,0 +1,237 @@
+"""
+Generate M3 Source Manifest JSON for Dam Engineering & Breach Event Definition (Final Reconciliation).
+SIH PS 26161 - JalRakshak-HD Milestone M3.
+"""
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+MANIFEST_M3 = {
+    "milestone": "M3",
+    "project": "JalRakshak-HD",
+    "description": "Source Provenance and Verification Manifest for Dam Engineering Metadata and Empirical Breach Parameters (Final Reconciliation)",
+    "parameters": [
+        {
+            "field": "dam_official_name",
+            "value": "Bhavanisagar Dam",
+            "unit": "string",
+            "provider": "Central Water Commission (CWC) / Tamil Nadu WRD",
+            "exact_source": "National Register of Large Dams (NRLD)",
+            "page_or_record": "Dam Code: TN12HH0014 (Bhavanisagar / Lower Bhavani)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Official statutory name in the National Register of Large Dams"
+        },
+        {
+            "field": "dam_type",
+            "value": "Composite Earthen Dam with Central Masonry Spillway",
+            "unit": "string",
+            "provider": "Central Water Commission (CWC)",
+            "exact_source": "NRLD Large Dam Inventory",
+            "page_or_record": "Tamil Nadu State Large Dam Registry",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Composite structural classification consisting of earthfill flanks and central masonry section"
+        },
+        {
+            "field": "year_completed",
+            "value": 1955,
+            "unit": "year",
+            "provider": "Central Water Commission (CWC)",
+            "exact_source": "NRLD Large Dam Inventory",
+            "page_or_record": "Commissioning year record",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Year construction completed and reservoir impoundment commenced"
+        },
+        {
+            "field": "nrld_height_above_lowest_foundation_m",
+            "value": 62.0,
+            "unit": "metres",
+            "provider": "Central Water Commission (CWC)",
+            "exact_source": "National Register of Large Dams 2019 (PIC: TN12HH0014)",
+            "page_or_record": "Height above lowest foundation field (Source A)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Height of dam structure above lowest point of foundation in metres"
+        },
+        {
+            "field": "nrld_dam_length_m",
+            "value": 8797.0,
+            "unit": "metres",
+            "provider": "Central Water Commission (CWC)",
+            "exact_source": "National Register of Large Dams 2019 (PIC: TN12HH0014)",
+            "page_or_record": "Dam length field (Source A)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Total length of dam structure reported in NRLD 2019"
+        },
+        {
+            "field": "technical_project_dam_length_m",
+            "value": 8780.0,
+            "unit": "metres",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "Lower Bhavani Project Technical Description & Rehabilitation Engineering Literature",
+            "page_or_record": "Overall dam length (Source B)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "Overall composite dam crest length reported in state technical documentation"
+        },
+        {
+            "field": "central_masonry_section_length_m",
+            "value": 464.0,
+            "unit": "metres",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "Lower Bhavani Project Technical Description & WRD Engineering Records",
+            "page_or_record": "Central masonry section length (Source B)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "Total length of the central masonry structural monolith housing spillway and sluices"
+        },
+        {
+            "field": "masonry_section_height_from_lowest_foundation_m",
+            "value": 62.18,
+            "unit": "metres",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "Lower Bhavani Project Technical Description (204 ft = 62.18 m)",
+            "page_or_record": "Masonry structural height (Source B)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "Height of central masonry gravity section above deepest foundation level"
+        },
+        {
+            "field": "spillway_crest_length_m",
+            "value": 120.70,
+            "unit": "metres",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "Lower Bhavani Project Technical Specifications",
+            "page_or_record": "9 bays x 10.97 m gate width + piers",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "Length of ogee spillway discharge crest (distinct from the 464.0 m central masonry monolith)"
+        },
+        {
+            "field": "spillway_crest_level_m",
+            "value": 274.32,
+            "unit": "metres MSL",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "TNWRD Lower Bhavani Dam Operations Manual (900.0 ft MSL = 274.32 m MSL)",
+            "page_or_record": "Spillway Sill Datum",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "Elevation of the ogee spillway crest sill in metres MSL"
+        },
+        {
+            "field": "spillway_capacity_cumec",
+            "value": 3455.0,
+            "unit": "m3/s",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "TNWRD Dam Safety & Spillway Rating Records (approx. 122,000 cfs)",
+            "page_or_record": "Spillway Discharge Capacity",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "Total design flood discharge capacity of the 9-bay gated spillway"
+        },
+        {
+            "field": "official_frl_m",
+            "value": 280.42,
+            "unit": "metres MSL",
+            "provider": "Central Water Commission (CWC)",
+            "exact_source": "CWC Daily Flood Forecasting Bulletin & 2024 Reservoir Appraisal",
+            "page_or_record": "Bhavanisagar Reservoir FRL Elevation (280.42 m MSL)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Full Reservoir Level in orthometric height above Mean Sea Level"
+        },
+        {
+            "field": "official_full_depth_ft",
+            "value": 105.0,
+            "unit": "feet",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "TNWRD Daily Reservoir Storage Dashboard",
+            "page_or_record": "Full Depth Gauge Height Field (105.0 ft = 32.004 m)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Operational water column storage depth above zero-gauge sill datum"
+        },
+        {
+            "field": "storage_cwc_2020",
+            "value": "Gross: 929.0 MCM, Live: 780.5 MCM",
+            "unit": "MCM",
+            "provider": "Central Water Commission (CWC)",
+            "exact_source": "CWC Hydrological Data Book 2020 (Cauvery Basin Records)",
+            "page_or_record": "Reservoir Storage Capacity Schedule",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "AUTHORITATIVE_VERIFIED",
+            "engineering_definition": "Authoritative CWC river basin compilation of reservoir storage capacities"
+        },
+        {
+            "field": "storage_state_feasibility",
+            "value": "Gross: 929.0 MCM, Live: 908.0 MCM",
+            "unit": "MCM",
+            "provider": "Tamil Nadu Water Resources Department (TNWRD)",
+            "exact_source": "Tamil Nadu State Project Feasibility & Operational Storage Schedule",
+            "page_or_record": "State Irrigation Feasibility Schedule (32.8 TMC gross, 32.0 TMC live)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "SECONDARY_VERIFIED",
+            "engineering_definition": "State irrigation feasibility and operational quota schedule"
+        },
+        {
+            "field": "breach_model_vw_m3",
+            "value": 780500000.0,
+            "unit": "m3",
+            "provider": "JalRakshak-HD Engineering Model Assumption",
+            "exact_source": "CWC Hydrological Data Book 2020 live storage record (780.5 MCM)",
+            "page_or_record": "Initial sensitivity reference volume",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+            "engineering_definition": "First-estimate active breach volume assumption in absence of dynamic stage-storage routing. NOT observed breachable volume."
+        },
+        {
+            "field": "final_breach_height_hb_m",
+            "value": 40.0,
+            "unit": "metres",
+            "provider": "JalRakshak-HD Engineering Model Assumption",
+            "exact_source": "Hypothetical complete-breach depth assumption",
+            "page_or_record": "Baseline stress test definition",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+            "engineering_definition": "This is a hypothetical complete-breach depth assumption and is not the published maximum dam height (which is 62.0 m / 62.18 m for the deepest masonry foundation)."
+        },
+        {
+            "field": "breach_width_froehlich_2008",
+            "value": 219.28,
+            "unit": "metres",
+            "provider": "Froehlich (2008) ASCE Empirical Model",
+            "exact_source": "Journal of Hydraulic Engineering, ASCE, 134(12), pp. 1708-1721",
+            "page_or_record": "Eq. (1): B_avg = 0.27 * K_0 * (V_w)^0.32 * (h_b)^0.04 (K_0 = 1.0 for prescribed failure)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "MODEL_DERIVED",
+            "engineering_definition": "Predicted average breach width under prescribed piping/internal erosion stress test"
+        },
+        {
+            "field": "breach_formation_time_froehlich_2008",
+            "value": 14095.59,
+            "unit": "seconds",
+            "provider": "Froehlich (2008) ASCE Empirical Model",
+            "exact_source": "Journal of Hydraulic Engineering, ASCE, 134(12), pp. 1708-1721",
+            "page_or_record": "Eq. (11): t_f = 63.2 * sqrt(V_w / (g * h_b^2)) (3.915 hours)",
+            "retrieval_date": "2026-09-25",
+            "verification_level": "MODEL_DERIVED",
+            "engineering_definition": "Predicted time for breach opening to develop to full dimensions"
+        }
+    ]
+}
+
+
+def main():
+    out_path = Path("outputs/validation/m3_source_manifest.json")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(MANIFEST_M3, f, indent=2)
+    print(f"Generated M3 Source Manifest at {out_path}")
+
+
+if __name__ == "__main__":
+    main()

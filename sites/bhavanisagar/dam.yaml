@@ -1,0 +1,13 @@
+dam:
+  crest_elevation_m: 284.42
+  dam_height_m: 40.0
+  height_above_riverbed_m: 40.0
+  crest_length_m: 8780.0
+  crest_width_m: 7.62
+  upstream_slope_ratio: 3.0
+  downstream_slope_ratio: 2.0
+  spillway_type: "Ogee Gated Spillway"
+  spillway_crest_elevation_m: 274.32
+  spillway_capacity_m3s: 3455.0
+  number_of_gates: 9
+  verification: "AUTHORITATIVE_VERIFIED"

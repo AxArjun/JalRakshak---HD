@@ -1,0 +1,203 @@
+# JalRakshak-HD - Verified Dam Engineering Configuration
+# Milestone: M3 — Verified Dam Engineering Inputs and Breach Event Definition (Final Source Reconciliation)
+# Study Site: Bhavanisagar Dam (Lower Bhavani Dam), Bhavani River, Tamil Nadu, India
+
+observed:
+  dam_official_name:
+    value: "Bhavanisagar Dam"
+    unit: "string"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "Central Water Commission (CWC) National Register of Large Dams (NRLD) & Tamil Nadu Water Resources Department (TNWRD)"
+
+  dam_type:
+    value: "Composite Earthen Dam with Central Masonry Spillway"
+    unit: "string"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "CWC NRLD Large Dam Inventory"
+
+  year_completed:
+    value: 1955
+    unit: "year"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "CWC NRLD Large Dam Inventory"
+
+  # Source A: National Register of Large Dams (NRLD 2019, PIC: TN12HH0014)
+  nrld_height_above_lowest_foundation_m:
+    value: 62.0
+    unit: "metres"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "Central Water Commission (CWC) National Register of Large Dams 2019 (PIC: TN12HH0014)"
+    definition: "Height of dam structure above lowest point of foundation in metres"
+
+  nrld_dam_length_m:
+    value: 8797.0
+    unit: "metres"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "Central Water Commission (CWC) National Register of Large Dams 2019 (PIC: TN12HH0014)"
+    definition: "Total length of dam structure in metres reported in NRLD 2019"
+
+  # Source B: Lower Bhavani Engineering Rehabilitation Literature & Project Technical Records
+  technical_project_dam_length_m:
+    value: 8780.0
+    unit: "metres"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "Lower Bhavani Project Technical Description & Rehabilitation Engineering Literature"
+    definition: "Overall composite dam crest length reported in state technical documentation (8.78 km)"
+
+  central_masonry_section_length_m:
+    value: 464.0
+    unit: "metres"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "Lower Bhavani Project Technical Description & WRD Engineering Records"
+    definition: "Total length of the central masonry structural section (housing spillway, river sluices, and power blocks)"
+
+  masonry_section_height_from_lowest_foundation_m:
+    value: 62.18
+    unit: "metres"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "Lower Bhavani Project Technical Description (204 ft = 62.18 m)"
+    definition: "Height of central masonry gravity section above deepest foundation level"
+
+  earthen_embankment_reported_height_m:
+    value: 40.0
+    unit: "metres"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "State Engineering Project Summaries (reported ~40.0 m / 130 ft height above riverbed for embankment flanks)"
+    definition: "Reported representative structural height of earthfill embankment flanks above riverbed (distinct from deepest masonry foundation)"
+
+  # Spillway Specific Quantities
+  spillway_crest_length_m:
+    value: 120.70
+    unit: "metres"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "Lower Bhavani Project Technical Specifications (9 bays x 10.97 m gate width plus intermediate piers)"
+    definition: "Length of ogee spillway discharge crest (distinct from the 464.0 m central masonry structural monolith)"
+
+  spillway_crest_level_m:
+    value: 274.32
+    unit: "metres MSL"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "TNWRD Lower Bhavani Dam Operations Manual (900.0 ft MSL = 274.32 m MSL)"
+    definition: "Elevation of the ogee spillway crest sill in metres MSL"
+
+  spillway_capacity_cumec:
+    value: 3455.0
+    unit: "m3/s"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "TNWRD Dam Safety & Spillway Rating Records (approx. 122,000 cfs)"
+    definition: "Total design flood discharge capacity of the 9-bay gated spillway"
+
+  spillway_gate_count:
+    value: 9
+    unit: "count"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "CWC NRLD & TNWRD Spillway Gate Schedule"
+    definition: "Nine radial crest spillway gates"
+
+  spillway_gate_size_m:
+    value: "10.97 x 6.10"
+    unit: "metres (width x height)"
+    verification_level: "SECONDARY_VERIFIED"
+    source: "TNWRD Lower Bhavani Dam Operations Manual (36 ft x 20 ft = 10.97 m x 6.10 m)"
+    definition: "Dimensions of each radial spillway crest gate"
+
+  # Hydraulic Datums
+  official_frl_m:
+    value: 280.42
+    unit: "metres MSL"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "Central Water Commission (CWC) Flood Forecasting & Reservoir Monitoring Records (https://cwc.gov.in) and CWC 2024 Appraisal Report"
+    definition: "Authoritative Full Reservoir Level in metres above Mean Sea Level"
+
+  official_full_depth_ft:
+    value: 105.0
+    unit: "feet"
+    verification_level: "AUTHORITATIVE_VERIFIED"
+    source: "Tamil Nadu Water Resources Department (TNWRD) Daily Reservoir Dashboard"
+    definition: "Operational water column storage depth above zero-gauge sill datum (equivalent to 32.004 m)"
+
+  # Conflicting Published Storage Sources
+  reservoir_storage_sources:
+    - source_name: "CWC Hydrological Data Book 2020 (Cauvery Basin Records)"
+      gross_storage_mcm: 929.0
+      live_storage_mcm: 780.5
+      definition: "Authoritative CWC river basin compilation of reservoir storage capacities"
+      verification_level: "AUTHORITATIVE_VERIFIED"
+
+    - source_name: "Tamil Nadu State Project Feasibility & Operational Storage Schedule"
+      gross_storage_mcm: 929.0
+      live_storage_mcm: 908.0
+      definition: "State irrigation feasibility and operational quota schedule (32.8 TMC gross, 32.0 TMC live/operational)"
+      verification_level: "SECONDARY_VERIFIED"
+
+derived:
+  arithmetic_embankment_length_approx_m:
+    value: 8316.0
+    unit: "metres"
+    verification_level: "MODEL_DERIVED_APPROXIMATION"
+    derivation_method: "Arithmetic subtraction: Technical Dam Length (8780.0 m) minus Central Masonry Section (464.0 m) = 8316.0 m (or 8797 - 464 = 8333.0 m from NRLD 2019). This is an arithmetic derivation, not a published survey quantity."
+
+assumed:
+  breach_model_vw_m3:
+    value: 780500000.0
+    unit: "m3"
+    verification_level: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+    source: "CWC Hydrological Data Book 2020 live storage record (780.5 MCM)"
+    justification: "First-estimate active breach volume assumption in absence of dynamic stage-storage routing and surveyed invert datum. NOT observed breachable volume."
+
+  final_breach_height_hb_m:
+    value: 40.0
+    unit: "metres"
+    verification_level: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+    source: "Hypothetical complete-breach depth assumption"
+    justification: "This is a hypothetical complete-breach depth assumption and is not the published maximum dam height (which is 62.0 m / 62.18 m for the deepest masonry foundation). Sensitivity-ready parameter."
+
+  initial_water_depth_above_breach_invert_hw_m:
+    value: 32.0
+    unit: "metres"
+    verification_level: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+    source: "Authoritative Full Depth (105 ft = 32.004 m) above operational dead sill datum"
+    justification: "Initial hydraulic water column depth above breach invert at FRL"
+
+unverified:
+  preferred_live_storage_for_breach_model:
+    value: null
+    unit: "MCM"
+    verification_level: "UNVERIFIED"
+    notes: "Kept null pending a documented physical engineering definition establishing whether 780.5 MCM or 908.0 MCM represents the hydraulic breachable volume above the final breach invert."
+
+  left_embankment_length_m:
+    value: null
+    unit: "metres"
+    verification_level: "UNVERIFIED"
+    notes: "Individual left flank length not separately reported in open CWC NRLD"
+
+  right_embankment_length_m:
+    value: null
+    unit: "metres"
+    verification_level: "UNVERIFIED"
+    notes: "Individual right flank length not separately reported in open CWC NRLD"
+
+  volume_above_final_breach_invert:
+    value: null
+    unit: "m3"
+    verification_level: "UNVERIFIED"
+    notes: "Exact volume above breach invert requires complete elevation-storage-area rating curve and surveyed invert datum"
+
+  official_mwl_m:
+    value: null
+    unit: "metres MSL"
+    verification_level: "UNVERIFIED"
+    notes: "Maximum Water Level MSL pending unredacted engineering completion drawings"
+
+  official_crest_elevation_m:
+    value: null
+    unit: "metres MSL"
+    verification_level: "UNVERIFIED"
+    notes: "Structural crest elevation MSL pending unredacted dam safety report"
+
+  elevation_storage_curve:
+    value: null
+    status: "UNAVAILABLE"
+    verification_level: "UNVERIFIED"
+    notes: "Stage-storage curve is UNAVAILABLE in open public domain. Level-pool dynamic routing is blocked until available."

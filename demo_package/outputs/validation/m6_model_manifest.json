@@ -1,0 +1,79 @@
+{
+  "milestone": "M6",
+  "title": "DualSPHysics 2D Near-Field Dam-Break Simulation Model Manifest",
+  "generated_at": "2026-09-25T15:30:00Z",
+  "model_classification": "2D_UNIT_WIDTH_NEAR_FIELD_SPH_SCREENING_MODEL",
+  "solver_environment": {
+    "solver": "DualSPHysics",
+    "version": "DualSPHysics5 v5.4.355 (08-04-2025)",
+    "gencase_version": "GenCase v5.4.354.01 (07-04-2025)",
+    "execution_mode": "CPU_ONLY",
+    "threads": 16,
+    "hardware_safety_limit_particles": 1500000
+  },
+  "study_reach": {
+    "river_name": "Bhavani River Mainstem (Near-Field Gorge Reach)",
+    "breach_origin": {
+      "name": "Bhavanisagar Dam Breach Origin",
+      "easting_m": 730450.10,
+      "northing_m": 1269149.74,
+      "crs": "EPSG:32643",
+      "datum": "WGS 84 / UTM Zone 43N"
+    },
+    "longitudinal_extent_m": 1500.0,
+    "terrain_source": "NASA SRTM 30m Projected DEM (data/terrain/dem_projected.tif)",
+    "bathymetry_status": "SRTM_SURFACE_TOPOGRAPHY_NO_UNDERWATER_BATHYMETRY",
+    "centerline_file": "data/sph/nearfield_centerline.gpkg",
+    "bed_profile_file": "data/sph/nearfield_bed_profile.csv",
+    "local_transform_file": "data/sph/local_coordinate_transform.json"
+  },
+  "hydraulic_forcing_and_parameters": {
+    "forcing_method": "PEAK_STATE_INITIALIZED_RELEASE_SCREENING_CASE",
+    "forcing_mechanism": "RESERVOIR/FLUID_BLOCK_RELEASE",
+    "continuous_inlet": false,
+    "m4_source_q_peak_m3s": 18742.38,
+    "m4_classification": "MODEL_DERIVED",
+    "froehlich_breach_width_m": 219.28,
+    "breach_width_classification": "MODEL_DERIVED",
+    "unit_width_discharge_m2s": 85.47236410069318,
+    "unit_width_classification": "MODEL_DERIVED",
+    "reservoir_frl_m_msl": 280.42,
+    "frl_classification": "AUTHORITATIVE_VERIFIED",
+    "breach_toe_elevation_m_msl": 262.894,
+    "toe_elevation_classification": "DEM_DERIVED",
+    "release_state_depth_m": 17.526,
+    "release_depth_classification": "MODEL_ASSUMPTION_DEM_DERIVED",
+    "release_state_velocity_mps": 4.876884,
+    "release_velocity_classification": "MODEL_DERIVED"
+  },
+  "numerical_discretization": {
+    "dimension": "2D (Unit Width, Y = 0.0 m)",
+    "particle_spacing_dp_m": 1.0,
+    "boundary_particles": 4182,
+    "fluid_particles": 6800,
+    "total_particles": 10982,
+    "smoothing_length_h_m": 1.697056,
+    "kernel": "Wendland (Quintic, Kernel = 2)",
+    "viscosity_formulation": "Artificial (Visco = 0.02, Monaghan 1992)",
+    "density_diffusion": "Fourtakas (DensityDT = 2, Fourtakas et al. 2019)",
+    "step_algorithm": "Verlet (StepAlgorithm = 1, VerletSteps = 40)",
+    "cfl_number": 0.2,
+    "simulation_duration_s": 600.0,
+    "output_timestep_s": 1.0,
+    "output_frames": 601
+  },
+  "numerical_gauges": [
+    {"name": "G_100m", "chainage_m": 100.0, "x_easting": 730545.28, "y_northing": 1269119.06},
+    {"name": "G_250m", "chainage_m": 250.0, "x_easting": 730687.99, "y_northing": 1269073.05},
+    {"name": "G_500m", "chainage_m": 500.0, "x_easting": 730722.90, "y_northing": 1269258.74},
+    {"name": "G_1000m", "chainage_m": 1000.0, "x_easting": 730635.80, "y_northing": 1269726.06},
+    {"name": "G_1500m", "chainage_m": 1500.0, "x_easting": 730628.27, "y_northing": 1270210.45}
+  ],
+  "scientific_limitations": [
+    "2D unit-width longitudinal representation does not capture 3D valley cross-sectional expansion.",
+    "Topography is derived from 30m SRTM; sub-grid bed bathymetry is not surveyed.",
+    "Breach dimensions and peak flow are derived from empirical regressions (Froehlich 1995/2008).",
+    "Near-field screening model covers the first 1.5 km of high-energy efflux; not full 51.7 km river routing.",
+    "CPU-only numerical discretization chosen for stable local execution within 8 GB RAM constraints."
+  ]
+}

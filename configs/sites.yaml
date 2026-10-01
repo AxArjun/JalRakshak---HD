@@ -1,0 +1,24 @@
+# ==============================================================================
+# JalRakshak-HD: Multi-Site Registry Configuration
+# ==============================================================================
+
+active_site: bhavanisagar
+
+sites:
+  bhavanisagar:
+    site_id: bhavanisagar
+    display_name: "Bhavanisagar Dam & Lower Bhavani Basin"
+    config_root: sites/bhavanisagar
+    enabled: true
+    state: "Tamil Nadu"
+    river: "Bhavani"
+    status: "PRODUCTION_VALIDATED"
+
+  hirakud:
+    site_id: hirakud
+    display_name: "Hirakud Dam & Mahanadi River Basin"
+    config_root: sites/hirakud
+    enabled: true
+    state: "Odisha"
+    river: "Mahanadi"
+    status: "PORTABILITY_VALIDATION"

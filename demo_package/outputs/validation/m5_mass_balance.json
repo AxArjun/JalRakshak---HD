@@ -1,0 +1,11 @@
+{
+  "milestone": "M5",
+  "scenario_id": "BHV_BASE",
+  "target_breach_volume_mcm": 780.5,
+  "final_stored_volume_mcm": 161.69075851463825,
+  "downstream_outflow_volume_mcm": 618.850176,
+  "mass_residual_mcm": 0.04093451463825204,
+  "mass_residual_percent": 0.005244652740326975,
+  "volume_conservation_status": "CONSERVED",
+  "classification": "MODEL_MASS_BALANCE_AUDIT"
+}

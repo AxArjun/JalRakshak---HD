@@ -1,0 +1,89 @@
+# JalRakshak-HD: Multi-Scale Hybrid Solver Architecture Configuration (Milestone M7)
+# ==============================================================================
+# Defines the scientific roles, domain handoff architecture, and coupling status
+# between DualSPHysics (near-field) and D-Flow FM (long-reach) hydrodynamic models.
+
+hybrid_architecture:
+  architecture_name: "JalRakshak-HD Hybrid Dam-Break Hydrodynamic Framework"
+  project: "SIH PS 26161"
+  study_site: "Bhavanisagar Dam / Lower Bhavani Dam, Tamil Nadu"
+  crs: "EPSG:32643"
+  
+  # Numerical Coupling State
+  coupling_status: "DESIGN_ONLY"
+  direct_coupling_activated: false
+  direct_discharge_coupling_ready: false
+  overall_coupling_readiness: "NOT_READY"
+  blocker_reason: "UNIT_WIDTH_TO_FULL_WIDTH_SCALING_UNRESOLVED"
+  coupling_readiness_blockers:
+    - "unit-width/full-width scaling unresolved"
+    - "forcing histories differ"
+    - "time origins differ"
+    - "SPH resolution sensitivity is NOT_STABILIZED"
+  
+  # Solver Role Definitions
+  solvers:
+    near_field:
+      solver_name: "DualSPHysics v5.4"
+      formulation: "2D_UNIT_WIDTH_NEAR_FIELD_SPH_SCREENING_MODEL"
+      governing_equations: "Weakly Compressible Navier-Stokes (SPH)"
+      domain_extent_m: [0.0, 1500.0]
+      resolution_nominal: "dp = 1.0 m particle spacing"
+      resolution_status: "PARTICLE_RESOLUTION_SENSITIVITY NOT_STABILIZED"
+      sph_role: "near-field high-gradient diagnostics"
+      primary_deliverables:
+        - "Dam toe plunge jet impact velocities"
+        - "Non-hydrostatic free-surface plunge profiles"
+        - "Wave impact pressures on immediate downstream infrastructure"
+        - "Initial wave front propagation dynamics"
+        - "High-energy near-field velocities relevant to potential erosion/scour assessment"
+      scientific_limitations:
+        - "Unit-width 2D assumption restricts lateral floodplain spreading"
+        - "Finite initialized peak block cannot sustain multi-hour hydrograph"
+        - "Particle resolution sensitivity not stabilized across dp=1.0m to 4.0m"
+        - "Does not simulate sediment transport or morphological scour"
+        
+    long_reach:
+      solver_name: "D-Flow FM (Delft3D Flexible Mesh)"
+      formulation: "2D_DFLOWFM_SCREENING_INUNDATION_MODEL"
+      governing_equations: "2D Shallow Water Equations (SWE, depth-averaged)"
+      domain_extent_km: 51.73
+      domain_area_km2: 818.37
+      resolution_nominal: "~100 m nominal cell size (82,309 faces)"
+      dflow_role: "long-reach floodplain inundation routing"
+      primary_deliverables:
+        - "Catchment-scale flood arrival times"
+        - "Regional peak inundation extent and depth mapping"
+        - "Downstream village and infrastructure hazard exposure"
+        - "Mass-conservative 30-hour hydrograph attenuation"
+      scientific_limitations:
+        - "Depth-averaged SWE neglects vertical jet accelerations"
+        - "100 m cell scale averages sub-grid breach channel bathymetry"
+        - "Hydrostatic pressure assumption invalid in plunging toe jet zone"
+
+  # Spatial Coupling Boundary Interface (Design Specification)
+  handoff_interface_design:
+    recommended_future_handoff_candidate: 500.0
+    station_id: "G_500m"
+    easting: 730759.756
+    northing: 1269272.562
+    candidate_status: "DESIGN_CANDIDATE_ONLY"
+    selection_rationale: >
+      Safely downstream of the violent 3D plunging toe jet (100–250 m) where non-hydrostatic
+      vertical accelerations have dissipated into a coherent longitudinal sheet, yet well
+      upstream of the downstream front deceleration reach (1000–1280 m). SPH front reached
+      1280.41 m by 600 s and the 1500 m station was NOT_REACHED_WITHIN_600_S (it was slowing
+      substantially but was still advancing). Preferred design candidate only; direct numerical
+      coupling is not presently possible.
+    rejected_chainages:
+      - chainage_m: 250.0
+        reason: "Violent toe plunge impact zone; severe non-hydrostatic vertical velocities (Fr=3.02)."
+      - chainage_m: 1000.0
+        reason: "Flow front approaches downstream deceleration reach (1280 m at 600 s); sparse particle support."
+
+  # Scientific Coupling Requirements for Future Activation
+  future_coupling_prerequisites:
+    - "3D SPH near-field simulation or defensible lateral expansion model to provide physical flow width"
+    - "Continuous inflow boundary forcing in SPH matching time-varying breach hydrograph"
+    - "Synchronized temporal origin between near-field and far-field solvers"
+    - "Dynamic flux-interpolating boundary interface transferring mass and momentum without artificial reflection"

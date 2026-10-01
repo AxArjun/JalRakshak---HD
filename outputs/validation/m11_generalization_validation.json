@@ -1,0 +1,52 @@
+{
+  "milestone": "M11",
+  "total_checks": 11,
+  "passed_checks": 11,
+  "pass_rate_pct": 100.0,
+  "checks": [
+    {
+      "description": "Site registry contains >= 2 sites (bhavanisagar, hirakud)",
+      "passed": true
+    },
+    {
+      "description": "Bhavanisagar configuration schema valid",
+      "passed": true
+    },
+    {
+      "description": "Hirakud second-site configuration schema valid",
+      "passed": true
+    },
+    {
+      "description": "Automatic CRS derived correctly (Bhavani: UTM 43N, Hirakud: UTM 44N)",
+      "passed": true
+    },
+    {
+      "description": "Hirakud real DEM raster generated (SRTM 30m)",
+      "passed": true
+    },
+    {
+      "description": "Hirakud river and dam point GeoJSON assets exist",
+      "passed": true
+    },
+    {
+      "description": "Hirakud authoritative sources and engineering matrix exist",
+      "passed": true
+    },
+    {
+      "description": "Bhavanisagar breach regression preserved (219.28m, 14095.59s, 18742.38m3/s)",
+      "passed": true
+    },
+    {
+      "description": "Workflow gates correctly distinguish verified from unrun stages",
+      "passed": true
+    },
+    {
+      "description": "ImpoundmentType extensible enum covers natural blockages",
+      "passed": true
+    },
+    {
+      "description": "Second-site dashboard screenshot generated",
+      "passed": true
+    }
+  ]
+}

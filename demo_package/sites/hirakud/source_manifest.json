@@ -1,0 +1,90 @@
+[
+  {
+    "parameter": "dam_model_coordinate",
+    "value": [83.8742, 21.5286],
+    "unit": "degrees_WGS84",
+    "dataset_name": "OpenStreetMap Dam Line & CWC NRLD",
+    "provider": "OpenStreetMap / Central Water Commission",
+    "retrieval_date": "2026-09-26",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "CWC NRLD 2023 (PIC: OD08MH0001) & OSM Feature way/242851214 (Hirakud Dam)",
+    "limitations": "Model point positioned at main concrete spillway discharge axis"
+  },
+  {
+    "parameter": "site_reference_coordinate",
+    "value": [83.8694, 21.5700],
+    "unit": "degrees_WGS84",
+    "dataset_name": "CWC NRLD Catalog",
+    "provider": "Central Water Commission",
+    "retrieval_date": "2026-09-26",
+    "verification": "SECONDARY_VERIFIED",
+    "citation": "CWC National Register of Large Dams Entry for Hirakud",
+    "limitations": "Administrative centroid of dam project area (4,625 m from spillway axis)"
+  },
+  {
+    "parameter": "gross_storage_original_1957",
+    "value": 8136.0,
+    "unit": "MCM",
+    "dataset_name": "CWC NRLD 2023 & Project Profile",
+    "provider": "Central Water Commission",
+    "retrieval_date": "2026-09-26",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "CWC NRLD 2023",
+    "limitations": "Original 1957 pre-sedimentation design gross capacity"
+  },
+  {
+    "parameter": "live_storage_original_1957",
+    "value": 5818.0,
+    "unit": "MCM",
+    "dataset_name": "Odisha DoWR Technical Compendium",
+    "provider": "Department of Water Resources, Odisha",
+    "retrieval_date": "2026-09-26",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "Hirakud Dam Project Specifications",
+    "limitations": "Original design live storage at FRL (630 ft). Used as conservative screening breach volume assumption (MODEL_ASSUMPTION_FIRST_ESTIMATE_FROM_ORIGINAL_DESIGN_STORAGE)."
+  },
+  {
+    "parameter": "live_storage_ohpc_sedimentation_revised",
+    "value": 4823.0,
+    "unit": "MCM",
+    "dataset_name": "OHPC Hydrographic Survey",
+    "provider": "Odisha Hydro Power Corporation",
+    "retrieval_date": "2026-09-26",
+    "verification": "SECONDARY_VERIFIED",
+    "citation": "OHPC Reservoir Siltation Report (2018)",
+    "limitations": "Reduced live capacity due to cumulative siltation over 60 years"
+  },
+  {
+    "parameter": "crest_elevation_m",
+    "value": 195.68,
+    "unit": "metres_MSL",
+    "dataset_name": "Odisha DoWR Technical Compendium",
+    "provider": "Department of Water Resources, Odisha",
+    "retrieval_date": "2026-09-26",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "Odisha DoWR Hirakud Dam Project Profile (642.0 ft MSL)",
+    "limitations": "Top of roadway / parapet"
+  },
+  {
+    "parameter": "full_reservoir_level_m",
+    "value": 192.024,
+    "unit": "metres_MSL",
+    "dataset_name": "CWC Daily Reservoir Bulletins",
+    "provider": "Central Water Commission",
+    "retrieval_date": "2026-09-26",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "CWC Mahanadi Basin Flood Management Bulletins (630.0 ft MSL)",
+    "limitations": "Monsoon rule curve operating level"
+  },
+  {
+    "parameter": "terrain_dem",
+    "value": "USGS/SRTMGL1_003",
+    "unit": "30m_elevation_metres",
+    "dataset_name": "NASA SRTM Global 1 Arc-Second GL1",
+    "provider": "NASA / USGS",
+    "retrieval_date": "2026-09-26",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "NASA JPL Shuttle Radar Topography Mission",
+    "limitations": "30 m spatial resolution covering Sambalpur / Mahanadi corridor"
+  }
+]

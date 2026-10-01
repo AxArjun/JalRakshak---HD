@@ -1,0 +1,89 @@
+{
+  "timestamp_utc": "2026-09-25T13:45:00Z",
+  "description": "Multi-model empirical sensitivity spread across independent published formulations",
+  "models_evaluated": [
+    {
+      "model_name": "Froehlich (2008)",
+      "authors": "David C. Froehlich",
+      "publication_year": 2008,
+      "breach_width_m": 219.28,
+      "width_status": "VALID_WITH_EXTRAPOLATION",
+      "formation_time_s": 14095.59,
+      "formation_time_hr": 3.915,
+      "eroded_volume_m3": null,
+      "side_slope_z": 1.0,
+      "peak_discharge_m3s": 24716.8,
+      "required_inputs": {
+        "active_water_volume_m3": 780500000.0,
+        "breach_height_hb_m": 40.0,
+        "failure_mode": "PRESCRIBED_BREACH",
+        "K_0": 1.0
+      },
+      "formula_traceability": "Froehlich (2008) ASCE J. Hydraul. Eng. 134(12): Eq. 1 & 2",
+      "calibration_range_status": "EXTRAPOLATED_ABOVE_MAX_CALIBRATION_VOLUME (V_w > 660 MCM)",
+      "extrapolation_warning": "Active reservoir volume (780.5 MCM) exceeds Froehlich 2008 dataset max of 660 MCM.",
+      "validity_assessment": "Standard parametric model for embankment dam breach geometry."
+    },
+    {
+      "model_name": "MacDonald & Langridge-Monopolis (1984)",
+      "authors": "Thomas C. MacDonald and Jennifer Langridge-Monopolis",
+      "publication_year": 1984,
+      "breach_width_m": null,
+      "width_status": "INSUFFICIENT_CROSS_SECTION_GEOMETRY",
+      "formation_time_s": 13907.39,
+      "formation_time_hr": 3.863,
+      "eroded_volume_m3": 2584256.4,
+      "side_slope_z": 0.5,
+      "peak_discharge_m3s": null,
+      "required_inputs": {
+        "outflow_volume_m3": 780500000.0,
+        "water_depth_hw_m": 32.0,
+        "material_type": "EARTHFILL"
+      },
+      "formula_traceability": "MacDonald & Langridge-Monopolis (1984) ASCE J. Hydraul. Eng. 110(5): Eq. 1 & 3",
+      "calibration_range_status": "MODEL_PROVIDES_ERODED_VOLUME_AND_TIME_ONLY",
+      "extrapolation_warning": "Width calculation skipped: requires unverified embankment cross-section geometry (crest width and slopes).",
+      "validity_assessment": "Valid for eroded volume and formation time; width requires cross-sectional embankment geometry."
+    },
+    {
+      "model_name": "Von Thun & Gillette (1990)",
+      "authors": "J. Lawrence Von Thun and David R. Gillette",
+      "publication_year": 1990,
+      "breach_width_m": 134.9,
+      "width_status": "VALID",
+      "formation_time_s": 3794.06,
+      "formation_time_hr": 1.054,
+      "eroded_volume_m3": null,
+      "side_slope_z": 0.5,
+      "peak_discharge_m3s": null,
+      "required_inputs": {
+        "water_depth_hw_m": 32.0,
+        "reservoir_volume_m3": 780500000.0,
+        "C_b_m": 54.9,
+        "erodibility": "HIGHLY_ERODIBLE"
+      },
+      "formula_traceability": "Von Thun & Gillette (1990) USBR Guidance: Table 1 & Eq. 1",
+      "calibration_range_status": "WITHIN_USBR_LARGE_DAM_ENVELOPE (C_b = 54.9 m for V_w > 12.3 MCM)",
+      "extrapolation_warning": null,
+      "validity_assessment": "Standard USBR agency guidance for embankment dam breach estimates."
+    }
+  ],
+  "model_spread_envelopes": [
+    {
+      "parameter": "average_breach_width_m",
+      "unit": "metres",
+      "lower_estimate": 134.9,
+      "reference_estimate": 219.28,
+      "upper_estimate": 219.28,
+      "derivation_method": "MODEL_SPREAD_SCENARIOS: Lower: Von Thun & Gillette (1990) [134.90 m]; Reference: Froehlich (2008) [220.76 m]; MacDonald width omitted due to missing cross-section geometry."
+    },
+    {
+      "parameter": "formation_time_seconds",
+      "unit": "seconds",
+      "lower_estimate": 3794.06,
+      "reference_estimate": 14095.59,
+      "upper_estimate": 14095.59,
+      "derivation_method": "MODEL_SPREAD_SCENARIOS: Lower: Von Thun & Gillette (1990) [3,794.1 s / 1.05 hr]; Reference: Froehlich (2008) [14,085.7 s / 3.91 hr]; Upper: MacDonald & Langridge-Monopolis (1984) [14,354.2 s / 3.99 hr]."
+    }
+  ]
+}

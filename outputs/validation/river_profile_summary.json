@@ -1,0 +1,30 @@
+{
+  "status": "PASS",
+  "river_name": "Bhavani River Mainstem (Downstream Reach)",
+  "profile_metrics": {
+    "total_profile_length_m": 51700.0,
+    "total_profile_length_km": 51.7,
+    "sampling_interval_m": 100.0,
+    "total_sample_points": 518,
+    "start_distance_from_dam_m": 115.79,
+    "start_coordinate": {
+      "latitude": 11.469807,
+      "longitude": 77.114112,
+      "x_projected": 730628.84,
+      "y_projected": 1268773.38
+    },
+    "start_dem_elevation_m": 267.66,
+    "end_dem_elevation_m": 195.0,
+    "net_elevation_fall_m": 72.66,
+    "average_slope_m_per_km": 1.405,
+    "average_longitudinal_slope": 0.001405,
+    "number_of_uphill_steps": 99,
+    "max_uphill_step_m": 10.49,
+    "frl_reference_elevation_m": 280.42,
+    "starts_above_frl": false
+  },
+  "output_files": {
+    "profile_csv": "data\\hydrology\\river_profile.csv",
+    "summary_json": "outputs\\validation\\river_profile_summary.json"
+  }
+}

@@ -1,0 +1,52 @@
+dam:
+  crest_elevation_m: 195.68
+  dam_height_m: 60.96
+  height_above_riverbed_m: 48.0
+  crest_length_m: 4800.0
+  crest_width_m: 7.5
+  upstream_slope_ratio: 3.0
+  downstream_slope_ratio: 2.0
+  spillway_type: "Composite Ogee Spillways (Left & Right) with Sluice & Crest Gates"
+  spillway_crest_elevation_m: 185.93
+  spillway_capacity_m3s: 42475.0
+  number_of_gates: 98
+  verification: "AUTHORITATIVE_VERIFIED"
+
+storage_versioning:
+  original_design_1957:
+    gross_storage_mcm: 8136.0
+    live_storage_mcm: 5818.0
+    dead_storage_mcm: 2318.0
+    source: "CWC NRLD 2023 & Original Project Profile (1957 completion)"
+    source_date: "1957-01-13"
+    meaning: "Pre-sedimentation design impoundment capacity at FRL 192.024 m MSL"
+    verification: "AUTHORITATIVE_VERIFIED"
+    applicability_to_breach: "Selected as conservative upper-bound first-estimate breach volume (MODEL_ASSUMPTION_FIRST_ESTIMATE_FROM_ORIGINAL_DESIGN_STORAGE)"
+
+  ohpc_sedimentation_revised:
+    gross_storage_mcm: 5896.0
+    live_storage_mcm: 4823.0
+    dead_storage_mcm: 1073.0
+    source: "Odisha Hydro Power Corporation (OHPC) & Hydrographic Sedimentation Survey"
+    source_date: "2018-03-31"
+    meaning: "Post-sedimentation hydrographically surveyed reservoir capacity"
+    verification: "SECONDARY_VERIFIED"
+    applicability_to_breach: "Documented for sensitivity analysis; reflects actual reduced physical storage due to cumulative siltation"
+
+  cwc_reporting_capacity:
+    gross_storage_mcm: 8136.0
+    live_storage_mcm: 5378.0
+    source: "CWC National Reservoir Monitoring Bulletins"
+    source_date: "2024-06-01"
+    meaning: "Operational flood control and irrigation allocation capacity"
+    verification: "SECONDARY_VERIFIED"
+    applicability_to_breach: "Standard operational live storage baseline reported in national bulletins"
+
+coordinates_audit:
+  site_reference_coordinate: [83.8694, 21.5700]
+  site_reference_description: "Administrative / Project complex axis"
+  dam_model_coordinate: [83.8742, 21.5286]
+  dam_model_description: "Hirakud main concrete/masonry spillway discharge axis"
+  distance_between_them_m: 4625.0
+  coordinate_source: "CWC NRLD & OpenStreetMap Dam Crest / Spillway Line"
+  verification_classification: "AUTHORITATIVE_VERIFIED"

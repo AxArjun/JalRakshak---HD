@@ -1,0 +1,8 @@
+{
+"type": "FeatureCollection",
+"name": "sph_reach",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "name": "SPH 1.5 km Near-Field Domain Centerline" }, "geometry": { "type": "LineString", "coordinates": [ [ 77.11337, 11.472936 ], [ 77.114675, 11.472511 ], [ 77.115346, 11.474309 ], [ 77.113941, 11.478445 ], [ 77.114204, 11.482794 ] ] } }
+]
+}

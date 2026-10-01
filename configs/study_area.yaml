@@ -1,0 +1,84 @@
+# JalRakshak-HD - Study Area Configuration
+# Milestone: M1 — Real Study Area, AOI and Terrain Acquisition (Hydraulic Datum Corrected)
+
+study_area:
+  id: "SA-TN-ERODE-BHAVANISAGAR-01"
+  name: "Bhavanisagar Dam & Lower Bhavani River Corridor"
+  state: "Tamil Nadu"
+  district: "Erode"
+  taluk: "Sathyamangalam"
+  revenue_division: "Gobichettipalayam"
+  firka: "Bhavanisagar"
+  development_block: "Bhavanisagar Block (Panchayat Union)"
+  town_panchayat: "Bhavanisagar Town Panchayat"
+  assembly_constituency: "Bhavanisagar (SC) - AC No. 107"
+  country: "India"
+  administrative_source: "Government of Tamil Nadu, Erode District Official Administration Portal (https://erode.nic.in/revenue-administration/ and https://erode.nic.in/taluks/)"
+  administrative_verification_status: "AUTHORITATIVE_VERIFIED"
+
+dam:
+  name: "Bhavanisagar Dam"
+  alternate_names:
+    - "Lower Bhavani Dam"
+    - "Bhavani Sagar Reservoir Project"
+  latitude: 11.47083
+  longitude: 77.11389
+  coordinate_reference_feature: "Dam administrative complex & spillway approach axis"
+  coordinate_source: "Central Water Commission (CWC) NRLD State Catalog & Tamil Nadu WRD Bhavanisagar Project Records"
+  coordinate_verification_level: "SECONDARY_VERIFIED"
+  dam_type: "Earthen Dam with Central Masonry Spillway (Composite)"
+  dam_type_verification_level: "AUTHORITATIVE_VERIFIED"
+  year_completed: 1955
+  crest_length_m: 8780.0
+  max_height_m: 40.0
+  gross_storage_tmc: 32.8
+  hydraulic_levels_msl:
+    official_frl_m: 280.42
+    official_frl_verification_level: "AUTHORITATIVE_VERIFIED"
+    official_frl_source: "Central Water Commission (CWC) Flood Forecasting & Reservoir Monitoring Records (https://cwc.gov.in)"
+    reservoir_full_depth_ft: 105.0
+    reservoir_full_depth_meaning: "Local gauge water column depth above sill/zero-gauge datum. Operational storage depth only, not an elevation in metres MSL."
+    official_mwl_m: null
+    official_mwl_verification_level: "UNVERIFIED"
+    official_crest_level_m: null
+    official_crest_level_verification_level: "UNVERIFIED"
+  structural_source: "Central Water Commission (CWC) National Register of Large Dams (NRLD) & Tamil Nadu Water Resources Department (TNWRD)"
+
+river:
+  name: "Bhavani River"
+  basin: "Cauvery Basin"
+  sub_basin: "Lower Cauvery"
+  tributary_of: "Cauvery River"
+  verification_status: "AUTHORITATIVE_VERIFIED"
+  source: "Central Water Commission (CWC) & India-WRIS (https://indiawris.gov.in)"
+
+reservoir:
+  name: "Bhavanisagar Reservoir"
+  official_frl_m: 280.42
+  reservoir_full_depth_ft: 105.0
+  gross_capacity_mcm: 928.8
+  verification_status: "AUTHORITATIVE_VERIFIED"
+  source: "Central Water Commission (CWC) & Tamil Nadu Water Resources Department (TNWRD)"
+
+aoi:
+  method: "Physically conditioned downstream reach and reservoir corridor"
+  upstream_buffer_km: 15.0
+  downstream_distance_km: 35.0
+  lateral_buffer_km: 12.0
+  bbox_wgs84:
+    min_lon: 76.9500
+    min_lat: 11.3600
+    max_lon: 77.4200
+    max_lat: 11.5800
+  projected_crs: "EPSG:32643"
+  projected_crs_name: "WGS 84 / UTM zone 43N"
+
+terrain:
+  source: "NASA / USGS via Google Earth Engine"
+  dataset_id: "USGS/SRTMGL1_003"
+  native_resolution_m: 30.0
+  output_resolution_m: 30.0
+  vertical_units: "metres"
+  vertical_datum: "EGM96 Geoid (approx. Mean Sea Level)"
+  acquisition_date: "2000-02-11 (SRTM Mission)"
+  verification_level: "AUTHORITATIVE_VERIFIED"

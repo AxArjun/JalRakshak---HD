@@ -1,0 +1,44 @@
+{
+  "milestone": "M6",
+  "title": "DualSPHysics Solver Environment Specification",
+  "generated_at": "2026-09-25T15:08:00Z",
+  "solver": "DualSPHysics",
+  "version": "DualSPHysics5 v5.4.355 (08-04-2025)",
+  "gencase_version": "GenCase v5.4.354.01 (07-04-2025)",
+  "executables": {
+    "gencase": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\GenCase_win64.exe",
+    "solver_cpu": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\DualSPHysics5.4CPU_win64.exe",
+    "partvtk": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\PartVTK_win64.exe",
+    "measuretool": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\MeasureTool_win64.exe",
+    "flowtool": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\FlowTool_win64.exe",
+    "boundaryvtk": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\BoundaryVTK_win64.exe",
+    "computeforces": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\ComputeForces_win64.exe",
+    "isosurface": "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\IsoSurface_win64.exe"
+  },
+  "execution_mode": "CPU_ONLY",
+  "hardware": {
+    "logical_processors": 16,
+    "system_ram_gb": 8,
+    "particle_safety_limit": 1500000
+  },
+  "example_paths": {
+    "dambreak_2d": "C:\\DualSPHysics\\DualSPHysics_v5.4\\examples\\main\\01_DamBreak",
+    "inletoutlet": "C:\\DualSPHysics\\DualSPHysics_v5.4\\examples\\inletoutlet",
+    "mdbc": "C:\\DualSPHysics\\DualSPHysics_v5.4\\examples\\mdbc"
+  },
+  "supported_inlet_outlet_capability": {
+    "inlet_types": [
+      "constant_velocity",
+      "linear_profile",
+      "parabolic_profile",
+      "time_dependent"
+    ],
+    "outlet_types": [
+      "free_outflow",
+      "fixed_elevation",
+      "velocity_controlled"
+    ],
+    "mdbc_support": true,
+    "status": "VERIFIED_LOCAL_INSTALLATION"
+  }
+}

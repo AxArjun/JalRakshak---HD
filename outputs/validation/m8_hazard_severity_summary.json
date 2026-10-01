@@ -1,0 +1,58 @@
+{
+  "milestone": "M8",
+  "standard": "CWC_AIDR_GUIDELINE_7_3_SMITH_2014",
+  "classification_method": "TIME_SYNCHRONOUS_STEPWISE_EVALUATION",
+  "total_domain_faces": 82309,
+  "total_inundated_faces": 10129,
+  "total_inundated_area_km2": 101.29,
+  "severe_hazard_h3_h6_area_km2": 97.99,
+  "severe_hazard_h3_h6_pct": 96.74,
+  "extreme_hazard_h5_h6_area_km2": 87.29,
+  "hazard_breakdown": {
+    "H1": {
+      "hazard_code": 1,
+      "description": "Generally safe for vehicles, people, and buildings",
+      "face_count": 187,
+      "area_km2": 1.87,
+      "area_percentage_inundated": 1.85
+    },
+    "H2": {
+      "hazard_code": 2,
+      "description": "Unsafe for small vehicles",
+      "face_count": 143,
+      "area_km2": 1.43,
+      "area_percentage_inundated": 1.41
+    },
+    "H3": {
+      "hazard_code": 3,
+      "description": "Unsafe for vehicles, children, and the elderly",
+      "face_count": 501,
+      "area_km2": 5.01,
+      "area_percentage_inundated": 4.95
+    },
+    "H4": {
+      "hazard_code": 4,
+      "description": "Unsafe for vehicles and people",
+      "face_count": 569,
+      "area_km2": 5.69,
+      "area_percentage_inundated": 5.62
+    },
+    "H5": {
+      "hazard_code": 5,
+      "description": "Unsafe for vehicles and people; all buildings vulnerable to structural damage",
+      "face_count": 1755,
+      "area_km2": 17.55,
+      "area_percentage_inundated": 17.33
+    },
+    "H6": {
+      "hazard_code": 6,
+      "description": "Unsafe for vehicles and people; all building types considered vulnerable to failure",
+      "face_count": 6974,
+      "area_km2": 69.74,
+      "area_percentage_inundated": 68.85
+    }
+  },
+  "max_observed_dv_product_m2ps": 98.92462921142578,
+  "max_observed_depth_m": 21.91775894165039,
+  "max_observed_velocity_mps": 11.72193717956543
+}

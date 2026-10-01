@@ -1,0 +1,85 @@
+{
+  "status": "PASS",
+  "dam_name": "Bhavanisagar Dam",
+  "stream_threshold_cells": 1000,
+  "max_tolerance_m": 500.0,
+  "original_coordinate": {
+    "latitude": 11.47083,
+    "longitude": 77.11389,
+    "x_projected": 730603.73,
+    "y_projected": 1268886.41,
+    "crs": "EPSG:32643"
+  },
+  "snapped_hydrologic_pour_point": {
+    "latitude": 11.470195,
+    "longitude": 77.113911,
+    "x_projected": 730606.52,
+    "y_projected": 1268816.13,
+    "raster_row": 414,
+    "raster_col": 599,
+    "crs": "EPSG:32643"
+  },
+  "snap_metrics": {
+    "snap_distance_m": 70.34,
+    "max_search_tolerance_m": 500.0,
+    "is_within_tolerance": true,
+    "flow_accumulation_cells": 401407,
+    "flow_accumulation_km2": 361.266,
+    "valid_against_threshold": true
+  },
+  "candidate_cells_evaluated": 871,
+  "qualifying_candidates_count": 50,
+  "top_candidates": [
+    {
+      "row": 396,
+      "col": 602,
+      "x_proj": 730696.52,
+      "y_proj": 1269356.13,
+      "distance_m": 478.79,
+      "accumulation_cells": 403374,
+      "accumulation_km2": 363.037,
+      "qualifies_stream_threshold": true
+    },
+    {
+      "row": 397,
+      "col": 603,
+      "x_proj": 730726.52,
+      "y_proj": 1269326.13,
+      "distance_m": 456.54,
+      "accumulation_cells": 403369,
+      "accumulation_km2": 363.032,
+      "qualifies_stream_threshold": true
+    },
+    {
+      "row": 398,
+      "col": 604,
+      "x_proj": 730756.52,
+      "y_proj": 1269296.13,
+      "distance_m": 437.28,
+      "accumulation_cells": 403366,
+      "accumulation_km2": 363.029,
+      "qualifies_stream_threshold": true
+    },
+    {
+      "row": 399,
+      "col": 604,
+      "x_proj": 730756.52,
+      "y_proj": 1269266.13,
+      "distance_m": 409.3,
+      "accumulation_cells": 403363,
+      "accumulation_km2": 363.027,
+      "qualifies_stream_threshold": true
+    },
+    {
+      "row": 400,
+      "col": 603,
+      "x_proj": 730726.52,
+      "y_proj": 1269236.13,
+      "distance_m": 370.65,
+      "accumulation_cells": 403327,
+      "accumulation_km2": 362.994,
+      "qualifies_stream_threshold": true
+    }
+  ],
+  "reason_for_snap": "Snaps the dam reference coordinate to the nearest verified thalweg cell satisfying accumulation >= stream threshold, ensuring exact topological continuity for watershed delineation and hydrodynamic outflow routing."
+}

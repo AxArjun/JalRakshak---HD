@@ -1,0 +1,128 @@
+{
+  "n_pass": 20,
+  "n_warn": 0,
+  "n_fail": 0,
+  "checks": [
+    {
+      "status": "[PASS]",
+      "check": "exclusive_zone_file_exists",
+      "message": "6 exclusive sectors loaded from response_zones_exclusive.gpkg",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "face_level_no_overlap",
+      "message": "All 10129 faces present in hazard_severity.gpkg",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "face_level_no_overlap",
+      "message": "Face-level assignment is bijective: 10129 faces assigned to 6 sectors (no double-count)",
+      "detail": "Per-zone: {'Z1': 1125, 'Z2': 2074, 'Z3': 1918, 'Z4': 2143, 'Z5': 1629, 'Z6': 1240}"
+    },
+    {
+      "status": "[PASS]",
+      "check": "zone_total_worldpop",
+      "message": "Zone sum=42428.1, Unique=42428.1, Delta=0.00% (tol=0.1%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "zone_total_ghsl",
+      "message": "Zone sum=84500.6, Unique=84500.5, Delta=0.00% (tol=0.1%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "zone_total_buildings",
+      "message": "Zone sum=25652.0, Unique=25652.0, Delta=0.00% (tol=1.0%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "zone_total_roads_(km)",
+      "message": "Zone sum=243.8, Unique=243.8, Delta=0.00% (tol=1.0%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "worldpop_ghsl_not_averaged",
+      "message": "No averaged WorldPop/GHSL language found in manifests or report",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "cwc_h6_wording",
+      "message": "CWC H6 wording correct \u2014 no implied observed failure language",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "cwc_h6_correct_wording_present",
+      "message": "CWC 'vulnerable to failure' wording present in m8_hadr_summary.md",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "deterministic_ranking",
+      "message": "All 6 zones ranked deterministically (MaxHazard DESC > EarliestArrival ASC > WorldPop DESC)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "unique_totals_unchanged",
+      "message": "WorldPop total unchanged: 42428.1",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "unique_totals_unchanged",
+      "message": "GHSL total unchanged: 84500.5",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "overlap_audit_json",
+      "message": "Overlap audit JSON present: original zones overlap=108.89 km2 (51.8%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "population_allocation_audit",
+      "message": "Population allocation audit PASS: WorldPop delta=0.000000%, GHSL delta=0.000118% (tol<=0.1%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "hazard_severity_breakdown",
+      "message": "Hazard severity breakdown covers all 6 classes, total area = 101.29 km2",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "population_interpretation_text",
+      "message": "population_interpretation contains all required phrases (PRIMARY, CROSS_CHECK, modelled gridded, sensitivity range)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "all_six_zones_present",
+      "message": "All 6 zones present in hadr_priority_zones.csv",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "arrival_times_plausible",
+      "message": "ZONE_01 (dam toe) earliest arrival = 0.000h (physically correct \u2014 immediately inundated at t=0)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "arrival_times_plausible",
+      "message": "Arrival times range: 0.000h to 9.500h across 6 zones",
+      "detail": ""
+    }
+  ],
+  "m8_validation_status": "READY"
+}

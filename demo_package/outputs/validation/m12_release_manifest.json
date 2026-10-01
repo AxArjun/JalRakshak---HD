@@ -1,0 +1,55 @@
+{
+  "project_name": "JalRakshak-HD",
+  "project_version": "v1.0-SIH",
+  "release_date": "2026-09-26",
+  "classification": "RESEARCH_SCREENING_DECISION_SUPPORT_PROTOTYPE",
+  "runtime_environment": {
+    "python_version": "3.12.3",
+    "node_version": "v22.x",
+    "frontend_framework": "React 18 + Vite 8.3 + Leaflet 1.9",
+    "backend_framework": "FastAPI 1.0 + Uvicorn + Pydantic v2",
+    "gis_engine": "GDAL / Rasterio / GeoPandas / PyProj",
+    "dflow_solver_version": "Delft3D Flexible Mesh (D-Flow FM) 2D Engine",
+    "dualsphysics_version": "DualSPHysics v5.2 SPH Binaries",
+    "earth_observation": "Google Earth Engine API / Sentinel-1 GRD IW C-Band SAR"
+  },
+  "registered_sites": [
+    {
+      "site_id": "bhavanisagar",
+      "display_name": "Bhavanisagar Dam & Lower Bhavani Basin",
+      "state": "Tamil Nadu",
+      "river": "Bhavani River",
+      "status": "M1_M10_PRODUCTION_VALIDATED",
+      "crs": "EPSG:32643 (UTM 43N)"
+    },
+    {
+      "site_id": "hirakud",
+      "display_name": "Hirakud Dam & Mahanadi River Basin",
+      "state": "Odisha",
+      "river": "Mahanadi River",
+      "status": "M11_PORTABILITY_CONFIG_ONBOARDED",
+      "crs": "EPSG:32644 (UTM 44N)"
+    }
+  ],
+  "validated_milestones": [
+    "M0_WORKSPACE_SETUP",
+    "M1_TERRAIN_DEM_HYDROLOGY",
+    "M2_HYDROLOGICAL_ALIGNMENT",
+    "M3_BREACH_PARAMETER_ESTIMATION",
+    "M4_HYDROGRAPH_GENERATION",
+    "M5_DFLOW_2D_HYDRODYNAMIC_SIMULATION",
+    "M6_DUALSPHYSICS_NEARFIELD_SIMULATION",
+    "M7_CROSS_SOLVER_COMPARATIVE_ANALYSIS",
+    "M8_HADR_CONSEQUENCE_EXPOSURE",
+    "M9_EARTH_OBSERVATION_SENTINEL1",
+    "M10_INTEGRATED_DASHBOARD_SYNC",
+    "M11_MULTI_SITE_PORTABILITY",
+    "M12_FINAL_VALIDATION_FREEZE"
+  ],
+  "governance": {
+    "authoritative_dam_database": "National Register of Large Dams (NRLD) / Central Water Commission",
+    "hazard_classification_standard": "Central Water Commission (CWC) Guidelines / AIDR 7.3",
+    "primary_solver_documentation": "Deltares D-Flow FM User Manual / DualSPHysics v5.2 Technical Guide",
+    "scientific_integrity_policy": "Zero synthetic numbers, zero fake coordinates, zero uncalibrated forecasting claims."
+  }
+}

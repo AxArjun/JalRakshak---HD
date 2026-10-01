@@ -1,0 +1,51 @@
+{
+  "timestamp_utc": "2026-09-25T13:45:00Z",
+  "description": "Explicit physical mapping between project engineering fields and empirical breach model variables",
+  "variable_mappings": [
+    {
+      "model": "Froehlich (2008)",
+      "input_variable": "V_w (m3)",
+      "engineering_definition": "Volume of water above breach bottom elevation at time of failure",
+      "project_source_field": "assumed.active_volume_for_breach_m3 (780.5 MCM)",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "compatibility": "COMPATIBLE_FIRST_ESTIMATE",
+      "notes": "Live storage volume used as initial estimate in absence of dynamic stage-storage routing"
+    },
+    {
+      "model": "Froehlich (2008)",
+      "input_variable": "h_b (m)",
+      "engineering_definition": "Height of breach from top of dam to breach bottom",
+      "project_source_field": "assumed.final_breach_height_hb_m (40.0 m)",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "compatibility": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "notes": "Assumes hypothetical complete vertical scour to riverbed foundation level"
+    },
+    {
+      "model": "Froehlich (2008)",
+      "input_variable": "K_0",
+      "engineering_definition": "Factor for failure mode (1.0 for piping/prescribed, 1.3 for overtopping)",
+      "project_source_field": "K_0 = 1.0 (PRESCRIBED_BREACH)",
+      "classification": "MODEL_ASSUMPTION",
+      "compatibility": "EXACT_MATCH",
+      "notes": "Prescribed breach scenario uses K_0 = 1.0; overtopping K_0 = 1.3 is not used"
+    },
+    {
+      "model": "MacDonald & Langridge-Monopolis (1984)",
+      "input_variable": "V_out * h_w",
+      "engineering_definition": "Breach formation factor (volume times water depth above invert)",
+      "project_source_field": "v_active_m3 * h_w_m (780.5 MCM * 32.0 m)",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "compatibility": "COMPATIBLE_FOR_VOLUME_AND_TIME_ONLY",
+      "notes": "Used to predict volume of eroded material V_er and time t_f. Width calculation requires embankment cross-section geometry."
+    },
+    {
+      "model": "Von Thun & Gillette (1990)",
+      "input_variable": "h_w (m)",
+      "engineering_definition": "Depth of water above breach invert at failure",
+      "project_source_field": "assumed.initial_water_depth_above_breach_invert_hw_m (32.0 m)",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "compatibility": "COMPATIBLE_FIRST_ESTIMATE",
+      "notes": "Full depth 105 ft = 32.004 m used; combined with C_b = 54.9 m for large reservoirs"
+    }
+  ]
+}

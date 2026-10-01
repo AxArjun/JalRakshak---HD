@@ -1,0 +1,49 @@
+# JalRakshak-HD - Hydrology & River Network Configuration
+# Milestone: M2 — Real Hydrology, River Network, Catchment and Reservoir Geometry (Repaired)
+
+river:
+  name: "Bhavani River"
+  basin: "Cauvery Basin"
+  sub_basin: "Lower Cauvery"
+  source: "Central Water Commission (CWC) & India-WRIS (https://indiawris.gov.in)"
+  geometry_source: "OpenStreetMap Authentic Hydrographic Ways (Relation: 326620 / Ways) & HydroSHEDS FreeFlowingRivers"
+  mainstem_source: "data/hydrology/bhavani_mainstem_downstream.gpkg"
+  network_source: "data/hydrology/bhavani_river_centerline.gpkg"
+  verification_level: "SECONDARY_VERIFIED"
+
+reservoir:
+  name: "Bhavanisagar Reservoir"
+  polygon_source: "EC JRC / Google Global Surface Water (JRC/GSW1_4/GlobalSurfaceWater)"
+  observation_date_or_period: "1984–2021 Multi-Decadal Historical Record"
+  occurrence_layer: "multi_decadal_water_occurrence_ge_50"
+  occurrence_threshold_pct: 50
+  persistent_core_layer: "persistent_water_core_seasonality_ge_10"
+  persistent_core_threshold_months: 10
+  geometry_type: "REMOTE_SENSING_DERIVED_WATER_FREQUENCY_EXTENT"
+  verification_level: "REMOTE_SENSING_DERIVED"
+
+drainage:
+  dem_source: "data/terrain/dem_projected.tif (USGS/SRTMGL1_003 30m, EPSG:32643)"
+  conditioning_method: "Priority-Flood Depression Filling (Barnes et al. 2014)"
+  flow_direction_method: "D8 Deterministic Eight-Direction Gradient-Enforced DAG Routing"
+  accumulation_units: "upstream_contributing_cells"
+  cell_area_m2: 900.0
+  stream_threshold: 1000
+  threshold_basis: "Optimal spatial overlap and centerline proximity against real Bhavani River mainstem (median offset: 43.2 m, <=60m: 67.7%, <=100m: 90.4%)"
+
+catchment:
+  upstream_basin_source: "WWF HydroSHEDS / HydroBASINS Level 12"
+  upstream_basin_dataset_id: "WWF/HydroSHEDS/v1/Basins/hybas_12"
+  hybas_id: 4121595750
+  main_bas: 4120028760
+  next_down: 4121595720
+  sub_area_sqkm: 161.8
+  up_area_sqkm: 4257.7
+  upstream_basin_verification_level: "SECONDARY_VERIFIED"
+  local_catchment_source: "Local M1 DEM D8 Watershed Delineation"
+  local_catchment_validity: "INVALID_FOR_TOTAL_UPSTREAM_AREA"
+  catchment_truncated: true
+  local_catchment_verification_level: "DEM_DERIVED"
+
+profile:
+  sampling_interval_m: 100.0

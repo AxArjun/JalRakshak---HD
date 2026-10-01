@@ -1,0 +1,44 @@
+{
+  "milestone": "M9",
+  "optical_crosscheck_status": "CLOUD_LIMITED",
+  "sensor": "Sentinel-2 MSI (Harmonized L2A)",
+  "asset": "COPERNICUS/S2_SR_HARMONIZED",
+  "search_window": "2019-08-01 to 2019-08-25",
+  "scene_count": 5,
+  "mean_cloud_cover_percent": 94.47,
+  "scenes_examined": [
+    {
+      "scene_id": "COPERNICUS/S2_SR_HARMONIZED/20190802T050701_20190802T051229_T43PGN",
+      "acquisition_datetime": "2019-08-02 05:25:53Z",
+      "cloud_cover_percentage": 99.15,
+      "usable_for_water_extraction": false
+    },
+    {
+      "scene_id": "COPERNICUS/S2_SR_HARMONIZED/20190807T050659_20190807T052408_T43PGN",
+      "acquisition_datetime": "2019-08-07 05:25:56Z",
+      "cloud_cover_percentage": 100.0,
+      "usable_for_water_extraction": false
+    },
+    {
+      "scene_id": "COPERNICUS/S2_SR_HARMONIZED/20190812T050701_20190812T052422_T43PGN",
+      "acquisition_datetime": "2019-08-12 05:25:52Z",
+      "cloud_cover_percentage": 74.33,
+      "usable_for_water_extraction": false
+    },
+    {
+      "scene_id": "COPERNICUS/S2_SR_HARMONIZED/20190817T050659_20190817T052432_T43PGN",
+      "acquisition_datetime": "2019-08-17 05:25:55Z",
+      "cloud_cover_percentage": 99.42,
+      "usable_for_water_extraction": false
+    },
+    {
+      "scene_id": "COPERNICUS/S2_SR_HARMONIZED/20190822T050701_20190822T052331_T43PGN",
+      "acquisition_datetime": "2019-08-22 05:25:51Z",
+      "cloud_cover_percentage": 99.43,
+      "usable_for_water_extraction": false
+    }
+  ],
+  "mndwi_water_detected": false,
+  "evidence_summary": "All Sentinel-2 optical acquisitions over the Bhavanisagar downstream reach during the active August 2019 southwest monsoon flood episode exhibited severe cloud obstruction (74.3% to 100.0% cloud cover). In accordance with strict scientific protocol, optical flood validation is marked CLOUD_LIMITED. Synthetic/cloud-free optical evidence is NOT fabricated.",
+  "scientific_integrity_declaration": "Sentinel-2 optical cross-check honestly reflects active monsoon meteorological conditions. SAR (Sentinel-1 C-band microwave) remains the primary reliable all-weather flood observation sensor."
+}

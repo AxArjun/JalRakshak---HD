@@ -1,0 +1,242 @@
+{
+  "type": "FeatureCollection",
+  "name": "settlements",
+  "crs": {
+    "type": "name",
+    "properties": {
+      "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+    }
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bhavanisagar",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.434347,
+        "longitude": 77.066117,
+        "response_zone": "ZONE_01 (Bhavanisagar)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.066117,
+          11.434347
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sathyamangalam",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.552374,
+        "longitude": 77.265376,
+        "response_zone": "ZONE_03 (Kodiveri)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.265376,
+          11.552374
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kodiveri",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.460625,
+        "longitude": 77.307376,
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.307376,
+          11.460625
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gobichettipalayam",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.455182,
+        "longitude": 77.435067,
+        "response_zone": "ZONE_06 (Bhavani)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.435067,
+          11.455182
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kalingarayanpalayam",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.435884,
+        "longitude": 77.675382,
+        "response_zone": "ZONE_06 (Bhavani)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.675382,
+          11.435884
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nambiyur",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.361484,
+        "longitude": 77.350198,
+        "response_zone": "ZONE_04 (Gobichettipalayam)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.350198,
+          11.361484
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bhavani",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.469978,
+        "longitude": 77.331215,
+        "response_zone": "ZONE_05 (Kalingarayanpalayam)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.331215,
+          11.469978
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Komarapalayam",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.442513,
+        "longitude": 77.693981,
+        "response_zone": "ZONE_06 (Bhavani)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.693981,
+          11.442513
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sirumugai",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.318228,
+        "longitude": 77.00665,
+        "response_zone": "ZONE_01 (Bhavanisagar)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          77.00665,
+          11.318228
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mettupalayam",
+        "place": "village",
+        "osm_id": null,
+        "population": null,
+        "latitude": 11.305936,
+        "longitude": 76.935654,
+        "response_zone": "ZONE_01 (Bhavanisagar)",
+        "earliest_arrival_hr": null,
+        "arrival_time": "Outside direct flood corridor",
+        "source": "OpenStreetMap Real Geographic Settlements",
+        "real_gis": true
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          76.935654,
+          11.305936
+        ]
+      }
+    }
+  ]
+}

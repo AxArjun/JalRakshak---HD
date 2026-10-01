@@ -1,0 +1,164 @@
+{
+  "manifest_name": "FINAL_SCIENTIFIC_TRUTH_MANIFEST",
+  "project": "JalRakshak-HD",
+  "version": "v1.0-SIH",
+  "classification": "RESEARCH_SCREENING_DECISION_SUPPORT_PROTOTYPE",
+  "date_locked": "2026-09-26",
+  "bhavanisagar": {
+    "dam_name": "Bhavanisagar Dam (Lower Bhavani Dam)",
+    "river": "Bhavani River (Cauvery Basin)",
+    "location": {
+      "state": "Tamil Nadu",
+      "district": "Erode",
+      "taluk": "Sathyamangalam",
+      "dam_centroid_coordinates": { "lat": 11.47083, "lon": 77.11389 },
+      "crs": "EPSG:32643 (UTM Zone 43N)"
+    },
+    "engineering_parameters": {
+      "dam_type": "Composite (Earthfill embankment with central masonry spillway)",
+      "crest_elevation_m_msl": 282.0,
+      "full_reservoir_level_frl_m_msl": 280.416,
+      "dead_storage_level_m_msl": 260.60,
+      "deepest_foundation_level_m_msl": 241.40,
+      "hydraulic_height_above_riverbed_m": 32.0,
+      "structural_height_m": 40.60,
+      "dam_crest_length_m": 8797.0,
+      "masonry_spillway_length_m": 464.0,
+      "gross_storage_capacity_mcm": 928.0,
+      "effective_live_storage_capacity_mcm": 928.0,
+      "water_volume_above_breach_invert_vw_mcm": 780.50,
+      "source_reference": "Tamil Nadu WRD / CWC National Register of Large Dams 2023"
+    },
+    "breach_scenario_bhv_base": {
+      "scenario_id": "BHV_BASE",
+      "classification": "HYPOTHETICAL_ENGINEERING_STRESS_TEST",
+      "failure_mode": "Piping through earthen embankment transitioning to overtopping breach",
+      "breach_invert_elevation_m_msl": 252.0,
+      "initial_reservoir_level_hw_m_msl": 280.416,
+      "breach_height_hb_m": 28.416,
+      "average_breach_width_b_avg_m": 219.28,
+      "breach_bottom_width_b_bottom_m": 193.70,
+      "breach_top_width_b_top_m": 244.85,
+      "breach_side_slopes_z": 0.9,
+      "breach_formation_time_tf_seconds": 14095.59,
+      "breach_formation_time_tf_hours": 3.9154,
+      "peak_breach_discharge_qpeak_m3s": 18742.38,
+      "hydrograph_volume_mcm": 780.50,
+      "empirical_formulation": "Froehlich (1995/2008) multi-regression breach equations",
+      "hydrograph_type": "Asymmetric parametric breach hydrograph with 20-minute time-step forcing"
+    },
+    "dflow_fm_simulation": {
+      "model_type": "2D Hydrodynamic Depth-Averaged Flexible Mesh (D-Flow FM)",
+      "numerical_mesh_cells": 46830,
+      "computational_domain_area_km2": 818.37,
+      "maximum_inundated_area_km2": 101.29,
+      "solver_maximum_depth_m": 22.02,
+      "p95_water_depth_m": 12.72,
+      "solver_maximum_velocity_mps": 11.79,
+      "p95_flow_velocity_mps": 4.27,
+      "simulation_duration_seconds": 108000,
+      "simulation_duration_hours": 30.0,
+      "solver_frame_count": 181,
+      "frame_interval_seconds": 600,
+      "mass_balance": {
+        "volume_inflow_mcm": 780.50,
+        "volume_outflow_domain_mcm": 618.850176,
+        "volume_stored_end_mcm": 161.690759,
+        "residual_error_mcm": 0.040935,
+        "relative_error_pct": 0.0052,
+        "status": "MASS_CONSERVATION_PASS"
+      }
+    },
+    "dualsphysics_nearfield": {
+      "model_type": "2D SPH Hydrodynamic Simulation (DualSPHysics v5.2)",
+      "particle_count_total": 10982,
+      "particle_count_fluid": 6800,
+      "particle_count_boundary": 4182,
+      "initial_particle_spacing_dp_m": 1.0,
+      "nearfield_reach_length_m": 1500.0,
+      "simulation_physical_time_s": 600.0,
+      "solver_maximum_depth_m": 17.11,
+      "solver_maximum_velocity_mps": 34.78,
+      "front_position_at_600s_m": 1280.41,
+      "status_at_1500m_600s": "NOT_REACHED_WITHIN_600_S"
+    },
+    "cross_solver_comparison": {
+      "comparison_reach_m": 1500.0,
+      "depth_trend": "PARTIALLY_CONSISTENT",
+      "velocity_trend": "DIVERGENT_TREND",
+      "recommended_future_handoff": "500 m downstream of dam toe",
+      "direct_coupling_status": "NOT_IMPLEMENTED_CONCEPTUAL_ANALYSIS_ONLY"
+    },
+    "hadr_exposure": {
+      "worldpop_exposed_count": 42428.1,
+      "ghsl_exposed_count": 84500.5,
+      "buildings_inundated_total": 25652,
+      "h5_h6_severe_damage_buildings": 22472,
+      "severe_hazard_h3_h6_area_km2": 97.99,
+      "severe_hazard_h3_h6_pct": 96.74,
+      "extreme_hazard_h5_h6_area_km2": 87.29,
+      "roads_exposed_total_km": 243.82,
+      "roads_exposed_h3_h6_km": 226.35,
+      "screened_bridge_crossings_count": 20,
+      "critical_facilities_count": 13,
+      "cropland_inundated_km2": 39.66,
+      "builtup_inundated_km2": 7.86,
+      "response_sectors_count": 6
+    },
+    "earth_observation": {
+      "historical_platform": "Sentinel-1A (Copernicus ESA)",
+      "historical_scene_id": "S1A_IW_GRDH_1SDV_20190810T004245_20190810T004310_028500_0338F1_041D",
+      "historical_event_date": "2019-08-10 (Kerala/Nilgiris Monsoon Flood)",
+      "historical_raster_flood_area_km2": 1.1925,
+      "historical_vector_flood_area_km2": 1.1150,
+      "historical_simulation_overlap_km2": 0.3050,
+      "latest_platform": "Sentinel-1D (Simulated NRT orbit pass)",
+      "latest_scene_date": "2026-09-24",
+      "latest_absolute_orbit": 4581,
+      "latest_relative_orbit": 165
+    }
+  },
+  "hirakud": {
+    "dam_name": "Hirakud Dam",
+    "river": "Mahanadi River Basin",
+    "location": {
+      "state": "Odisha",
+      "district": "Sambalpur",
+      "site_reference_coordinate": { "lat": 21.5700, "lon": 83.8694 },
+      "dam_model_coordinate": { "lat": 21.5286, "lon": 83.8742 },
+      "coordinate_offset_distance_m": 4625.0,
+      "derived_crs": "EPSG:32644 (UTM Zone 44N)"
+    },
+    "storage_capacity_versions": {
+      "original_design_1957": {
+        "gross_storage_mcm": 8136.0,
+        "live_storage_mcm": 5818.0,
+        "source": "Hirakud Dam Project Report (1957) / CWC NRLD"
+      },
+      "ohpc_sedimentation_revised_2000s": {
+        "gross_storage_mcm": 5896.0,
+        "live_storage_mcm": 4823.0,
+        "source": "Odisha Hydro Power Corporation (OHPC) Bathymetric Survey"
+      },
+      "cwc_operational_reporting": {
+        "gross_storage_mcm": 8136.0,
+        "live_storage_mcm": 5378.0,
+        "source": "Central Water Commission Reservoir Bulletin 2024"
+      }
+    },
+    "screening_breach_values": {
+      "screening_breach_width_m": 298.45,
+      "screening_breach_formation_time_s": 15840.0,
+      "screening_peak_discharge_m3s": 38450.0,
+      "status": "CONFIG_ONBOARDED_SCREENING_ONLY"
+    },
+    "workflow_execution_gates": {
+      "config_schema": "VERIFIED_PASS",
+      "gis_dem_and_hydrology": "GENERATED_VERIFIED",
+      "production_dflow_fm": "INPUT_READY_NOT_EXECUTED",
+      "production_sph": "NOT_EXECUTED",
+      "hadr_exposure": "NOT_EXECUTED",
+      "earth_observation": "NOT_EXECUTED"
+    }
+  }
+}

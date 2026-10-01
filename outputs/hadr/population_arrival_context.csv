@@ -1,0 +1,10 @@
+time_window_hr,arrival_window_min,population_exposed_worldpop,population_exposed_ghsl,cumulative_worldpop,cumulative_pct
+< 1 hour,60,295.6,777.4,295.6,0.73
+1 - 2 hours,120,1559.3,3638.2,1854.9,4.55
+2 - 3 hours,180,2953.9,5617.7,4808.8,11.8
+3 - 4 hours,240,3100.5,4012.1,7909.3,19.41
+4 - 6 hours,360,12003.8,43065.3,19913.1,48.87
+6 - 8 hours,480,8193.2,20404.8,28106.3,68.98
+8 - 12 hours,720,12535.7,4222.9,40642.0,99.75
+12 - 24 hours,1440,102.3,29.3,40744.3,100.0
+> 24 hours,2880,0.0,0.0,40744.3,100.0

@@ -1,0 +1,55 @@
+# JalRakshak-HD - Empirical Dam Breach Models Configuration
+# Milestone: M3 — Verified Dam Engineering Inputs and Breach Event Definition (Repaired)
+
+models:
+  froehlich_2008:
+    model_name: "Froehlich (2008)"
+    authors: "David C. Froehlich"
+    publication_year: 2008
+    source: "Journal of Hydraulic Engineering, ASCE, Vol. 134, No. 12, pp. 1708-1721"
+    equations:
+      average_breach_width: "B_avg = 0.27 * K_0 * (V_w)^0.32 * (h_b)^0.04"
+      formation_time_seconds: "t_f = 63.2 * sqrt(V_w / (g * h_b^2))"
+      side_slope_z: "z = 1.0 (piping / prescribed), 0.7 (overtopping)"
+    parameter_definitions:
+      V_w: "Volume of water above breach bottom elevation at time of failure (m3)"
+      h_b: "Height of breach from top of dam to breach bottom (m)"
+      K_0: "Factor for failure mode (1.0 for piping/prescribed, 1.3 for overtopping)"
+      g: "Gravitational acceleration (9.80665 m/s2)"
+    intended_dam_type: "Embankment Dams (Earthen and Rockfill)"
+    validity_range: "V_w up to 660 MCM, h_b up to 85.3 m across 74 historical cases"
+    calibration_range_notes: "Volumes above 660 MCM are marked EXTRAPOLATED_ABOVE_MAX_CALIBRATION_VOLUME"
+    limitations: "Parametric statistical regression from historical database; log-normal confidence envelope"
+
+  macdonald_langridge_monopolis_1984:
+    model_name: "MacDonald & Langridge-Monopolis (1984)"
+    authors: "Thomas C. MacDonald and Jennifer Langridge-Monopolis"
+    publication_year: 1984
+    source: "Journal of Hydraulic Engineering, ASCE, Vol. 110, No. 5, pp. 567-586"
+    equations:
+      eroded_volume_m3: "V_er = 0.0261 * (V_out * h_w)^0.769 (for earthfill)"
+      formation_time_hours: "t_f = 0.0179 * (V_er)^0.364"
+      side_slope_z: "z = 0.5 (1V:0.5H)"
+    parameter_definitions:
+      V_out: "Volume of water passing through breach (m3)"
+      h_w: "Depth of water above breach invert at failure (m)"
+    intended_dam_type: "Earthfill and Rockfill Embankments"
+    validity_range: "Tested on 42 historical dam breach case studies (23 earthfill)"
+    width_status: "INSUFFICIENT_CROSS_SECTION_GEOMETRY"
+    limitations: "Predicts eroded volume and formation time only. Converting V_er to average breach width requires embankment cross-section geometry (crest width and upstream/downstream slopes)."
+
+  von_thun_gillette_1990:
+    model_name: "Von Thun & Gillette (1990)"
+    authors: "J. Lawrence Von Thun and David R. Gillette"
+    publication_year: 1990
+    source: "U.S. Bureau of Reclamation Guidance on Breach Parameters, Denver, CO"
+    equations:
+      average_breach_width: "B_avg = 2.5 * h_w + C_b"
+      formation_time_hours: "t_f = B_avg / (4 * h_w) for highly erodible, B_avg / (2 * h_w) for erosion resistant"
+      side_slope_z: "z = 0.5 (1V:0.5H)"
+    parameter_definitions:
+      h_w: "Depth of water above breach invert (m)"
+      C_b: "Offset based on reservoir volume tier (54.9 m for V_w > 12.335 MCM / 10,000 acre-ft)"
+    intended_dam_type: "Homogeneous and Zoned Earthfill Embankments"
+    validity_range: "USBR dam safety portfolio review across earthfill dams"
+    limitations: "Piecewise linear width relationship; does not directly scale with storage volume above 12.3 MCM threshold"

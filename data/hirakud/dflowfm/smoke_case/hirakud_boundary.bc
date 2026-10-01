@@ -1,0 +1,15 @@
+# D-Flow FM Boundary Condition File: hirakud_screening_01
+# Method: Froehlich_2008 | Failure Mode: OVERTOPPING
+
+[Boundary]
+Name                 = UpstreamDamInflow
+Function             = time-series
+Time-interpolation   = linear
+Quantity             = time
+Unit                 = minutes since 2026-09-26 00:00:00
+Quantity             = total_discharge
+Unit                 = m3/s
+
+0.00                 0.00
+533.75               56420.80
+3437.27              0.00

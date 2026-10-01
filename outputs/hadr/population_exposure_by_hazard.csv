@@ -1,0 +1,7 @@
+hazard_code,hazard_class,description,worldpop_population,worldpop_percentage,ghsl_population,ghsl_percentage,dataset_spread
+1,H1,"Generally safe for vehicles, people, and buildings",878.1,2.07,1461.9,1.73,583.8
+2,H2,Unsafe for small vehicles,805.7,1.9,1271.0,1.5,465.3
+3,H3,"Unsafe for vehicles, children, and the elderly",2360.0,5.56,3984.8,4.72,1624.8
+4,H4,Unsafe for vehicles and people,2621.6,6.18,4379.8,5.18,1758.2
+5,H5,Unsafe for vehicles and people; all buildings vulnerable to structural damage,8042.3,18.96,14103.4,16.69,6061.1
+6,H6,Unsafe for vehicles and people; all building types considered vulnerable to failure,27720.3,65.33,59299.6,70.18,31579.2

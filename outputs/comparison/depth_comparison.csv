@@ -1,0 +1,6 @@
+station_id,chainage_m,dflow_peak_depth_m,sph_peak_depth_m,absolute_model_spread_m,relative_model_spread_percent,depth_ratio_sph_to_dflow,comparison_classification,notes
+G_100m,100.0,6.215,8.059,1.844,29.67,1.2967,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Valid common station
+G_250m,250.0,14.641,12.004,-2.637,-18.01,0.8199,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Valid common station
+G_500m,500.0,11.044,5.55,-5.494,-49.75,0.5025,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Valid common station
+G_1000m,1000.0,13.572,5.211,-8.361,-61.6,0.384,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Valid common station
+G_1500m,1500.0,14.126,0.0,-14.126,-100.0,0.0,CROSS_SOLVER_CONSISTENCY_ANALYSIS,SPH not reached within 600 s

@@ -1,0 +1,100 @@
+{
+  "milestone": "M9",
+  "validation_suite": "M9_REMOTE_SENSING_VALIDATION_SUITE",
+  "n_pass": 15,
+  "n_warn": 0,
+  "n_fail": 0,
+  "m9_validation_status": "READY",
+  "checks": [
+    {
+      "status": "[PASS]",
+      "check": "historical_event_official_source",
+      "message": "Historical event verified with official source: Central Water Commission (CWC) & India Meteorological Department (IMD) & Tamil Nadu State Disaster Management Authority (TNSDMA) (AUGUST_2019_BHAVANI_FLOOD_BHAVANISAGAR_INFLOW_EVENT)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "threshold_governance_audit",
+      "message": "All 6 thresholds audited and scientifically supported (0 UNSUPPORTED)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "detection_sensitivity_and_traceability",
+      "message": "Authoritative detector trace verified: pre_slope=4.2238 km2, post_slope=3.8694 km2, raster=1.1925 km2, vector=1.1150 km2",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "s1_scenes_and_orbit_consistency",
+      "message": "4 S1 scenes recorded with strict orbit consistency: Orbit 165 (DESCENDING)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "gee_raster_retrieval",
+      "message": "All 5 historical SAR & baseline GeoTIFFs retrieved and georeferenced in EPSG:32643",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "baseline_separated_from_new_flood",
+      "message": "Strict baseline separation verified: 0 pixels overlap between new flood (1908) and baseline (4964)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "optical_status_honest",
+      "message": "Optical status correctly reported as CLOUD_LIMITED (94.5% cloud cover)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "rainfall_discharge_constraint",
+      "message": "Rainfall constraint verified: CHIRPS precipitation strictly context (accum=113.86 mm)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "hypothetical_model_not_called_validated",
+      "message": "Scientific classification verified as SPATIAL_SUSCEPTIBILITY_CONTEXT (Overlap: 27.35%)",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "latest_mode_causal_governance",
+      "message": "Latest monitoring governance verified: Status=CANDIDATE_NEW_WATER_EXPANSION_DETECTED, Cause=UNVERIFIED, Quality=HIGH, Confidence=UNCONFIRMED",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "latest_scene_audit_verified",
+      "message": "Live Earth Engine scene audit verified: Scene=S1D_IW_GRDH_1SDV_20260915T003957_20260915T004022_004581_008881_7A96, Consistency=True",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "unverified_cusec_claim_audit",
+      "message": "Zero unverified 85,000-cusec claims found across all M9 artifacts and scripts",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "manifests_present",
+      "message": "All M9 manifests present: m9_source_manifest.json, m9_gee_query_manifest.json, m9_gee_dataset_inventory.json",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "cartographic_maps_generated",
+      "message": "All 5 publication-quality maps generated in outputs/maps/",
+      "detail": ""
+    },
+    {
+      "status": "[PASS]",
+      "check": "technical_report_present",
+      "message": "Technical report verified: m9_remote_sensing_summary.md (11,070 bytes)",
+      "detail": ""
+    }
+  ]
+}

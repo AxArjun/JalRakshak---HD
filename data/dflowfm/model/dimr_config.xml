@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<dimrConfig xmlns="http://schemas.deltares.nl/dimr" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.deltares.nl/dimr http://schemas.deltares.nl/dimr/dimr_config.xsd">
+  <documentation>
+    <fileVersion>1.3</fileVersion>
+    <createdBy>Deltares, DIMR-FM</createdBy>
+    <creationDate>2026-09-25T14:30:00Z</creationDate>
+  </documentation>
+  <control>
+    <parallel>
+      <start name="DFlowFM" />
+    </parallel>
+  </control>
+  <component name="DFlowFM">
+    <library>dflowfm</library>
+    <workingDir>.</workingDir>
+    <inputFile>Bhavanisagar_DamBreak.mdu</inputFile>
+  </component>
+</dimrConfig>

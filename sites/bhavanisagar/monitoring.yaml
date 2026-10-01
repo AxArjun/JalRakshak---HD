@@ -1,0 +1,9 @@
+earth_observation:
+  satellite_platform: "Sentinel-1"
+  orbit_pass_preference: "DESCENDING"
+  relative_orbit_preference: 165
+  historical_scene_id: "COPERNICUS/S1_GRD/S1A_IW_GRDH_1SDV_20190810T003943_20190810T004008_028500_033878_041D"
+  historical_platform: "Sentinel-1A"
+  detection_threshold_delta_db: -3.0
+  event_vv_threshold_db: -14.0
+  slope_threshold_deg: 5.0

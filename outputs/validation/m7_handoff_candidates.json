@@ -1,0 +1,61 @@
+{
+  "assessment_title": "JalRakshak-HD Milestone M7 Hybrid Coupling Handoff Evaluation",
+  "recommended_future_handoff_candidate": "500 m",
+  "direct_discharge_coupling_ready": false,
+  "overall_coupling_readiness": "NOT_READY",
+  "direct_coupling_blocker": "UNIT_WIDTH_TO_FULL_WIDTH_SCALING_UNRESOLVED",
+  "coupling_status": "DESIGN_ONLY",
+  "coupling_readiness_blockers": [
+    "unit-width/full-width scaling unresolved",
+    "forcing histories differ",
+    "time origins differ",
+    "SPH resolution sensitivity is NOT_STABILIZED"
+  ],
+  "candidate_evaluations": {
+    "250m": {
+      "chainage_m": 250.0,
+      "sph_peak_depth_m": 12.004,
+      "sph_peak_velocity_mps": 24.726,
+      "sph_froude_number": 3.021,
+      "dflow_peak_depth_m": 14.641,
+      "dflow_peak_velocity_mps": 2.505,
+      "dflow_froude_number": 0.723,
+      "terrain_slope_m_per_m": -0.068,
+      "distance_from_breach_m": 250.0,
+      "status": "REJECTED",
+      "reason": "Located in immediate plunging toe jet impact zone. High vertical particle accelerations and violent free-surface churn violate hydrostatic shallow-water assumptions required by D-Flow FM. Froude number exceeds 3.0."
+    },
+    "500m": {
+      "chainage_m": 500.0,
+      "sph_peak_depth_m": 5.55,
+      "sph_peak_velocity_mps": 15.947,
+      "sph_froude_number": 2.218,
+      "dflow_peak_depth_m": 11.044,
+      "dflow_peak_velocity_mps": 2.648,
+      "dflow_froude_number": 0.631,
+      "terrain_slope_m_per_m": 0.012,
+      "distance_from_breach_m": 500.0,
+      "status": "RECOMMENDED_FUTURE_HANDOFF_CANDIDATE",
+      "reason": "Located downstream of the violent toe plunge jet where vertical accelerations subside into a coherent longitudinal flow sheet. Reached rapidly by SPH (28 s) with high particle density, well upstream of the downstream deceleration zone (1000-1280 m). Both models actively represent this station with stable numerical metrics. Preferred design candidate only; direct numerical coupling is not presently possible."
+    },
+    "1000m": {
+      "chainage_m": 1000.0,
+      "sph_peak_depth_m": 5.211,
+      "sph_peak_velocity_mps": 13.996,
+      "sph_froude_number": 2.51,
+      "dflow_peak_depth_m": 13.572,
+      "dflow_peak_velocity_mps": 4.324,
+      "dflow_froude_number": 0.492,
+      "terrain_slope_m_per_m": -0.012,
+      "distance_from_breach_m": 1000.0,
+      "status": "MARGINAL",
+      "reason": "Reached late in SPH simulation (119 s). SPH front reached 1280.41 m by 600 s and the 1500 m station was NOT_REACHED_WITHIN_600_S. It was slowing substantially but was still advancing. Particle resolution becomes sparse and 2D unit-width spreading errors accumulate significantly."
+    }
+  },
+  "recommended_handoff_location": {
+    "chainage_m": 500.0,
+    "station_id": "G_500m",
+    "candidate_type": "DESIGN_CANDIDATE_ONLY",
+    "justification": "500 m provides the scientifically optimal handoff design candidate: safely downstream of the 3D plunging toe jet at 100-250 m, while maintaining robust particle support prior to the downstream deceleration zone at 1000+ m."
+  }
+}

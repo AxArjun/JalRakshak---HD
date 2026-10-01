@@ -1,0 +1,50 @@
+{
+  "timestamp_utc": "2026-09-25T12:49:23.292706+00:00",
+  "status": "PASS",
+  "file_path": "data\\terrain\\dem_projected.tif",
+  "file_size_mb": 5.418,
+  "file_size_bytes": 5681607,
+  "sha256": "12c29b4b08c48b4a2d031bc9a9a7970bff579595028ec485fdbc21d18bb065ef",
+  "raster_properties": {
+    "width": 1718,
+    "height": 826,
+    "crs": "EPSG:32643",
+    "is_projected": true,
+    "pixel_size_x_m": 30.0,
+    "pixel_size_y_m": 30.0,
+    "bounds": {
+      "left": 712621.5248131498,
+      "bottom": 1256471.129802822,
+      "right": 764161.5248131498,
+      "top": 1281251.129802822
+    },
+    "nodata_value": -32768.0
+  },
+  "elevation_statistics_metres": {
+    "min_elevation": 194.1,
+    "max_elevation": 1809.7,
+    "mean_elevation": 372.22,
+    "median_elevation": 284.83,
+    "std_deviation": 247.98,
+    "total_pixels": 1419068,
+    "valid_pixels": 1391249,
+    "nodata_percentage": 1.96
+  },
+  "dam_spatial_check": {
+    "dam_name": "Bhavanisagar Dam",
+    "dam_lat_wgs84": 11.47083,
+    "dam_lon_wgs84": 77.11389,
+    "dam_x_projected": 730603.73,
+    "dam_y_projected": 1268886.41,
+    "dam_inside_raster": true,
+    "dam_pixel_elevation_m": 269.75
+  },
+  "validation_checks": {
+    "is_not_empty": true,
+    "is_projected_crs": true,
+    "nodata_percentage_acceptable": true,
+    "has_meaningful_variation": true,
+    "dam_inside_bounds": true,
+    "elevation_physically_plausible": true
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "execution_timestamp": "2026-09-26 03:39:50Z",
+  "mode": "LATEST_MONITORING_MODE",
+  "latest_scene_id": "S1D_IW_GRDH_1SDV_20260915T003957_20260915T004022_004581_008881_7A96",
+  "latest_acquisition_datetime": "2026-09-15 00:39:57Z",
+  "observation_age_hours": 267.0,
+  "days_since_acquisition": 11.12,
+  "reference_scenes_used": [
+    "COPERNICUS/S1_GRD/S1D_IW_GRDH_1SDV_20260810T003956_20260810T004021_004056_007638_E878",
+    "COPERNICUS/S1_GRD/S1D_IW_GRDH_1SDV_20260822T003956_20260822T004021_004231_007C51_BEFE",
+    "COPERNICUS/S1_GRD/S1D_IW_GRDH_1SDV_20260903T003957_20260903T004022_004406_008273_BD1D"
+  ],
+  "relative_orbit": 165,
+  "orbit_pass": "DESCENDING",
+  "candidate_new_water_detected_km2": 0.4213,
+  "latest_status": "CANDIDATE_NEW_WATER_EXPANSION_DETECTED",
+  "cause": "UNVERIFIED",
+  "observation_quality": "HIGH",
+  "flood_interpretation_confidence": "UNCONFIRMED",
+  "quality_details": {
+    "observation_quality": "HIGH",
+    "flood_interpretation_confidence": "UNCONFIRMED",
+    "orbit_consistency": true,
+    "reference_scene_count": 3,
+    "aoi_coverage_percent": 100.0,
+    "terrain_shadow_masked": true,
+    "baseline_water_masked": true,
+    "optical_corroborated": false,
+    "quality_rationale": [
+      "Orbit consistency verified: Orbit 165 (DESCENDING).",
+      "Reference collection: 3 preceding scenes used for multi-temporal baseline.",
+      "AOI coverage: 100.0% coverage of Bhavanisagar downstream corridor.",
+      "Terrain slope mask applied (SRTM 30m slope <= 5 deg, UN-SPIDER standard).",
+      "Historical recurrent water baseline removed (JRC GSW occurrence >= 50%).",
+      "Causal attribution: UNVERIFIED (candidate surface water expansion detected; not definitively attributed to flood/irrigation without ground validation)."
+    ]
+  },
+  "output_tif": "outputs\\gee\\latest\\latest_water_change.tif",
+  "output_gpkg": "outputs\\gee\\latest\\latest_candidate_flood.gpkg"
+}

@@ -1,0 +1,71 @@
+{
+  "milestone": "M8",
+  "generated_at": "2026-09-25T23:00:00+05:30",
+  "sources": {
+    "hydraulic_model": {
+      "source_name": "D-Flow FM 2D Flexible Mesh Solver Output (Milestone M5)",
+      "classification": "2D_DFLOWFM_SCREENING_INUNDATION_MODEL",
+      "file_path": "outputs/simulations/dflowfm/BHV_BASE/Bhavanisagar_DamBreak_map.nc",
+      "variables_used": [
+        "mesh2d_waterdepth",
+        "mesh2d_ucmag",
+        "time",
+        "mesh2d_face_x",
+        "mesh2d_face_y",
+        "mesh2d_flowelem_ba"
+      ],
+      "spatial_coverage": "51.73 km reach, 82,309 computational faces",
+      "temporal_resolution": "10-minute intervals (181 timesteps, 30.0 hr duration)"
+    },
+    "hazard_classification_standard": {
+      "provider": "Central Water Commission (CWC) Dam Safety Organization / Australian Institute for Disaster Resilience (AIDR)",
+      "document": "Australian Disaster Resilience Guideline 7-3: Flood Hazard / CWC Guidelines for Mapping Dam Inundation",
+      "document_number": "AIDR Guideline 7-3 (ISBN 978-0-9953963-3-3)",
+      "citation": "Smith, G.P., Davey, E.K., and Cox, R.J. (2014). 'Flood Hazard', WRL Technical Report 2014/07, UNSW Water Research Laboratory.",
+      "url": "https://knowledge.aidr.org.au/resources/guideline-7-3-flood-hazard/",
+      "thresholds": "H1 (D*V<=0.3, D<=0.3, V<=2.0), H2 (D*V<=0.6, D<=0.5), H3 (D*V<=0.6, D<=1.2), H4 (D*V<=1.0, D<=2.0), H5 (D*V<=4.0, D<=4.0, V<=4.0), H6 (D*V>4.0 or D>4.0 or V>4.0)"
+    },
+    "population_primary": {
+      "provider": "WorldPop (School of Geography and Environmental Science, University of Southampton)",
+      "product": "WorldPop 2020 UN-Adjusted Global 100m Population Count Grid (IND_ppp_2020_UNadj_constrained)",
+      "gee_id": "WorldPop/GP/100m/pop/IND_2020",
+      "reprojection": "EPSG:32643, sum-conserved reprojected grid",
+      "total_reprojected_sum": 249913.5
+    },
+    "population_crosscheck": {
+      "provider": "European Commission Joint Research Centre (JRC)",
+      "product": "Global Human Settlement Layer (GHSL) GHS-POP R2023A (100m)",
+      "gee_id": "JRC/GHSL/P2023A/GHS_POP/2025",
+      "reprojection": "EPSG:32643, sum-conserved reprojected grid",
+      "total_reprojected_sum": 385064.9
+    },
+    "building_footprints": {
+      "provider": "Google Research / Earth Engine",
+      "product": "Open Buildings v3 Polygons (confidence >= 0.75)",
+      "gee_id": "GOOGLE/Research/open-buildings/v3/polygons",
+      "reprojection": "EPSG:32643, footprint area calculated from polygon geometry",
+      "total_footprints_acquired": 43470
+    },
+    "land_cover": {
+      "provider": "European Space Agency (ESA)",
+      "product": "ESA WorldCover 2021 v200 (10m global land cover)",
+      "gee_id": "ESA/WorldCover/v200/2021",
+      "reprojection": "EPSG:32643, nearest-neighbor categorical resampling",
+      "key_classes": {
+        "40": "Cropland",
+        "50": "Built-up"
+      }
+    },
+    "infrastructure_and_facilities": {
+      "provider": "OpenStreetMap (OSM) Contributors",
+      "api": "Overpass API / Nominatim",
+      "queries": [
+        "way['highway']",
+        "node/way['amenity']",
+        "node/way['emergency']",
+        "node['place']"
+      ],
+      "reprojection": "EPSG:32643, line length and point coordinates"
+    }
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "milestone": "M8",
+  "audit_type": "POPULATION_CONSERVATIVE_ALLOCATION_AUDIT",
+  "allocation_method": "SINGLE_ZONE_CELL_CENTROID_CHAINAGE_ASSIGNMENT",
+  "raster_resolution": "25.0 m",
+  "CRS": "EPSG:32643",
+  "pixel_boundary_method": "Exact 1-to-1 pixel centroid projection onto Bhavani river mainstem chainage intervals (zero double-counting)",
+  "conservation_tolerance_percent": 0.1,
+  "datasets": {
+    "worldpop_2020": {
+      "dataset": "WorldPop 2020 (UN-adjusted 100m, reprojected to 25m EPSG:32643)",
+      "role": "PRIMARY",
+      "unique_population": 42428.1,
+      "sector_population_sum": 42428.1,
+      "absolute_difference": 0.0,
+      "percentage_difference": 0.0,
+      "allocation_method": "SINGLE_ZONE_CELL_CENTROID_CHAINAGE_ASSIGNMENT",
+      "raster_resolution": "25.0 m",
+      "CRS": "EPSG:32643",
+      "pixel_boundary_method": "Exact 1-to-1 pixel centroid projection onto river chainage (no boundary double-counting)",
+      "conservation_status": "PASS"
+    },
+    "ghsl_2025": {
+      "dataset": "GHSL 2025 (GHS-POP R2023A 100m, reprojected to 25m EPSG:32643)",
+      "role": "CROSS_CHECK",
+      "unique_population": 84500.5,
+      "sector_population_sum": 84500.6,
+      "absolute_difference": 0.1,
+      "percentage_difference": 0.000118,
+      "allocation_method": "SINGLE_ZONE_CELL_CENTROID_CHAINAGE_ASSIGNMENT",
+      "raster_resolution": "25.0 m",
+      "CRS": "EPSG:32643",
+      "pixel_boundary_method": "Exact 1-to-1 pixel centroid projection onto river chainage (no boundary double-counting)",
+      "conservation_status": "PASS"
+    }
+  },
+  "sector_breakdown": [
+    {
+      "zone_id": "ZONE_01",
+      "locality_name": "Bhavanisagar",
+      "chainage_interval_km": "0.0\u20137.5",
+      "worldpop_population": 4601.4,
+      "ghsl_population": 9405.7
+    },
+    {
+      "zone_id": "ZONE_02",
+      "locality_name": "Sathyamangalam",
+      "chainage_interval_km": "7.5\u201317.5",
+      "worldpop_population": 8856.2,
+      "ghsl_population": 11387.7
+    },
+    {
+      "zone_id": "ZONE_03",
+      "locality_name": "Kodiveri",
+      "chainage_interval_km": "17.5\u201326.5",
+      "worldpop_population": 11220.5,
+      "ghsl_population": 47728.8
+    },
+    {
+      "zone_id": "ZONE_04",
+      "locality_name": "Gobichettipalayam",
+      "chainage_interval_km": "26.5\u201335.5",
+      "worldpop_population": 7094.0,
+      "ghsl_population": 14381.5
+    },
+    {
+      "zone_id": "ZONE_05",
+      "locality_name": "Kalingarayanpalayam",
+      "chainage_interval_km": "35.5\u201344.5",
+      "worldpop_population": 5691.3,
+      "ghsl_population": 753.2
+    },
+    {
+      "zone_id": "ZONE_06",
+      "locality_name": "Bhavani",
+      "chainage_interval_km": "44.5\u201351.73",
+      "worldpop_population": 4964.7,
+      "ghsl_population": 843.7
+    }
+  ],
+  "overall_conservation_status": "PASS"
+}

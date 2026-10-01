@@ -1,0 +1,4089 @@
+{
+  "milestone": "M10",
+  "scenario_id": "BHV_BASE",
+  "total_frames": 181,
+  "interval_seconds": 600,
+  "total_duration_hours": 30.0,
+  "grid_shape": [
+    247,
+    339
+  ],
+  "bounds_wgs84": {
+    "south_west": [
+      11.359179,
+      77.111197
+    ],
+    "north_east": [
+      11.57997,
+      77.423552
+    ],
+    "leaflet_bounds": [
+      [
+        11.359179,
+        77.111197
+      ],
+      [
+        11.57997,
+        77.423552
+      ]
+    ]
+  },
+  "depth_legend_bins_m": [
+    {
+      "min": 0.05,
+      "max": 0.5,
+      "label": "0.05 \u2013 0.50 m",
+      "color": "#A0E1FF",
+      "rgba": [
+        160,
+        225,
+        255,
+        255
+      ]
+    },
+    {
+      "min": 0.5,
+      "max": 1.0,
+      "label": "0.50 \u2013 1.00 m",
+      "color": "#46BEFA",
+      "rgba": [
+        70,
+        190,
+        250,
+        255
+      ]
+    },
+    {
+      "min": 1.0,
+      "max": 2.0,
+      "label": "1.00 \u2013 2.00 m",
+      "color": "#008CEB",
+      "rgba": [
+        0,
+        140,
+        235,
+        255
+      ]
+    },
+    {
+      "min": 2.0,
+      "max": 5.0,
+      "label": "2.00 \u2013 5.00 m",
+      "color": "#0A50C8",
+      "rgba": [
+        10,
+        80,
+        200,
+        255
+      ]
+    },
+    {
+      "min": 5.0,
+      "max": 10.0,
+      "label": "5.00 \u2013 10.00 m",
+      "color": "#4B14A0",
+      "rgba": [
+        75,
+        20,
+        160,
+        255
+      ]
+    },
+    {
+      "min": 10.0,
+      "max": 100.0,
+      "label": "> 10.00 m",
+      "color": "#82006E",
+      "rgba": [
+        130,
+        0,
+        110,
+        255
+      ]
+    }
+  ],
+  "frames": [
+    {
+      "frame_index": 0,
+      "solver_time_s": 0.0,
+      "solver_time_hr": 0.0,
+      "timestamp_label": "T+00h 00m",
+      "max_depth_at_frame": 2.489,
+      "wet_face_count": 2,
+      "wet_area_km2": 0.02,
+      "non_transparent_pixels": 2,
+      "image_filename": "frame_000.png",
+      "image_url": "/api/simulation/frames/frame_000.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 1,
+      "solver_time_s": 600.0,
+      "solver_time_hr": 0.17,
+      "timestamp_label": "T+00h 10m",
+      "max_depth_at_frame": 2.689,
+      "wet_face_count": 19,
+      "wet_area_km2": 0.19,
+      "non_transparent_pixels": 19,
+      "image_filename": "frame_001.png",
+      "image_url": "/api/simulation/frames/frame_001.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 2,
+      "solver_time_s": 1200.0,
+      "solver_time_hr": 0.33,
+      "timestamp_label": "T+00h 20m",
+      "max_depth_at_frame": 4.688,
+      "wet_face_count": 40,
+      "wet_area_km2": 0.4,
+      "non_transparent_pixels": 40,
+      "image_filename": "frame_002.png",
+      "image_url": "/api/simulation/frames/frame_002.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 3,
+      "solver_time_s": 1800.0,
+      "solver_time_hr": 0.5,
+      "timestamp_label": "T+00h 30m",
+      "max_depth_at_frame": 6.311,
+      "wet_face_count": 75,
+      "wet_area_km2": 0.75,
+      "non_transparent_pixels": 75,
+      "image_filename": "frame_003.png",
+      "image_url": "/api/simulation/frames/frame_003.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 4,
+      "solver_time_s": 2400.0,
+      "solver_time_hr": 0.67,
+      "timestamp_label": "T+00h 40m",
+      "max_depth_at_frame": 7.109,
+      "wet_face_count": 105,
+      "wet_area_km2": 1.05,
+      "non_transparent_pixels": 105,
+      "image_filename": "frame_004.png",
+      "image_url": "/api/simulation/frames/frame_004.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 5,
+      "solver_time_s": 3000.0,
+      "solver_time_hr": 0.83,
+      "timestamp_label": "T+00h 50m",
+      "max_depth_at_frame": 7.957,
+      "wet_face_count": 133,
+      "wet_area_km2": 1.33,
+      "non_transparent_pixels": 133,
+      "image_filename": "frame_005.png",
+      "image_url": "/api/simulation/frames/frame_005.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 6,
+      "solver_time_s": 3600.0,
+      "solver_time_hr": 1.0,
+      "timestamp_label": "T+01h 00m",
+      "max_depth_at_frame": 11.03,
+      "wet_face_count": 175,
+      "wet_area_km2": 1.75,
+      "non_transparent_pixels": 175,
+      "image_filename": "frame_006.png",
+      "image_url": "/api/simulation/frames/frame_006.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 7,
+      "solver_time_s": 4200.0,
+      "solver_time_hr": 1.17,
+      "timestamp_label": "T+01h 10m",
+      "max_depth_at_frame": 13.302,
+      "wet_face_count": 245,
+      "wet_area_km2": 2.45,
+      "non_transparent_pixels": 245,
+      "image_filename": "frame_007.png",
+      "image_url": "/api/simulation/frames/frame_007.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 8,
+      "solver_time_s": 4800.0,
+      "solver_time_hr": 1.33,
+      "timestamp_label": "T+01h 20m",
+      "max_depth_at_frame": 14.99,
+      "wet_face_count": 293,
+      "wet_area_km2": 2.93,
+      "non_transparent_pixels": 293,
+      "image_filename": "frame_008.png",
+      "image_url": "/api/simulation/frames/frame_008.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 9,
+      "solver_time_s": 5400.0,
+      "solver_time_hr": 1.5,
+      "timestamp_label": "T+01h 30m",
+      "max_depth_at_frame": 16.156,
+      "wet_face_count": 358,
+      "wet_area_km2": 3.58,
+      "non_transparent_pixels": 358,
+      "image_filename": "frame_009.png",
+      "image_url": "/api/simulation/frames/frame_009.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 10,
+      "solver_time_s": 6000.0,
+      "solver_time_hr": 1.67,
+      "timestamp_label": "T+01h 40m",
+      "max_depth_at_frame": 17.042,
+      "wet_face_count": 439,
+      "wet_area_km2": 4.39,
+      "non_transparent_pixels": 439,
+      "image_filename": "frame_010.png",
+      "image_url": "/api/simulation/frames/frame_010.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 11,
+      "solver_time_s": 6600.0,
+      "solver_time_hr": 1.83,
+      "timestamp_label": "T+01h 50m",
+      "max_depth_at_frame": 17.776,
+      "wet_face_count": 540,
+      "wet_area_km2": 5.4,
+      "non_transparent_pixels": 540,
+      "image_filename": "frame_011.png",
+      "image_url": "/api/simulation/frames/frame_011.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 12,
+      "solver_time_s": 7200.0,
+      "solver_time_hr": 2.0,
+      "timestamp_label": "T+02h 00m",
+      "max_depth_at_frame": 18.419,
+      "wet_face_count": 646,
+      "wet_area_km2": 6.46,
+      "non_transparent_pixels": 646,
+      "image_filename": "frame_012.png",
+      "image_url": "/api/simulation/frames/frame_012.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 13,
+      "solver_time_s": 7800.0,
+      "solver_time_hr": 2.17,
+      "timestamp_label": "T+02h 10m",
+      "max_depth_at_frame": 18.947,
+      "wet_face_count": 745,
+      "wet_area_km2": 7.45,
+      "non_transparent_pixels": 745,
+      "image_filename": "frame_013.png",
+      "image_url": "/api/simulation/frames/frame_013.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 14,
+      "solver_time_s": 8400.0,
+      "solver_time_hr": 2.33,
+      "timestamp_label": "T+02h 20m",
+      "max_depth_at_frame": 19.396,
+      "wet_face_count": 884,
+      "wet_area_km2": 8.84,
+      "non_transparent_pixels": 884,
+      "image_filename": "frame_014.png",
+      "image_url": "/api/simulation/frames/frame_014.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 15,
+      "solver_time_s": 9000.0,
+      "solver_time_hr": 2.5,
+      "timestamp_label": "T+02h 30m",
+      "max_depth_at_frame": 19.79,
+      "wet_face_count": 1025,
+      "wet_area_km2": 10.25,
+      "non_transparent_pixels": 1025,
+      "image_filename": "frame_015.png",
+      "image_url": "/api/simulation/frames/frame_015.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 16,
+      "solver_time_s": 9600.0,
+      "solver_time_hr": 2.67,
+      "timestamp_label": "T+02h 40m",
+      "max_depth_at_frame": 20.129,
+      "wet_face_count": 1140,
+      "wet_area_km2": 11.4,
+      "non_transparent_pixels": 1140,
+      "image_filename": "frame_016.png",
+      "image_url": "/api/simulation/frames/frame_016.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 17,
+      "solver_time_s": 10200.0,
+      "solver_time_hr": 2.83,
+      "timestamp_label": "T+02h 50m",
+      "max_depth_at_frame": 20.435,
+      "wet_face_count": 1235,
+      "wet_area_km2": 12.35,
+      "non_transparent_pixels": 1235,
+      "image_filename": "frame_017.png",
+      "image_url": "/api/simulation/frames/frame_017.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 18,
+      "solver_time_s": 10800.0,
+      "solver_time_hr": 3.0,
+      "timestamp_label": "T+03h 00m",
+      "max_depth_at_frame": 20.713,
+      "wet_face_count": 1354,
+      "wet_area_km2": 13.54,
+      "non_transparent_pixels": 1354,
+      "image_filename": "frame_018.png",
+      "image_url": "/api/simulation/frames/frame_018.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 19,
+      "solver_time_s": 11400.0,
+      "solver_time_hr": 3.17,
+      "timestamp_label": "T+03h 10m",
+      "max_depth_at_frame": 20.96,
+      "wet_face_count": 1506,
+      "wet_area_km2": 15.06,
+      "non_transparent_pixels": 1506,
+      "image_filename": "frame_019.png",
+      "image_url": "/api/simulation/frames/frame_019.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 20,
+      "solver_time_s": 12000.0,
+      "solver_time_hr": 3.33,
+      "timestamp_label": "T+03h 20m",
+      "max_depth_at_frame": 21.183,
+      "wet_face_count": 1660,
+      "wet_area_km2": 16.6,
+      "non_transparent_pixels": 1660,
+      "image_filename": "frame_020.png",
+      "image_url": "/api/simulation/frames/frame_020.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 21,
+      "solver_time_s": 12600.0,
+      "solver_time_hr": 3.5,
+      "timestamp_label": "T+03h 30m",
+      "max_depth_at_frame": 21.391,
+      "wet_face_count": 1804,
+      "wet_area_km2": 18.04,
+      "non_transparent_pixels": 1804,
+      "image_filename": "frame_021.png",
+      "image_url": "/api/simulation/frames/frame_021.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 22,
+      "solver_time_s": 13200.0,
+      "solver_time_hr": 3.67,
+      "timestamp_label": "T+03h 40m",
+      "max_depth_at_frame": 21.584,
+      "wet_face_count": 1963,
+      "wet_area_km2": 19.63,
+      "non_transparent_pixels": 1963,
+      "image_filename": "frame_022.png",
+      "image_url": "/api/simulation/frames/frame_022.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 23,
+      "solver_time_s": 13800.0,
+      "solver_time_hr": 3.83,
+      "timestamp_label": "T+03h 50m",
+      "max_depth_at_frame": 21.76,
+      "wet_face_count": 2126,
+      "wet_area_km2": 21.26,
+      "non_transparent_pixels": 2126,
+      "image_filename": "frame_023.png",
+      "image_url": "/api/simulation/frames/frame_023.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 24,
+      "solver_time_s": 14400.0,
+      "solver_time_hr": 4.0,
+      "timestamp_label": "T+04h 00m",
+      "max_depth_at_frame": 21.918,
+      "wet_face_count": 2284,
+      "wet_area_km2": 22.84,
+      "non_transparent_pixels": 2284,
+      "image_filename": "frame_024.png",
+      "image_url": "/api/simulation/frames/frame_024.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 25,
+      "solver_time_s": 15000.0,
+      "solver_time_hr": 4.17,
+      "timestamp_label": "T+04h 10m",
+      "max_depth_at_frame": 21.994,
+      "wet_face_count": 2449,
+      "wet_area_km2": 24.49,
+      "non_transparent_pixels": 2449,
+      "image_filename": "frame_025.png",
+      "image_url": "/api/simulation/frames/frame_025.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 26,
+      "solver_time_s": 15600.0,
+      "solver_time_hr": 4.33,
+      "timestamp_label": "T+04h 20m",
+      "max_depth_at_frame": 22.02,
+      "wet_face_count": 2623,
+      "wet_area_km2": 26.23,
+      "non_transparent_pixels": 2623,
+      "image_filename": "frame_026.png",
+      "image_url": "/api/simulation/frames/frame_026.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 27,
+      "solver_time_s": 16200.0,
+      "solver_time_hr": 4.5,
+      "timestamp_label": "T+04h 30m",
+      "max_depth_at_frame": 22.023,
+      "wet_face_count": 2801,
+      "wet_area_km2": 28.01,
+      "non_transparent_pixels": 2801,
+      "image_filename": "frame_027.png",
+      "image_url": "/api/simulation/frames/frame_027.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 28,
+      "solver_time_s": 16800.0,
+      "solver_time_hr": 4.67,
+      "timestamp_label": "T+04h 40m",
+      "max_depth_at_frame": 22.015,
+      "wet_face_count": 2991,
+      "wet_area_km2": 29.91,
+      "non_transparent_pixels": 2991,
+      "image_filename": "frame_028.png",
+      "image_url": "/api/simulation/frames/frame_028.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 29,
+      "solver_time_s": 17400.0,
+      "solver_time_hr": 4.83,
+      "timestamp_label": "T+04h 50m",
+      "max_depth_at_frame": 22.0,
+      "wet_face_count": 3166,
+      "wet_area_km2": 31.66,
+      "non_transparent_pixels": 3166,
+      "image_filename": "frame_029.png",
+      "image_url": "/api/simulation/frames/frame_029.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 30,
+      "solver_time_s": 18000.0,
+      "solver_time_hr": 5.0,
+      "timestamp_label": "T+05h 00m",
+      "max_depth_at_frame": 21.981,
+      "wet_face_count": 3341,
+      "wet_area_km2": 33.41,
+      "non_transparent_pixels": 3341,
+      "image_filename": "frame_030.png",
+      "image_url": "/api/simulation/frames/frame_030.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 31,
+      "solver_time_s": 18600.0,
+      "solver_time_hr": 5.17,
+      "timestamp_label": "T+05h 10m",
+      "max_depth_at_frame": 21.958,
+      "wet_face_count": 3548,
+      "wet_area_km2": 35.48,
+      "non_transparent_pixels": 3548,
+      "image_filename": "frame_031.png",
+      "image_url": "/api/simulation/frames/frame_031.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 32,
+      "solver_time_s": 19200.0,
+      "solver_time_hr": 5.33,
+      "timestamp_label": "T+05h 20m",
+      "max_depth_at_frame": 21.933,
+      "wet_face_count": 3746,
+      "wet_area_km2": 37.46,
+      "non_transparent_pixels": 3746,
+      "image_filename": "frame_032.png",
+      "image_url": "/api/simulation/frames/frame_032.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 33,
+      "solver_time_s": 19800.0,
+      "solver_time_hr": 5.5,
+      "timestamp_label": "T+05h 30m",
+      "max_depth_at_frame": 21.906,
+      "wet_face_count": 3890,
+      "wet_area_km2": 38.9,
+      "non_transparent_pixels": 3890,
+      "image_filename": "frame_033.png",
+      "image_url": "/api/simulation/frames/frame_033.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 34,
+      "solver_time_s": 20400.0,
+      "solver_time_hr": 5.67,
+      "timestamp_label": "T+05h 40m",
+      "max_depth_at_frame": 21.879,
+      "wet_face_count": 4052,
+      "wet_area_km2": 40.52,
+      "non_transparent_pixels": 4052,
+      "image_filename": "frame_034.png",
+      "image_url": "/api/simulation/frames/frame_034.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 35,
+      "solver_time_s": 21000.0,
+      "solver_time_hr": 5.83,
+      "timestamp_label": "T+05h 50m",
+      "max_depth_at_frame": 21.85,
+      "wet_face_count": 4239,
+      "wet_area_km2": 42.39,
+      "non_transparent_pixels": 4239,
+      "image_filename": "frame_035.png",
+      "image_url": "/api/simulation/frames/frame_035.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 36,
+      "solver_time_s": 21600.0,
+      "solver_time_hr": 6.0,
+      "timestamp_label": "T+06h 00m",
+      "max_depth_at_frame": 21.821,
+      "wet_face_count": 4449,
+      "wet_area_km2": 44.49,
+      "non_transparent_pixels": 4449,
+      "image_filename": "frame_036.png",
+      "image_url": "/api/simulation/frames/frame_036.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 37,
+      "solver_time_s": 22200.0,
+      "solver_time_hr": 6.17,
+      "timestamp_label": "T+06h 10m",
+      "max_depth_at_frame": 21.791,
+      "wet_face_count": 4623,
+      "wet_area_km2": 46.23,
+      "non_transparent_pixels": 4623,
+      "image_filename": "frame_037.png",
+      "image_url": "/api/simulation/frames/frame_037.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 38,
+      "solver_time_s": 22800.0,
+      "solver_time_hr": 6.33,
+      "timestamp_label": "T+06h 20m",
+      "max_depth_at_frame": 21.76,
+      "wet_face_count": 4810,
+      "wet_area_km2": 48.1,
+      "non_transparent_pixels": 4810,
+      "image_filename": "frame_038.png",
+      "image_url": "/api/simulation/frames/frame_038.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 39,
+      "solver_time_s": 23400.0,
+      "solver_time_hr": 6.5,
+      "timestamp_label": "T+06h 30m",
+      "max_depth_at_frame": 21.729,
+      "wet_face_count": 5010,
+      "wet_area_km2": 50.1,
+      "non_transparent_pixels": 5010,
+      "image_filename": "frame_039.png",
+      "image_url": "/api/simulation/frames/frame_039.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 40,
+      "solver_time_s": 24000.0,
+      "solver_time_hr": 6.67,
+      "timestamp_label": "T+06h 40m",
+      "max_depth_at_frame": 21.698,
+      "wet_face_count": 5222,
+      "wet_area_km2": 52.22,
+      "non_transparent_pixels": 5222,
+      "image_filename": "frame_040.png",
+      "image_url": "/api/simulation/frames/frame_040.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 41,
+      "solver_time_s": 24600.0,
+      "solver_time_hr": 6.83,
+      "timestamp_label": "T+06h 50m",
+      "max_depth_at_frame": 21.666,
+      "wet_face_count": 5434,
+      "wet_area_km2": 54.34,
+      "non_transparent_pixels": 5434,
+      "image_filename": "frame_041.png",
+      "image_url": "/api/simulation/frames/frame_041.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 42,
+      "solver_time_s": 25200.0,
+      "solver_time_hr": 7.0,
+      "timestamp_label": "T+07h 00m",
+      "max_depth_at_frame": 21.634,
+      "wet_face_count": 5670,
+      "wet_area_km2": 56.7,
+      "non_transparent_pixels": 5670,
+      "image_filename": "frame_042.png",
+      "image_url": "/api/simulation/frames/frame_042.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 43,
+      "solver_time_s": 25800.0,
+      "solver_time_hr": 7.17,
+      "timestamp_label": "T+07h 10m",
+      "max_depth_at_frame": 21.6,
+      "wet_face_count": 5899,
+      "wet_area_km2": 58.99,
+      "non_transparent_pixels": 5899,
+      "image_filename": "frame_043.png",
+      "image_url": "/api/simulation/frames/frame_043.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 44,
+      "solver_time_s": 26400.0,
+      "solver_time_hr": 7.33,
+      "timestamp_label": "T+07h 20m",
+      "max_depth_at_frame": 21.567,
+      "wet_face_count": 6102,
+      "wet_area_km2": 61.02,
+      "non_transparent_pixels": 6102,
+      "image_filename": "frame_044.png",
+      "image_url": "/api/simulation/frames/frame_044.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 45,
+      "solver_time_s": 27000.0,
+      "solver_time_hr": 7.5,
+      "timestamp_label": "T+07h 30m",
+      "max_depth_at_frame": 21.533,
+      "wet_face_count": 6309,
+      "wet_area_km2": 63.09,
+      "non_transparent_pixels": 6309,
+      "image_filename": "frame_045.png",
+      "image_url": "/api/simulation/frames/frame_045.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 46,
+      "solver_time_s": 27600.0,
+      "solver_time_hr": 7.67,
+      "timestamp_label": "T+07h 40m",
+      "max_depth_at_frame": 21.499,
+      "wet_face_count": 6462,
+      "wet_area_km2": 64.62,
+      "non_transparent_pixels": 6462,
+      "image_filename": "frame_046.png",
+      "image_url": "/api/simulation/frames/frame_046.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 47,
+      "solver_time_s": 28200.0,
+      "solver_time_hr": 7.83,
+      "timestamp_label": "T+07h 50m",
+      "max_depth_at_frame": 21.464,
+      "wet_face_count": 6616,
+      "wet_area_km2": 66.16,
+      "non_transparent_pixels": 6616,
+      "image_filename": "frame_047.png",
+      "image_url": "/api/simulation/frames/frame_047.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 48,
+      "solver_time_s": 28800.0,
+      "solver_time_hr": 8.0,
+      "timestamp_label": "T+08h 00m",
+      "max_depth_at_frame": 21.429,
+      "wet_face_count": 6807,
+      "wet_area_km2": 68.07,
+      "non_transparent_pixels": 6807,
+      "image_filename": "frame_048.png",
+      "image_url": "/api/simulation/frames/frame_048.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 49,
+      "solver_time_s": 29400.0,
+      "solver_time_hr": 8.17,
+      "timestamp_label": "T+08h 10m",
+      "max_depth_at_frame": 21.393,
+      "wet_face_count": 6980,
+      "wet_area_km2": 69.8,
+      "non_transparent_pixels": 6980,
+      "image_filename": "frame_049.png",
+      "image_url": "/api/simulation/frames/frame_049.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 50,
+      "solver_time_s": 30000.0,
+      "solver_time_hr": 8.33,
+      "timestamp_label": "T+08h 20m",
+      "max_depth_at_frame": 21.357,
+      "wet_face_count": 7199,
+      "wet_area_km2": 71.99,
+      "non_transparent_pixels": 7199,
+      "image_filename": "frame_050.png",
+      "image_url": "/api/simulation/frames/frame_050.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 51,
+      "solver_time_s": 30600.0,
+      "solver_time_hr": 8.5,
+      "timestamp_label": "T+08h 30m",
+      "max_depth_at_frame": 21.321,
+      "wet_face_count": 7406,
+      "wet_area_km2": 74.06,
+      "non_transparent_pixels": 7406,
+      "image_filename": "frame_051.png",
+      "image_url": "/api/simulation/frames/frame_051.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 52,
+      "solver_time_s": 31200.0,
+      "solver_time_hr": 8.67,
+      "timestamp_label": "T+08h 40m",
+      "max_depth_at_frame": 21.284,
+      "wet_face_count": 7596,
+      "wet_area_km2": 75.96,
+      "non_transparent_pixels": 7596,
+      "image_filename": "frame_052.png",
+      "image_url": "/api/simulation/frames/frame_052.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 53,
+      "solver_time_s": 31800.0,
+      "solver_time_hr": 8.83,
+      "timestamp_label": "T+08h 50m",
+      "max_depth_at_frame": 21.248,
+      "wet_face_count": 7796,
+      "wet_area_km2": 77.96,
+      "non_transparent_pixels": 7796,
+      "image_filename": "frame_053.png",
+      "image_url": "/api/simulation/frames/frame_053.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 54,
+      "solver_time_s": 32400.0,
+      "solver_time_hr": 9.0,
+      "timestamp_label": "T+09h 00m",
+      "max_depth_at_frame": 21.21,
+      "wet_face_count": 8007,
+      "wet_area_km2": 80.07,
+      "non_transparent_pixels": 8007,
+      "image_filename": "frame_054.png",
+      "image_url": "/api/simulation/frames/frame_054.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 55,
+      "solver_time_s": 33000.0,
+      "solver_time_hr": 9.17,
+      "timestamp_label": "T+09h 10m",
+      "max_depth_at_frame": 21.172,
+      "wet_face_count": 8191,
+      "wet_area_km2": 81.91,
+      "non_transparent_pixels": 8191,
+      "image_filename": "frame_055.png",
+      "image_url": "/api/simulation/frames/frame_055.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 56,
+      "solver_time_s": 33600.0,
+      "solver_time_hr": 9.33,
+      "timestamp_label": "T+09h 20m",
+      "max_depth_at_frame": 21.134,
+      "wet_face_count": 8365,
+      "wet_area_km2": 83.65,
+      "non_transparent_pixels": 8365,
+      "image_filename": "frame_056.png",
+      "image_url": "/api/simulation/frames/frame_056.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 57,
+      "solver_time_s": 34200.0,
+      "solver_time_hr": 9.5,
+      "timestamp_label": "T+09h 30m",
+      "max_depth_at_frame": 21.095,
+      "wet_face_count": 8535,
+      "wet_area_km2": 85.35,
+      "non_transparent_pixels": 8535,
+      "image_filename": "frame_057.png",
+      "image_url": "/api/simulation/frames/frame_057.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 58,
+      "solver_time_s": 34800.0,
+      "solver_time_hr": 9.67,
+      "timestamp_label": "T+09h 40m",
+      "max_depth_at_frame": 21.056,
+      "wet_face_count": 8726,
+      "wet_area_km2": 87.26,
+      "non_transparent_pixels": 8726,
+      "image_filename": "frame_058.png",
+      "image_url": "/api/simulation/frames/frame_058.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 59,
+      "solver_time_s": 35400.0,
+      "solver_time_hr": 9.83,
+      "timestamp_label": "T+09h 50m",
+      "max_depth_at_frame": 21.017,
+      "wet_face_count": 8916,
+      "wet_area_km2": 89.16,
+      "non_transparent_pixels": 8916,
+      "image_filename": "frame_059.png",
+      "image_url": "/api/simulation/frames/frame_059.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 60,
+      "solver_time_s": 36000.0,
+      "solver_time_hr": 10.0,
+      "timestamp_label": "T+10h 00m",
+      "max_depth_at_frame": 20.976,
+      "wet_face_count": 9112,
+      "wet_area_km2": 91.12,
+      "non_transparent_pixels": 9112,
+      "image_filename": "frame_060.png",
+      "image_url": "/api/simulation/frames/frame_060.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 61,
+      "solver_time_s": 36600.0,
+      "solver_time_hr": 10.17,
+      "timestamp_label": "T+10h 10m",
+      "max_depth_at_frame": 20.936,
+      "wet_face_count": 9319,
+      "wet_area_km2": 93.19,
+      "non_transparent_pixels": 9319,
+      "image_filename": "frame_061.png",
+      "image_url": "/api/simulation/frames/frame_061.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 62,
+      "solver_time_s": 37200.0,
+      "solver_time_hr": 10.33,
+      "timestamp_label": "T+10h 20m",
+      "max_depth_at_frame": 20.895,
+      "wet_face_count": 9505,
+      "wet_area_km2": 95.05,
+      "non_transparent_pixels": 9505,
+      "image_filename": "frame_062.png",
+      "image_url": "/api/simulation/frames/frame_062.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 63,
+      "solver_time_s": 37800.0,
+      "solver_time_hr": 10.5,
+      "timestamp_label": "T+10h 30m",
+      "max_depth_at_frame": 20.853,
+      "wet_face_count": 9682,
+      "wet_area_km2": 96.82,
+      "non_transparent_pixels": 9682,
+      "image_filename": "frame_063.png",
+      "image_url": "/api/simulation/frames/frame_063.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 64,
+      "solver_time_s": 38400.0,
+      "solver_time_hr": 10.67,
+      "timestamp_label": "T+10h 40m",
+      "max_depth_at_frame": 20.811,
+      "wet_face_count": 9822,
+      "wet_area_km2": 98.22,
+      "non_transparent_pixels": 9822,
+      "image_filename": "frame_064.png",
+      "image_url": "/api/simulation/frames/frame_064.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 65,
+      "solver_time_s": 39000.0,
+      "solver_time_hr": 10.83,
+      "timestamp_label": "T+10h 50m",
+      "max_depth_at_frame": 20.769,
+      "wet_face_count": 9898,
+      "wet_area_km2": 98.98,
+      "non_transparent_pixels": 9898,
+      "image_filename": "frame_065.png",
+      "image_url": "/api/simulation/frames/frame_065.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 66,
+      "solver_time_s": 39600.0,
+      "solver_time_hr": 11.0,
+      "timestamp_label": "T+11h 00m",
+      "max_depth_at_frame": 20.726,
+      "wet_face_count": 9934,
+      "wet_area_km2": 99.34,
+      "non_transparent_pixels": 9934,
+      "image_filename": "frame_066.png",
+      "image_url": "/api/simulation/frames/frame_066.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 67,
+      "solver_time_s": 40200.0,
+      "solver_time_hr": 11.17,
+      "timestamp_label": "T+11h 10m",
+      "max_depth_at_frame": 20.682,
+      "wet_face_count": 9966,
+      "wet_area_km2": 99.66,
+      "non_transparent_pixels": 9966,
+      "image_filename": "frame_067.png",
+      "image_url": "/api/simulation/frames/frame_067.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 68,
+      "solver_time_s": 40800.0,
+      "solver_time_hr": 11.33,
+      "timestamp_label": "T+11h 20m",
+      "max_depth_at_frame": 20.639,
+      "wet_face_count": 9984,
+      "wet_area_km2": 99.84,
+      "non_transparent_pixels": 9984,
+      "image_filename": "frame_068.png",
+      "image_url": "/api/simulation/frames/frame_068.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 69,
+      "solver_time_s": 41400.0,
+      "solver_time_hr": 11.5,
+      "timestamp_label": "T+11h 30m",
+      "max_depth_at_frame": 20.594,
+      "wet_face_count": 10003,
+      "wet_area_km2": 100.03,
+      "non_transparent_pixels": 10003,
+      "image_filename": "frame_069.png",
+      "image_url": "/api/simulation/frames/frame_069.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 70,
+      "solver_time_s": 42000.0,
+      "solver_time_hr": 11.67,
+      "timestamp_label": "T+11h 40m",
+      "max_depth_at_frame": 20.549,
+      "wet_face_count": 10005,
+      "wet_area_km2": 100.05,
+      "non_transparent_pixels": 10005,
+      "image_filename": "frame_070.png",
+      "image_url": "/api/simulation/frames/frame_070.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 71,
+      "solver_time_s": 42600.0,
+      "solver_time_hr": 11.83,
+      "timestamp_label": "T+11h 50m",
+      "max_depth_at_frame": 20.504,
+      "wet_face_count": 10010,
+      "wet_area_km2": 100.1,
+      "non_transparent_pixels": 10010,
+      "image_filename": "frame_071.png",
+      "image_url": "/api/simulation/frames/frame_071.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 72,
+      "solver_time_s": 43200.0,
+      "solver_time_hr": 12.0,
+      "timestamp_label": "T+12h 00m",
+      "max_depth_at_frame": 20.458,
+      "wet_face_count": 10016,
+      "wet_area_km2": 100.16,
+      "non_transparent_pixels": 10016,
+      "image_filename": "frame_072.png",
+      "image_url": "/api/simulation/frames/frame_072.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 73,
+      "solver_time_s": 43800.0,
+      "solver_time_hr": 12.17,
+      "timestamp_label": "T+12h 10m",
+      "max_depth_at_frame": 20.412,
+      "wet_face_count": 10018,
+      "wet_area_km2": 100.18,
+      "non_transparent_pixels": 10018,
+      "image_filename": "frame_073.png",
+      "image_url": "/api/simulation/frames/frame_073.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 74,
+      "solver_time_s": 44400.0,
+      "solver_time_hr": 12.33,
+      "timestamp_label": "T+12h 20m",
+      "max_depth_at_frame": 20.365,
+      "wet_face_count": 10014,
+      "wet_area_km2": 100.14,
+      "non_transparent_pixels": 10014,
+      "image_filename": "frame_074.png",
+      "image_url": "/api/simulation/frames/frame_074.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 75,
+      "solver_time_s": 45000.0,
+      "solver_time_hr": 12.5,
+      "timestamp_label": "T+12h 30m",
+      "max_depth_at_frame": 20.318,
+      "wet_face_count": 10009,
+      "wet_area_km2": 100.09,
+      "non_transparent_pixels": 10009,
+      "image_filename": "frame_075.png",
+      "image_url": "/api/simulation/frames/frame_075.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 76,
+      "solver_time_s": 45600.0,
+      "solver_time_hr": 12.67,
+      "timestamp_label": "T+12h 40m",
+      "max_depth_at_frame": 20.27,
+      "wet_face_count": 10008,
+      "wet_area_km2": 100.08,
+      "non_transparent_pixels": 10008,
+      "image_filename": "frame_076.png",
+      "image_url": "/api/simulation/frames/frame_076.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 77,
+      "solver_time_s": 46200.0,
+      "solver_time_hr": 12.83,
+      "timestamp_label": "T+12h 50m",
+      "max_depth_at_frame": 20.222,
+      "wet_face_count": 10007,
+      "wet_area_km2": 100.07,
+      "non_transparent_pixels": 10007,
+      "image_filename": "frame_077.png",
+      "image_url": "/api/simulation/frames/frame_077.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 78,
+      "solver_time_s": 46800.0,
+      "solver_time_hr": 13.0,
+      "timestamp_label": "T+13h 00m",
+      "max_depth_at_frame": 20.172,
+      "wet_face_count": 9998,
+      "wet_area_km2": 99.98,
+      "non_transparent_pixels": 9998,
+      "image_filename": "frame_078.png",
+      "image_url": "/api/simulation/frames/frame_078.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 79,
+      "solver_time_s": 47400.0,
+      "solver_time_hr": 13.17,
+      "timestamp_label": "T+13h 10m",
+      "max_depth_at_frame": 20.122,
+      "wet_face_count": 9990,
+      "wet_area_km2": 99.9,
+      "non_transparent_pixels": 9990,
+      "image_filename": "frame_079.png",
+      "image_url": "/api/simulation/frames/frame_079.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 80,
+      "solver_time_s": 48000.0,
+      "solver_time_hr": 13.33,
+      "timestamp_label": "T+13h 20m",
+      "max_depth_at_frame": 20.072,
+      "wet_face_count": 9984,
+      "wet_area_km2": 99.84,
+      "non_transparent_pixels": 9984,
+      "image_filename": "frame_080.png",
+      "image_url": "/api/simulation/frames/frame_080.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 81,
+      "solver_time_s": 48600.0,
+      "solver_time_hr": 13.5,
+      "timestamp_label": "T+13h 30m",
+      "max_depth_at_frame": 20.021,
+      "wet_face_count": 9978,
+      "wet_area_km2": 99.78,
+      "non_transparent_pixels": 9978,
+      "image_filename": "frame_081.png",
+      "image_url": "/api/simulation/frames/frame_081.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 82,
+      "solver_time_s": 49200.0,
+      "solver_time_hr": 13.67,
+      "timestamp_label": "T+13h 40m",
+      "max_depth_at_frame": 19.97,
+      "wet_face_count": 9970,
+      "wet_area_km2": 99.7,
+      "non_transparent_pixels": 9970,
+      "image_filename": "frame_082.png",
+      "image_url": "/api/simulation/frames/frame_082.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 83,
+      "solver_time_s": 49800.0,
+      "solver_time_hr": 13.83,
+      "timestamp_label": "T+13h 50m",
+      "max_depth_at_frame": 19.919,
+      "wet_face_count": 9961,
+      "wet_area_km2": 99.61,
+      "non_transparent_pixels": 9961,
+      "image_filename": "frame_083.png",
+      "image_url": "/api/simulation/frames/frame_083.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 84,
+      "solver_time_s": 50400.0,
+      "solver_time_hr": 14.0,
+      "timestamp_label": "T+14h 00m",
+      "max_depth_at_frame": 19.867,
+      "wet_face_count": 9952,
+      "wet_area_km2": 99.52,
+      "non_transparent_pixels": 9952,
+      "image_filename": "frame_084.png",
+      "image_url": "/api/simulation/frames/frame_084.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 85,
+      "solver_time_s": 51000.0,
+      "solver_time_hr": 14.17,
+      "timestamp_label": "T+14h 10m",
+      "max_depth_at_frame": 19.815,
+      "wet_face_count": 9941,
+      "wet_area_km2": 99.41,
+      "non_transparent_pixels": 9941,
+      "image_filename": "frame_085.png",
+      "image_url": "/api/simulation/frames/frame_085.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 86,
+      "solver_time_s": 51600.0,
+      "solver_time_hr": 14.33,
+      "timestamp_label": "T+14h 20m",
+      "max_depth_at_frame": 19.762,
+      "wet_face_count": 9934,
+      "wet_area_km2": 99.34,
+      "non_transparent_pixels": 9934,
+      "image_filename": "frame_086.png",
+      "image_url": "/api/simulation/frames/frame_086.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 87,
+      "solver_time_s": 52200.0,
+      "solver_time_hr": 14.5,
+      "timestamp_label": "T+14h 30m",
+      "max_depth_at_frame": 19.709,
+      "wet_face_count": 9923,
+      "wet_area_km2": 99.23,
+      "non_transparent_pixels": 9923,
+      "image_filename": "frame_087.png",
+      "image_url": "/api/simulation/frames/frame_087.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 88,
+      "solver_time_s": 52800.0,
+      "solver_time_hr": 14.67,
+      "timestamp_label": "T+14h 40m",
+      "max_depth_at_frame": 19.655,
+      "wet_face_count": 9916,
+      "wet_area_km2": 99.16,
+      "non_transparent_pixels": 9916,
+      "image_filename": "frame_088.png",
+      "image_url": "/api/simulation/frames/frame_088.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 89,
+      "solver_time_s": 53400.0,
+      "solver_time_hr": 14.83,
+      "timestamp_label": "T+14h 50m",
+      "max_depth_at_frame": 19.6,
+      "wet_face_count": 9906,
+      "wet_area_km2": 99.06,
+      "non_transparent_pixels": 9906,
+      "image_filename": "frame_089.png",
+      "image_url": "/api/simulation/frames/frame_089.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 90,
+      "solver_time_s": 54000.0,
+      "solver_time_hr": 15.0,
+      "timestamp_label": "T+15h 00m",
+      "max_depth_at_frame": 19.544,
+      "wet_face_count": 9894,
+      "wet_area_km2": 98.94,
+      "non_transparent_pixels": 9894,
+      "image_filename": "frame_090.png",
+      "image_url": "/api/simulation/frames/frame_090.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 91,
+      "solver_time_s": 54600.0,
+      "solver_time_hr": 15.17,
+      "timestamp_label": "T+15h 10m",
+      "max_depth_at_frame": 19.488,
+      "wet_face_count": 9883,
+      "wet_area_km2": 98.83,
+      "non_transparent_pixels": 9883,
+      "image_filename": "frame_091.png",
+      "image_url": "/api/simulation/frames/frame_091.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 92,
+      "solver_time_s": 55200.0,
+      "solver_time_hr": 15.33,
+      "timestamp_label": "T+15h 20m",
+      "max_depth_at_frame": 19.432,
+      "wet_face_count": 9871,
+      "wet_area_km2": 98.71,
+      "non_transparent_pixels": 9871,
+      "image_filename": "frame_092.png",
+      "image_url": "/api/simulation/frames/frame_092.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 93,
+      "solver_time_s": 55800.0,
+      "solver_time_hr": 15.5,
+      "timestamp_label": "T+15h 30m",
+      "max_depth_at_frame": 19.375,
+      "wet_face_count": 9865,
+      "wet_area_km2": 98.65,
+      "non_transparent_pixels": 9865,
+      "image_filename": "frame_093.png",
+      "image_url": "/api/simulation/frames/frame_093.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 94,
+      "solver_time_s": 56400.0,
+      "solver_time_hr": 15.67,
+      "timestamp_label": "T+15h 40m",
+      "max_depth_at_frame": 19.318,
+      "wet_face_count": 9852,
+      "wet_area_km2": 98.52,
+      "non_transparent_pixels": 9852,
+      "image_filename": "frame_094.png",
+      "image_url": "/api/simulation/frames/frame_094.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 95,
+      "solver_time_s": 57000.0,
+      "solver_time_hr": 15.83,
+      "timestamp_label": "T+15h 50m",
+      "max_depth_at_frame": 19.26,
+      "wet_face_count": 9838,
+      "wet_area_km2": 98.38,
+      "non_transparent_pixels": 9838,
+      "image_filename": "frame_095.png",
+      "image_url": "/api/simulation/frames/frame_095.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 96,
+      "solver_time_s": 57600.0,
+      "solver_time_hr": 16.0,
+      "timestamp_label": "T+16h 00m",
+      "max_depth_at_frame": 19.201,
+      "wet_face_count": 9823,
+      "wet_area_km2": 98.23,
+      "non_transparent_pixels": 9823,
+      "image_filename": "frame_096.png",
+      "image_url": "/api/simulation/frames/frame_096.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 97,
+      "solver_time_s": 58200.0,
+      "solver_time_hr": 16.17,
+      "timestamp_label": "T+16h 10m",
+      "max_depth_at_frame": 19.141,
+      "wet_face_count": 9814,
+      "wet_area_km2": 98.14,
+      "non_transparent_pixels": 9814,
+      "image_filename": "frame_097.png",
+      "image_url": "/api/simulation/frames/frame_097.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 98,
+      "solver_time_s": 58800.0,
+      "solver_time_hr": 16.33,
+      "timestamp_label": "T+16h 20m",
+      "max_depth_at_frame": 19.08,
+      "wet_face_count": 9800,
+      "wet_area_km2": 98.0,
+      "non_transparent_pixels": 9800,
+      "image_filename": "frame_098.png",
+      "image_url": "/api/simulation/frames/frame_098.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 99,
+      "solver_time_s": 59400.0,
+      "solver_time_hr": 16.5,
+      "timestamp_label": "T+16h 30m",
+      "max_depth_at_frame": 19.019,
+      "wet_face_count": 9780,
+      "wet_area_km2": 97.8,
+      "non_transparent_pixels": 9780,
+      "image_filename": "frame_099.png",
+      "image_url": "/api/simulation/frames/frame_099.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 100,
+      "solver_time_s": 60000.0,
+      "solver_time_hr": 16.67,
+      "timestamp_label": "T+16h 40m",
+      "max_depth_at_frame": 18.957,
+      "wet_face_count": 9762,
+      "wet_area_km2": 97.62,
+      "non_transparent_pixels": 9762,
+      "image_filename": "frame_100.png",
+      "image_url": "/api/simulation/frames/frame_100.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 101,
+      "solver_time_s": 60600.0,
+      "solver_time_hr": 16.83,
+      "timestamp_label": "T+16h 50m",
+      "max_depth_at_frame": 18.894,
+      "wet_face_count": 9748,
+      "wet_area_km2": 97.48,
+      "non_transparent_pixels": 9748,
+      "image_filename": "frame_101.png",
+      "image_url": "/api/simulation/frames/frame_101.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 102,
+      "solver_time_s": 61200.0,
+      "solver_time_hr": 17.0,
+      "timestamp_label": "T+17h 00m",
+      "max_depth_at_frame": 18.83,
+      "wet_face_count": 9733,
+      "wet_area_km2": 97.33,
+      "non_transparent_pixels": 9733,
+      "image_filename": "frame_102.png",
+      "image_url": "/api/simulation/frames/frame_102.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 103,
+      "solver_time_s": 61800.0,
+      "solver_time_hr": 17.17,
+      "timestamp_label": "T+17h 10m",
+      "max_depth_at_frame": 18.766,
+      "wet_face_count": 9721,
+      "wet_area_km2": 97.21,
+      "non_transparent_pixels": 9721,
+      "image_filename": "frame_103.png",
+      "image_url": "/api/simulation/frames/frame_103.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 104,
+      "solver_time_s": 62400.0,
+      "solver_time_hr": 17.33,
+      "timestamp_label": "T+17h 20m",
+      "max_depth_at_frame": 18.7,
+      "wet_face_count": 9707,
+      "wet_area_km2": 97.07,
+      "non_transparent_pixels": 9707,
+      "image_filename": "frame_104.png",
+      "image_url": "/api/simulation/frames/frame_104.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 105,
+      "solver_time_s": 63000.0,
+      "solver_time_hr": 17.5,
+      "timestamp_label": "T+17h 30m",
+      "max_depth_at_frame": 18.634,
+      "wet_face_count": 9691,
+      "wet_area_km2": 96.91,
+      "non_transparent_pixels": 9691,
+      "image_filename": "frame_105.png",
+      "image_url": "/api/simulation/frames/frame_105.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 106,
+      "solver_time_s": 63600.0,
+      "solver_time_hr": 17.67,
+      "timestamp_label": "T+17h 40m",
+      "max_depth_at_frame": 18.566,
+      "wet_face_count": 9682,
+      "wet_area_km2": 96.82,
+      "non_transparent_pixels": 9682,
+      "image_filename": "frame_106.png",
+      "image_url": "/api/simulation/frames/frame_106.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 107,
+      "solver_time_s": 64200.0,
+      "solver_time_hr": 17.83,
+      "timestamp_label": "T+17h 50m",
+      "max_depth_at_frame": 18.496,
+      "wet_face_count": 9665,
+      "wet_area_km2": 96.65,
+      "non_transparent_pixels": 9665,
+      "image_filename": "frame_107.png",
+      "image_url": "/api/simulation/frames/frame_107.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 108,
+      "solver_time_s": 64800.0,
+      "solver_time_hr": 18.0,
+      "timestamp_label": "T+18h 00m",
+      "max_depth_at_frame": 18.426,
+      "wet_face_count": 9645,
+      "wet_area_km2": 96.45,
+      "non_transparent_pixels": 9645,
+      "image_filename": "frame_108.png",
+      "image_url": "/api/simulation/frames/frame_108.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 109,
+      "solver_time_s": 65400.0,
+      "solver_time_hr": 18.17,
+      "timestamp_label": "T+18h 10m",
+      "max_depth_at_frame": 18.355,
+      "wet_face_count": 9632,
+      "wet_area_km2": 96.32,
+      "non_transparent_pixels": 9632,
+      "image_filename": "frame_109.png",
+      "image_url": "/api/simulation/frames/frame_109.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 110,
+      "solver_time_s": 66000.0,
+      "solver_time_hr": 18.33,
+      "timestamp_label": "T+18h 20m",
+      "max_depth_at_frame": 18.282,
+      "wet_face_count": 9616,
+      "wet_area_km2": 96.16,
+      "non_transparent_pixels": 9616,
+      "image_filename": "frame_110.png",
+      "image_url": "/api/simulation/frames/frame_110.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 111,
+      "solver_time_s": 66600.0,
+      "solver_time_hr": 18.5,
+      "timestamp_label": "T+18h 30m",
+      "max_depth_at_frame": 18.207,
+      "wet_face_count": 9605,
+      "wet_area_km2": 96.05,
+      "non_transparent_pixels": 9605,
+      "image_filename": "frame_111.png",
+      "image_url": "/api/simulation/frames/frame_111.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 112,
+      "solver_time_s": 67200.0,
+      "solver_time_hr": 18.67,
+      "timestamp_label": "T+18h 40m",
+      "max_depth_at_frame": 18.131,
+      "wet_face_count": 9591,
+      "wet_area_km2": 95.91,
+      "non_transparent_pixels": 9591,
+      "image_filename": "frame_112.png",
+      "image_url": "/api/simulation/frames/frame_112.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 113,
+      "solver_time_s": 67800.0,
+      "solver_time_hr": 18.83,
+      "timestamp_label": "T+18h 50m",
+      "max_depth_at_frame": 18.052,
+      "wet_face_count": 9570,
+      "wet_area_km2": 95.7,
+      "non_transparent_pixels": 9570,
+      "image_filename": "frame_113.png",
+      "image_url": "/api/simulation/frames/frame_113.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 114,
+      "solver_time_s": 68400.0,
+      "solver_time_hr": 19.0,
+      "timestamp_label": "T+19h 00m",
+      "max_depth_at_frame": 17.971,
+      "wet_face_count": 9554,
+      "wet_area_km2": 95.54,
+      "non_transparent_pixels": 9554,
+      "image_filename": "frame_114.png",
+      "image_url": "/api/simulation/frames/frame_114.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 115,
+      "solver_time_s": 69000.0,
+      "solver_time_hr": 19.17,
+      "timestamp_label": "T+19h 10m",
+      "max_depth_at_frame": 17.889,
+      "wet_face_count": 9537,
+      "wet_area_km2": 95.37,
+      "non_transparent_pixels": 9537,
+      "image_filename": "frame_115.png",
+      "image_url": "/api/simulation/frames/frame_115.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 116,
+      "solver_time_s": 69600.0,
+      "solver_time_hr": 19.33,
+      "timestamp_label": "T+19h 20m",
+      "max_depth_at_frame": 17.804,
+      "wet_face_count": 9520,
+      "wet_area_km2": 95.2,
+      "non_transparent_pixels": 9520,
+      "image_filename": "frame_116.png",
+      "image_url": "/api/simulation/frames/frame_116.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 117,
+      "solver_time_s": 70200.0,
+      "solver_time_hr": 19.5,
+      "timestamp_label": "T+19h 30m",
+      "max_depth_at_frame": 17.718,
+      "wet_face_count": 9501,
+      "wet_area_km2": 95.01,
+      "non_transparent_pixels": 9501,
+      "image_filename": "frame_117.png",
+      "image_url": "/api/simulation/frames/frame_117.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 118,
+      "solver_time_s": 70800.0,
+      "solver_time_hr": 19.67,
+      "timestamp_label": "T+19h 40m",
+      "max_depth_at_frame": 17.629,
+      "wet_face_count": 9484,
+      "wet_area_km2": 94.84,
+      "non_transparent_pixels": 9484,
+      "image_filename": "frame_118.png",
+      "image_url": "/api/simulation/frames/frame_118.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 119,
+      "solver_time_s": 71400.0,
+      "solver_time_hr": 19.83,
+      "timestamp_label": "T+19h 50m",
+      "max_depth_at_frame": 17.537,
+      "wet_face_count": 9466,
+      "wet_area_km2": 94.66,
+      "non_transparent_pixels": 9466,
+      "image_filename": "frame_119.png",
+      "image_url": "/api/simulation/frames/frame_119.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 120,
+      "solver_time_s": 72000.0,
+      "solver_time_hr": 20.0,
+      "timestamp_label": "T+20h 00m",
+      "max_depth_at_frame": 17.442,
+      "wet_face_count": 9449,
+      "wet_area_km2": 94.49,
+      "non_transparent_pixels": 9449,
+      "image_filename": "frame_120.png",
+      "image_url": "/api/simulation/frames/frame_120.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 121,
+      "solver_time_s": 72600.0,
+      "solver_time_hr": 20.17,
+      "timestamp_label": "T+20h 10m",
+      "max_depth_at_frame": 17.344,
+      "wet_face_count": 9431,
+      "wet_area_km2": 94.31,
+      "non_transparent_pixels": 9431,
+      "image_filename": "frame_121.png",
+      "image_url": "/api/simulation/frames/frame_121.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 122,
+      "solver_time_s": 73200.0,
+      "solver_time_hr": 20.33,
+      "timestamp_label": "T+20h 20m",
+      "max_depth_at_frame": 17.241,
+      "wet_face_count": 9413,
+      "wet_area_km2": 94.13,
+      "non_transparent_pixels": 9413,
+      "image_filename": "frame_122.png",
+      "image_url": "/api/simulation/frames/frame_122.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 123,
+      "solver_time_s": 73800.0,
+      "solver_time_hr": 20.5,
+      "timestamp_label": "T+20h 30m",
+      "max_depth_at_frame": 17.135,
+      "wet_face_count": 9390,
+      "wet_area_km2": 93.9,
+      "non_transparent_pixels": 9390,
+      "image_filename": "frame_123.png",
+      "image_url": "/api/simulation/frames/frame_123.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 124,
+      "solver_time_s": 74400.0,
+      "solver_time_hr": 20.67,
+      "timestamp_label": "T+20h 40m",
+      "max_depth_at_frame": 17.024,
+      "wet_face_count": 9369,
+      "wet_area_km2": 93.69,
+      "non_transparent_pixels": 9369,
+      "image_filename": "frame_124.png",
+      "image_url": "/api/simulation/frames/frame_124.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 125,
+      "solver_time_s": 75000.0,
+      "solver_time_hr": 20.83,
+      "timestamp_label": "T+20h 50m",
+      "max_depth_at_frame": 16.907,
+      "wet_face_count": 9355,
+      "wet_area_km2": 93.55,
+      "non_transparent_pixels": 9355,
+      "image_filename": "frame_125.png",
+      "image_url": "/api/simulation/frames/frame_125.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 126,
+      "solver_time_s": 75600.0,
+      "solver_time_hr": 21.0,
+      "timestamp_label": "T+21h 00m",
+      "max_depth_at_frame": 16.784,
+      "wet_face_count": 9340,
+      "wet_area_km2": 93.4,
+      "non_transparent_pixels": 9340,
+      "image_filename": "frame_126.png",
+      "image_url": "/api/simulation/frames/frame_126.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 127,
+      "solver_time_s": 76200.0,
+      "solver_time_hr": 21.17,
+      "timestamp_label": "T+21h 10m",
+      "max_depth_at_frame": 16.655,
+      "wet_face_count": 9318,
+      "wet_area_km2": 93.18,
+      "non_transparent_pixels": 9318,
+      "image_filename": "frame_127.png",
+      "image_url": "/api/simulation/frames/frame_127.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 128,
+      "solver_time_s": 76800.0,
+      "solver_time_hr": 21.33,
+      "timestamp_label": "T+21h 20m",
+      "max_depth_at_frame": 16.517,
+      "wet_face_count": 9296,
+      "wet_area_km2": 92.96,
+      "non_transparent_pixels": 9296,
+      "image_filename": "frame_128.png",
+      "image_url": "/api/simulation/frames/frame_128.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 129,
+      "solver_time_s": 77400.0,
+      "solver_time_hr": 21.5,
+      "timestamp_label": "T+21h 30m",
+      "max_depth_at_frame": 16.371,
+      "wet_face_count": 9280,
+      "wet_area_km2": 92.8,
+      "non_transparent_pixels": 9280,
+      "image_filename": "frame_129.png",
+      "image_url": "/api/simulation/frames/frame_129.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 130,
+      "solver_time_s": 78000.0,
+      "solver_time_hr": 21.67,
+      "timestamp_label": "T+21h 40m",
+      "max_depth_at_frame": 16.218,
+      "wet_face_count": 9255,
+      "wet_area_km2": 92.55,
+      "non_transparent_pixels": 9255,
+      "image_filename": "frame_130.png",
+      "image_url": "/api/simulation/frames/frame_130.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 131,
+      "solver_time_s": 78600.0,
+      "solver_time_hr": 21.83,
+      "timestamp_label": "T+21h 50m",
+      "max_depth_at_frame": 16.056,
+      "wet_face_count": 9231,
+      "wet_area_km2": 92.31,
+      "non_transparent_pixels": 9231,
+      "image_filename": "frame_131.png",
+      "image_url": "/api/simulation/frames/frame_131.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 132,
+      "solver_time_s": 79200.0,
+      "solver_time_hr": 22.0,
+      "timestamp_label": "T+22h 00m",
+      "max_depth_at_frame": 15.885,
+      "wet_face_count": 9205,
+      "wet_area_km2": 92.05,
+      "non_transparent_pixels": 9205,
+      "image_filename": "frame_132.png",
+      "image_url": "/api/simulation/frames/frame_132.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 133,
+      "solver_time_s": 79800.0,
+      "solver_time_hr": 22.17,
+      "timestamp_label": "T+22h 10m",
+      "max_depth_at_frame": 15.702,
+      "wet_face_count": 9174,
+      "wet_area_km2": 91.74,
+      "non_transparent_pixels": 9174,
+      "image_filename": "frame_133.png",
+      "image_url": "/api/simulation/frames/frame_133.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 134,
+      "solver_time_s": 80400.0,
+      "solver_time_hr": 22.33,
+      "timestamp_label": "T+22h 20m",
+      "max_depth_at_frame": 15.586,
+      "wet_face_count": 9145,
+      "wet_area_km2": 91.45,
+      "non_transparent_pixels": 9145,
+      "image_filename": "frame_134.png",
+      "image_url": "/api/simulation/frames/frame_134.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 135,
+      "solver_time_s": 81000.0,
+      "solver_time_hr": 22.5,
+      "timestamp_label": "T+22h 30m",
+      "max_depth_at_frame": 15.528,
+      "wet_face_count": 9128,
+      "wet_area_km2": 91.28,
+      "non_transparent_pixels": 9128,
+      "image_filename": "frame_135.png",
+      "image_url": "/api/simulation/frames/frame_135.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 136,
+      "solver_time_s": 81600.0,
+      "solver_time_hr": 22.67,
+      "timestamp_label": "T+22h 40m",
+      "max_depth_at_frame": 15.467,
+      "wet_face_count": 9100,
+      "wet_area_km2": 91.0,
+      "non_transparent_pixels": 9100,
+      "image_filename": "frame_136.png",
+      "image_url": "/api/simulation/frames/frame_136.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 137,
+      "solver_time_s": 82200.0,
+      "solver_time_hr": 22.83,
+      "timestamp_label": "T+22h 50m",
+      "max_depth_at_frame": 15.404,
+      "wet_face_count": 9084,
+      "wet_area_km2": 90.84,
+      "non_transparent_pixels": 9084,
+      "image_filename": "frame_137.png",
+      "image_url": "/api/simulation/frames/frame_137.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 138,
+      "solver_time_s": 82800.0,
+      "solver_time_hr": 23.0,
+      "timestamp_label": "T+23h 00m",
+      "max_depth_at_frame": 15.337,
+      "wet_face_count": 9060,
+      "wet_area_km2": 90.6,
+      "non_transparent_pixels": 9060,
+      "image_filename": "frame_138.png",
+      "image_url": "/api/simulation/frames/frame_138.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 139,
+      "solver_time_s": 83400.0,
+      "solver_time_hr": 23.17,
+      "timestamp_label": "T+23h 10m",
+      "max_depth_at_frame": 15.267,
+      "wet_face_count": 9040,
+      "wet_area_km2": 90.4,
+      "non_transparent_pixels": 9040,
+      "image_filename": "frame_139.png",
+      "image_url": "/api/simulation/frames/frame_139.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 140,
+      "solver_time_s": 84000.0,
+      "solver_time_hr": 23.33,
+      "timestamp_label": "T+23h 20m",
+      "max_depth_at_frame": 15.194,
+      "wet_face_count": 9015,
+      "wet_area_km2": 90.15,
+      "non_transparent_pixels": 9015,
+      "image_filename": "frame_140.png",
+      "image_url": "/api/simulation/frames/frame_140.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 141,
+      "solver_time_s": 84600.0,
+      "solver_time_hr": 23.5,
+      "timestamp_label": "T+23h 30m",
+      "max_depth_at_frame": 15.116,
+      "wet_face_count": 8988,
+      "wet_area_km2": 89.88,
+      "non_transparent_pixels": 8988,
+      "image_filename": "frame_141.png",
+      "image_url": "/api/simulation/frames/frame_141.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 142,
+      "solver_time_s": 85200.0,
+      "solver_time_hr": 23.67,
+      "timestamp_label": "T+23h 40m",
+      "max_depth_at_frame": 15.033,
+      "wet_face_count": 8957,
+      "wet_area_km2": 89.57,
+      "non_transparent_pixels": 8957,
+      "image_filename": "frame_142.png",
+      "image_url": "/api/simulation/frames/frame_142.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 143,
+      "solver_time_s": 85800.0,
+      "solver_time_hr": 23.83,
+      "timestamp_label": "T+23h 50m",
+      "max_depth_at_frame": 14.946,
+      "wet_face_count": 8931,
+      "wet_area_km2": 89.31,
+      "non_transparent_pixels": 8931,
+      "image_filename": "frame_143.png",
+      "image_url": "/api/simulation/frames/frame_143.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 144,
+      "solver_time_s": 86400.0,
+      "solver_time_hr": 24.0,
+      "timestamp_label": "T+24h 00m",
+      "max_depth_at_frame": 14.853,
+      "wet_face_count": 8903,
+      "wet_area_km2": 89.03,
+      "non_transparent_pixels": 8903,
+      "image_filename": "frame_144.png",
+      "image_url": "/api/simulation/frames/frame_144.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 145,
+      "solver_time_s": 87000.0,
+      "solver_time_hr": 24.17,
+      "timestamp_label": "T+24h 10m",
+      "max_depth_at_frame": 14.755,
+      "wet_face_count": 8870,
+      "wet_area_km2": 88.7,
+      "non_transparent_pixels": 8870,
+      "image_filename": "frame_145.png",
+      "image_url": "/api/simulation/frames/frame_145.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 146,
+      "solver_time_s": 87600.0,
+      "solver_time_hr": 24.33,
+      "timestamp_label": "T+24h 20m",
+      "max_depth_at_frame": 14.651,
+      "wet_face_count": 8831,
+      "wet_area_km2": 88.31,
+      "non_transparent_pixels": 8831,
+      "image_filename": "frame_146.png",
+      "image_url": "/api/simulation/frames/frame_146.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 147,
+      "solver_time_s": 88200.0,
+      "solver_time_hr": 24.5,
+      "timestamp_label": "T+24h 30m",
+      "max_depth_at_frame": 14.542,
+      "wet_face_count": 8800,
+      "wet_area_km2": 88.0,
+      "non_transparent_pixels": 8800,
+      "image_filename": "frame_147.png",
+      "image_url": "/api/simulation/frames/frame_147.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 148,
+      "solver_time_s": 88800.0,
+      "solver_time_hr": 24.67,
+      "timestamp_label": "T+24h 40m",
+      "max_depth_at_frame": 14.427,
+      "wet_face_count": 8770,
+      "wet_area_km2": 87.7,
+      "non_transparent_pixels": 8770,
+      "image_filename": "frame_148.png",
+      "image_url": "/api/simulation/frames/frame_148.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 149,
+      "solver_time_s": 89400.0,
+      "solver_time_hr": 24.83,
+      "timestamp_label": "T+24h 50m",
+      "max_depth_at_frame": 14.305,
+      "wet_face_count": 8750,
+      "wet_area_km2": 87.5,
+      "non_transparent_pixels": 8750,
+      "image_filename": "frame_149.png",
+      "image_url": "/api/simulation/frames/frame_149.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 150,
+      "solver_time_s": 90000.0,
+      "solver_time_hr": 25.0,
+      "timestamp_label": "T+25h 00m",
+      "max_depth_at_frame": 14.177,
+      "wet_face_count": 8731,
+      "wet_area_km2": 87.31,
+      "non_transparent_pixels": 8731,
+      "image_filename": "frame_150.png",
+      "image_url": "/api/simulation/frames/frame_150.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 151,
+      "solver_time_s": 90600.0,
+      "solver_time_hr": 25.17,
+      "timestamp_label": "T+25h 10m",
+      "max_depth_at_frame": 14.041,
+      "wet_face_count": 8694,
+      "wet_area_km2": 86.94,
+      "non_transparent_pixels": 8694,
+      "image_filename": "frame_151.png",
+      "image_url": "/api/simulation/frames/frame_151.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 152,
+      "solver_time_s": 91200.0,
+      "solver_time_hr": 25.33,
+      "timestamp_label": "T+25h 20m",
+      "max_depth_at_frame": 13.9,
+      "wet_face_count": 8668,
+      "wet_area_km2": 86.68,
+      "non_transparent_pixels": 8668,
+      "image_filename": "frame_152.png",
+      "image_url": "/api/simulation/frames/frame_152.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 153,
+      "solver_time_s": 91800.0,
+      "solver_time_hr": 25.5,
+      "timestamp_label": "T+25h 30m",
+      "max_depth_at_frame": 13.753,
+      "wet_face_count": 8644,
+      "wet_area_km2": 86.44,
+      "non_transparent_pixels": 8644,
+      "image_filename": "frame_153.png",
+      "image_url": "/api/simulation/frames/frame_153.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 154,
+      "solver_time_s": 92400.0,
+      "solver_time_hr": 25.67,
+      "timestamp_label": "T+25h 40m",
+      "max_depth_at_frame": 13.601,
+      "wet_face_count": 8619,
+      "wet_area_km2": 86.19,
+      "non_transparent_pixels": 8619,
+      "image_filename": "frame_154.png",
+      "image_url": "/api/simulation/frames/frame_154.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 155,
+      "solver_time_s": 93000.0,
+      "solver_time_hr": 25.83,
+      "timestamp_label": "T+25h 50m",
+      "max_depth_at_frame": 13.446,
+      "wet_face_count": 8582,
+      "wet_area_km2": 85.82,
+      "non_transparent_pixels": 8582,
+      "image_filename": "frame_155.png",
+      "image_url": "/api/simulation/frames/frame_155.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 156,
+      "solver_time_s": 93600.0,
+      "solver_time_hr": 26.0,
+      "timestamp_label": "T+26h 00m",
+      "max_depth_at_frame": 13.288,
+      "wet_face_count": 8546,
+      "wet_area_km2": 85.46,
+      "non_transparent_pixels": 8546,
+      "image_filename": "frame_156.png",
+      "image_url": "/api/simulation/frames/frame_156.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 157,
+      "solver_time_s": 94200.0,
+      "solver_time_hr": 26.17,
+      "timestamp_label": "T+26h 10m",
+      "max_depth_at_frame": 13.131,
+      "wet_face_count": 8508,
+      "wet_area_km2": 85.08,
+      "non_transparent_pixels": 8508,
+      "image_filename": "frame_157.png",
+      "image_url": "/api/simulation/frames/frame_157.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 158,
+      "solver_time_s": 94800.0,
+      "solver_time_hr": 26.33,
+      "timestamp_label": "T+26h 20m",
+      "max_depth_at_frame": 13.091,
+      "wet_face_count": 8474,
+      "wet_area_km2": 84.74,
+      "non_transparent_pixels": 8474,
+      "image_filename": "frame_158.png",
+      "image_url": "/api/simulation/frames/frame_158.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 159,
+      "solver_time_s": 95400.0,
+      "solver_time_hr": 26.5,
+      "timestamp_label": "T+26h 30m",
+      "max_depth_at_frame": 13.055,
+      "wet_face_count": 8440,
+      "wet_area_km2": 84.4,
+      "non_transparent_pixels": 8440,
+      "image_filename": "frame_159.png",
+      "image_url": "/api/simulation/frames/frame_159.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 160,
+      "solver_time_s": 96000.0,
+      "solver_time_hr": 26.67,
+      "timestamp_label": "T+26h 40m",
+      "max_depth_at_frame": 13.018,
+      "wet_face_count": 8417,
+      "wet_area_km2": 84.17,
+      "non_transparent_pixels": 8417,
+      "image_filename": "frame_160.png",
+      "image_url": "/api/simulation/frames/frame_160.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 161,
+      "solver_time_s": 96600.0,
+      "solver_time_hr": 26.83,
+      "timestamp_label": "T+26h 50m",
+      "max_depth_at_frame": 12.981,
+      "wet_face_count": 8383,
+      "wet_area_km2": 83.83,
+      "non_transparent_pixels": 8383,
+      "image_filename": "frame_161.png",
+      "image_url": "/api/simulation/frames/frame_161.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 162,
+      "solver_time_s": 97200.0,
+      "solver_time_hr": 27.0,
+      "timestamp_label": "T+27h 00m",
+      "max_depth_at_frame": 12.943,
+      "wet_face_count": 8340,
+      "wet_area_km2": 83.4,
+      "non_transparent_pixels": 8340,
+      "image_filename": "frame_162.png",
+      "image_url": "/api/simulation/frames/frame_162.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 163,
+      "solver_time_s": 97800.0,
+      "solver_time_hr": 27.17,
+      "timestamp_label": "T+27h 10m",
+      "max_depth_at_frame": 12.905,
+      "wet_face_count": 8308,
+      "wet_area_km2": 83.08,
+      "non_transparent_pixels": 8308,
+      "image_filename": "frame_163.png",
+      "image_url": "/api/simulation/frames/frame_163.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 164,
+      "solver_time_s": 98400.0,
+      "solver_time_hr": 27.33,
+      "timestamp_label": "T+27h 20m",
+      "max_depth_at_frame": 12.867,
+      "wet_face_count": 8284,
+      "wet_area_km2": 82.84,
+      "non_transparent_pixels": 8284,
+      "image_filename": "frame_164.png",
+      "image_url": "/api/simulation/frames/frame_164.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 165,
+      "solver_time_s": 99000.0,
+      "solver_time_hr": 27.5,
+      "timestamp_label": "T+27h 30m",
+      "max_depth_at_frame": 12.828,
+      "wet_face_count": 8253,
+      "wet_area_km2": 82.53,
+      "non_transparent_pixels": 8253,
+      "image_filename": "frame_165.png",
+      "image_url": "/api/simulation/frames/frame_165.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 166,
+      "solver_time_s": 99600.0,
+      "solver_time_hr": 27.67,
+      "timestamp_label": "T+27h 40m",
+      "max_depth_at_frame": 12.789,
+      "wet_face_count": 8215,
+      "wet_area_km2": 82.15,
+      "non_transparent_pixels": 8215,
+      "image_filename": "frame_166.png",
+      "image_url": "/api/simulation/frames/frame_166.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 167,
+      "solver_time_s": 100200.0,
+      "solver_time_hr": 27.83,
+      "timestamp_label": "T+27h 50m",
+      "max_depth_at_frame": 12.749,
+      "wet_face_count": 8182,
+      "wet_area_km2": 81.82,
+      "non_transparent_pixels": 8182,
+      "image_filename": "frame_167.png",
+      "image_url": "/api/simulation/frames/frame_167.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 168,
+      "solver_time_s": 100800.0,
+      "solver_time_hr": 28.0,
+      "timestamp_label": "T+28h 00m",
+      "max_depth_at_frame": 12.709,
+      "wet_face_count": 8154,
+      "wet_area_km2": 81.54,
+      "non_transparent_pixels": 8154,
+      "image_filename": "frame_168.png",
+      "image_url": "/api/simulation/frames/frame_168.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 169,
+      "solver_time_s": 101400.0,
+      "solver_time_hr": 28.17,
+      "timestamp_label": "T+28h 10m",
+      "max_depth_at_frame": 12.668,
+      "wet_face_count": 8125,
+      "wet_area_km2": 81.25,
+      "non_transparent_pixels": 8125,
+      "image_filename": "frame_169.png",
+      "image_url": "/api/simulation/frames/frame_169.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 170,
+      "solver_time_s": 102000.0,
+      "solver_time_hr": 28.33,
+      "timestamp_label": "T+28h 20m",
+      "max_depth_at_frame": 12.627,
+      "wet_face_count": 8104,
+      "wet_area_km2": 81.04,
+      "non_transparent_pixels": 8104,
+      "image_filename": "frame_170.png",
+      "image_url": "/api/simulation/frames/frame_170.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 171,
+      "solver_time_s": 102600.0,
+      "solver_time_hr": 28.5,
+      "timestamp_label": "T+28h 30m",
+      "max_depth_at_frame": 12.585,
+      "wet_face_count": 8080,
+      "wet_area_km2": 80.8,
+      "non_transparent_pixels": 8080,
+      "image_filename": "frame_171.png",
+      "image_url": "/api/simulation/frames/frame_171.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 172,
+      "solver_time_s": 103200.0,
+      "solver_time_hr": 28.67,
+      "timestamp_label": "T+28h 40m",
+      "max_depth_at_frame": 12.543,
+      "wet_face_count": 8058,
+      "wet_area_km2": 80.58,
+      "non_transparent_pixels": 8058,
+      "image_filename": "frame_172.png",
+      "image_url": "/api/simulation/frames/frame_172.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 173,
+      "solver_time_s": 103800.0,
+      "solver_time_hr": 28.83,
+      "timestamp_label": "T+28h 50m",
+      "max_depth_at_frame": 12.5,
+      "wet_face_count": 8029,
+      "wet_area_km2": 80.29,
+      "non_transparent_pixels": 8029,
+      "image_filename": "frame_173.png",
+      "image_url": "/api/simulation/frames/frame_173.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 174,
+      "solver_time_s": 104400.0,
+      "solver_time_hr": 29.0,
+      "timestamp_label": "T+29h 00m",
+      "max_depth_at_frame": 12.457,
+      "wet_face_count": 8000,
+      "wet_area_km2": 80.0,
+      "non_transparent_pixels": 8000,
+      "image_filename": "frame_174.png",
+      "image_url": "/api/simulation/frames/frame_174.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 175,
+      "solver_time_s": 105000.0,
+      "solver_time_hr": 29.17,
+      "timestamp_label": "T+29h 10m",
+      "max_depth_at_frame": 12.412,
+      "wet_face_count": 7967,
+      "wet_area_km2": 79.67,
+      "non_transparent_pixels": 7967,
+      "image_filename": "frame_175.png",
+      "image_url": "/api/simulation/frames/frame_175.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 176,
+      "solver_time_s": 105600.0,
+      "solver_time_hr": 29.33,
+      "timestamp_label": "T+29h 20m",
+      "max_depth_at_frame": 12.368,
+      "wet_face_count": 7945,
+      "wet_area_km2": 79.45,
+      "non_transparent_pixels": 7945,
+      "image_filename": "frame_176.png",
+      "image_url": "/api/simulation/frames/frame_176.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 177,
+      "solver_time_s": 106200.0,
+      "solver_time_hr": 29.5,
+      "timestamp_label": "T+29h 30m",
+      "max_depth_at_frame": 12.323,
+      "wet_face_count": 7910,
+      "wet_area_km2": 79.1,
+      "non_transparent_pixels": 7910,
+      "image_filename": "frame_177.png",
+      "image_url": "/api/simulation/frames/frame_177.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 178,
+      "solver_time_s": 106800.0,
+      "solver_time_hr": 29.67,
+      "timestamp_label": "T+29h 40m",
+      "max_depth_at_frame": 12.277,
+      "wet_face_count": 7885,
+      "wet_area_km2": 78.85,
+      "non_transparent_pixels": 7885,
+      "image_filename": "frame_178.png",
+      "image_url": "/api/simulation/frames/frame_178.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 179,
+      "solver_time_s": 107400.0,
+      "solver_time_hr": 29.83,
+      "timestamp_label": "T+29h 50m",
+      "max_depth_at_frame": 12.23,
+      "wet_face_count": 7853,
+      "wet_area_km2": 78.53,
+      "non_transparent_pixels": 7853,
+      "image_filename": "frame_179.png",
+      "image_url": "/api/simulation/frames/frame_179.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    {
+      "frame_index": 180,
+      "solver_time_s": 108000.0,
+      "solver_time_hr": 30.0,
+      "timestamp_label": "T+30h 00m",
+      "max_depth_at_frame": 12.184,
+      "wet_face_count": 7827,
+      "wet_area_km2": 78.27,
+      "non_transparent_pixels": 7827,
+      "image_filename": "frame_180.png",
+      "image_url": "/api/simulation/frames/frame_180.png",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "dataset": "C:\\JalRakshak-HD\\outputs\\simulations\\dflowfm\\BHV_BASE\\Bhavanisagar_DamBreak_map.nc",
+  "total_mesh_faces": 82309,
+  "nominal_resolution_m": 100.0,
+  "crs": "EPSG:32643",
+  "arrival_wetting_threshold_m": 0.05,
+  "stations": {
+    "G_100m": {
+      "chainage_m": 100.0,
+      "gauge_easting": 730545.278,
+      "gauge_northing": 1269119.062,
+      "mesh_face_id": 7968,
+      "face_centroid_x": 730550.0,
+      "face_centroid_y": 1269150.0,
+      "sampling_distance_m": 31.3,
+      "cell_dimensions_m": "100.0 x 100.0",
+      "cell_area_m2": 10000.0,
+      "point_inside_face_polygon": true,
+      "spatial_precision_limitation": "D-Flow FM operates on a nominal ~100m grid; sub-grid hydraulic features and narrow jet contraction are depth-averaged across the cell."
+    },
+    "G_250m": {
+      "chainage_m": 250.0,
+      "gauge_easting": 730688.045,
+      "gauge_northing": 1269073.044,
+      "mesh_face_id": 7969,
+      "face_centroid_x": 730650.0,
+      "face_centroid_y": 1269050.0,
+      "sampling_distance_m": 44.48,
+      "cell_dimensions_m": "100.0 x 100.0",
+      "cell_area_m2": 10000.0,
+      "point_inside_face_polygon": true,
+      "spatial_precision_limitation": "D-Flow FM operates on a nominal ~100m grid; sub-grid hydraulic features and narrow jet contraction are depth-averaged across the cell."
+    },
+    "G_500m": {
+      "chainage_m": 500.0,
+      "gauge_easting": 730759.756,
+      "gauge_northing": 1269272.562,
+      "mesh_face_id": 8351,
+      "face_centroid_x": 730750.0,
+      "face_centroid_y": 1269250.0,
+      "sampling_distance_m": 24.58,
+      "cell_dimensions_m": "100.0 x 100.0",
+      "cell_area_m2": 10000.0,
+      "point_inside_face_polygon": true,
+      "spatial_precision_limitation": "D-Flow FM operates on a nominal ~100m grid; sub-grid hydraulic features and narrow jet contraction are depth-averaged across the cell."
+    },
+    "G_1000m": {
+      "chainage_m": 1000.0,
+      "gauge_easting": 730603.088,
+      "gauge_northing": 1269729.058,
+      "mesh_face_id": 8872,
+      "face_centroid_x": 730650.0,
+      "face_centroid_y": 1269750.0,
+      "sampling_distance_m": 51.37,
+      "cell_dimensions_m": "100.0 x 100.0",
+      "cell_area_m2": 10000.0,
+      "point_inside_face_polygon": true,
+      "spatial_precision_limitation": "D-Flow FM operates on a nominal ~100m grid; sub-grid hydraulic features and narrow jet contraction are depth-averaged across the cell."
+    },
+    "G_1500m": {
+      "chainage_m": 1500.0,
+      "gauge_easting": 730628.274,
+      "gauge_northing": 1270210.446,
+      "mesh_face_id": 9547,
+      "face_centroid_x": 730650.0,
+      "face_centroid_y": 1270250.0,
+      "sampling_distance_m": 45.13,
+      "cell_dimensions_m": "100.0 x 100.0",
+      "cell_area_m2": 10000.0,
+      "point_inside_face_polygon": true,
+      "spatial_precision_limitation": "D-Flow FM operates on a nominal ~100m grid; sub-grid hydraulic features and narrow jet contraction are depth-averaged across the cell."
+    }
+  }
+}

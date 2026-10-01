@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "catchment_type": "LOCAL_DEM_DELINEATED_CATCHMENT",
+  "local_catchment_metrics": {
+    "area_km2": 361.27,
+    "total_cells": 401407,
+    "catchment_polygon_touches_dem_boundary": false,
+    "upstream_flow_path_touches_dem_boundary": true,
+    "inflow_enters_from_outside_dem": true,
+    "catchment_truncated": true,
+    "local_catchment_validity": "INVALID_FOR_TOTAL_UPSTREAM_AREA"
+  },
+  "upstream_basin_comparison": {
+    "hydrobasins_level_12_up_area_km2": 4257.7,
+    "hydrobasins_dataset": "WWF/HydroSHEDS/v1/Basins/hybas_12 (HYBAS_ID: 4121595750)",
+    "local_to_regional_ratio": 0.0849
+  },
+  "scientific_interpretation_and_limitations": "The M1 DEM covers only the reservoir impoundment and downstream river reach (~40km). The delineated local watershed (362.67 km2) captures local overland inflow into the reservoir basin within the DEM boundary. Because the primary headwaters of Bhavani and Moyar originate in the Nilgiri Hills (~4,257.7 km2 upstream), major inflow enters from outside the DEM extent. Consequently, local_catchment_validity is classified as INVALID_FOR_TOTAL_UPSTREAM_AREA and catchment_truncated = True. Regional upstream context is provided separately by HydroBASINS Level 12."
+}

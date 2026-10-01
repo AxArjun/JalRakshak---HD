@@ -1,0 +1,49 @@
+{
+  "study": "JalRakshak-HD Milestone M7 Cross-Solver Consistency Analysis",
+  "comparison_type": "NON_EQUIVALENT_FORCING_COMPARISON",
+  "timing_comparable": false,
+  "explanation": "D-Flow FM t=0 corresponds to the initiation of the complete 30-hour BHV_BASE empirical hydrograph with discharge rising from zero to Qpeak (18,742.38 m3/s) at t=14,095.59 s. DualSPHysics t=0 corresponds to an initialized static peak-state fluid release block (depth=17.526 m, unit discharge=85.47 m2/s). Absolute arrival times reflect fundamentally distinct initial-boundary value formulations and MUST NOT be subtracted to claim solver timing error or synchronization.",
+  "dflow_time_reference": {
+    "t0_definition": "Start of BHV_BASE hydrograph (Q approximately 0 m3/s)",
+    "time_of_peak_discharge_s": 14095.59,
+    "total_simulation_duration_s": 108000.0,
+    "hydrograph_rise_time_s": 14095.59
+  },
+  "dualsphysics_time_reference": {
+    "t0_definition": "Instantaneous release of initialized peak-state reservoir column",
+    "initial_fluid_state": "Qpeak equivalent static column (H=17.526 m, L=400 m)",
+    "total_simulation_duration_s": 600.0
+  },
+  "diagnostic_peak_relative_arrival": {
+    "G_100m": {
+      "chainage_m": 100.0,
+      "dflow_arrival_time_s": 4200.0,
+      "dflow_peak_relative_time_s": -9895.59,
+      "interpretation_note": "Diagnostic metadata only; negative values indicate wetting prior to hydrograph peak and are NOT physical SPH-equivalent times."
+    },
+    "G_250m": {
+      "chainage_m": 250.0,
+      "dflow_arrival_time_s": 1800.0,
+      "dflow_peak_relative_time_s": -12295.59,
+      "interpretation_note": "Diagnostic metadata only; negative values indicate wetting prior to hydrograph peak and are NOT physical SPH-equivalent times."
+    },
+    "G_500m": {
+      "chainage_m": 500.0,
+      "dflow_arrival_time_s": 1800.0,
+      "dflow_peak_relative_time_s": -12295.59,
+      "interpretation_note": "Diagnostic metadata only; negative values indicate wetting prior to hydrograph peak and are NOT physical SPH-equivalent times."
+    },
+    "G_1000m": {
+      "chainage_m": 1000.0,
+      "dflow_arrival_time_s": 600.0,
+      "dflow_peak_relative_time_s": -13495.59,
+      "interpretation_note": "Diagnostic metadata only; negative values indicate wetting prior to hydrograph peak and are NOT physical SPH-equivalent times."
+    },
+    "G_1500m": {
+      "chainage_m": 1500.0,
+      "dflow_arrival_time_s": 1200.0,
+      "dflow_peak_relative_time_s": -12895.59,
+      "interpretation_note": "Diagnostic metadata only; negative values indicate wetting prior to hydrograph peak and are NOT physical SPH-equivalent times."
+    }
+  }
+}

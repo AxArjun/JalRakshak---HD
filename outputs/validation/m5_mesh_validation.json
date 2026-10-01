@@ -1,0 +1,34 @@
+{
+  "milestone": "M5",
+  "mesh_name": "Bhavani_2D_net.nc",
+  "crs": "EPSG:32643",
+  "units": "metres",
+  "node_count": 82895,
+  "edge_count": 165203,
+  "face_count": 82309,
+  "safety_limit_150k_faces": "PASS",
+  "nan_coordinate_count": 0,
+  "elevation_stats_m_msl": {
+    "min": 194.1691131591797,
+    "max": 1350.72900390625,
+    "mean": 300.644717865386
+  },
+  "edge_length_stats_m": {
+    "min": 100.0,
+    "max": 100.0,
+    "mean": 100.0
+  },
+  "face_area_stats_m2": {
+    "min": 10000.0,
+    "max": 10000.0,
+    "median": 10000.0
+  },
+  "spatial_validation": {
+    "breach_near_upstream_boundary": true,
+    "distance_breach_to_mesh_boundary_m": 0.0,
+    "river_mainstem_contained_percent": 99.94902321336146,
+    "all_observation_points_inside": true,
+    "domain_area_km2": 818.3689576437372
+  },
+  "overall_status": "PASS"
+}

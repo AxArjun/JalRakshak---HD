@@ -1,0 +1,159 @@
+"""
+Generate M2 Source Manifest JSON.
+SIH PS 26161 - JalRakshak-HD Milestone M2 Repair.
+
+Authoritative source manifest tracking datasets, types, providers,
+retrieval paths, and exact verification levels.
+"""
+import json
+from pathlib import Path
+
+MANIFEST = {
+    "milestone": "M2_REPAIRED",
+    "project": "JalRakshak-HD",
+    "description": "Source Provenance and Verification Manifest for Hydrology, River Networks, and Watersheds",
+    "geometries": [
+        {
+            "field": "bhavani_mainstem_downstream",
+            "dataset": "OpenStreetMap River Relations (Relation: 326620 / Way: 70237216)",
+            "type": "RIVER_POLYLINE_NETWORK",
+            "provider": "OpenStreetMap Contributors",
+            "exact_source_or_api": "Overpass API (https://overpass-api.de/api/interpreter) way(70237216)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Vector extraction from OSM way 70237216 starting at dam outlet (115.79 m from dam centroid), clipped to valid DEM domain, oriented downstream (West to East). Length: 51.73 km.",
+            "verification_level": "SECONDARY_VERIFIED",
+            "limitations": "Crowdsourced vector alignment representing low-flow surface centerline; does not capture bankfull hydraulic width or seasonal bathymetry."
+        },
+        {
+            "field": "bhavani_river_network_total",
+            "dataset": "OpenStreetMap Hydrographic Ways in Study AOI",
+            "type": "RIVER_POLYLINE_NETWORK",
+            "provider": "OpenStreetMap Contributors",
+            "exact_source_or_api": "Overpass API (https://overpass-api.de/api/interpreter) query: way['waterway'='river'] in AOI bounding box",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "All river reach features inside AOI bounding box including upstream Bhavani, Moyar tributary, and downstream reaches. Total length: 138.97 km.",
+            "verification_level": "SECONDARY_VERIFIED",
+            "limitations": "Includes upstream reservoir inflows and major tributaries."
+        },
+        {
+            "field": "hydrobasins_level_12_upstream_basin",
+            "dataset": "HydroBASINS Level 12 (Standard)",
+            "type": "GLOBAL_DERIVED_WATERSHED_DATASET",
+            "provider": "WWF / HydroSHEDS (Lehner & Grill 2013) / Google Earth Engine",
+            "exact_source_or_api": "Google Earth Engine Asset 'WWF/HydroSHEDS/v1/Basins/hybas_12' (HYBAS_ID: 4121595750)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Extracted watershed polygon intersecting Bhavanisagar Dam (11.47083 N, 77.11389 E). Records SUB_AREA = 161.8 km2, UP_AREA = 4257.7 km2, MAIN_BAS = 4120028760, NEXT_DOWN = 4121595720, PFAF_ID = 453804030300, ORDER = 2.",
+            "verification_level": "SECONDARY_VERIFIED",
+            "limitations": "Provides regional upstream watershed context (~4,257.7 km2) draining Western Ghats and Nilgiris; maintained separate from bounded M1 DEM hydraulic domain."
+        },
+        {
+            "field": "freeflowingrivers_reach_network",
+            "dataset": "WWF HydroSHEDS FreeFlowingRivers",
+            "type": "RIVER_POLYLINE_NETWORK",
+            "provider": "WWF / Grill et al. (2019) / Google Earth Engine",
+            "exact_source_or_api": "Google Earth Engine Asset 'WWF/HydroSHEDS/v1/FreeFlowingRivers' (BAS_NAME: Cauvery, REACH_ID: 40222384)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "1D river reach network attribute UPLAND_SKM = 4118.4 km2 for the Bhavanisagar reach.",
+            "verification_level": "SECONDARY_VERIFIED",
+            "limitations": "Polyline reach representation; distinct from the 2D polygon watershed dataset HydroBASINS hybas_12."
+        },
+        {
+            "field": "reservoir_surface_water_extent",
+            "dataset": "JRC Global Surface Water Mapping Layers, v1.4",
+            "type": "REMOTE_SENSING_DERIVED_WATER_FREQUENCY_EXTENT",
+            "provider": "European Commission Joint Research Centre (JRC) / Google Earth Engine",
+            "exact_source_or_api": "Google Earth Engine Asset 'JRC/GSW1_4/GlobalSurfaceWater' (Bands: 'occurrence' >= 50% and 'seasonality' >= 10 months)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Extracted multi_decadal_water_occurrence_ge_50 (area = 31.38 km2) and persistent_water_core_seasonality_ge_10 (area = 40.30 km2). Cleaned with shapely.validation.make_valid and projected to EPSG:32643.",
+            "verification_level": "REMOTE_SENSING_DERIVED",
+            "limitations": "Represents historical satellite water frequency extent over 1984-2021 Landsat archive; NOT legal boundary, FRL design boundary, or flood capacity limit."
+        },
+        {
+            "field": "dem_hydroconditioned",
+            "dataset": "Conditioned FABDEM v1-2 Surface",
+            "type": "DEM_DERIVED",
+            "provider": "JalRakshak-HD Priority-Flood DAG Routing Engine",
+            "exact_source_or_api": "Computed from data/terrain/dem_projected.tif using Priority-Flood depression filling and gradient enforcement",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Priority-flood filling ensuring continuous downhill drainage towards domain boundaries. Resolves flat waterbodies and spillway routing.",
+            "verification_level": "DEM_DERIVED",
+            "limitations": "Numerical conditioning to eliminate spurious raster depressions; does not account for subterranean engineered culverts."
+        },
+        {
+            "field": "flow_direction_and_accumulation",
+            "dataset": "D8 Flow Direction & Upstream Cell Accumulation Grids",
+            "type": "DEM_DERIVED",
+            "provider": "JalRakshak-HD Hydrologic Processing Pipeline",
+            "exact_source_or_api": "Computed from data/hydrology/dem_hydroconditioned.tif (ESRI D8 convention: 1..128)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "D8 gradient-enforced DAG flow routing and topological accumulation. Max accumulation: 1,271,792 cells (1144.61 km2).",
+            "verification_level": "DEM_DERIVED",
+            "limitations": "Single-direction flow routing model."
+        },
+        {
+            "field": "derived_stream_network",
+            "dataset": "DEM-Derived Drainage Network (Threshold: 1000 cells)",
+            "type": "DEM_DERIVED",
+            "provider": "JalRakshak-HD Drainage Extractor",
+            "exact_source_or_api": "Computed from data/hydrology/flow_accumulation.tif thresholded at 1000 cells (~0.90 km2)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Vectorized contiguous stream cells >= 1000 cells. Evaluated against verified Bhavani mainstem: median offset 43.2 m, 67.7% within 60 m, 90.4% within 100 m.",
+            "verification_level": "DEM_DERIVED",
+            "limitations": "Synthetic channel lines derived strictly from topography."
+        },
+        {
+            "field": "hydrologic_pour_point",
+            "dataset": "Snapped Dam Outlet Thalweg Cell",
+            "type": "DEM_DERIVED",
+            "provider": "JalRakshak-HD Pour Point Snapping Engine",
+            "exact_source_or_api": "Snapped from dam reference coordinate (11.47083 N, 77.11389 E) to adjacent thalweg cell (11.470195 N, 77.113911 E)",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Snapped to cell satisfying accumulation >= 1000 stream threshold. Snap distance: 70.34 m (< 500 m tolerance). Accumulation: 401,407 cells (361.27 km2). valid_against_threshold = True.",
+            "verification_level": "DEM_DERIVED",
+            "limitations": "Hydrologic routing cell on 30m grid, distinct from physical masonry dam centroid."
+        },
+        {
+            "field": "local_catchment",
+            "dataset": "Local M1 DEM Delineated Catchment",
+            "type": "DEM_DERIVED",
+            "provider": "JalRakshak-HD Watershed Delineator",
+            "exact_source_or_api": "D8 reverse routing from snapped pour point over data/hydrology/flow_direction.tif",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "Local basin footprint = 361.27 km2. Evaluated boundary interactions: upstream flow enters from outside DEM boundary. Classified: catchment_truncated = True, local_catchment_validity = 'INVALID_FOR_TOTAL_UPSTREAM_AREA'.",
+            "verification_level": "DEM_DERIVED",
+            "limitations": "Covers only local DEM domain; total 4,257.7 km2 upstream catchment is maintained in HydroBASINS Level 12."
+        },
+        {
+            "field": "river_longitudinal_profile",
+            "dataset": "Downstream Bhavani Longitudinal Elevation Profile",
+            "type": "DEM_DERIVED",
+            "provider": "JalRakshak-HD River Profiler",
+            "exact_source_or_api": "Sampled at 100m chainage stations along data/hydrology/bhavani_mainstem_downstream.gpkg over data/hydrology/dem_hydroconditioned.tif",
+            "retrieval_date": "2026-09-25",
+            "crs": "EPSG:32643",
+            "processing": "518 sample stations over 51.70 km reach. Start elev: 267.66 m MSL (below FRL 280.42 m MSL, dist to dam: 115.79 m). End elev: 195.00 m MSL. Net fall: 72.66 m. Average slope: 1.405 m/km.",
+            "verification_level": "DEM_DERIVED",
+            "limitations": "Sampled along 30m DEM surface; reflects water/sand bar elevations at DEM epoch."
+        }
+    ]
+}
+
+def main():
+    out_path = Path("outputs/validation/m2_source_manifest.json")
+    out_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        json.dump(MANIFEST, f, indent=2)
+    print(f"Generated M2 Source Manifest at {out_path}")
+
+if __name__ == "__main__":
+    main()

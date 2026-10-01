@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<case>
+    <casedef>
+        <constantsdef>
+            <gravity x="0" y="0" z="-9.81" comment="Gravitational acceleration" units_comment="m/s^2" />
+            <rhop0 value="1000" comment="Reference density of the fluid" units_comment="kg/m^3" />
+            <rhopgradient value="2" comment="Initial density gradient 1:Rhop0, 2:Water column, 3:Max. water height (default=2)" />
+            <hswl value="17.526" auto="false" comment="Maximum still water level to calculate speedofsound using coefsound" units_comment="metres (m)" />
+            <gamma value="7" comment="Polytropic constant for water used in the state equation" />
+            <speedsystem value="12.192" auto="false" comment="Maximum system speed" />
+            <coefsound value="20" comment="Coefficient to multiply speedsystem" />
+            <speedsound value="0" auto="true" comment="Speed of sound to use in the simulation" />
+            <coefh value="1.2" comment="Coefficient to calculate the smoothing length (h=coefh*sqrt(3*dp^2) in 3D)" />
+            <cflnumber value="0.2" comment="Coefficient to multiply dt" />
+        </constantsdef>
+        <mkconfig boundcount="240" fluidcount="9">
+            <mkorientfluid mk="0" orient="Xyz" />
+        </mkconfig>
+        <geometry>
+            <definition dp="1.0000" units_comment="metres (m)">
+                <pointref x="0" y="0" z="0" />
+                <pointmin x="-430.0" y="0" z="232.3" />
+                <pointmax x="1530.0" y="0" z="295.4" />
+            </definition>
+            <commands>
+                <mainlist>
+                    <setshapemode>real | dp | bound</setshapemode>
+                    <setdrawmode mode="full" />
+                    <!-- Upstream reservoir fluid column [x_min, 0] at FRL -->
+                    <setmkfluid mk="0" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="-400.00" y="-1.0" z="262.89" />
+                        <size x="400.00" y="2.0" z="17.53" />
+                    </drawbox>
+                    <!-- Upstream boundary back wall -->
+                    <setmkbound mk="0" />
+                    <drawbox>
+                        <boxfill>solid</boxfill>
+                        <point x="-404.00" y="-1.0" z="237.26" />
+                        <size x="4.0" y="2.0" z="48.16" />
+                    </drawbox>
+                    <!-- Real DEM bed geometry imported from STL -->
+                    <setmkbound mk="1" />
+                    <drawfilestl file="bed_profile.stl">
+                        <drawmove x="0" y="0" z="0" />
+                    </drawfilestl>
+                    <_shapeout file="" />
+                </mainlist>
+            </commands>
+        </geometry>
+    </casedef>
+    <execution>
+        <special>
+            <initialize>
+                <fluidvelocity mkfluid="0">
+                    <direction x="1" y="0" z="0" />
+                    <velocity v="4.877" comment="Initial release velocity matching unit-width peak discharge" units_comment="m/s" />
+                </fluidvelocity>
+            </initialize>
+            <gauges>
+                <default>
+                    <savevtkpart value="true" comment="Creates VTK files for each PART (default=false)" />
+                    <output value="true" comment="Creates CSV files of measurements (default=false)" />
+                </default>
+                <swl name="G_100m">
+                    <pointdp coefdp="0.5" />
+                    <point0 x="100.0" y="0" z="235.0" />
+                    <point2 x="100.0" y="0" z="290.0" />
+                </swl>
+                <swl name="G_250m">
+                    <pointdp coefdp="0.5" />
+                    <point0 x="250.0" y="0" z="235.0" />
+                    <point2 x="250.0" y="0" z="290.0" />
+                </swl>
+                <swl name="G_500m">
+                    <pointdp coefdp="0.5" />
+                    <point0 x="500.0" y="0" z="235.0" />
+                    <point2 x="500.0" y="0" z="290.0" />
+                </swl>
+                <swl name="G_1000m">
+                    <pointdp coefdp="0.5" />
+                    <point0 x="1000.0" y="0" z="235.0" />
+                    <point2 x="1000.0" y="0" z="290.0" />
+                </swl>
+                <swl name="G_1500m">
+                    <pointdp coefdp="0.5" />
+                    <point0 x="1500.0" y="0" z="235.0" />
+                    <point2 x="1500.0" y="0" z="290.0" />
+                </swl>
+            </gauges>
+        </special>
+        <parameters>
+            <parameter key="SavePosDouble" value="0" comment="Saves particle position using double precision" />
+            <parameter key="StepAlgorithm" value="1" comment="Step Algorithm 1:Verlet, 2:Symplectic (default=1)" />
+            <parameter key="VerletSteps" value="40" comment="Verlet only: Number of steps to apply Euler timestepping" />
+            <parameter key="Kernel" value="2" comment="Interaction Kernel 1:Cubic Spline, 2:Wendland (default=2)" />
+            <parameter key="ViscoTreatment" value="1" comment="Viscosity formulation 1:Artificial" />
+            <parameter key="Visco" value="0.02" comment="Viscosity value" />
+            <parameter key="ViscoBoundFactor" value="1" comment="Multiply viscosity value with boundary" />
+            <parameter key="DensityDT" value="2" comment="Density Diffusion Term 0:None, 1:Molteni, 2:Fourtakas" />
+            <parameter key="DensityDTvalue" value="0.1" comment="DDT value" />
+            <parameter key="Shifting" value="0" comment="Shifting mode" />
+            <parameter key="RigidAlgorithm" value="1" comment="Rigid Algorithm 1:SPH" />
+            <parameter key="CoefDtMin" value="0.05" comment="Coefficient to calculate minimum time step" />
+            <parameter key="DtIni" value="0" comment="Initial time step" units_comment="seconds" />
+            <parameter key="DtMin" value="0" comment="Minimum time step" units_comment="seconds" />
+            <parameter key="DtFixed" value="0" comment="Fixed Dt value" units_comment="seconds" />
+            <parameter key="DtAllParticles" value="0" comment="Velocity of particles used to calculate DT" />
+            <parameter key="TimeMax" value="600.0" comment="Time of simulation" units_comment="seconds" />
+            <parameter key="TimeOut" value="1.00" comment="Time out data" units_comment="seconds" />
+            <parameter key="PartsOutMax" value="1.0" comment="Percent of fluid particles allowed to exit domain" units_comment="decimal" />
+            <parameter key="RhopOutMin" value="700" comment="Minimum rhop valid" units_comment="kg/m^3" />
+            <parameter key="RhopOutMax" value="1300" comment="Maximum rhop valid" units_comment="kg/m^3" />
+            <simulationdomain comment="Defines domain of simulation">
+                <posmin x="default" y="default" z="default" />
+                <posmax x="default + 30" y="default" z="default + 15%" />
+            </simulationdomain>
+        </parameters>
+    </execution>
+</case>

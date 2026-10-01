@@ -1,0 +1,25 @@
+{
+  "milestone": "M5",
+  "solver_name": "Delft3D Flexible Mesh Suite (D-Flow FM)",
+  "installed_version": "1.2.184.Unknown (Sep 25 2026, 15:09:37)",
+  "source_tag": "DIMRset_2026.02",
+  "d3d_home": "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64",
+  "dflowfm_executable": "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\dflowfm-cli.exe",
+  "dimr_executable": "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\dimr.exe",
+  "dimr_runner_bat": "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\run_dimr.bat",
+  "dflowfm_runner_bat": "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\run_dflowfm.bat",
+  "compiler": "Intel ifort with OpenMP, MPI, PETSc, METIS, PROJ, Shapelib, GDAL support",
+  "python_packages": {
+    "meshkernel": "8.3.0",
+    "hydrolib_core": "1.4.0",
+    "netCDF4": "1.7.4",
+    "xarray": "2026.7.0"
+  },
+  "hardware_environment": {
+    "cpu": "Intel Core i5-12500H",
+    "ram_total_gb": 8.0,
+    "gpu": "None / CPU Only",
+    "os": "Windows 11 (AMD64)"
+  },
+  "verification_status": "VALIDATED_LOCAL_INSTALLATION"
+}

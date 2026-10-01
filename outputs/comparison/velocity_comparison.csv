@@ -1,0 +1,6 @@
+station_id,chainage_m,dflow_peak_velocity_mps,sph_peak_velocity_mps,absolute_model_spread_mps,relative_model_spread_percent,velocity_ratio_sph_to_dflow,comparison_classification,notes
+G_100m,100.0,2.466,23.159,20.693,839.13,9.3913,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Gauge-specific SPH extraction
+G_250m,250.0,2.505,24.726,22.221,887.07,9.8707,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Gauge-specific SPH extraction
+G_500m,500.0,2.648,15.947,13.299,502.23,6.0223,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Gauge-specific SPH extraction
+G_1000m,1000.0,4.324,13.996,9.672,223.68,3.2368,CROSS_SOLVER_CONSISTENCY_ANALYSIS,Gauge-specific SPH extraction
+G_1500m,1500.0,4.451,0.0,-4.451,-100.0,0.0,CROSS_SOLVER_CONSISTENCY_ANALYSIS,SPH not reached within 600 s

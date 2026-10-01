@@ -1,0 +1,68 @@
+[
+  {
+    "parameter": "dam_coordinates",
+    "value": [77.11389, 11.47083],
+    "unit": "degrees_WGS84",
+    "dataset_name": "CWC NRLD 2019 & TNWRD Records",
+    "provider": "Central Water Commission",
+    "retrieval_date": "2026-09-20",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "Central Water Commission (CWC) National Register of Large Dams (PIC: TN12HH0014)",
+    "limitations": "Point representation at dam approach axis"
+  },
+  {
+    "parameter": "crest_elevation_m",
+    "value": 284.42,
+    "unit": "metres_MSL",
+    "dataset_name": "TNWRD Lower Bhavani Project Technical Records",
+    "provider": "Tamil Nadu Water Resources Department",
+    "retrieval_date": "2026-09-20",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "TNWRD Lower Bhavani Dam Operations Manual",
+    "limitations": "Includes 4.0 m freeboard above FRL"
+  },
+  {
+    "parameter": "full_reservoir_level_m",
+    "value": 280.42,
+    "unit": "metres_MSL",
+    "dataset_name": "CWC Flood Forecasting Bulletins",
+    "provider": "Central Water Commission",
+    "retrieval_date": "2026-09-20",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "CWC Reservoir Monitoring Bulletin for Bhavanisagar",
+    "limitations": "Standard operational full reservoir level"
+  },
+  {
+    "parameter": "gross_storage_capacity_mcm",
+    "value": 928.8,
+    "unit": "MCM",
+    "dataset_name": "CWC NRLD Catalog",
+    "provider": "Central Water Commission",
+    "retrieval_date": "2026-09-20",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "CWC NRLD 2019",
+    "limitations": "Gross storage at FRL (32.8 TMC)"
+  },
+  {
+    "parameter": "terrain_dem",
+    "value": "USGS/SRTMGL1_003",
+    "unit": "30m_elevation_metres",
+    "dataset_name": "NASA SRTM Global 1 Arc-Second GL1",
+    "provider": "NASA / USGS",
+    "retrieval_date": "2026-09-21",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "Farr et al. (2007) The Shuttle Radar Topography Mission, Rev. Geophys.",
+    "limitations": "30 m spatial resolution; does not capture sub-grid micro-embankments or underwater bathymetry"
+  },
+  {
+    "parameter": "historical_satellite_flood",
+    "value": "S1A_IW_GRDH_1SDV_20190810T003943",
+    "unit": "SAR_backscatter_dB",
+    "dataset_name": "Copernicus Sentinel-1 GRD",
+    "provider": "ESA / Copernicus",
+    "retrieval_date": "2026-09-25",
+    "verification": "AUTHORITATIVE_VERIFIED",
+    "citation": "European Space Agency Sentinel-1 SAR GRD Archive",
+    "limitations": "Single historical observation on 2019-08-10 during extreme monsoon discharge"
+  }
+]

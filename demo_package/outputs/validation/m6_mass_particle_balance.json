@@ -1,0 +1,34 @@
+{
+  "milestone": "M6",
+  "title": "DualSPHysics Particle and Mass Balance Audit",
+  "classification": "PARTICLE_COUNT_CONSERVED",
+  "generated_at": "2026-09-25T16:05:00Z",
+  "simulation_duration_s": 600.0,
+  "particle_spacing_dp_m": 1.0,
+  "particle_mass_kg": 1000.0,
+  "particle_volume_m3_per_m": 1.0,
+  "initial_fluid_particles": 6800,
+  "generated_or_injected_particles": 0,
+  "removed_or_exited_particles": 2089,
+  "final_active_particles": 4711,
+  "particle_balance_residual": 0,
+  "fluid_volume_balance_m3_per_m": {
+    "initial_volume": 6800.0,
+    "injected_volume": 0.0,
+    "final_active_volume": 4711.0,
+    "exited_volume": 2089.0,
+    "volume_balance_residual": 0.0
+  },
+  "boundary_particles": 4182,
+  "total_initial_system_particles": 10982,
+  "extreme_velocity_diagnostic": {
+    "flag": "EXTREME_NEAR_FIELD_VALUE_REQUIRES_INTERPRETATION",
+    "maximum_velocity_mps": 34.779,
+    "occurrence_time_s": 12.0,
+    "occurrence_chainage_m": 228.62,
+    "occurrence_elevation_m_msl": 251.95,
+    "local_water_depth_m": 2.323,
+    "neighboring_particles_2h": 15,
+    "interpretation": "Occurs in the initial high-energy plunging toe jet at x \u2248 25-50 m as the upstream water column accelerates down the bed slope. Supported by dense particle cluster; P95 velocity (11.24 m/s) represents the sustained bulk wave velocity."
+  }
+}

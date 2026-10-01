@@ -1,0 +1,25 @@
+{
+  "timestamp_utc": "2026-09-25T13:30:14.469285+00:00",
+  "status": "PASS",
+  "spatial_consistency_metrics": {
+    "distance_dam_to_reservoir_m": 0.0,
+    "distance_dam_to_river_m": 115.79,
+    "reservoir_centroid_x": 727286.49,
+    "reservoir_centroid_y": 1267376.3,
+    "dam_x": 730603.73,
+    "dam_y": 1268886.41,
+    "reservoir_relative_position": "West / Upstream (Valid)",
+    "downstream_channel_length_km": 19.12,
+    "straight_line_valley_length_km": 16.69,
+    "sinuosity": 1.146,
+    "observed_surface_water_width_notes": "Mean observed reservoir body width is ~1562.6 m from JRC Global Surface Water. Downstream river channel hydraulic bankfull width is unmeasured and left null (OBSERVED_SURFACE_WATER_WIDTH only)."
+  },
+  "consistency_checks": {
+    "dam_near_reservoir_outlet": true,
+    "reservoir_is_upstream_of_dam": true,
+    "river_connected_to_reservoir": true,
+    "dam_near_river_channel": true,
+    "geometry_topology_valid": true
+  },
+  "validation_summary": "The reservoir polygon, dam reference point, snapped hydrologic pour point, and downstream river centerline exhibit complete geometric and topological alignment."
+}

@@ -1,0 +1,141 @@
+{
+  "timestamp_utc": "2026-09-25T14:15:00Z",
+  "description": "Multi-scenario screening hydrograph comparison across peak and rise time models",
+  "scenarios": [
+    {
+      "metadata": {
+        "scenario_id": "BHV_BASE",
+        "scenario_name": "Bhavanisagar Base Case Hybrid (Froehlich 1995 Qp + Froehlich 2008 tf)",
+        "classification": "SCREENING_HYDROGRAPH",
+        "hydrograph_shape": "VOLUME_CONSTRAINED_TRIANGULAR",
+        "breach_geometry_model": "FROEHLICH_2008",
+        "peak_discharge_model": "FROEHLICH_1995",
+        "volume_source": "CWC Hydrological Data Book 2020 Live Storage (780.5 MCM)",
+        "rise_time_source": "Froehlich (2008) M3 Result (t_f = 14,095.59 s / 3.915 hr)",
+        "target_volume_m3": 780500000.0,
+        "integrated_volume_m3": 780500000.0,
+        "volume_error_percent": 0.0,
+        "peak_discharge_m3s": 18742.38,
+        "rise_time_s": 14095.59,
+        "rise_time_hr": 3.9154,
+        "recession_time_s": 69191.59,
+        "recession_time_hr": 19.2199,
+        "total_duration_s": 83287.18,
+        "total_duration_hr": 23.1353,
+        "mean_discharge_m3s": 9371.19,
+        "peak_to_mean_ratio": 2.0,
+        "limitations": "Empirical volume-constrained screening hydrograph mathematically constrained to 780.5 MCM; not dynamic stage-storage routed"
+      },
+      "validation": {
+        "scenario_id": "BHV_BASE",
+        "is_non_negative": true,
+        "has_single_peak": true,
+        "is_monotonic_rise": true,
+        "is_monotonic_recession": true,
+        "is_final_discharge_zero": true,
+        "is_volume_conserved": true,
+        "volume_error_percent": 0.0,
+        "peak_matching_error_percent": 0.0,
+        "rise_time_matching_error_s": 0.0,
+        "overall_status": "PASS"
+      },
+      "points_count": 1391,
+      "csv_file_path": "data/dflowfm/hydrographs/BHV_BASE.csv",
+      "boundary_tim_file_path": "data/dflowfm/hydrographs/BHV_BASE_boundary.tim"
+    },
+    {
+      "metadata": {
+        "scenario_id": "BHV_FROEHLICH95_DIAGNOSTIC",
+        "scenario_name": "Bhavanisagar Same-Family Diagnostic (Froehlich 1995 Qp + Froehlich 1995 tf)",
+        "classification": "SCREENING_HYDROGRAPH",
+        "hydrograph_shape": "VOLUME_CONSTRAINED_TRIANGULAR",
+        "breach_geometry_model": "FROEHLICH_1995",
+        "peak_discharge_model": "FROEHLICH_1995",
+        "volume_source": "CWC Hydrological Data Book 2020 Live Storage (780.5 MCM)",
+        "rise_time_source": "Froehlich (1995) Formation Time Equation (t_f = 17070.25 s / 4.742 hr)",
+        "target_volume_m3": 780500000.0,
+        "integrated_volume_m3": 780499999.99,
+        "volume_error_percent": 0.0,
+        "peak_discharge_m3s": 18742.38,
+        "rise_time_s": 17070.25,
+        "rise_time_hr": 4.7417,
+        "recession_time_s": 66216.93,
+        "recession_time_hr": 18.3936,
+        "total_duration_s": 83287.18,
+        "total_duration_hr": 23.1353,
+        "mean_discharge_m3s": 9371.19,
+        "peak_to_mean_ratio": 2.0,
+        "limitations": "Single-family comparison showing sensitivity to formation time formula"
+      },
+      "validation": {
+        "scenario_id": "BHV_FROEHLICH95_DIAGNOSTIC",
+        "is_non_negative": true,
+        "has_single_peak": true,
+        "is_monotonic_rise": true,
+        "is_monotonic_recession": true,
+        "is_final_discharge_zero": true,
+        "is_volume_conserved": true,
+        "volume_error_percent": 0.0,
+        "peak_matching_error_percent": 0.0,
+        "rise_time_matching_error_s": 0.0,
+        "overall_status": "PASS"
+      },
+      "points_count": 1391,
+      "csv_file_path": "data/dflowfm/hydrographs/BHV_FROEHLICH95_DIAGNOSTIC.csv",
+      "boundary_tim_file_path": "data/dflowfm/hydrographs/BHV_FROEHLICH95_DIAGNOSTIC_boundary.tim"
+    },
+    {
+      "metadata": {
+        "scenario_id": "BHV_PEAK_SENSITIVITY_MLM",
+        "scenario_name": "Bhavanisagar Peak Sensitivity (MacDonald 1984 / Wahl 1998 Qp + M3 MLM tf)",
+        "classification": "SCREENING_HYDROGRAPH",
+        "hydrograph_shape": "VOLUME_CONSTRAINED_TRIANGULAR",
+        "breach_geometry_model": "MACDONALD_LANGRIDGE_MONOPOLIS_1984",
+        "peak_discharge_model": "MACDONALD_LANGRIDGE_MONOPOLIS_1984_WAHL",
+        "volume_source": "CWC Hydrological Data Book 2020 Live Storage (780.5 MCM)",
+        "rise_time_source": "MacDonald & Langridge-Monopolis (1984) M3 Result (t_f = 13907.39 s / 3.863 hr)",
+        "target_volume_m3": 780500000.0,
+        "integrated_volume_m3": 780499999.73,
+        "volume_error_percent": 0.0,
+        "peak_discharge_m3s": 22181.21,
+        "rise_time_s": 13907.39,
+        "rise_time_hr": 3.8632,
+        "recession_time_s": 56467.49,
+        "recession_time_hr": 15.6854,
+        "total_duration_s": 70374.88,
+        "total_duration_hr": 19.5486,
+        "mean_discharge_m3s": 11090.6,
+        "peak_to_mean_ratio": 2.0,
+        "limitations": "Upper-envelope peak outflow sensitivity based on breach formation factor"
+      },
+      "validation": {
+        "scenario_id": "BHV_PEAK_SENSITIVITY_MLM",
+        "is_non_negative": true,
+        "has_single_peak": true,
+        "is_monotonic_rise": true,
+        "is_monotonic_recession": true,
+        "is_final_discharge_zero": true,
+        "is_volume_conserved": true,
+        "volume_error_percent": 0.0,
+        "peak_matching_error_percent": 0.0,
+        "rise_time_matching_error_s": 0.0,
+        "overall_status": "PASS"
+      },
+      "points_count": 1175,
+      "csv_file_path": "data/dflowfm/hydrographs/BHV_PEAK_SENSITIVITY_MLM.csv",
+      "boundary_tim_file_path": "data/dflowfm/hydrographs/BHV_PEAK_SENSITIVITY_MLM_boundary.tim"
+    }
+  ],
+  "comparison_metrics": {
+    "peak_discharge_range_m3s": [
+      18742.38,
+      22181.21
+    ],
+    "total_duration_range_hr": [
+      19.5486,
+      23.1353
+    ],
+    "volume_spread_percent": 0.0,
+    "derivation_classification": "MODEL_SPREAD_SCENARIOS"
+  }
+}

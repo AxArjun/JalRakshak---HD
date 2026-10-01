@@ -1,0 +1,87 @@
+# JalRakshak-HD - Breach Outflow Hydrograph Configuration
+# Milestone: M4 — Breach Outflow Hydrograph Generation
+# Study Site: Bhavanisagar Dam (Lower Bhavani Dam), Tamil Nadu, India
+
+hydrograph:
+  classification: "SCREENING_HYDROGRAPH"
+  method: "VOLUME_CONSTRAINED_TRIANGULAR_SCREENING_HYDROGRAPH"
+  timestep_seconds: 60.0
+  volume_tolerance_percent: 0.5
+  interpolation_method: "LINEAR"
+  coordinate_reference_system: "EPSG:32643"
+
+reservoir:
+  dam_name: "Bhavanisagar Dam"
+  initial_water_level_m_msl: 280.42
+  initial_water_level_source: "Central Water Commission (CWC) Authoritative FRL"
+  assumed_breach_volume_m3: 780500000.0  # 780.5 MCM (CWC Hydrological Data Book 2020 live storage)
+  volume_classification: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+  water_depth_above_invert_hw_m: 32.0  # 105 ft full depth above zero-gauge dead sill
+  water_depth_classification: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+  dam_breach_height_hb_m: 40.0  # Assumed complete breach depth to riverbed foundation
+  breach_height_classification: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+  stage_storage_curve_available: false
+
+peak_discharge_models:
+  froehlich_1995:
+    model_name: "Froehlich (1995)"
+    authors: "David C. Froehlich"
+    publication_year: 1995
+    source: "Journal of Water Resources Planning and Management, ASCE, Vol. 121, No. 1, pp. 90-97"
+    equation: "Q_p = 0.607 * (V_w)^0.295 * (h_w)^1.24"
+    formation_time_equation: "t_f_hr = 0.00254 * (V_w)^0.53 * (h_b)^-0.9"
+    required_inputs: ["V_w (m3)", "h_w (m)", "h_b (m)"]
+    calibration_dataset_size: "22 embankment dam failure case studies"
+    intended_dam_type: "Embankment Dams (Earthfill and Rockfill)"
+    validity_notes: "SI unit regression for peak discharge and breach development time"
+
+  macdonald_langridge_monopolis_1984_wahl:
+    model_name: "MacDonald & Langridge-Monopolis (1984) / Wahl (1998, 2004)"
+    authors: "Thomas C. MacDonald and Jennifer Langridge-Monopolis (SI formulation by Tony L. Wahl)"
+    publication_year: 1998
+    source: "USBR DSO-98-004: Prediction of Embankment Dam Breach Parameters, Denver, CO"
+    equation: "Q_p = 1.154 * (V_w * h_w)^0.412"
+    required_inputs: ["V_w (m3)", "h_w (m)"]
+    calibration_dataset_size: "42 historical dam breach cases"
+    intended_dam_type: "Earthfill and Rockfill Embankments"
+    validity_notes: "Envelope/regression relationship for peak outflow from breach formation factor"
+
+scenarios:
+  - scenario_id: "BHV_BASE"
+    scenario_name: "Bhavanisagar Base Case Hybrid Screening Hydrograph (Froehlich 1995 Qp + Froehlich 2008 tf)"
+    classification: "SCREENING_HYDROGRAPH"
+    peak_model: "froehlich_1995"
+    geometry_model: "FROEHLICH_2008"
+    rise_time_source: "Froehlich (2008) M3 Result (t_f = 14,095.59 s / 3.915 hr)"
+    rise_time_classification: "MODEL_ASSUMPTION_MAPPING"
+    rise_time_mapping_definition: "Froehlich 2008 empirical breach formation time is being used as the rise-time parameter of the volume-constrained triangular screening hydrograph. It is NOT measured hydrograph time-to-peak."
+    assumed_breach_volume_m3: 780500000.0
+    water_depth_hw_m: 32.0
+    breach_height_hb_m: 40.0
+    limitations: "Empirical screening hydrograph mathematically volume-constrained to 780.5 MCM; not dynamic stage-storage routed"
+
+  - scenario_id: "BHV_FROEHLICH95_DIAGNOSTIC"
+    scenario_name: "Bhavanisagar Same-Family Diagnostic Hydrograph (Froehlich 1995 Qp + Froehlich 1995 tf)"
+    classification: "SCREENING_HYDROGRAPH"
+    peak_model: "froehlich_1995"
+    geometry_model: "FROEHLICH_1995"
+    rise_time_source: "Froehlich (1995) Formation Time Equation (t_f = 17,070.25 s / 4.742 hr)"
+    rise_time_classification: "MODEL_ASSUMPTION_MAPPING"
+    rise_time_mapping_definition: "Froehlich 1995 empirical breach formation time is mapped to hydrograph rise time."
+    assumed_breach_volume_m3: 780500000.0
+    water_depth_hw_m: 32.0
+    breach_height_hb_m: 40.0
+    limitations: "Single-family formulation comparison; demonstrates sensitivity to formation time regression"
+
+  - scenario_id: "BHV_PEAK_SENSITIVITY_MLM"
+    scenario_name: "Bhavanisagar Peak Sensitivity Screening Hydrograph (MacDonald 1984 / Wahl 1998 Qp + M3 MLM tf)"
+    classification: "SCREENING_HYDROGRAPH"
+    peak_model: "macdonald_langridge_monopolis_1984_wahl"
+    geometry_model: "MACDONALD_LANGRIDGE_MONOPOLIS_1984"
+    rise_time_source: "MacDonald & Langridge-Monopolis (1984) M3 Result (t_f = 13,907.39 s / 3.863 hr)"
+    rise_time_classification: "MODEL_ASSUMPTION_MAPPING"
+    rise_time_mapping_definition: "MacDonald 1984 empirical breach formation time is mapped to hydrograph rise time."
+    assumed_breach_volume_m3: 780500000.0
+    water_depth_hw_m: 32.0
+    breach_height_hb_m: 40.0
+    limitations: "Peak discharge sensitivity envelope based on breach formation factor"

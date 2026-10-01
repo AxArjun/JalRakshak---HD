@@ -1,0 +1,98 @@
+{
+  "timestamp_utc": "2026-09-25T12:52:04.180428+00:00",
+  "status": "PASS",
+  "study_site": {
+    "dam_name": "Bhavanisagar Dam",
+    "alternate_names": [
+      "Lower Bhavani Dam",
+      "Bhavani Sagar Reservoir Project"
+    ],
+    "river": "Bhavani River",
+    "basin": "Cauvery Basin",
+    "sub_basin": "Lower Cauvery",
+    "reservoir": "Bhavanisagar Reservoir",
+    "state": "Tamil Nadu",
+    "district": "Erode",
+    "taluk": "Sathyamangalam",
+    "revenue_division": "Gobichettipalayam",
+    "firka": "Bhavanisagar",
+    "development_block": "Bhavanisagar Block (Panchayat Union)",
+    "town_panchayat": "Bhavanisagar Town Panchayat",
+    "assembly_constituency": "Bhavanisagar (SC) - AC No. 107",
+    "country": "India",
+    "dam_type": "Earthen Dam with Central Masonry Spillway (Composite)",
+    "year_completed": 1955,
+    "crest_length_m": 8780.0,
+    "max_height_m": 40.0,
+    "gross_storage_tmc": 32.8
+  },
+  "selected_coordinates": {
+    "latitude": 11.47083,
+    "longitude": 77.11389,
+    "crs": "EPSG:4326 (WGS 84)",
+    "feature_type": "Dam administration & spillway approach control complex",
+    "verification_level": "SECONDARY_VERIFIED"
+  },
+  "spatial_checks": {
+    "in_wgs84_bounds": true,
+    "in_tamil_nadu_envelope": true,
+    "calculated_utm_epsg": "EPSG:32643",
+    "calculated_utm_crs_name": "WGS 84 / UTM zone 43N",
+    "configured_projected_crs": "EPSG:32643",
+    "crs_match": true,
+    "max_inter_source_divergence_m": 319.33
+  },
+  "coordinate_candidates": [
+    {
+      "source": "Central Water Commission (CWC) NRLD State Profile Entry & TNWRD Records",
+      "url": "https://cwc.gov.in/national-register-large-dams",
+      "latitude": 11.47083,
+      "longitude": 77.11389,
+      "feature_represented": "Dam administration & spillway approach complex",
+      "verification_level": "SECONDARY_VERIFIED"
+    },
+    {
+      "source": "OpenStreetMap Dam Spillway Crest Axis (Way 304402636 / Relation 3831804)",
+      "url": "https://www.openstreetmap.org/relation/3831804",
+      "latitude": 11.47326,
+      "longitude": 77.11547,
+      "feature_represented": "Active masonry spillway crest centerline",
+      "verification_level": "SECONDARY_VERIFIED"
+    }
+  ],
+  "authoritative_sources": [
+    {
+      "authority": "Central Water Commission (CWC)",
+      "document": "National Register of Large Dams (NRLD)",
+      "url": "https://cwc.gov.in/national-register-large-dams",
+      "verification_level": "AUTHORITATIVE_VERIFIED"
+    },
+    {
+      "authority": "Government of Tamil Nadu, Erode District Administration",
+      "portal": "https://erode.nic.in/revenue-administration/ and https://erode.nic.in/taluks/",
+      "verification_level": "AUTHORITATIVE_VERIFIED"
+    },
+    {
+      "authority": "India-WRIS (Water Resources Information System)",
+      "portal": "https://indiawris.gov.in",
+      "verification_level": "AUTHORITATIVE_VERIFIED"
+    },
+    {
+      "authority": "Water Resources Department, Government of Tamil Nadu",
+      "portal": "https://www.wrd.tn.gov.in",
+      "verification_level": "AUTHORITATIVE_VERIFIED"
+    }
+  ],
+  "aoi_definition": {
+    "method": "Physically conditioned downstream reach and reservoir corridor",
+    "upstream_buffer_km": 15.0,
+    "downstream_distance_km": 35.0,
+    "lateral_buffer_km": 12.0,
+    "bbox_wgs84": {
+      "min_lon": 76.95,
+      "min_lat": 11.36,
+      "max_lon": 77.42,
+      "max_lat": 11.58
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "timestamp_utc": "2026-09-25T14:15:00Z",
+  "study_site": "Bhavanisagar Dam",
+  "models_evaluated": [
+    {
+      "model_name": "Froehlich (1995)",
+      "authors": "David C. Froehlich",
+      "publication_year": 1995,
+      "peak_discharge_m3s": 18742.38,
+      "required_inputs": {
+        "V_w_m3": 780500000.0,
+        "h_w_m": 32.0,
+        "input_units": "SI (m3, m)",
+        "output_units": "SI (m3/s)"
+      },
+      "formula_traceability": "Froehlich (1995) ASCE J. Water Resour. Plann. Manage. 121(1): Eq. 2",
+      "calibration_notes": "Calibrated against 22 historical dam failure cases with volume up to 660 MCM and height up to 85 m.",
+      "validity_assessment": "Standard parametric peak outflow regression for embankment dam failures."
+    },
+    {
+      "model_name": "MacDonald & Langridge-Monopolis (1984) / Wahl (1998)",
+      "authors": "Thomas C. MacDonald and Jennifer Langridge-Monopolis (SI form by Tony L. Wahl)",
+      "publication_year": 1998,
+      "peak_discharge_m3s": 22181.21,
+      "required_inputs": {
+        "V_w_m3": 780500000.0,
+        "h_w_m": 32.0,
+        "breach_formation_factor_m4": 24976000000.0,
+        "input_units": "SI (m3, m)",
+        "output_units": "SI (m3/s)"
+      },
+      "formula_traceability": "USBR DSO-98-004 Table 5 / Wahl (2004) Eq. 6",
+      "calibration_notes": "Evaluated across 42 historical dam failures (23 earthfill, 19 rockfill).",
+      "validity_assessment": "Standard upper-envelope peak outflow regression based on breach formation factor."
+    }
+  ],
+  "notes": "Both regressions evaluated using exact SI units with V_w = 780.5 MCM and h_w = 32.0 m."
+}

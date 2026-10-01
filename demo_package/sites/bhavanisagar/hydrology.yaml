@@ -1,0 +1,20 @@
+reservoir:
+  full_reservoir_level_m: 280.42
+  maximum_water_level_m: 280.42
+  dead_storage_level_m: 248.42
+  gross_storage_capacity_mcm: 928.8
+  live_storage_capacity_mcm: 780.5
+  dead_storage_capacity_mcm: 148.3
+  reservoir_area_frl_km2: 78.5
+  catchment_area_km2: 4200.0
+  verification: "AUTHORITATIVE_VERIFIED"
+
+river:
+  reach_name: "Lower Bhavani River"
+  downstream_length_km: 35.0
+  average_bed_slope: 0.0012
+  main_confluence: "Cauvery River at Bhavani Town"
+  primary_gauges:
+    - "Bhavanisagar Dam Outflow Gauge"
+    - "Sathyamangalam Bridge Gauge"
+    - "Kalingarayan Anicut Gauge"

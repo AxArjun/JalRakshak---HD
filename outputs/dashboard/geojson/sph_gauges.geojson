@@ -1,0 +1,12 @@
+{
+"type": "FeatureCollection",
+"name": "sph_gauges",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "gauge_name": "G_100m", "chainage_m": 100.0, "easting": 730545.278, "northing": 1269119.062, "longitude": 77.11337, "latitude": 11.472936, "arrival_time_s": "5.00053", "arrival_time_min": "0.08", "max_water_depth_m": 8.059, "max_velocity_mps": 23.159, "time_of_max_velocity_s": 5.00053 }, "geometry": { "type": "Point", "coordinates": [ 77.11337, 11.472936 ] } },
+{ "type": "Feature", "properties": { "gauge_name": "G_250m", "chainage_m": 250.0, "easting": 730688.045, "northing": 1269073.044, "longitude": 77.114675, "latitude": 11.472511, "arrival_time_s": "12.0005", "arrival_time_min": "0.2", "max_water_depth_m": 12.004, "max_velocity_mps": 24.726, "time_of_max_velocity_s": 13.0007 }, "geometry": { "type": "Point", "coordinates": [ 77.114675, 11.472511 ] } },
+{ "type": "Feature", "properties": { "gauge_name": "G_500m", "chainage_m": 500.0, "easting": 730759.756, "northing": 1269272.562, "longitude": 77.115346, "latitude": 11.474309, "arrival_time_s": "28.0005", "arrival_time_min": "0.47", "max_water_depth_m": 5.55, "max_velocity_mps": 15.947, "time_of_max_velocity_s": 29.0005 }, "geometry": { "type": "Point", "coordinates": [ 77.115346, 11.474309 ] } },
+{ "type": "Feature", "properties": { "gauge_name": "G_1000m", "chainage_m": 1000.0, "easting": 730603.088, "northing": 1269729.058, "longitude": 77.113941, "latitude": 11.478445, "arrival_time_s": "119.0", "arrival_time_min": "1.98", "max_water_depth_m": 5.211, "max_velocity_mps": 13.996, "time_of_max_velocity_s": 191.001 }, "geometry": { "type": "Point", "coordinates": [ 77.113941, 11.478445 ] } },
+{ "type": "Feature", "properties": { "gauge_name": "G_1500m", "chainage_m": 1500.0, "easting": 730628.274, "northing": 1270210.446, "longitude": 77.114204, "latitude": 11.482794, "arrival_time_s": "NOT_REACHED", "arrival_time_min": "NOT_REACHED", "max_water_depth_m": 0.0, "max_velocity_mps": 0.0, "time_of_max_velocity_s": null }, "geometry": { "type": "Point", "coordinates": [ 77.114204, 11.482794 ] } }
+]
+}

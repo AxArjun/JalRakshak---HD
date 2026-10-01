@@ -1,0 +1,14 @@
+[Forcing]
+Name = downstream_boundary_0001
+Function = constant
+Quantity = riemannbnd
+Unit = m/s
+0.0
+
+[Forcing]
+Name = downstream_boundary_0002
+Function = constant
+Quantity = riemannbnd
+Unit = m/s
+0.0
+

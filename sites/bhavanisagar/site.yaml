@@ -1,0 +1,30 @@
+site_id: "bhavanisagar"
+display_name: "Bhavanisagar Dam & Lower Bhavani River Corridor"
+description: "Validated composite dam breach and 2D hydraulic routing model for Bhavanisagar Dam on Bhavani River, Erode District, Tamil Nadu."
+
+identity:
+  dam_name: "Bhavanisagar Dam"
+  river_name: "Bhavani River"
+  basin_name: "Cauvery Basin"
+  country: "India"
+  state: "Tamil Nadu"
+  district: "Erode"
+  latitude: 11.47083
+  longitude: 77.11389
+  impoundment_type: "ENGINEERED_DAM"
+  national_id: "TN12HH0014"
+  year_completed: 1955
+  dam_type: "Composite Earthen Dam with Central Masonry Spillway"
+
+study_area:
+  aoi_bbox_wgs84: [76.9500, 11.3600, 77.4200, 11.5800]
+  dam_coordinates_wgs84: [77.11389, 11.47083]
+  downstream_reach_length_km: 35.0
+  domain_area_km2: 818.37
+  crs:
+    source_crs: "EPSG:4326"
+    project_crs: "EPSG:32643"
+    utm_zone: 43
+    hemisphere: "N"
+    derivation_reason: "AUTOMATIC_UTM_ZONE_DERIVATION_ZONE_43N"
+    override_applied: false

@@ -1,0 +1,86 @@
+{
+  "timestamp_utc": "2026-09-25T14:05:00Z",
+  "dam_name": "Bhavanisagar Dam (Lower Bhavani Dam)",
+  "dam_type": "Composite Earthen Embankment with Central Masonry Spillway",
+  "published_dam_dimensions": {
+    "source_a_nrld_2019": {
+      "pic_code": "TN12HH0014",
+      "height_above_lowest_foundation_m": 62.0,
+      "dam_length_m": 8797.0,
+      "verification_level": "AUTHORITATIVE_VERIFIED"
+    },
+    "source_b_technical_project_description": {
+      "reference": "Lower Bhavani Project Technical Description & Rehabilitation Engineering Literature",
+      "overall_dam_length_m": 8780.0,
+      "central_masonry_section_length_m": 464.0,
+      "masonry_section_height_from_lowest_foundation_m": 62.18,
+      "earthen_embankment_reported_height_m": 40.0,
+      "verification_level": "SECONDARY_VERIFIED"
+    }
+  },
+  "structural_components": [
+    {
+      "component_name": "Left Earthen Embankment Flank",
+      "component_type": "EARTHEN_EMBANKMENT",
+      "material": "Zoned Rolled Earthfill with Upstream Riprap and Downstream Rock Toe",
+      "individual_length_m": null,
+      "length_verification": "UNVERIFIED",
+      "max_height_m": 40.0,
+      "breachable_status": "BREACHABLE",
+      "breachability_notes": "Subject to progressive erosion or piping failure under extreme hydraulic stress. Selected candidate breachable component."
+    },
+    {
+      "component_name": "Central Masonry Section",
+      "component_type": "MASONRY_SECTION",
+      "material": "Massive Rubble Masonry / Concrete Gravity Monolith",
+      "individual_length_m": 464.0,
+      "length_verification": "SECONDARY_VERIFIED",
+      "max_height_m": 62.18,
+      "breachable_status": "NON_BREACHABLE_MASSIVE_MASONRY",
+      "breachability_notes": "Massive concrete/masonry gravity section housing spillway and sluice monoliths; non-breachable under empirical earthen breach models."
+    },
+    {
+      "component_name": "Ogee Spillway Structure",
+      "component_type": "SPILLWAY_CREST",
+      "material": "Gated Masonry Ogee Crest with 9 Radial Gates",
+      "individual_length_m": 120.70,
+      "length_verification": "SECONDARY_VERIFIED",
+      "crest_level_m_msl": 274.32,
+      "discharge_capacity_cumec": 3455.0,
+      "gate_count": 9,
+      "gate_dimensions_m": "10.97 x 6.10",
+      "breachable_status": "CONTROLLED_SPILLWAY_DISCHARGE",
+      "breachability_notes": "Controlled hydraulic discharge structure with 9 radial gates (36 ft x 20 ft / 10.97 m x 6.10 m) on ogee crest."
+    },
+    {
+      "component_name": "Right Earthen Embankment Flank",
+      "component_type": "EARTHEN_EMBANKMENT",
+      "material": "Zoned Rolled Earthfill with Main Canal Head Sluice",
+      "individual_length_m": null,
+      "length_verification": "UNVERIFIED",
+      "max_height_m": 38.0,
+      "breachable_status": "BREACHABLE",
+      "breachability_notes": "Contains the Lower Bhavani Main Canal headworks; alternative candidate embankment segment."
+    },
+    {
+      "component_name": "River and Canal Sluices",
+      "component_type": "OUTLET_STRUCTURE",
+      "material": "Reinforced Concrete Conduit / Masonry Intake Tower",
+      "individual_length_m": 50.0,
+      "length_verification": "SECONDARY_VERIFIED",
+      "max_height_m": 15.0,
+      "breachable_status": "CONTROLLED_DISCHARGE_OUTLET",
+      "breachability_notes": "Controlled outlet conduit for downstream irrigation and power generation."
+    }
+  ],
+  "derived_approximations": {
+    "arithmetic_embankment_length_approx_m": 8316.0,
+    "derivation_formula": "8780.0 m (Technical Dam Length) - 464.0 m (Central Masonry Section) = 8316.0 m",
+    "verification_level": "MODEL_DERIVED_APPROXIMATION",
+    "notes": "Arithmetic subtraction only; not a surveyed or published individual component length."
+  },
+  "selected_breachable_component": {
+    "component_name": "Left Earthen Embankment Flank",
+    "rationale": "Represents the primary river valley embankment section directly impounding the deep reservoir pool adjacent to the central masonry section. Standard empirical embankment breach formulations (Froehlich, MacDonald, Von Thun) apply specifically to this earthfill component."
+  }
+}

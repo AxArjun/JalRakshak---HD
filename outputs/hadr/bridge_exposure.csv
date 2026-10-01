@@ -1,0 +1,21 @@
+osm_id,name,highway,hazard_class,hazard_code,exposed_length_m,screening_classification,notes
+966247490,Puliyampatti - Bhavanisagar - Bannari Road,primary,H6,6,139.6,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+583603495,Unnamed Road,tertiary,H6,6,229.7,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+966250310,Sathy - Kothamangalam Road,secondary,H6,6,44.4,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1369830099,Unnamed Road,trunk,H6,6,109.3,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+240303459,Unnamed Road,trunk,H6,6,111.9,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+640592681,Unnamed Road,trunk,H6,6,46.0,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1343268199,Unnamed Road,unclassified,H6,6,9.6,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1343268203,Unnamed Road,unclassified,H6,6,10.7,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1263299356,Unnamed Road,footway,H5,5,6.0,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+555413880,Kodivery Dam Road,secondary,H6,6,36.7,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1000692331,Kodivery Dam Road,secondary,H6,6,50.1,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1000692329,Kodivery Dam Road,secondary,H6,6,23.8,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+555413885,Unnamed Road,unclassified,H6,6,25.6,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+631230370,Unnamed Road,unclassified,DRY,0,5.2,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+634003430,Unnamed Road,unclassified,H3,3,22.4,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+631230375,Unnamed Road,tertiary,H5,5,33.0,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+634000778,Sathy - Periyakodivery - Kadambur Road,secondary,H5,5,73.1,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+634005120,Unnamed Road,tertiary,DRY,0,101.3,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+1341664169,Unnamed Road,unclassified,H4,4,29.5,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation
+130075002,Karattadipalayam - Bungalowpudur Road,secondary,H6,6,166.0,BRIDGE_HYDRAULIC_EXPOSURE_SCREENING,Hydraulic exposure identified; detailed scour/submergence rating requires surveyed deck elevation

@@ -1,0 +1,10 @@
+# JalRakshak-HD - Project Metadata & Global Settings
+# Milestone: M0 — Project Foundation and Verified Environment Lock
+
+project_name: "JalRakshak-HD"
+problem_statement: "PS 26161"
+simulation_mode: "research_prototype"
+default_crs: "EPSG:32643"
+study_area: "Bhavanisagar Dam & Lower Bhavani River Corridor"
+dam: "Bhavanisagar Dam"
+river: "Bhavani River"

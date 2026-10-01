@@ -1,0 +1,215 @@
+{
+  "milestone": "M10",
+  "validation_type": "E2E_API_AND_ASSET_CHECK",
+  "timestamp": "2026-09-26T10:34:25+0530",
+  "summary": {
+    "total": 36,
+    "passed": 36,
+    "failed": 0
+  },
+  "results": [
+    {
+      "test": "GET /health",
+      "status": "PASS",
+      "detail": {
+        "status": "ready",
+        "project": "JalRakshak-HD",
+        "backend_version": "1.0.0"
+      }
+    },
+    {
+      "test": "GET /api/health",
+      "status": "PASS",
+      "detail": {
+        "status": "ready",
+        "project": "JalRakshak-HD",
+        "backend_version": "1.0.0",
+        "data_readiness": "ALL_MILESTONES_COMPLETE",
+        "milestones_status": {
+          "M0_CORE_SETUP": "COMPLETE",
+          "M1_TERRAIN_DEM": "COMPLETE",
+          "M2_HYDROLOGY_NETWORK": "COMPLETE",
+          "M3_DAM_ENGINEERING": "COMPLETE",
+          "M4_BREACH_HYDROGRAPH": "COMPLETE",
+          "M5_2D_DFLOWFM_SIMULATION": "COMPLETE",
+          "M6_3D_SPH_NEARFIELD": "COMPLETE",
+          "M7_CROSS_SOLVER_AUDIT": "COMPLETE",
+          "M8_HADR_EXPOSURE": "COMPLETE",
+          "M9_EARTH_OBSERVATION": "COMPLETE",
+          "M10_GIS_DASHBOARD": "READY"
+        },
+        "timestamp": "2026-09-26T05:04:24Z"
+      }
+    },
+    {
+      "test": "GET /api/project/meta (values check)",
+      "status": "PASS",
+      "detail": "domain=818.37 km2, inundated=101.29 km2"
+    },
+    {
+      "test": "GET /api/simulation/meta (M5 values check)",
+      "status": "PASS",
+      "detail": "solver_d=22.02m, solver_v=11.79m/s, domain=818.37km2, frames=181"
+    },
+    {
+      "test": "GET /api/tiles/simulation_frames/frame_000.png",
+      "status": "PASS",
+      "detail": "status=200, bytes=420"
+    },
+    {
+      "test": "GET /api/tiles/simulation_frames/frame_090.png",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "test": "GET /api/tiles/simulation_frames/frame_180.png",
+      "status": "PASS",
+      "detail": "status=200"
+    },
+    {
+      "test": "GET /api/hadr/summary (M8 values check)",
+      "status": "PASS",
+      "detail": "WP=42428.1, GHSL=84500.5, Bld=25652, H5/H6 Bld=22472, Bridges=20, H3-H6 Area=97.99"
+    },
+    {
+      "test": "GET /api/hadr/hazard/summary",
+      "status": "PASS",
+      "detail": "total_area_km2=101.29"
+    },
+    {
+      "test": "GET /api/hadr/response-zones",
+      "status": "PASS",
+      "detail": "zones=6"
+    },
+    {
+      "test": "GET /api/sph/summary (M6/M7 values check)",
+      "status": "PASS",
+      "detail": "particles=10982, max_d=17.11m, max_v=34.78m/s, coupling=False"
+    },
+    {
+      "test": "GET /api/remote-sensing/summary (M9 values check)",
+      "status": "PASS",
+      "detail": "historical_platform=Sentinel-1A, vector_flood=1.115km2, latest_orbit=4581"
+    },
+    {
+      "test": "GET /api/tiles/overlays/max_depth.png",
+      "status": "PASS",
+      "detail": "bytes=7928"
+    },
+    {
+      "test": "GET /api/tiles/overlays/max_velocity.png",
+      "status": "PASS",
+      "detail": "bytes=6710"
+    },
+    {
+      "test": "GET /api/tiles/overlays/arrival_time.png",
+      "status": "PASS",
+      "detail": "bytes=3208"
+    },
+    {
+      "test": "GET /api/tiles/overlays/hazard_class.png",
+      "status": "PASS",
+      "detail": "bytes=5934"
+    },
+    {
+      "test": "GET /api/tiles/overlays/historical_flood.png",
+      "status": "PASS",
+      "detail": "bytes=4804"
+    },
+    {
+      "test": "GET /api/tiles/overlays/hillshade.png",
+      "status": "PASS",
+      "detail": "bytes=1033836"
+    },
+    {
+      "test": "GET /api/tiles/geojson/inundation_extent.geojson",
+      "status": "PASS",
+      "detail": "bytes=90950"
+    },
+    {
+      "test": "GET /api/tiles/geojson/response_zones.geojson",
+      "status": "PASS",
+      "detail": "bytes=16242"
+    },
+    {
+      "test": "GET /api/tiles/geojson/bhavani_river.geojson",
+      "status": "PASS",
+      "detail": "bytes=11351"
+    },
+    {
+      "test": "GET /api/tiles/geojson/dam_point.geojson",
+      "status": "PASS",
+      "detail": "bytes=461"
+    },
+    {
+      "test": "GET /api/tiles/geojson/hazard_severity.geojson",
+      "status": "PASS",
+      "detail": "bytes=6052092"
+    },
+    {
+      "test": "GET /api/tiles/geojson/road_exposure.geojson",
+      "status": "PASS",
+      "detail": "bytes=379142"
+    },
+    {
+      "test": "GET /api/tiles/geojson/critical_facilities.geojson",
+      "status": "PASS",
+      "detail": "bytes=5221"
+    },
+    {
+      "test": "GET /api/tiles/geojson/sph_gauges.geojson",
+      "status": "PASS",
+      "detail": "bytes=2173"
+    },
+    {
+      "test": "GET /api/gis/query-point (inundated zone)",
+      "status": "PASS",
+      "detail": "depth=?m"
+    },
+    {
+      "test": "GET /api/gis/query-point (outside domain)",
+      "status": "PASS",
+      "detail": "depth=?"
+    },
+    {
+      "test": "outputs/dashboard/overlays/manifest.json",
+      "status": "PASS",
+      "detail": "2,250 bytes"
+    },
+    {
+      "test": "outputs/dashboard/simulation_frames/frame_000.png",
+      "status": "PASS",
+      "detail": "420 bytes"
+    },
+    {
+      "test": "outputs/dashboard/simulation_frames/frame_180.png",
+      "status": "PASS",
+      "detail": "9,377 bytes"
+    },
+    {
+      "test": "outputs/dashboard/geojson/hazard_severity.geojson",
+      "status": "PASS",
+      "detail": "6,052,092 bytes"
+    },
+    {
+      "test": "outputs/validation/m8_exposure_summary.json",
+      "status": "PASS",
+      "detail": "13,123 bytes"
+    },
+    {
+      "test": "outputs/validation/m8_hazard_severity_summary.json",
+      "status": "PASS",
+      "detail": "1,855 bytes"
+    },
+    {
+      "test": "frontend/dist/index.html",
+      "status": "PASS",
+      "detail": "458 bytes"
+    },
+    {
+      "test": "frontend/dist/assets/*.js (bundle exists)",
+      "status": "PASS",
+      "detail": "1 JS bundles, largest=806,506 bytes"
+    }
+  ]
+}

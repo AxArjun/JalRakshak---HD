@@ -1,0 +1,11 @@
+earth_observation:
+  satellite_platform: "Sentinel-1"
+  orbit_pass_preference: "DESCENDING"
+  relative_orbit_preference: null
+  orbit_preference_mode: "AUTO_DISCOVER"
+  historical_scene_id: null
+  historical_platform: null
+  live_query_status: "UNVERIFIED_PENDING_LIVE_GEE_QUERY"
+  detection_threshold_delta_db: -3.0
+  event_vv_threshold_db: -14.0
+  slope_threshold_deg: 5.0

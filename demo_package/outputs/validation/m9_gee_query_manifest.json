@@ -1,0 +1,86 @@
+{
+  "milestone": "M9",
+  "manifest_type": "GEE_QUERY_AND_PROVENANCE_MANIFEST",
+  "earth_engine_project": "jalrakshak-hd",
+  "generated_timestamp": "2026-09-25 18:22:39Z",
+  "total_queries": 4,
+  "queries": [
+    {
+      "query_id": "Q1_S1_HISTORICAL_EVENT",
+      "dataset": "COPERNICUS/S1_GRD",
+      "date_window": "2019-07-15 to 2019-08-31",
+      "filters": {
+        "instrumentMode": "IW",
+        "orbitProperties_pass": "DESCENDING",
+        "relativeOrbitNumber_start": 165,
+        "polarizations": [
+          "VV",
+          "VH"
+        ]
+      },
+      "scene_ids": [
+        "COPERNICUS/S1_GRD/S1B_IW_GRDH_1SDV_20190717T003951_20190717T004016_017166_0204AB_54B5",
+        "COPERNICUS/S1_GRD/S1B_IW_GRDH_1SDV_20190729T003951_20190729T004016_017341_0209C8_61C1",
+        "COPERNICUS/S1_GRD/S1B_IW_GRDH_1SDV_20190810T003943_20190810T004008_017516_020F12_799A",
+        "COPERNICUS/S1_GRD/S1B_IW_GRDH_1SDV_20190822T003944_20190822T004009_017691_021489_D69D"
+      ],
+      "bands": [
+        "VV",
+        "VH"
+      ],
+      "scale_m": 25,
+      "crs": "EPSG:32643",
+      "region": "Bhavanisagar Downstream Domain [77.10, 11.42, 77.45, 11.55]"
+    },
+    {
+      "query_id": "Q2_S2_OPTICAL_CROSSCHECK",
+      "dataset": "COPERNICUS/S2_SR_HARMONIZED",
+      "date_window": "2019-08-01 to 2019-08-25",
+      "filters": {
+        "bounds": "[77.10, 11.42, 77.45, 11.55]"
+      },
+      "scene_ids": [
+        "COPERNICUS/S2_SR_HARMONIZED/20190802T050701_20190802T051229_T43PGN",
+        "COPERNICUS/S2_SR_HARMONIZED/20190807T050659_20190807T052408_T43PGN",
+        "COPERNICUS/S2_SR_HARMONIZED/20190812T050701_20190812T052422_T43PGN",
+        "COPERNICUS/S2_SR_HARMONIZED/20190817T050659_20190817T052432_T43PGN",
+        "COPERNICUS/S2_SR_HARMONIZED/20190822T050701_20190822T052331_T43PGN"
+      ],
+      "bands": [
+        "B2",
+        "B3",
+        "B4",
+        "B8",
+        "B11",
+        "B12"
+      ],
+      "scale_m": 20,
+      "crs": "EPSG:32643"
+    },
+    {
+      "query_id": "Q3_JRC_SURFACE_WATER",
+      "dataset": "JRC/GSW1_4/GlobalSurfaceWater",
+      "date_window": "1984-03-16 to 2021-12-31",
+      "bands": [
+        "occurrence",
+        "seasonality",
+        "max_extent"
+      ],
+      "filters": {
+        "occurrence": ">= 50%"
+      },
+      "scale_m": 25,
+      "crs": "EPSG:32643"
+    },
+    {
+      "query_id": "Q4_CHIRPS_PRECIPITATION",
+      "dataset": "UCSB-CHG/CHIRPS/DAILY",
+      "date_window": "2019-08-01 to 2019-08-20",
+      "bands": [
+        "precipitation"
+      ],
+      "scale_m": 5500,
+      "crs": "EPSG:4326"
+    }
+  ]
+}

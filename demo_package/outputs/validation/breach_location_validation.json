@@ -1,0 +1,27 @@
+{
+  "timestamp_utc": "2026-09-25T13:45:00Z",
+  "breach_id": "BR_BHV_01",
+  "wgs84_coordinates": {
+    "latitude": 11.47322,
+    "longitude": 77.1125
+  },
+  "epsg32643_coordinates": {
+    "easting_m": 730450.1,
+    "northing_m": 1269149.74
+  },
+  "dam_metadata_point": {
+    "wgs84": [
+      11.47083,
+      77.11389
+    ],
+    "epsg32643": [
+      730603.73,
+      1268886.41
+    ]
+  },
+  "distance_to_dam_metadata_point_m": 304.87,
+  "structural_component": "Left Earthen Embankment Flank",
+  "selection_method": "Geometric alignment on composite earthfill flank adjacent to spillway abutment",
+  "geometry_source": "OpenStreetMap Relation 3831804 & FABDEM/SRTM Terrain surface",
+  "verification_level": "MODEL_DERIVED_CANDIDATE_LOCATION"
+}

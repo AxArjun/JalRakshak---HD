@@ -1,0 +1,22 @@
+# JalRakshak-HD - Path Configuration
+# Milestone: M0 — Project Foundation and Verified Environment Lock
+
+paths:
+  project_root: "C:\\JalRakshak-HD"
+  raw_data: "C:\\JalRakshak-HD\\data\\raw"
+  processed_data: "C:\\JalRakshak-HD\\data\\processed"
+  terrain: "C:\\JalRakshak-HD\\data\\terrain"
+  hydrology: "C:\\JalRakshak-HD\\data\\hydrology"
+  gee: "C:\\JalRakshak-HD\\data\\gee"
+  dflowfm_data: "C:\\JalRakshak-HD\\data\\dflowfm"
+  sph_data: "C:\\JalRakshak-HD\\data\\sph"
+  hadr_data: "C:\\JalRakshak-HD\\data\\hadr"
+  observations: "C:\\JalRakshak-HD\\data\\observations"
+  outputs: "C:\\JalRakshak-HD\\outputs"
+  logs: "C:\\JalRakshak-HD\\logs"
+
+external_tools:
+  dflowfm_exe: "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\dflowfm-cli.exe"
+  dimr_exe: "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\dimr.exe"
+  dualsphysics_cpu_exe: "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\DualSPHysics5.4CPU_win64.exe"
+  gencase_exe: "C:\\DualSPHysics\\DualSPHysics_v5.4\\bin\\windows\\GenCase_win64.exe"

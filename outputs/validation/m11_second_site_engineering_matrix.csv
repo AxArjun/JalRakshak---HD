@@ -1,0 +1,20 @@
+parameter,value,unit,source,verification,required_for_breach,available,notes
+dam_height_m,60.96,metres,CWC NRLD 2023,AUTHORITATIVE_VERIFIED,YES,YES,Height above deepest foundation (200 ft)
+dam_length_m,4800.0,metres,CWC NRLD 2023,AUTHORITATIVE_VERIFIED,YES,YES,Main dam section (4.8 km)
+crest_level_m,195.68,metres MSL,Odisha DoWR,AUTHORITATIVE_VERIFIED,YES,YES,Roadway top elevation (642 ft)
+full_reservoir_level_m,192.024,metres MSL,CWC Bulletins,AUTHORITATIVE_VERIFIED,YES,YES,Operational FRL (630 ft)
+maximum_water_level_m,192.024,metres MSL,CWC Bulletins,AUTHORITATIVE_VERIFIED,YES,YES,Design MWL equal to FRL
+gross_storage_original_mcm,8136.0,MCM,CWC NRLD 2023,AUTHORITATIVE_VERIFIED,YES,YES,Pre-sedimentation original gross capacity
+live_storage_original_mcm,5818.0,MCM,Odisha DoWR,AUTHORITATIVE_VERIFIED,YES,YES,Original active live capacity (used for conservative screening breach)
+gross_storage_revised_mcm,5896.0,MCM,OHPC Hydrographic Survey 2018,SECONDARY_VERIFIED,NO,YES,Post-siltation surveyed gross capacity
+live_storage_revised_mcm,4823.0,MCM,OHPC Hydrographic Survey 2018,SECONDARY_VERIFIED,NO,YES,Post-siltation surveyed active live capacity
+live_storage_cwc_reporting_mcm,5378.0,MCM,CWC Daily Bulletins 2024,SECONDARY_VERIFIED,NO,YES,Operational reporting live capacity
+spillway_capacity_m3s,42475.0,m3/s,CWC Rating Curves,AUTHORITATIVE_VERIFIED,NO,YES,Maximum gated discharge (1.5 million cfs)
+gate_count,98,count,DoWR Technical Schedule,AUTHORITATIVE_VERIFIED,NO,YES,64 sluices + 34 crest gates
+dam_type,Composite,string,CWC NRLD,AUTHORITATIVE_VERIFIED,YES,YES,Earthfill flanks with concrete/masonry spillways
+dam_model_coordinate_lat,21.5286,degrees_N,OSM & CWC Dam Axis,AUTHORITATIVE_VERIFIED,YES,YES,Main concrete spillway discharge axis
+dam_model_coordinate_lon,83.8742,degrees_E,OSM & CWC Dam Axis,AUTHORITATIVE_VERIFIED,YES,YES,Main concrete spillway discharge axis
+site_reference_coordinate_lat,21.5700,degrees_N,CWC NRLD Catalog,SECONDARY_VERIFIED,NO,YES,Administrative centroid (4625m north)
+site_reference_coordinate_lon,83.8694,degrees_E,CWC NRLD Catalog,SECONDARY_VERIFIED,NO,YES,Administrative centroid
+downstream_riverbed_m,144.024,metres MSL,Topographic Profile,MODEL_ASSUMPTION,YES,YES,Derived from SRTM 30m bed elevation
+embankment_soil_erodibility,MEDIUM,categorical,Site Reconnaissance,MODEL_ASSUMPTION,NO,NO,Detailed geotechnical borings unverified

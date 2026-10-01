@@ -1,0 +1,31 @@
+{
+  "milestone": "M9",
+  "audit_type": "LIVE_EARTH_ENGINE_LATEST_SCENE_AUDIT",
+  "query_execution_time": "2026-09-26 03:36:14Z",
+  "earth_engine_collection": "COPERNICUS/S1_GRD",
+  "live_query_verified": true,
+  "scene_metadata": {
+    "image_id": "S1D_IW_GRDH_1SDV_20260915T003957_20260915T004022_004581_008881_7A96",
+    "system_index": "S1D_IW_GRDH_1SDV_20260915T003957_20260915T004022_004581_008881_7A96",
+    "system_time_start": 1789432797000,
+    "acquisition_utc": "2026-09-15 00:39:57Z",
+    "platform_number": "D",
+    "orbitNumber_start": 4581,
+    "relativeOrbitNumber_start": 165,
+    "orbitProperties_pass": "DESCENDING",
+    "transmitterReceiverPolarisation": [
+      "VV",
+      "VH"
+    ],
+    "instrumentMode": "IW",
+    "resolution_meters": 10
+  },
+  "consistency_validation": {
+    "platform_matches_scene_id": true,
+    "orbit_numbers_valid": true,
+    "pass_direction_valid": true,
+    "polarisation_mode_dual": true,
+    "scene_not_manually_constructed": true,
+    "overall_scene_metadata_consistent": true
+  }
+}

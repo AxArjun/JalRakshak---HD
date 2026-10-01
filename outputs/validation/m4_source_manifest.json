@@ -1,0 +1,110 @@
+{
+  "milestone": "M4",
+  "title": "Breach Outflow Hydrograph Source and Parameter Manifest",
+  "generated_at": "2026-09-25T14:15:00Z",
+  "study_site": {
+    "dam_name": "Bhavanisagar Dam (Lower Bhavani)",
+    "river": "Bhavani River",
+    "district": "Erode",
+    "state": "Tamil Nadu, India",
+    "coordinates": {
+      "latitude_n": 11.47083,
+      "longitude_e": 77.11389,
+      "epsg": 4326,
+      "projected_epsg": 32643
+    }
+  },
+  "sources": {
+    "FRL": {
+      "parameter_name": "Full Reservoir Level (FRL)",
+      "value": 280.42,
+      "unit": "m MSL",
+      "source": "Central Water Commission (CWC) National Register of Large Dams (NRLD) & Tamil Nadu WRD Reservoir Records",
+      "exact_citation": "Central Water Commission (2019/2024), Dam Safety Appraisal & Flood Forecasting Datum, Lower Bhavani Project (PIC: TN12HH0014)",
+      "equation": "N/A (Physical Hydraulic Elevation Datum)",
+      "classification": "AUTHORITATIVE_VERIFIED",
+      "limitations": "Official operating full reservoir elevation datum above Mean Sea Level."
+    },
+    "Vw": {
+      "parameter_name": "Reference Breach Water Volume (V_w)",
+      "value": 780500000.0,
+      "unit": "m3",
+      "source": "Central Water Commission (CWC) Hydrological Data Book 2020",
+      "exact_citation": "CWC (2020), Hydrological Data Book (Southern Rivers Basin), Live Storage Capacity of Lower Bhavani Reservoir = 780.50 MCM (27.56 TMC)",
+      "equation": "V_w = 780.5 MCM = 780,500,000 m3",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "limitations": "Proxy volume corresponding to active live storage; actual volume released depends on real-time reservoir pool level at moment of hypothetical breach."
+    },
+    "hw": {
+      "parameter_name": "Depth of Water Above Final Breach Invert (h_w)",
+      "value": 32.0,
+      "unit": "m",
+      "source": "Tamil Nadu Water Resources Department (TNDWR) Operational Full Depth",
+      "exact_citation": "TNDWR Daily Reservoir Bulletin (Operational Full Depth = 105.0 ft = 32.004 m)",
+      "equation": "h_w = 105.0 ft * 0.3048 m/ft = 32.0 m",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "limitations": "Assumes water level at full depth with breach cutting down to riverbed foundation level."
+    },
+    "hb": {
+      "parameter_name": "Height of Breach Structure (h_b)",
+      "value": 40.0,
+      "unit": "m",
+      "source": "M3 Standard Hypothetical Failure Mode Definition",
+      "exact_citation": "JalRakshak-HD M3 Engineering Definition (h_b = 40.0 m earthen composite flank section)",
+      "equation": "h_b = 40.0 m",
+      "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE",
+      "limitations": "Hypothetical total breach cut height for earthen flank failure mode."
+    },
+    "froehlich_1995_Qp": {
+      "parameter_name": "Froehlich (1995) Peak Discharge Regression",
+      "value": 18742.38,
+      "unit": "m3/s",
+      "source": "Froehlich, D. C. (1995)",
+      "exact_citation": "Froehlich, D. C. (1995). 'Embankment dam breach parameters revisited.' Water Resources Engineering, Proc. of the 1995 Conf., ASCE, San Antonio, Texas, pp. 887-891; also Wahl (1998) USBR DSO-98-004 p. 25, Eq. 2.",
+      "equation": "Q_p = 0.607 * (V_w)^0.295 * (h_w)^1.24",
+      "classification": "PUBLISHED_EMPIRICAL_RELATIONSHIP",
+      "limitations": "Empirical power-law regression calibrated on 22 dam failures (V_w up to 660 MCM, h_w up to 85 m). V_w = 780.5 MCM is slightly outside maximum calibration dataset (EXTRAPOLATION_PRESENT)."
+    },
+    "froehlich_1995_tf": {
+      "parameter_name": "Froehlich (1995) Breach Formation Time Regression",
+      "value": 17070.25,
+      "unit": "s (4.7417 hr)",
+      "source": "Froehlich, D. C. (1995)",
+      "exact_citation": "Froehlich, D. C. (1995). 'Embankment dam breach parameters revisited.' ASCE; also Wahl (1998) USBR DSO-98-004 p. 25, Eq. 3.",
+      "equation": "t_f [hr] = 0.00254 * (V_w)^0.53 * (h_b)^(-0.9)",
+      "classification": "PUBLISHED_EMPIRICAL_RELATIONSHIP",
+      "hydrograph_mapping_classification": "MODEL_ASSUMPTION_MAPPING",
+      "mapping_definition": "Empirical breach formation time mapped to triangular screening hydrograph rise-time parameter; NOT measured hydrograph time-to-peak.",
+      "limitations": "Formation time regression evaluated for same-family diagnostic comparison; calibrated on 22 failure cases."
+    },
+    "froehlich_2008_tf": {
+      "parameter_name": "Froehlich (2008) Breach Formation Time Regression",
+      "value": 14095.59,
+      "unit": "s (3.9154 hr)",
+      "source": "Froehlich, D. C. (2008)",
+      "exact_citation": "Froehlich, D. C. (2008). 'Embankment Dam Breach Parameters and Their Uncertainties.' Journal of Hydraulic Engineering, ASCE, 134(12), 1708-1721.",
+      "equation": "t_f [s] = 63.2 * sqrt(V_w / (g * h_b^2))",
+      "classification": "PUBLISHED_EMPIRICAL_RELATIONSHIP",
+      "hydrograph_mapping_classification": "MODEL_ASSUMPTION_MAPPING",
+      "mapping_definition": "Froehlich 2008 empirical breach formation time is being used as the rise-time parameter of the volume-constrained triangular screening hydrograph. It is NOT measured hydrograph time-to-peak.",
+      "limitations": "Calibrated on 74 historical dam failures with maximum V_w = 660 MCM. Extrapolated to 780.5 MCM (EXTRAPOLATION_NOTED)."
+    },
+    "macdonald_langridge_monopolis_1984_Qp": {
+      "parameter_name": "MacDonald & Langridge-Monopolis (1984) / Wahl (1998) Peak Flow Regression",
+      "value": 22181.21,
+      "unit": "m3/s",
+      "source": "MacDonald & Langridge-Monopolis (1984) in SI units by Wahl (1998/2004)",
+      "exact_citation": "MacDonald, T. C., and Langridge-Monopolis, J. (1984). 'Breaching characteristics of dam failures.' J. Hydraul. Eng., ASCE, 110(5), 567-586; Wahl, T. L. (1998) USBR DSO-98-004 p. 26; Wahl, T. L. (2004) 'Uncertainty of Predictions of Embankment Dam Breach Parameters', ASCE JHE 130(5), Eq. 6.",
+      "equation": "Q_p = 1.154 * (V_w * h_w)^0.412",
+      "classification": "PUBLISHED_EMPIRICAL_RELATIONSHIP",
+      "limitations": "Enveloping empirical equation based on breach formation factor (V_w * h_w). Calibrated across 42 earth/rockfill dam failures. Used as upper-bound peak discharge sensitivity."
+    }
+  },
+  "methodology": {
+    "hydrograph_synthesis_method": "VOLUME_CONSTRAINED_TRIANGULAR_SCREENING_HYDROGRAPH",
+    "classification": "SCREENING_HYDROGRAPH",
+    "stage_storage_curve_available": false,
+    "reservoir_bathymetry_available": false,
+    "physical_routing_status": "NOT_CLAIMED_LEVEL_POOL_ROUTING_UNAVAILABLE"
+  }
+}

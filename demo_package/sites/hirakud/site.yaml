@@ -1,0 +1,30 @@
+site_id: "hirakud"
+display_name: "Hirakud Dam & Mahanadi River Basin"
+description: "Second-site portability validation package for Hirakud Dam on the Mahanadi River, Sambalpur District, Odisha, India."
+
+identity:
+  dam_name: "Hirakud Dam"
+  river_name: "Mahanadi River"
+  basin_name: "Mahanadi Basin"
+  country: "India"
+  state: "Odisha"
+  district: "Sambalpur"
+  latitude: 21.5700
+  longitude: 83.8694
+  impoundment_type: "ENGINEERED_DAM"
+  national_id: "OD08MH0001"
+  year_completed: 1957
+  dam_type: "Composite Earth-fill, Concrete and Masonry Dam"
+
+study_area:
+  aoi_bbox_wgs84: [83.7000, 21.4000, 84.1500, 21.7000]
+  dam_coordinates_wgs84: [83.8694, 21.5700]
+  downstream_reach_length_km: 40.0
+  domain_area_km2: 950.0
+  crs:
+    source_crs: "EPSG:4326"
+    project_crs: "EPSG:32644"
+    utm_zone: 44
+    hemisphere: "N"
+    derivation_reason: "AUTOMATIC_UTM_ZONE_DERIVATION_ZONE_44N"
+    override_applied: false

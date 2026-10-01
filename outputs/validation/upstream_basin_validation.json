@@ -1,0 +1,27 @@
+{
+  "dataset_name": "HydroBASINS Level 12 (Standard)",
+  "dataset_type": "GLOBAL_DERIVED_WATERSHED_DATASET",
+  "gee_asset_id": "WWF/HydroSHEDS/v1/Basins/hybas_12",
+  "provider": "WWF / HydroSHEDS (Lehner & Grill 2013)",
+  "verification_level": "SECONDARY_VERIFIED",
+  "dam_coordinates": {
+    "latitude": 11.47083,
+    "longitude": 77.11389
+  },
+  "hydrobasins_attributes": {
+    "HYBAS_ID": 4121595750,
+    "MAIN_BAS": 4120028760,
+    "NEXT_DOWN": 4121595720,
+    "SUB_AREA_sqkm": 161.8,
+    "UP_AREA_sqkm": 4257.7,
+    "PFAF_ID": 453804030300,
+    "ORDER": 2
+  },
+  "distinction_from_river_network": {
+    "FreeFlowingRivers_asset": "WWF/HydroSHEDS/v1/FreeFlowingRivers",
+    "FreeFlowingRivers_type": "RIVER_POLYLINE_NETWORK",
+    "FreeFlowingRivers_UPLAND_SKM": 4118.4,
+    "HydroBASINS_UP_AREA_sqkm": 4257.7,
+    "explanation": "HydroBASINS Level 12 provides watershed polygon geometry with cumulative upstream drainage area UP_AREA = 4257.7 km2. FreeFlowingRivers provides 1D river centerlines where the specific reach attribute UPLAND_SKM = 4118.4 km2. Both reflect the regional Western Ghats/Nilgiris catchment of Bhavanisagar Dam."
+  }
+}

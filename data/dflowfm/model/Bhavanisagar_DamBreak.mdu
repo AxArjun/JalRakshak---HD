@@ -1,0 +1,37 @@
+[general]
+fileVersion = 1.09
+fileType = modelDef
+program = D-Flow FM
+version = 1.2.184
+
+[geometry]
+NetFile = Bhavani_2D_net.nc
+BedlevType = 3
+
+[physics]
+UnifFrictType = Manning
+UnifFrictCoef = 0.035
+
+[numerics]
+CFLMax = 0.70
+AdvecType = 3
+Limtypmom = 4
+
+[time]
+RefDate = 20260101
+Tstart = 0.0
+Tstop = 108000.0
+DtUser = 30.0
+DtMax = 30.0
+AutoTimestep = 1
+
+[external forcing]
+ExtForceFileNew = model.ext
+
+[output]
+ObsFile = observation_points.xyn
+HisInterval = 120.0
+MapInterval = 600.0
+RstInterval = 0.0
+WaqInterval = 0.0
+FlowGeomFile = 0

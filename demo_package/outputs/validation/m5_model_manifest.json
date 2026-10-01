@@ -1,0 +1,90 @@
+{
+  "milestone": "M5",
+  "title": "2D D-Flow FM Dam-Break Hydrodynamic Simulation Manifest",
+  "generated_at": "2026-09-25T14:45:00Z",
+  "model_classification": "2D_DFLOWFM_SCREENING_INUNDATION_MODEL",
+  "solver_environment": {
+    "solver": "Delft3D Flexible Mesh Suite (D-Flow FM)",
+    "version": "1.2.184.Unknown (Sep 25 2026, 15:09:37)",
+    "runner": "Deltares Integrated Model Runner (DIMR 2.00 / DIMRset_2026.02)",
+    "executable_path": "C:\\Program Files\\Deltares\\Delft3D FM Suite 2026.02 OpenHMWQ\\plugins\\DeltaShell.Dimr\\kernels\\x64\\bin\\dflowfm-cli.exe",
+    "parallelization": "OpenMP (8 threads)"
+  },
+  "study_site": {
+    "dam_name": "Bhavanisagar Dam (Lower Bhavani)",
+    "river": "Bhavani River",
+    "district": "Erode",
+    "state": "Tamil Nadu, India",
+    "coordinates": {
+      "latitude_n": 11.47083,
+      "longitude_e": 77.11389,
+      "projected_easting_m": 730450.10,
+      "projected_northing_m": 1269149.74,
+      "crs": "EPSG:32643",
+      "crs_name": "WGS 84 / UTM Zone 43N",
+      "units": "metres",
+      "solver_crs_handling": "Missing CRS tag defaulted to Cartesian projected (standard D-Flow FM NetCDF behavior; all outputs projected to EPSG:32643)"
+    }
+  },
+  "computational_mesh": {
+    "mesh_file": "data/dflowfm/model/Bhavani_2D_net.nc",
+    "mesh_type": "2D Unstructured Rectilinear UGRID",
+    "nominal_resolution_m": 100.0,
+    "total_nodes": 82895,
+    "total_edges": 165203,
+    "total_faces": 82309,
+    "domain_area_km2": 818.37,
+    "elevation_range_m_msl": {
+      "min": 194.17,
+      "max": 1350.73,
+      "mean": 300.64
+    },
+    "terrain_source": "data/terrain/dem_projected.tif (NASA SRTM 30m)",
+    "bathymetry_status": "SRTM_SURFACE_TOPOGRAPHY_NO_UNDERWATER_BATHYMETRY"
+  },
+  "boundary_conditions": {
+    "upstream_inflow": {
+      "boundary_name": "upstream_breach_boundary",
+      "location_file": "upstream_breach_boundary.pli",
+      "forcing_file": "BHV_BASE.bc",
+      "boundary_type": "dischargebnd",
+      "forcing_scenario": "BHV_BASE",
+      "peak_discharge_m3s": 18742.38,
+      "total_volume_mcm": 780.50,
+      "hydrograph_classification": "SCREENING_HYDROGRAPH"
+    },
+    "downstream_outflow": {
+      "boundary_name": "downstream_boundary",
+      "location_file": "downstream_boundary.pli",
+      "forcing_file": "downstream_boundary.bc",
+      "boundary_type": "riemannbnd",
+      "classification": "MODEL_ASSUMPTION_BOUNDARY_CONDITION"
+    }
+  },
+  "physical_parameters": {
+    "roughness_type": "Manning",
+    "uniform_manning_n_s_m_third": 0.035,
+    "classification": "MODEL_ASSUMPTION",
+    "initial_condition": "DRY_START_SCREENING (Water Depth = 0.0 m)",
+    "initial_condition_classification": "MODEL_ASSUMPTION_NUMERICAL_INITIAL_CONDITION"
+  },
+  "numerical_settings": {
+    "advection_scheme": "Perot (AdvecType = 3)",
+    "momentum_limiter": "Minmod (Limtypmom = 4)",
+    "cfl_max": 0.70,
+    "dt_user_s": 30.0,
+    "dt_max_s": 30.0,
+    "auto_timestep": 1,
+    "simulation_duration_s": 108000.0,
+    "simulation_duration_hr": 30.0,
+    "map_interval_s": 600.0,
+    "his_interval_s": 120.0
+  },
+  "scientific_limitations": [
+    "No surveyed bathymetric cross-sections available; SRTM 30m surface topography utilized.",
+    "Upstream inflow forcing is an empirical volume-constrained screening hydrograph (not dynamic reservoir routed).",
+    "Uniform Manning roughness parameterized from empirical literature.",
+    "Dry-start initial condition assumed to isolate breach flood wave propagation.",
+    "Simulations represent hypothetical emergency preparedness screening for SIH PS 26161."
+  ]
+}

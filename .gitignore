@@ -1,0 +1,82 @@
+# JalRakshak-HD — Hydrodynamic Dam-Break & HADR Intelligence Platform
+# Git Ignore Configuration (SIH 2026 - PS 26161)
+
+# ==============================================================================
+# 1. Python & Virtual Environments
+# ==============================================================================
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+
+# ==============================================================================
+# 2. Node.js & Frontend Build Artifacts
+# ==============================================================================
+node_modules/
+frontend/node_modules/
+dist/
+frontend/dist/
+build/
+frontend/build/
+.vite/
+frontend/.vite/
+*.tsbuildinfo
+
+# ==============================================================================
+# 3. Environment Variables & Credentials
+# ==============================================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+service_account*.json
+
+# ==============================================================================
+# 4. Logs, Scratch, and Temporary Files
+# ==============================================================================
+logs/
+*.log
+scratch/
+temp/
+tmp/
+test_ifx.exe
+test_ifx.obj
+test_ifx.f90
+
+# ==============================================================================
+# 5. Heavy Raw Simulation Outputs & Particle Caches (> 100 MB / Binary Runs)
+# (Lightweight web-ready frames, GeoJSONs, and validation JSONs remain in outputs/)
+# ==============================================================================
+outputs/simulations/
+data/dflowfm/model/DFM_OUTPUT_*
+data/dflowfm/model/*.cache
+data/dflowfm/model/0
+data/sph/BHV_BASE_NEARFIELD/production_out/
+data/sph/BHV_BASE_NEARFIELD/gencase_out/
+*.nc_map.nc
+*_map.nc
+*.bi4
+
+# ==============================================================================
+# 6. IDE, Editor & OS Artifacts
+# ==============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+desktop.ini
+

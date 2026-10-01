@@ -1,0 +1,35 @@
+scenarios:
+  bhavanisagar_base:
+    scenario_id: "bhavanisagar_base"
+    legacy_id: "BHV_BASE"
+    scenario_name: "Overtopping Failure at Maximum Water Level (Froehlich 2008)"
+    breach_method: "Froehlich_2008"
+    breach_formation_mode: "OVERTOPPING"
+    failure_elevation_m: 280.42
+    breach_bottom_elevation_m: 248.42
+    breach_height_m: 32.0
+    reservoir_volume_at_breach_mcm: 780.5
+    average_breach_width_m: 219.28
+    side_slope_z: 1.0
+    breach_formation_time_s: 14095.59
+    peak_discharge_m3s: 18742.38
+    hydrograph_time_step_s: 60.0
+    hydrograph_duration_s: 108000.0
+    verification: "MODEL_DERIVED"
+
+  bhavanisagar_piping_screening:
+    scenario_id: "bhavanisagar_piping_screening"
+    scenario_name: "Internal Erosion / Piping Sensitivity Failure"
+    breach_method: "Froehlich_2008"
+    breach_formation_mode: "PIPING"
+    failure_elevation_m: 280.42
+    breach_bottom_elevation_m: 248.42
+    breach_height_m: 32.0
+    reservoir_volume_at_breach_mcm: 780.5
+    average_breach_width_m: 154.67
+    side_slope_z: 0.7
+    breach_formation_time_s: 10822.41
+    peak_discharge_m3s: 14210.12
+    hydrograph_time_step_s: 60.0
+    hydrograph_duration_s: 108000.0
+    verification: "MODEL_ASSUMPTION"

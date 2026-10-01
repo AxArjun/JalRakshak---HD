@@ -1,0 +1,12 @@
+{
+  "audit_name": "M12_FINAL_CLAIM_AUDIT",
+  "project": "JalRakshak-HD",
+  "files_scanned": 78,
+  "violations_found": 0,
+  "status": "PASS",
+  "flagged_issues": [],
+  "enforced_disclaimers": {
+    "primary_disclaimer": "Research screening prototype. The breach scenario is hypothetical; hydraulic results are model outputs and not an official warning.",
+    "hirakud_notice": "Production hydraulic simulation not executed for this site. Displaying real GIS terrain, river & reservoir boundaries."
+  }
+}

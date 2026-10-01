@@ -1,0 +1,74 @@
+# JalRakshak-HD - Breach Scenarios Configuration
+# Milestone: M3 — Verified Dam Engineering Inputs and Breach Event Definition (Final Source Reconciliation)
+
+study_site: "Bhavanisagar Dam"
+
+scenarios:
+  - scenario_id: "BHV_BASE"
+    scenario_name: "Bhavanisagar Embankment Prescribed Breach — Base Case (Froehlich 2008)"
+    scenario_type: "HYPOTHETICAL_ENGINEERING_STRESS_TEST"
+    historical_status: "NON_HISTORICAL_HYPOTHETICAL_TEST"
+    breached_component: "Left Earthen Embankment Flank"
+    component_material: "Zoned Earthfill with Upstream Riprap"
+    approx_total_embankment_length_m: 8316.0
+    initial_reservoir_condition:
+      water_level_m_msl: 280.42
+      water_level_source: "Central Water Commission (CWC) Authoritative FRL"
+      active_breach_volume_m3: 780500000.0
+      volume_classification: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+      volume_justification: "First-estimate active breach volume assumption based on CWC Hydrological Data Book 2020 live storage record (780.5 MCM). NOT observed breachable volume."
+    failure_mechanism: "PRESCRIBED_BREACH"
+    breach_model: "Froehlich (2008)"
+    required_inputs:
+      v_w_m3: 780500000.0
+      h_b_m: 40.0
+      K_0: 1.0
+      failure_mode: "PRESCRIBED_BREACH"
+    derived_parameters:
+      average_breach_width_m: 219.28
+      formation_time_seconds: 14095.59
+      formation_time_hours: 3.915
+      side_slope_z: 1.0
+    assumptions:
+      - "Hypothetical engineering stress test conducted on the composite earthen flank, preserving non-breachable massive masonry section."
+      - "This is a hypothetical complete-breach depth assumption (h_b = 40.0 m) and is not the published maximum dam height (which is 62.0 m / 62.18 m for the deepest masonry foundation)."
+      - "Active reservoir volume above dead storage sill (780.5 MCM live capacity) represents active breach volume as a MODEL_ASSUMPTION_FIRST_ESTIMATE."
+      - "Failure mode coefficient K_0 = 1.0 applied for prescribed piping/internal erosion mode (overtopping coefficient K_0 = 1.3 is not used)."
+    source_references:
+      - "Froehlich, D. C. (2008). Journal of Hydraulic Engineering, ASCE, 134(12), 1708-1721"
+      - "CWC Hydrological Data Book 2020 & NRLD 2019"
+    uncertainties: "Statistical regression log-normal standard error of estimate (std error 0.18 for width, 0.27 for time); V_w exceeds 660 MCM calibration maximum"
+    validity: "VALID_WITH_EXTRAPOLATION"
+
+  - scenario_id: "BHV_SENSITIVITY_VTG"
+    scenario_name: "Bhavanisagar Embankment Breach — Sensitivity Case (Von Thun & Gillette 1990)"
+    scenario_type: "HYPOTHETICAL_ENGINEERING_STRESS_TEST"
+    historical_status: "NON_HISTORICAL_HYPOTHETICAL_TEST"
+    breached_component: "Left Earthen Embankment Flank"
+    component_material: "Zoned Earthfill with Upstream Riprap"
+    approx_total_embankment_length_m: 8316.0
+    initial_reservoir_condition:
+      water_level_m_msl: 280.42
+      water_level_source: "Central Water Commission (CWC) Authoritative FRL"
+      active_breach_volume_m3: 780500000.0
+      volume_classification: "MODEL_ASSUMPTION_FIRST_ESTIMATE"
+    failure_mechanism: "PRESCRIBED_BREACH"
+    breach_model: "Von Thun & Gillette (1990)"
+    required_inputs:
+      h_w_m: 32.0
+      v_w_m3: 780500000.0
+      C_b_m: 54.9
+      erodibility: "HIGHLY_ERODIBLE"
+    derived_parameters:
+      average_breach_width_m: 134.90
+      formation_time_seconds: 3794.06
+      formation_time_hours: 1.054
+      side_slope_z: 0.5
+    assumptions:
+      - "USBR piecewise linear guidance representing empirical lower envelope comparison."
+      - "Initial water depth h_w = 32.0 m based on full operational storage depth (105 ft = 32.004 m)."
+      - "Offset parameter C_b = 54.9 m for very large reservoirs (> 12.335 MCM / 10,000 acre-ft)."
+    source_references:
+      - "Von Thun, J. L., and Gillette, D. R. (1990). USBR Technical Memorandum"
+    uncertainties: "Piecewise linear empirical envelope; does not scale exponentially with large storage volume"
+    validity: "VALID"

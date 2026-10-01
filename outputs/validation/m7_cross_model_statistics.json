@@ -1,0 +1,29 @@
+{
+  "metric_type": "CROSS_MODEL_SPREAD_METRICS",
+  "description": "Descriptive spread metrics across common reached stations (100 m to 1000 m). Not validation error metrics.",
+  "evaluated_stations": [
+    "G_100m",
+    "G_250m",
+    "G_500m",
+    "G_1000m"
+  ],
+  "depth_spread": {
+    "median_absolute_spread_m": 4.066,
+    "median_ratio": 0.6612,
+    "maximum_ratio": 1.2967,
+    "minimum_ratio": 0.384
+  },
+  "velocity_spread": {
+    "median_absolute_spread_mps": 16.996,
+    "median_ratio": 7.7068,
+    "maximum_ratio": 9.8707,
+    "minimum_ratio": 3.2368
+  },
+  "trend_assessment": {
+    "downstream_progression": "CONSISTENT_TREND",
+    "depth_attenuation_amplification": "PARTIALLY_CONSISTENT",
+    "velocity_trend": "DIVERGENT_TREND",
+    "high_energy_near_field_behaviour": "CONSISTENT_TREND",
+    "velocity_trend_explanation": "SPH shows strong attenuation after the near-dam jet region, whereas D-Flow depth-averaged peak velocity increases farther downstream in the sampled reach. This is not solver error because forcing and dimensional formulations are non-equivalent."
+  }
+}

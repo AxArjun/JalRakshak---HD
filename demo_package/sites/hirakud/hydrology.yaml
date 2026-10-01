@@ -1,0 +1,20 @@
+reservoir:
+  full_reservoir_level_m: 192.024
+  maximum_water_level_m: 192.024
+  dead_storage_level_m: 179.83
+  gross_storage_capacity_mcm: 8136.0
+  live_storage_capacity_mcm: 5818.0
+  dead_storage_capacity_mcm: 2318.0
+  reservoir_area_frl_km2: 743.0
+  catchment_area_km2: 83400.0
+  verification: "AUTHORITATIVE_VERIFIED"
+
+river:
+  reach_name: "Upper Mahanadi River Reach (Sambalpur Corridor)"
+  downstream_length_km: 40.0
+  average_bed_slope: 0.00085
+  main_confluence: "Ib River upstream confluence & Tel River downstream confluence"
+  primary_gauges:
+    - "Hirakud Dam Outflow Sluices"
+    - "Sambalpur CWC Hydrological Station"
+    - "Barmul Gauge Station"

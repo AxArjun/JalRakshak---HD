@@ -1,0 +1,120 @@
+{
+  "milestone": "M10",
+  "layers": {
+    "max_depth": {
+      "file": "max_depth.png",
+      "url": "/api/tiles/overlays/max_depth.png",
+      "label": "Maximum Water Depth",
+      "unit": "m",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ],
+      "max_val": 21.99
+    },
+    "max_velocity": {
+      "file": "max_velocity.png",
+      "url": "/api/tiles/overlays/max_velocity.png",
+      "label": "Maximum Flow Velocity",
+      "unit": "m/s",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ],
+      "max_val": 10.76
+    },
+    "arrival_time": {
+      "file": "arrival_time.png",
+      "url": "/api/tiles/overlays/arrival_time.png",
+      "label": "Flood Wave Arrival Time",
+      "unit": "hr",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ],
+      "max_val": 20.67
+    },
+    "hazard_class": {
+      "file": "hazard_class.png",
+      "url": "/api/tiles/overlays/hazard_class.png",
+      "label": "CWC H1\u2013H6 Hazard Severity",
+      "unit": "class",
+      "bounds_wgs84": [
+        [
+          11.359179,
+          77.111197
+        ],
+        [
+          11.57997,
+          77.423552
+        ]
+      ]
+    },
+    "historical_flood": {
+      "file": "historical_flood.png",
+      "url": "/api/tiles/overlays/historical_flood.png",
+      "label": "Sentinel-1 Historical Flood Anomaly (Aug 2019)",
+      "unit": "binary",
+      "bounds_wgs84": [
+        [
+          11.431432,
+          77.111044
+        ],
+        [
+          11.521654,
+          77.421218
+        ]
+      ]
+    },
+    "hillshade": {
+      "file": "hillshade.png",
+      "url": "/api/tiles/overlays/hillshade.png",
+      "label": "SRTM 30m Topographic Hillshade",
+      "unit": "grayscale",
+      "bounds_wgs84": [
+        [
+          11.359761,
+          76.948355
+        ],
+        [
+          11.580164,
+          77.422284
+        ]
+      ]
+    },
+    "hirakud_hillshade": {
+      "file": "hirakud_hillshade.png",
+      "url": "/api/tiles/overlays/hirakud_hillshade.png",
+      "label": "NASA SRTM 30m Topographic Hillshade (Hirakud)",
+      "unit": "grayscale",
+      "bounds_wgs84": [
+        [
+          21.4,
+          83.7
+        ],
+        [
+          21.7,
+          84.15
+        ]
+      ]
+    }
+  }
+}

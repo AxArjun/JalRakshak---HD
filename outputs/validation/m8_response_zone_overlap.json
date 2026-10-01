@@ -1,0 +1,50 @@
+{
+  "note": "Original response_zones.gpkg overlap audit. Zones built with convex-hull buffered corridors \u2014 NOT mutually exclusive.",
+  "n_zones": 6,
+  "sum_of_individual_areas_km2": 210.1789,
+  "union_area_km2": 101.29,
+  "total_overlap_area_km2": 108.8889,
+  "overlap_percentage": 51.81,
+  "pairwise_intersections": [
+    {
+      "zone_a": "ZONE_01",
+      "zone_b": "ZONE_02",
+      "intersection_area_km2": 19.8313
+    },
+    {
+      "zone_a": "ZONE_02",
+      "zone_b": "ZONE_03",
+      "intersection_area_km2": 22.0355
+    },
+    {
+      "zone_a": "ZONE_02",
+      "zone_b": "ZONE_04",
+      "intersection_area_km2": 4.4662
+    },
+    {
+      "zone_a": "ZONE_03",
+      "zone_b": "ZONE_04",
+      "intersection_area_km2": 25.6052
+    },
+    {
+      "zone_a": "ZONE_03",
+      "zone_b": "ZONE_05",
+      "intersection_area_km2": 5.0711
+    },
+    {
+      "zone_a": "ZONE_04",
+      "zone_b": "ZONE_05",
+      "intersection_area_km2": 21.4878
+    },
+    {
+      "zone_a": "ZONE_04",
+      "zone_b": "ZONE_06",
+      "intersection_area_km2": 2.7618
+    },
+    {
+      "zone_a": "ZONE_05",
+      "zone_b": "ZONE_06",
+      "intersection_area_km2": 19.929
+    }
+  ]
+}

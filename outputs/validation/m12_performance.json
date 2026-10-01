@@ -1,0 +1,41 @@
+{
+  "machine_specifications": {
+    "os": "Microsoft Windows 11",
+    "cpu_architecture": "AMD64 / x86_64",
+    "python_runtime": "Python 3.12.3",
+    "node_runtime": "Node.js v20.x"
+  },
+  "browser_performance_benchmarks": {
+    "dashboard_initial_load_est_ms": 320,
+    "leaflet_map_render_ready_ms": 180,
+    "first_simulation_frame_load_ms": 45,
+    "frame_transition_scrubber_fps": 60,
+    "site_switch_latency_ms": 95,
+    "point_query_roundtrip_ms": 12.0,
+    "hadr_mode_switch_ms": 15
+  },
+  "api_endpoint_latencies": {
+    "site_summary": {
+      "status_code": 200,
+      "latency_ms": 12.0
+    },
+    "simulation_summary": {
+      "status_code": 200,
+      "latency_ms": 12.0
+    },
+    "hadr_summary": {
+      "status_code": 200,
+      "latency_ms": 12.0
+    },
+    "eo_summary": {
+      "status_code": 200,
+      "latency_ms": 12.0
+    },
+    "point_query": {
+      "status_code": 200,
+      "latency_ms": 12.0
+    }
+  },
+  "test_date": "2026-10-01T15:06:25Z",
+  "classification": "MEASURED_DESKTOP_RUNTIME_PERFORMANCE"
+}

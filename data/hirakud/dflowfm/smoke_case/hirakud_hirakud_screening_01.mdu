@@ -1,0 +1,33 @@
+# Master Definition File for D-Flow FM (JalRakshak-HD Multi-Site Engine)
+[model]
+Program            = D-Flow FM
+Version            = 1.2.0
+ModelType          = 2D
+SiteId             = hirakud
+ScenarioId         = hirakud_screening_01
+
+[geometry]
+NetFile            = hirakud_mesh_net.nc
+BathymetryFile     = hirakud_bathymetry.xyz
+BedLevType         = 3
+
+[physics]
+Gravity            = 9.80665
+WaterDensity       = 1000.0
+
+[numerics]
+CFLMax             = 0.7
+AdvectionType      = 1
+TimeStepMin        = 0.1
+TimeStepMax        = 10.0
+
+[time]
+RefDate            = 20260926
+TStart             = 0.0
+TStop              = 108000.0
+DtUser             = 600.0
+
+[output]
+OutputDir          = DFM_OUTPUT_hirakud
+MapInterval        = 600.0
+HisInterval        = 60.0

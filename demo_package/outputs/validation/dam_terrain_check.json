@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-09-25T12:52:13.806386+00:00",
+  "status": "PASS",
+  "dam_name": "Bhavanisagar Dam",
+  "dam_coordinates": {
+    "latitude_wgs84": 11.47083,
+    "longitude_wgs84": 77.11389,
+    "x_projected_m": 730603.73,
+    "y_projected_m": 1268886.41,
+    "projected_crs": "EPSG:32643",
+    "verification_level": "SECONDARY_VERIFIED"
+  },
+  "elevation_audit": {
+    "srtm_ground_elevation_m": 269.75,
+    "official_frl_m": 280.42,
+    "official_frl_verification_level": "AUTHORITATIVE_VERIFIED",
+    "official_frl_source": "Central Water Commission (CWC) Flood Forecasting & Reservoir Monitoring Records (https://cwc.gov.in)",
+    "reservoir_full_depth_ft": 105.0,
+    "reservoir_full_depth_meaning": "Local operational gauge storage depth (105.0 ft) above zero-gauge sill datum. Not an absolute elevation in metres MSL.",
+    "official_mwl_m": null,
+    "official_mwl_verification_level": "UNVERIFIED",
+    "official_crest_level_m": null,
+    "official_crest_level_verification_level": "UNVERIFIED",
+    "elevation_datum_notes": "SRTM elevation represents radar-reflective surface ground/water topography on the EGM96 geoid datum (approx. Mean Sea Level). Official FRL is authoritatively established by Central Water Commission (CWC) records at 280.42 m MSL. The state dashboard gauge parameter (105.0 ft) represents operational water column depth and is not derived from or converted to an assumed sill datum.",
+    "comparison_warning": "SRTM ground elevation (269.75 m MSL) is a raster terrain sample capturing surface topography at the time of the SRTM radar sweep. It must NOT be conflated with the official full reservoir level (FRL = 280.42 m MSL), maximum water level (MWL), crest elevation, or structural foundation level. Any comparison between DEM cell values and hydraulic operational stages is contextual only."
+  },
+  "spatial_terrain_samples_metres": {
+    "buffer_500m": {
+      "min": 244.02,
+      "max": 282.12,
+      "mean": 264.07,
+      "pixel_count": 877
+    },
+    "buffer_1000m": {
+      "min": 243.28,
+      "max": 282.12,
+      "mean": 263.65,
+      "pixel_count": 3505
+    },
+    "downstream_5km_point_elevation": 250.35,
+    "downstream_valley_gradient_m_per_km": 3.88
+  },
+  "physical_plausibility": {
+    "is_within_expected_regional_elevation": true,
+    "notes": "Sampled elevation (269.75 m) is physically consistent with the lower Bhavani river gorge floor and valley terrain."
+  }
+}

@@ -1,0 +1,21 @@
+scenarios:
+  hirakud_screening_01:
+    scenario_id: "hirakud_screening_01"
+    scenario_name: "Hirakud Dam Hypothetical Screening Overtopping Breach (Froehlich 2008)"
+    breach_method: "Froehlich_2008"
+    breach_formation_mode: "OVERTOPPING"
+    failure_elevation_m: 192.024
+    breach_bottom_elevation_m: 144.024
+    breach_height_m: 48.0
+    reservoir_volume_at_breach_mcm: 5818.0
+    average_breach_width_m: 541.34
+    side_slope_z: 1.0
+    breach_formation_time_s: 32025.10
+    peak_discharge_m3s: 56420.80
+    hydrograph_time_step_s: 60.0
+    hydrograph_duration_s: 108000.0
+    breach_model_volume_mcm: 5818.0
+    source_value: "Original Design Live Storage (1957)"
+    why_selected: "Conservative upper-bound screening assumption representing original active volume prior to sedimentation"
+    classification: "MODEL_ASSUMPTION_FIRST_ESTIMATE_FROM_ORIGINAL_DESIGN_STORAGE"
+    extrapolation_warning: "Froehlich 2008 calibration dataset max V_w is 660 MCM. Hirakud V_w (5818 MCM) is an extrapolation."

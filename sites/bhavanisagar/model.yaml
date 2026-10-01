@@ -1,0 +1,24 @@
+hydraulic_model:
+  solver_name: "D-Flow FM"
+  grid_type: "flexible_mesh_unstructured"
+  target_cell_size_m: 50.0
+  manning_roughness_global: 0.035
+  upstream_boundary_type: "discharge_hydrograph"
+  downstream_boundary_type: "free_outflow"
+  timestep_min_s: 0.1
+  timestep_max_s: 10.0
+  simulation_duration_s: 108000.0
+  output_interval_s: 600.0
+
+sph_model:
+  solver_name: "DualSPHysics"
+  dimension: "2D_UNIT_WIDTH"
+  classification: "2D_UNIT_WIDTH_NEAR_FIELD_SPH_SCREENING_MODEL"
+  dp_particle_spacing_m: 1.0
+  initial_fluid_particles: 6800
+  boundary_particles: 4182
+  total_particles: 10982
+  simulation_duration_s: 600.0
+  upstream_reservoir_extent_m: 100.0
+  downstream_chute_extent_m: 1500.0
+  time_step_out_s: 1.0

@@ -1,0 +1,48 @@
+{
+  "milestone": "M8",
+  "classification": "SCREENING_HADR_CONSEQUENCE_ANALYSIS",
+  "key_uncertainties": [
+    {
+      "domain": "Population Estimation",
+      "nature": "Gridded census disaggregation vs real-time occupancy",
+      "spread_observed": "WorldPop=42,428 vs GHSL=84,500 (Ratio 1.99)",
+      "mitigation": "Reported as DATASET_SPREAD. Both primary and cross-check datasets are preserved and documented without cherry-picking.",
+      "interpretation": "Population counts are modelled gridded estimates and should be interpreted as a sensitivity range/context, not two measurements of the same true population. WorldPop 2020 = PRIMARY; GHSL 2025 = CROSS_CHECK (DATASET_SPREAD ~2x). Do NOT average or combine the two datasets."
+    },
+    {
+      "domain": "Building Structural Vulnerability",
+      "nature": "No site-specific building height, masonry type, or engineering fragility curves",
+      "mitigation": "Classified conservatively as H5_H6_STRUCTURAL_DAMAGE_EXPOSURE based strictly on CWC H5/H6 hydrodynamic thresholds (D*V > 1.0 m2/s or D > 2.0 m). Buildings are NOT assumed destroyed.",
+      "cwc_wording_h5": "Buildings vulnerable to structural damage; some less robust buildings may be subject to failure",
+      "cwc_wording_h6": "All building types considered vulnerable to failure",
+      "cwc_source": "CWC CDSO_GUD_DS_09_v1.0",
+      "prohibited_language": [
+        "buildings destroyed",
+        "building collapsed",
+        "building has failed"
+      ]
+    },
+    {
+      "domain": "Bridge Vulnerability",
+      "nature": "No surveyed bridge deck elevation or scour rating in screening dataset",
+      "mitigation": "Classified as BRIDGE_HYDRAULIC_EXPOSURE_SCREENING. Screened bridges are NOT assumed collapsed."
+    },
+    {
+      "domain": "Agricultural & Economic Losses",
+      "nature": "No crop calendar, crop stage, market prices, or economic damage curves",
+      "mitigation": "Monetary damage and crop loss modeling declared NOT_IMPLEMENTED_IN_M8."
+    },
+    {
+      "domain": "Life Safety / Casualties",
+      "nature": "No empirical fatality rates (e.g. Graham 1999 or RCEM) parameterized for local warning compliance",
+      "mitigation": "Potential loss of life model declared NOT_IMPLEMENTED to prevent speculative casualty figures."
+    }
+  ],
+  "response_zone_geometry": {
+    "original_zones_overlap_area_km2": 108.8889,
+    "original_zones_overlap_pct": 51.81,
+    "exclusive_zone_construction": "Face-level chainage projection \u2014 each face assigned to exactly one sector",
+    "face_level_overlap_km2": 0.0,
+    "polygon_buffer_residual_note": "Sector polygons are built by buffering face point clusters; underlying face-level and pixel-level assignment guarantees zero double-counting in all vector and raster quantities."
+  }
+}

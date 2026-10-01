@@ -1,0 +1,330 @@
+{
+  "milestone": "M10",
+  "manifest_type": "DASHBOARD_DATA_INVENTORY",
+  "total_sources_inventoried": 32,
+  "available_sources_count": 32,
+  "missing_sources_count": 0,
+  "inventory_status": "READY",
+  "sources": [
+    {
+      "id": "study_area_config",
+      "path": "configs/study_area.yaml",
+      "exists": true,
+      "file_size_bytes": 3368,
+      "crs": "N/A",
+      "source_milestone": "M1",
+      "classification": "CONFIGURATION",
+      "frontend_role": "Project bounds and dam parameters"
+    },
+    {
+      "id": "dam_point",
+      "path": "data/processed/study_area/dam_point_projected.gpkg",
+      "exists": true,
+      "file_size_bytes": 98304,
+      "crs": "EPSG:32643",
+      "source_milestone": "M1",
+      "classification": "VECTOR_DAM_LOCATION",
+      "frontend_role": "Dam marker on GIS map"
+    },
+    {
+      "id": "bhavani_mainstem",
+      "path": "data/hydrology/bhavani_mainstem_downstream.gpkg",
+      "exists": true,
+      "file_size_bytes": 102400,
+      "crs": "EPSG:32643",
+      "source_milestone": "M2",
+      "classification": "VECTOR_RIVER_NETWORK",
+      "frontend_role": "Bhavani River vector overlay"
+    },
+    {
+      "id": "reservoir_surface",
+      "path": "data/hydrology/reservoir_surface.gpkg",
+      "exists": true,
+      "file_size_bytes": 163840,
+      "crs": "EPSG:32643",
+      "source_milestone": "M2",
+      "classification": "VECTOR_RESERVOIR_POLYGON",
+      "frontend_role": "Bhavanisagar reservoir surface water"
+    },
+    {
+      "id": "dem_terrain",
+      "path": "data/terrain/dem_projected.tif",
+      "exists": true,
+      "file_size_bytes": 5681607,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M1",
+      "classification": "RASTER_DEM",
+      "frontend_role": "SRTM 30m elevation context"
+    },
+    {
+      "id": "hillshade_terrain",
+      "path": "data/terrain/hillshade.tif",
+      "exists": true,
+      "file_size_bytes": 1420859,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M1",
+      "classification": "RASTER_HILLSHADE",
+      "frontend_role": "3D Topographic hillshade basemap"
+    },
+    {
+      "id": "inflow_hydrograph",
+      "path": "data/dflowfm/hydrographs/BHV_BASE.csv",
+      "exists": true,
+      "file_size_bytes": 63282,
+      "crs": "N/A",
+      "source_milestone": "M4",
+      "classification": "HYDROGRAPH_TIME_SERIES",
+      "frontend_role": "Dam breach hydrograph chart"
+    },
+    {
+      "id": "dflow_map_nc",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/Bhavanisagar_DamBreak_map.nc",
+      "exists": true,
+      "file_size_bytes": 1211121776,
+      "crs": "N/A",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_2D_MAP_NETCDF",
+      "frontend_role": "Source for 181 solver animation frames"
+    },
+    {
+      "id": "dflow_his_nc",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/Bhavanisagar_DamBreak_his.nc",
+      "exists": true,
+      "file_size_bytes": 378048,
+      "crs": "N/A",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_2D_HISTORY_NETCDF",
+      "frontend_role": "History time series stations"
+    },
+    {
+      "id": "max_depth_raster",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/max_water_depth.tif",
+      "exists": true,
+      "file_size_bytes": 335562,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_MAX_DEPTH",
+      "frontend_role": "Maximum water depth raster layer and point query"
+    },
+    {
+      "id": "max_velocity_raster",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/max_velocity.tif",
+      "exists": true,
+      "file_size_bytes": 335562,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_MAX_VELOCITY",
+      "frontend_role": "Maximum flow velocity raster layer and point query"
+    },
+    {
+      "id": "arrival_time_raster",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/arrival_time.tif",
+      "exists": true,
+      "file_size_bytes": 335562,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_ARRIVAL_TIME",
+      "frontend_role": "Flood wave arrival time raster layer and point query"
+    },
+    {
+      "id": "inundation_extent_vector",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/inundation_extent.gpkg",
+      "exists": true,
+      "file_size_bytes": 131072,
+      "crs": "EPSG:32643",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_INUNDATION_EXTENT",
+      "frontend_role": "Maximum flood envelope polygon"
+    },
+    {
+      "id": "observation_hydrographs_csv",
+      "path": "outputs/simulations/dflowfm/BHV_BASE/observation_hydrographs.csv",
+      "exists": true,
+      "file_size_bytes": 1056,
+      "crs": "N/A",
+      "source_milestone": "M5",
+      "classification": "SIMULATION_STATION_HYDROGRAPHS",
+      "frontend_role": "Station hydrograph points"
+    },
+    {
+      "id": "sph_gauges_csv",
+      "path": "outputs/simulations/sph/BHV_BASE_NEARFIELD/gauge_results.csv",
+      "exists": true,
+      "file_size_bytes": 606,
+      "crs": "N/A",
+      "source_milestone": "M6",
+      "classification": "SPH_NUMERICAL_GAUGES",
+      "frontend_role": "Near-field numerical gauge table and inspector"
+    },
+    {
+      "id": "sph_front_csv",
+      "path": "outputs/simulations/sph/BHV_BASE_NEARFIELD/front_propagation.csv",
+      "exists": true,
+      "file_size_bytes": 12106,
+      "crs": "N/A",
+      "source_milestone": "M6",
+      "classification": "SPH_FRONT_PROPAGATION",
+      "frontend_role": "Near-field wave front advancement chart"
+    },
+    {
+      "id": "depth_comparison_csv",
+      "path": "outputs/comparison/depth_comparison.csv",
+      "exists": true,
+      "file_size_bytes": 688,
+      "crs": "N/A",
+      "source_milestone": "M7",
+      "classification": "CROSS_SOLVER_COMPARISON",
+      "frontend_role": "D-Flow vs SPH water depth comparison chart"
+    },
+    {
+      "id": "velocity_comparison_csv",
+      "path": "outputs/comparison/velocity_comparison.csv",
+      "exists": true,
+      "file_size_bytes": 741,
+      "crs": "N/A",
+      "source_milestone": "M7",
+      "classification": "CROSS_SOLVER_COMPARISON",
+      "frontend_role": "D-Flow vs SPH velocity comparison chart"
+    },
+    {
+      "id": "hazard_severity_vector",
+      "path": "outputs/hadr/hazard_severity.gpkg",
+      "exists": true,
+      "file_size_bytes": 2166784,
+      "crs": "EPSG:32643",
+      "source_milestone": "M8",
+      "classification": "HADR_HAZARD_SEVERITY_ZONES",
+      "frontend_role": "CWC H1\u2013H6 hazard polygons on map"
+    },
+    {
+      "id": "hazard_class_raster",
+      "path": "outputs/hadr/hazard_class.tif",
+      "exists": true,
+      "file_size_bytes": 3513,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M8",
+      "classification": "HADR_HAZARD_CLASS_RASTER",
+      "frontend_role": "Hazard class raster layer and point query"
+    },
+    {
+      "id": "population_exposure_csv",
+      "path": "outputs/hadr/population_exposure_by_hazard.csv",
+      "exists": true,
+      "file_size_bytes": 670,
+      "crs": "N/A",
+      "source_milestone": "M8",
+      "classification": "HADR_POPULATION_EXPOSURE",
+      "frontend_role": "WorldPop & GHSL population exposure summary"
+    },
+    {
+      "id": "building_exposure_vector",
+      "path": "outputs/hadr/building_exposure.gpkg",
+      "exists": true,
+      "file_size_bytes": 10158080,
+      "crs": "EPSG:32643",
+      "source_milestone": "M8",
+      "classification": "HADR_BUILDING_EXPOSURE",
+      "frontend_role": "Inundated building footprints with bbox query"
+    },
+    {
+      "id": "road_exposure_vector",
+      "path": "outputs/hadr/road_exposure.gpkg",
+      "exists": true,
+      "file_size_bytes": 323584,
+      "crs": "EPSG:32643",
+      "source_milestone": "M8",
+      "classification": "HADR_ROAD_EXPOSURE",
+      "frontend_role": "Inundated road network lines"
+    },
+    {
+      "id": "critical_facilities_csv",
+      "path": "outputs/hadr/critical_facility_exposure.csv",
+      "exists": true,
+      "file_size_bytes": 1124,
+      "crs": "N/A",
+      "source_milestone": "M8",
+      "classification": "HADR_CRITICAL_FACILITIES",
+      "frontend_role": "Exposed hospitals, schools, police, power stations"
+    },
+    {
+      "id": "response_zones_vector",
+      "path": "outputs/hadr/response_zones_exclusive.gpkg",
+      "exists": true,
+      "file_size_bytes": 143360,
+      "crs": "EPSG:32643",
+      "source_milestone": "M8",
+      "classification": "HADR_RESPONSE_ZONES",
+      "frontend_role": "Exclusive non-overlapping response sector polygons"
+    },
+    {
+      "id": "hadr_priority_csv",
+      "path": "outputs/hadr/hadr_priority_zones.csv",
+      "exists": true,
+      "file_size_bytes": 3013,
+      "crs": "N/A",
+      "source_milestone": "M8",
+      "classification": "HADR_PRIORITY_RANKING",
+      "frontend_role": "HADR priority sector ranking table"
+    },
+    {
+      "id": "m8_exposure_summary_json",
+      "path": "outputs/validation/m8_exposure_summary.json",
+      "exists": true,
+      "file_size_bytes": 13123,
+      "crs": "N/A",
+      "source_milestone": "M8",
+      "classification": "HADR_EXPOSURE_SUMMARY",
+      "frontend_role": "HADR summary statistics panel"
+    },
+    {
+      "id": "observed_flood_raster",
+      "path": "data/gee/observed_new_flood.tif",
+      "exists": true,
+      "file_size_bytes": 2849,
+      "crs": "PROJCS[\"WGS 84 / UTM zone 43N\",GEOGCS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",SPHEROID[\"WGS 84\",6378137,298.257223563]],PRIMEM[\"Greenwich\",0],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]]],PROJECTION[\"Transverse_Mercator\"],PARAMETER[\"latitude_of_origin\",0],PARAMETER[\"central_meridian\",75],PARAMETER[\"scale_factor\",0.9996],PARAMETER[\"false_easting\",500000],PARAMETER[\"false_northing\",0],UNIT[\"metre\",1,AUTHORITY[\"EPSG\",\"9001\"]],AXIS[\"Easting\",EAST],AXIS[\"Northing\",NORTH]]",
+      "source_milestone": "M9",
+      "classification": "SATELLITE_HISTORICAL_FLOOD_RASTER",
+      "frontend_role": "Sentinel-1 historical flood raster overlay"
+    },
+    {
+      "id": "observed_flood_vector",
+      "path": "outputs/gee/observed_new_flood_extent.gpkg",
+      "exists": true,
+      "file_size_bytes": 151552,
+      "crs": "EPSG:32643",
+      "source_milestone": "M9",
+      "classification": "SATELLITE_HISTORICAL_FLOOD_VECTOR",
+      "frontend_role": "Sentinel-1 historical flood vector overlay"
+    },
+    {
+      "id": "latest_water_vector",
+      "path": "outputs/gee/latest/latest_candidate_flood.gpkg",
+      "exists": true,
+      "file_size_bytes": 143360,
+      "crs": "EPSG:32643",
+      "source_milestone": "M9",
+      "classification": "SATELLITE_NRT_WATER_CHANGE",
+      "frontend_role": "Latest Sentinel-1 water change anomaly vector"
+    },
+    {
+      "id": "latest_monitoring_json",
+      "path": "outputs/gee/latest/latest_monitoring_metadata.json",
+      "exists": true,
+      "file_size_bytes": 1962,
+      "crs": "N/A",
+      "source_milestone": "M9",
+      "classification": "SATELLITE_NRT_METADATA",
+      "frontend_role": "Latest satellite monitoring status and quality panel"
+    },
+    {
+      "id": "m9_spatial_context_json",
+      "path": "outputs/validation/m9_model_observation_spatial_context.json",
+      "exists": true,
+      "file_size_bytes": 1242,
+      "crs": "N/A",
+      "source_milestone": "M9",
+      "classification": "SATELLITE_SPATIAL_CONTEXT",
+      "frontend_role": "Model vs satellite spatial context comparison"
+    }
+  ]
+}

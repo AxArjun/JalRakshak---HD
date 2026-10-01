@@ -1,0 +1,87 @@
+{
+  "site_id": "hirakud",
+  "dam_name": "Hirakud Dam",
+  "river": "Mahanadi River",
+  "basin": "Mahanadi Basin",
+  "state": "Odisha",
+  "district": "Sambalpur",
+  "country": "India",
+  "coordinates": {
+    "site_reference_coordinate": {
+      "latitude": 21.5700,
+      "longitude": 83.8694,
+      "description": "Administrative / Project complex axis",
+      "verification": "SECONDARY_VERIFIED"
+    },
+    "dam_model_coordinate": {
+      "latitude": 21.5286,
+      "longitude": 83.8742,
+      "description": "Hirakud main concrete/masonry spillway discharge axis",
+      "verification": "AUTHORITATIVE_VERIFIED"
+    },
+    "distance_between_them_m": 4625.0,
+    "source_crs": "EPSG:4326",
+    "derived_project_crs": "EPSG:32644",
+    "utm_zone": 44,
+    "hemisphere": "N"
+  },
+  "storage_versioning": {
+    "original_design_1957": {
+      "gross_storage_mcm": 8136.0,
+      "live_storage_mcm": 5818.0,
+      "dead_storage_mcm": 2318.0,
+      "source": "CWC NRLD 2023 & Project Specifications",
+      "date": "1957",
+      "verification": "AUTHORITATIVE_VERIFIED",
+      "breach_applicability": "Used as upper-bound first-estimate breach volume (MODEL_ASSUMPTION_FIRST_ESTIMATE_FROM_ORIGINAL_DESIGN_STORAGE)"
+    },
+    "ohpc_sedimentation_revised": {
+      "gross_storage_mcm": 5896.0,
+      "live_storage_mcm": 4823.0,
+      "dead_storage_mcm": 1073.0,
+      "source": "Odisha Hydro Power Corporation (OHPC) Sedimentation Survey",
+      "date": "2018",
+      "verification": "SECONDARY_VERIFIED",
+      "breach_applicability": "Reflects surveyed physical storage loss from 60+ years of siltation"
+    },
+    "cwc_reporting_capacity": {
+      "gross_storage_mcm": 8136.0,
+      "live_storage_mcm": 5378.0,
+      "source": "CWC National Reservoir Monitoring Bulletins",
+      "date": "2024",
+      "verification": "SECONDARY_VERIFIED",
+      "breach_applicability": "National operational bulletin standard"
+    }
+  },
+  "breach_model_audit": {
+    "breach_model_volume_mcm": 5818.0,
+    "source_value": "Original Design Live Storage (1957)",
+    "why_selected": "Conservative upper-bound screening assumption representing original active volume prior to sedimentation",
+    "classification": "MODEL_ASSUMPTION_FIRST_ESTIMATE_FROM_ORIGINAL_DESIGN_STORAGE",
+    "derived_parameters": {
+      "average_breach_width_m": 541.34,
+      "formation_time_s": 32025.10,
+      "peak_discharge_m3s": 56420.80
+    },
+    "extrapolation_warning": "Froehlich 2008 calibration dataset max V_w is 660 MCM. Hirakud V_w (5818 MCM) is an extrapolation."
+  },
+  "hydrology_geometry_source": {
+    "reservoir_source": "OpenStreetMap Feature way/242851214 & HydroSHEDS Water Bodies",
+    "river_source": "OpenStreetMap Mahanadi River Relation & HydroRIVERS Basin Network",
+    "verification": "REAL_GEOGRAPHIC_SOURCE_VERIFIED"
+  },
+  "dflow_smoke_status": {
+    "input_files_generated": true,
+    "mdu_file": "data/hirakud/dflowfm/smoke_case/hirakud_hirakud_screening_01.mdu",
+    "bc_file": "data/hirakud/dflowfm/smoke_case/hirakud_boundary.bc",
+    "solver_smoke_executed": false,
+    "status": "INPUT_READY_NOT_EXECUTED",
+    "classification": "SECOND_SITE_DFLOW_PORTABILITY_SMOKE_TEST"
+  },
+  "earth_observation_status": {
+    "orbit_mode": "AUTO_DISCOVER",
+    "relative_orbit": null,
+    "pass_preference": "DESCENDING",
+    "live_query_status": "UNVERIFIED_PENDING_LIVE_GEE_QUERY"
+  }
+}

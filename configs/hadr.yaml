@@ -1,0 +1,42 @@
+# JalRakshak-HD: Humanitarian Assistance and Disaster Relief (HADR) Configuration
+# ==============================================================================
+# Milestone: M8 — HADR Consequence, Exposure and Emergency-Priority Analysis
+# Framework: Central Water Commission (CWC) Guidelines for Dam Inundation & Hazard Mapping
+
+hazard:
+  source_model: "2D_DFLOWFM_SCREENING_INUNDATION_MODEL"
+  classification_standard: "Central Water Commission (CWC) Guidelines for Development and Classification of Dam Inundation Hazard Maps / AIDR Guideline 7-3 (Smith et al., 2014)"
+  wet_depth_threshold_m: 0.05
+  arrival_time_resolution_s: 600
+
+population:
+  primary_dataset: "WorldPop Global High Resolution Population Denominators"
+  primary_collection: "WorldPop/GP/100m/pop"
+  primary_year: 2020
+  population_is_not_2026: true
+  secondary_dataset: "JRC Global Human Settlement Layer Population (GHS-POP)"
+  secondary_collection: "JRC/GHSL/P2023A/GHS_POP"
+  secondary_year: 2025
+
+buildings:
+  dataset: "Google Open Buildings v3"
+  collection: "GOOGLE/Research/open-buildings/v3/polygons"
+  confidence_handling: "confidence >= 0.75"
+
+landcover:
+  dataset: "ESA WorldCover 10m v200"
+  collection: "ESA/WorldCover/v200"
+  year: 2021
+  cropland_class_id: 40
+  builtup_class_id: 50
+
+infrastructure:
+  road_source: "OpenStreetMap Overpass API (highway network)"
+  critical_facility_source: "OpenStreetMap Overpass API (amenity, healthcare, education, emergency)"
+  verification_level: "SECONDARY_COMMUNITY_GEODATA"
+
+damage:
+  monetary_damage_enabled: false
+  fatality_model_enabled: false
+  potential_loss_of_life_model: "NOT_IMPLEMENTED"
+  monetary_damage_status: "NOT_IMPLEMENTED_IN_M8"
