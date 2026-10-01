@@ -1,377 +1,530 @@
-# JalRakshak-HD
+<div align="center">
 
-**Hydrodynamic Dam-Break & HADR Intelligence Platform**  
-*Smart India Hackathon 2026 — Problem Statement: SIH26161*  
-*“Dam Break Inundation Modelling Using Hydrodynamic Modelling of any River”*
+# 🌊 JalRakshak-HD
+
+### Hydrodynamic Dam-Break & HADR Intelligence Platform
+
+**Smart India Hackathon 2026 · Problem Statement SIH26161**
+*Dam Break Inundation Modelling Using Hydrodynamic Modelling of any River*
+
+![Version](https://img.shields.io/badge/version-v1.0--SIH-blue)
+![Python](https://img.shields.io/badge/python-3.10--3.12-3776AB?logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/backend-FastAPI-009688?logo=fastapi&logoColor=white)
+![React](https://img.shields.io/badge/frontend-React%2019%20%2B%20Vite-61DAFB?logo=react&logoColor=black)
+![Solvers](https://img.shields.io/badge/solvers-D--Flow%20FM%20%2B%20DualSPHysics-0A66C2)
+![Status](https://img.shields.io/badge/status-research%20screening%20prototype-orange)
+
+</div>
+
+> ⚠️ **Research screening prototype.** The breach scenario is hypothetical. All hydraulic results are model outputs for emergency-preparedness screening and are **not** an official warning or a statutory Emergency Action Plan.
 
 ---
 
-## 🌊 1. Problem Statement
+## 📑 Table of Contents
 
-Dam failures and catastrophic reservoir releases represent high-consequence hydraulic hazards capable of causing severe loss of life, devastating downstream communities, and wiping out critical civil infrastructure within hours. Traditional dam-break emergency action plans (EAPs) frequently suffer from:
-- **Static & Coarse Inundation Maps:** Outdated 1D hydraulic profiles that fail to capture 2D terrain inundation dynamics, transverse velocities, and complex flood fronts.
-- **Disconnected HADR Intelligence:** Hydrodynamic models rarely integrate with real-time exposure databases (buildings, population densities, road network cutoffs, hospitals, bridges).
-- **Near-Field Structural Blindspots:** Shallow-water approximations fail to resolve 3D turbulence, violent splash-up, and localized impact pressures on dam faces and immediately adjacent structures.
-- **Lack of Multi-Site Adaptability:** Hardcoded single-dam workflows that cannot be generalized to other river basins across India without extensive manual refactoring.
-
-**JalRakshak-HD** addresses Problem Statement **SIH26161** by providing a configuration-driven, fail-honest hydrodynamic screening and humanitarian decision-support platform designed to model breach hydrodynamics, calculate dynamic inundation propagation, quantify infrastructure exposure, and support civil defense agencies with actionable evacuation intelligence.
+1. [Overview](#1--overview)
+2. [Key Features](#2--key-features)
+3. [Demo](#3--demo)
+4. [How It Works](#4--how-it-works)
+5. [System Architecture](#5--system-architecture)
+6. [Headline Results (Bhavanisagar Dam)](#6--headline-results-bhavanisagar-dam)
+7. [Fail-Honest Verification](#7--fail-honest-verification)
+8. [Technology Stack](#8--technology-stack)
+9. [Project Structure](#9--project-structure)
+10. [Getting Started](#10--getting-started)
+11. [API Reference](#11--api-reference)
+12. [Multi-Site Onboarding](#12--multi-site-onboarding)
+13. [Testing & Validation](#13--testing--validation)
+14. [Data Sources](#14--data-sources)
+15. [Limitations](#15--limitations)
+16. [Roadmap](#16--roadmap)
+17. [Contributors](#17--contributors)
 
 ---
 
-## 💡 2. Solution Workflow
+## 1. 🎯 Overview
+
+Dam failures release large reservoir volumes in hours and can devastate downstream communities and infrastructure. Dam-break planning in practice often suffers from four gaps:
+
+| Gap | What goes wrong |
+| :-- | :-- |
+| **Coarse inundation maps** | 1D profiles miss 2D floodplain behaviour, lateral velocity and flood-front timing. |
+| **Disconnected consequence data** | Hydraulics are rarely joined to population, buildings, roads, bridges and critical facilities. |
+| **Near-field blind spots** | Shallow-water models cannot resolve violent splash, jets and impact close to the dam. |
+| **Single-dam workflows** | Hard-coded pipelines can't be reused on another river without a rewrite. |
+
+**JalRakshak-HD** closes these gaps with a **configuration-driven** pipeline that goes from dam geometry to a breach hydrograph, a 2D flood simulation, a near-field particle simulation, hazard classification, humanitarian exposure screening and an interactive GIS command-centre dashboard. A new dam is onboarded by writing YAML, not by changing code.
+
+The prototype is fully worked on **Bhavanisagar Dam (Bhavani River, Tamil Nadu)** and tested for portability on **Hirakud Dam (Mahanadi River, Odisha)**.
+
+---
+
+## 2. ⚡ Key Features
+
+- **Parametric breach modelling:** breach width, formation time and peak discharge from Froehlich (2008) regressions, with MacDonald & Langridge-Monopolis and CWC-style options configurable per site.
+- **Mass-conserving hydrograph synthesis:** breach outflow Q(t) that conserves the 780.50 MCM reservoir volume.
+- **2D flood routing (D-Flow FM):** 30-hour simulation on an 818.37 km² domain, exported as 181 frames at 600 s steps (depth, velocity, arrival time).
+- **Near-field SPH (DualSPHysics):** Lagrangian particle model of the first 1.5 km below the breach for the first 600 s.
+- **Hazard classification H1–H6:** combined depth-velocity classes from the CWC / AIDR Guideline 7-3 thresholds.
+- **HADR consequence screening:** population (two independent datasets), buildings, roads, bridges, critical facilities and 6 non-overlapping response sectors.
+- **Earth observation pipeline:** Sentinel-1 SAR flood-extent detection (Google Earth Engine), demonstrated on the August 2019 Bhavani flood event.
+- **Interactive GIS dashboard:** playback scrubber, click-anywhere point inspector, layer controls, per-timestep impact reports and a site switcher.
+- **Offline-capable demo:** pre-built overlays, GeoJSON caches and a local SRTM hillshade, so the dashboard runs with no internet or credentials.
+- **Fail-honest design:** anything not actually computed for a site is shown as `NOT_RUN` instead of being filled in.
+
+---
+
+## 3. 🎬 Demo
+
+| Simulation playback | HADR exposure |
+| :-: | :-: |
+| ![Simulation mode](outputs/dashboard/screenshots/m10_real_map_simulation.png) | ![HADR mode](outputs/dashboard/screenshots/m10_real_map_hadr.png) |
+
+| Earth observation (Sentinel-1) | Hirakud portability |
+| :-: | :-: |
+| ![Earth observation mode](outputs/dashboard/screenshots/m10_real_map_earth_observation.png) | ![Hirakud second site](outputs/dashboard/screenshots/m11_hirakud_real_map.png) |
+
+▶️ **70-second walkthrough video:** [`outputs/final_demo/JalRakshak_HD_SIH_70sec_Demo.mp4`](outputs/final_demo/JalRakshak_HD_SIH_70sec_Demo.mp4)
+📜 **Presenter script and jury Q&A:** [`docs/SIH_DEMO_SCRIPT.md`](docs/SIH_DEMO_SCRIPT.md) · [`docs/SIH_JURY_QA.md`](docs/SIH_JURY_QA.md)
+
+---
+
+## 4. 🧭 How It Works
+
+```mermaid
+flowchart TD
+    A["Site config (YAML)<br/>dam · breach · hydrology · model · monitoring"] --> B["Breach parameterisation<br/>Froehlich 2008"]
+    B --> C["Breach hydrograph Q(t)<br/>780.5 MCM conserved"]
+    C --> D["2D shallow-water routing<br/>D-Flow FM · 30 h · 181 frames"]
+    C --> E["Near-field SPH<br/>DualSPHysics · 600 s"]
+    D --> F["Hazard classification H1–H6<br/>depth × velocity"]
+    F --> G["HADR exposure screening<br/>population · buildings · roads · bridges · facilities"]
+    G --> H["Response sectors &<br/>per-timestep impact reports"]
+    I["Sentinel-1 SAR<br/>(Google Earth Engine)"] --> J["Observed flood extent"]
+    D --> K["FastAPI backend"]
+    E --> K
+    G --> K
+    H --> K
+    J --> K
+    K --> L["React + Leaflet<br/>GIS command-centre dashboard"]
+```
+
+**Scale separation.** The 2D model handles far-field propagation over about 52 km of river and 30 hours. The SPH model handles only the near-dam region and the first 10 minutes, where depth-averaged assumptions break down. These two solvers are **decoupled** in this prototype (see [Limitations](#15--limitations)).
+
+---
+
+## 5. 🏗️ System Architecture
 
 ```
-[Dam Geometry & Hydraulic Scenario]
-                 │
-                 ▼
-[Empirical Breach Parameterization (Froehlich / MacDonald-Langridge-Monopolis)]
-                 │
-                 ▼
-[Breach Outflow Hydrograph Synthesis Q(t)]
-                 │
-                 ├──────────────────────────────────────┐
-                 ▼                                      ▼
-[3D SPH Near-Field Modeling (DualSPHysics)]   [2D Flexible Mesh Hydrodynamics (D-Flow FM)]
-(Near-dam splash, wall pressure, jet front)   (Downstream water depth, velocity, arrival time)
-                 │                                      │
-                 └───────────────────┬──────────────────┘
-                                     │
-                                     ▼
-                      [Flood Hazard Classification (H1–H6)]
-                                     │
-                                     ▼
-                 [HADR Consequence & Exposure Screening]
-                 (Population, Buildings, Road Corridors, Critical Assets)
-                                     │
-                                     ▼
-                [GIS Command Centre & Decision Support Dashboard]
+┌──────────────────────────────────────────────────────────────────────────┐
+│                           JALRAKSHAK-HD PLATFORM                         │
+├──────────────────────────────────────────────────────────────────────────┤
+│ DATA LAYER                                                               │
+│  SRTM 30 m DEM · HydroSHEDS · CWC NRLD 2023 · OSM · Google Open          │
+│  Buildings · WorldPop · GHSL · ESA WorldCover · Sentinel-1 SAR           │
+├──────────────────────────────────────────────────────────────────────────┤
+│ COMPUTE / SCREENING ENGINE (offline pipeline, scripts/)                  │
+│  Breach + hydrograph · D-Flow FM 2D · DualSPHysics · hazard classifier   │
+│  HADR exposure · Sentinel-1 flood detection · audit & validation gates   │
+├──────────────────────────────────────────────────────────────────────────┤
+│ BACKEND  FastAPI (backend/app)                                           │
+│  /api/sites · /api/simulation · /api/gis · /api/hadr · /api/sph          │
+│  /api/remote-sensing · /api/reports · /api/provenance                    │
+├──────────────────────────────────────────────────────────────────────────┤
+│ FRONTEND  React 19 + TypeScript + Vite + Leaflet                         │
+│  Modes: Simulation · HADR Exposure · Near-Field SPH · Earth Observation  │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
----
+### What is live vs. pre-computed
 
-## ⚡ 3. Core Prototype Capabilities
-
-The current working prototype demonstrates:
-
-- **Parametric Dam-Break Modeling:** Automated calculation of breach formation time ($t_f$), average breach width ($B_{\text{avg}}$), and peak discharge ($Q_{\text{peak}}$) using peer-reviewed empirical regressions (Froehlich 2008, MacDonald & Langridge-Monopolis 1984, CWC guidelines).
-- **Outflow Hydrograph Synthesis:** Verified mass-conserving hydrograph $Q(t)$ generation with exact reservoir storage balance verification ($780.50\text{ MCM}$ at Bhavanisagar FRL).
-- **2D Hydrodynamic Flood Routing:** Flexible mesh simulation tracking flood propagation over $30\text{ hours}$ ($108,000\text{ s}$) with $181$ continuous timesteps ($600\text{ s}$ resolution), outputting spatial depth, velocity vectors, and flood front arrival times.
-- **3D Particle Near-Field Modeling:** DualSPHysics Lagrangian modeling ($10,982$ fluid particles) resolving near-field hydrodynamics, splashing fronts, and force distribution on the spillway face ($0$–$600\text{ s}$).
-- **Humanitarian Assistance & Disaster Relief (HADR) Exposure Analysis:**
-  - Multi-tier population exposure quantification using high-resolution gridded datasets (**WorldPop 2020:** $42,428$ exposed; **Copernicus GHSL 2023:** $84,501$ exposed).
-  - High-resolution infrastructure screening ($25,652$ buildings via Google Open Buildings / OSM, $243.82\text{ km}$ affected road segments, $20$ bridges, $13$ critical facilities).
-  - Delineation of 9 prioritized HADR operational response sectors from near-dam high-hazard zones to downstream settlements.
-- **Satellite Earth Observation Benchmarking:** ESA Copernicus Sentinel-1 C-band SAR backscatter flood extraction pipeline for all-weather satellite verification of observed historical inundation.
-- **Multi-Site Architecture:** Declarative, schema-validated site onboarding (`site_config.yaml`) demonstrated on two distinct basins:
-  - **Bhavanisagar Dam (Tamil Nadu):** Primary fully modeled and validated scenario ($818.37\text{ km}^2$ study area).
-  - **Hirakud Dam (Odisha):** Generalization test site demonstrating automated basin delineation, geometry ingestion, and parameterization ($2,367.43\text{ km}^2$ study area).
-- **Zero-Dependency Offline Operation:** Built-in raster overlays, GeoJSON caches, and NASA SRTM 30m hillshades allowing full operational GIS dashboard functionality during disconnected field operations.
+| Aspect | In this prototype | Production target |
+| :-- | :-- | :-- |
+| **Solver execution** | Solvers run offline; the backend serves their verified outputs (181 PNG frames, GeoPackages, rasters) | On-demand solver runs on an HPC queue |
+| **Solver coupling** | Decoupled; both driven from the same breach geometry | Boundary-flux coupled 3D/2D workflow |
+| **Database** | File-based manifests; PostGIS is optional | PostgreSQL / PostGIS with live telemetry |
+| **Satellite data** | Pre-processed Sentinel-1 scenes plus Earth Engine scripts | Automated live ingestion |
+| **Sites** | Bhavanisagar fully simulated; Hirakud configured, not simulated | National dam-registry scale |
 
 ---
 
-## 🏗️ 4. System Architecture
+## 6. 📊 Headline Results (Bhavanisagar Dam)
 
-### Architectural Components
+Scenario **`BHV_BASE`**: hypothetical overtopping breach at full reservoir level. Values below are the locked figures from `outputs/validation/M12_FINAL_FREEZE.json`.
+
+### Breach & hydrograph
+
+| Parameter | Value | Basis |
+| :-- | --: | :-- |
+| Water volume above breach invert (Vw) | 780.50 MCM | CWC NRLD 2023 / TN WRD |
+| Average breach width (B_avg) | 219.28 m | Froehlich (2008) |
+| Breach formation time (t_f) | 14,095.59 s (≈ 3.92 h) | Froehlich (2008) |
+| Peak breach discharge (Q_peak) | 18,742.38 m³/s | Parametric hydrograph |
+| Hydrograph volume | 780.50 MCM | Mass-balance checked |
+
+### 2D hydrodynamics (D-Flow FM)
+
+| Parameter | Value |
+| :-- | --: |
+| Computational domain | 818.37 km² (82,309 cells, uniform 100 m grid) |
+| Simulation length / output | 108,000 s (30 h) · 181 frames at 600 s |
+| Maximum inundated area | 101.29 km² (wet where depth > 0.05 m) |
+| Maximum depth / P95 depth | 22.02 m / 12.72 m |
+| Maximum velocity / P95 velocity | 11.79 m/s / 4.27 m/s |
+| Mass-balance residual | 0.041 MCM (0.0052 %) |
+| Severe hazard area (H3–H6) | 97.99 km² (96.74 % of inundated area) |
+| Extreme hazard area (H5–H6) | 87.29 km² |
+| Bed roughness | Uniform Manning n = 0.035 |
+
+### Near-field SPH (DualSPHysics v5.4)
+
+| Parameter | Value |
+| :-- | --: |
+| Model type | 2D unit-width longitudinal section (not full 3D) |
+| Particles | 10,982 (6,800 fluid + 4,182 boundary), spacing 1.0 m |
+| Duration / reach | 600 s / first 1.5 km below breach |
+| Max depth / max velocity | 17.11 m / 34.78 m/s |
+| Front position at 600 s | 1,280.41 m |
+
+### HADR consequence screening
+
+| Metric | Value |
+| :-- | --: |
+| Exposed population, WorldPop 2020 | 42,428 (40,744 in H3–H6) |
+| Exposed population, GHSL 2023 | 84,501 (81,768 in H3–H6) |
+| Exposed buildings | 25,652 (22,472 in H5–H6) |
+| Inundated road length | 243.82 km (226.35 km in H3–H6) |
+| Bridges screened / critical facilities | 20 / 13 |
+| Response sectors | 6 non-overlapping chainage sectors, from the dam toe to the Lower Bhavani canal confluence |
+
+> **Reading the population numbers:** the two datasets differ by about 2×. This is reported as a dataset spread rather than hidden. No casualty or loss-of-life model is implemented; the output is *exposure only*.
+
+### Earth observation (Sentinel-1)
+
+| Metric | Value |
+| :-- | --: |
+| Benchmark event | August 2019 Bhavani flood (scene of 2019-08-10) |
+| Detected new flood extent | 1.19 km² |
+| Method | VV/VH backscatter change detection with slope masking |
+
+This benchmarks the SAR pipeline against a real, documented *natural* flood. It does **not** validate the dam-break simulation, since no dam failure has occurred at Bhavanisagar.
+
+### Cross-solver comparison
+
+D-Flow FM and DualSPHysics agree on the downstream trend of the flood front but **diverge on velocity** (the SPH model shows strong attenuation after the near-dam jet, while the depth-averaged 2D velocity grows downstream). The two models use non-equivalent formulations and forcing, so this spread is reported as a cross-model difference, not as a validation error. Direct coupling is marked `DESIGN_ONLY` / `NOT_READY`, and 500 m is the recommended future handoff chainage.
+
+### Hirakud Dam (generalization site)
+
+| Item | Value |
+| :-- | :-- |
+| Location | Mahanadi River, Odisha (EPSG:32644) |
+| NRLD live storage | 5,818 MCM |
+| Screening peak discharge | 65,163.63 m³/s |
+| Solver status | `INPUT_READY_NOT_EXECUTED` (inputs prepared; no 2D/3D run performed) |
+
+---
+
+## 7. 🛡️ Fail-Honest Verification
+
+Every result carries an explicit status, and the code and docs are audited so a claim is not stated more strongly than its evidence.
+
+| Tier | Meaning | Example |
+| :-- | :-- | :-- |
+| 🟢 **VERIFIED / AUTHORITATIVE** | Computed and checked, or taken from an official source | Mass conservation (0.0052 % residual); NRLD storage |
+| 🟡 **MODEL_DERIVED / ASSUMPTION** | Empirical or parametric estimate with documented uncertainty | Froehlich breach geometry (±25–35 %); uniform Manning n |
+| 🟠 **PARTIAL / INPUT_READY** | Inputs built but solver not run | Hirakud second site |
+| 🔴 **NOT_RUN / BLOCKED** | Not executed; shown as such in the UI and API | Any module without outputs for the selected site |
+
+Supporting checks in `scripts/`: `audit_final_claims.py`, `audit_no_fake_results.py`, `audit_hardcoding.py`, `validate_final_scientific_values.py` and `validate_m12_final.py`. The point query returns `Outside model extent` rather than a zero when you click outside the domain.
+
+---
+
+## 8. 🛠️ Technology Stack
+
+| Layer | Technologies |
+| :-- | :-- |
+| **Frontend** | React 19, TypeScript, Vite 8, Leaflet / React-Leaflet, Recharts, Tailwind CSS v4, Lucide icons |
+| **Backend** | FastAPI, Uvicorn, Pydantic v2, pydantic-settings, PyYAML, python-dotenv |
+| **Geospatial & science** | GeoPandas, Shapely, PyProj, Rasterio, NumPy, SciPy, Pandas, Xarray, netCDF4, h5py, Matplotlib |
+| **Earth observation** | Google Earth Engine API (`earthengine-api`), Sentinel-1 GRD |
+| **Database (optional)** | PostgreSQL / PostGIS via `psycopg` and SQLAlchemy |
+| **Solvers** | Deltares D-Flow FM (Delft3D FM Suite 2026.02), DualSPHysics v5.4 |
+| **Hazard standard** | CWC / AIDR Guideline 7-3 (Smith, Davey & Cox, 2014) |
+
+---
+
+## 9. 📁 Project Structure
 
 ```
-┌───────────────────────────────────────────────────────────────────────────┐
-│                           JALRAKSHAK-HD PLATFORM                          │
-├───────────────────────────────────────────────────────────────────────────┤
-│                                                                           │
-│  [DATA LAYER]                                                             │
-│  ├── Elevation & Terrain: NASA SRTM 30m / HydroSHEDS                     │
-│  ├── Engineering: CWC National Register of Large Dams (NRLD 2023)        │
-│  ├── Exposure: Google Open Buildings, OpenStreetMap, WorldPop, GHSL      │
-│  └── Earth Observation: ESA Copernicus Sentinel-1 SAR (GEE / Local)      │
-│                                                                           │
-│  [COMPUTATIONAL & SCREENING ENGINE]                                       │
-│  ├── Breach & Hydrograph: Froehlich & MacDonald-Monopolis Synthesizer     │
-│  ├── 2D Hydraulic Solver: Deltares D-Flow Flexible Mesh (DFlowFM)        │
-│  ├── 3D Particle Solver: DualSPHysics Lagrangian SPH                      │
-│  └── Hazard Classifier: Australian Disaster Resilience Handbook 7 (H1–H6)│
-│                                                                           │
-│  [BACKEND REST API (FastAPI)]                                             │
-│  ├── Multi-Site Registry & Path Resolver (`/api/sites`)                   │
-│  ├── Simulation Time-Series & Frame Streaming (`/api/simulation`)         │
-│  ├── GIS Vector & Raster Layers (`/api/tiles`, `/api/gis`)                │
-│  ├── HADR Impact Assessment (`/api/hadr`)                                 │
-│  └── Data Lineage & Provenance Auditor (`/api/provenance`)                │
-│                                                                           │
-│  [GIS COMMAND CENTRE FRONTEND (React 18 + Vite + Leaflet)]                │
-│  ├── Real-Time Simulation Playback & Scrubbing Controller                 │
-│  ├── Multi-Layer GIS Map with Dynamic Hazard Severity Coloring            │
-│  ├── Interactive Point-Click Hydraulic & Risk Inspector                   │
-│  ├── Multi-Site Basin Switcher (Bhavanisagar / Hirakud)                   │
-│  └── Humanitarian Logistics & Evacuation Priority Tab                     │
-│                                                                           │
-└───────────────────────────────────────────────────────────────────────────┘
-```
-
-### Prototype Demonstrated vs. Full Deployment Architecture
-
-| Aspect | Prototype Demonstrated (SIH 2026) | Full Production Deployment Target |
-| :--- | :--- | :--- |
-| **Solver Coupling** | Decoupled execution parameterized from unified site geometry | Automated bidirectional boundary coupling pipeline |
-| **Execution Mode** | Pre-computed, verified 181-frame high-resolution time series | Real-time HPC cluster job queuing & on-demand solver runs |
-| **Database** | Lightweight local file manifests + Optional PostGIS schema | Distributed PostgreSQL / PostGIS with live SCADA telemetry |
-| **Satellite Ingestion** | Pre-processed Sentinel-1 SAR scenes + GEE scripts | Automated live Copernicus Hub webhook ingestion pipeline |
-| **Multi-Site Scope** | Bhavanisagar (Fully simulated) + Hirakud (Configured & Parametric) | National inventory scaling across CWC major dam registry |
-
----
-
-## 📡 5. Data Sources & Provenance
-
-All data utilized in JalRakshak-HD originates from authentic, peer-reviewed, and official government or space agency repositories:
-
-- **Dam Engineering & Reservoir Specs:** Central Water Commission (CWC) National Register of Large Dams (NRLD 2023) & Tamil Nadu Water Resources Department (TN WRD).
-- **Elevation & Terrain:** NASA Shuttle Radar Topography Mission (SRTM) 30m Global DEM & USGS HydroSHEDS hydro-conditioned drainage network.
-- **Land Cover & Roughness:** ESA WorldCover 10m global land cover dataset (Manning's $n$ calibrated per land use class).
-- **Infrastructure & Assets:** OpenStreetMap (OSM) Overpass API (roads, bridges, waterways, medical centres, emergency services) & Google Open Buildings v3.
-- **Population Exposure:** WorldPop 2020 UN-Adjusted 100m Spatial Demographics & European Commission Copernicus Global Human Settlement Layer (GHSL 2023).
-- **Satellite Radar:** ESA Copernicus Sentinel-1 C-band Synthetic Aperture Radar (SAR) Ground Range Detected (GRD) backscatter imagery.
-
----
-
-## 🛠️ 6. Technology Stack
-
-### Frontend
-- **Framework:** React 19 / Vite / TypeScript
-- **Mapping & GIS:** Leaflet / React-Leaflet
-- **Styling & UI:** TailwindCSS v4 / Lucide React Icons
-- **Data Visualization:** Recharts
-
-### Backend & API
-- **Framework:** FastAPI / Uvicorn (Asynchronous REST API)
-- **Data Validation & Settings:** Pydantic v2 / PyYAML / Python-Dotenv
-- **Geospatial & Vector Processing:** GeoPandas / Shapely / PyProj / Rasterio
-- **Scientific Computing & IO:** NumPy / SciPy / Pandas / NetCDF4 / Xarray / h5py
-- **Spatial Database (Optional):** PostgreSQL / PostGIS (`psycopg`)
-
-### Hydrodynamic Solvers Represented
-- **2D Mesh Hydrodynamics:** Deltares Delft3D Flexible Mesh (D-Flow FM 2026.02)
-- **3D Particle Hydrodynamics:** DualSPHysics v5.4 (Smoothed Particle Hydrodynamics)
-
----
-
-## 🛡️ 7. Fail-Honest Scientific Verification Architecture
-
-JalRakshak-HD implements a strict **Fail-Honest** design philosophy. Output claims are cryptographically and programmatically audited into four explicit verification tiers:
-
-- 🟢 **VERIFIED:** Computationally executed, mass-conserved, and validated against authoritative criteria (e.g. Bhavanisagar $780.50\text{ MCM}$ reservoir volume conservation, 181-frame hydrodynamic propagation).
-- 🟡 **ASSUMPTION:** Documented empirical or parametric engineering estimates (e.g. Froehlich 2008 breach geometry with $\pm 25\text{–}35\%$ uncertainty bounds).
-- 🟠 **PARTIAL:** Baseline terrain, hydrologic routing, and parametric estimates derived, pending full solver meshing (e.g. Hirakud generalization site).
-- 🔴 **BLOCKED / NOT-RUN:** Solvers or modules that have not been executed for a specific site are explicitly flagged as `NOT_RUN` in the UI and API rather than displaying fabricated or interpolated data.
-
----
-
-## 📁 8. Project Structure
-
-```
-JalRakshak-HD/
-├── VERSION                               # Release identifier (v1.0-SIH)
-├── README.md                             # Comprehensive technical documentation
-├── requirements.txt                      # Python dependencies
-├── .env.example                          # Safe environment variable template
-├── .gitignore                            # Comprehensive ignore rules
-├── START_DEMO.bat                        # Windows 1-click startup batch script
-├── start_jalrakshak.ps1                  # PowerShell launcher & port checker
+JalRakshak---HD/
+├── README.md
+├── VERSION                       # v1.0-SIH
+├── requirements.txt              # Python dependencies
+├── .env.example                  # Optional PostGIS / Earth Engine settings
+├── START_DEMO.bat                # Windows one-click launcher
+├── start_jalrakshak.ps1          # Port check + backend + frontend startup
 │
-├── backend/                              # FastAPI REST backend service
+├── backend/
 │   ├── app/
-│   │   ├── main.py                       # FastAPI entrypoint & router mounts
-│   │   ├── api/                          # Endpoints (simulation, hadr, gis, sites, reports)
-│   │   ├── core/                         # Configuration & dynamic site path resolvers
-│   │   ├── models/                       # Domain data models & schemas
-│   │   ├── schemas/                      # Pydantic request/response schemas
-│   │   └── services/                     # Breach physics, hazard logic & loaders
-│   └── tests/                            # Pytest test suite (57/57 tests passing)
+│   │   ├── main.py               # FastAPI entrypoint, routers, static mounts
+│   │   ├── api/                  # gis, hadr, health, project, provenance,
+│   │   │                         #   remote_sensing, reports, simulation, sites, sph
+│   │   ├── core/                 # config, CRS, units, logging, site path resolver
+│   │   ├── models/               # breach, dam, hydrograph, HADR, remote-sensing models
+│   │   ├── schemas/              # Pydantic request/response schemas
+│   │   └── services/             # breach & peak-discharge models, hydrograph,
+│   │                             #   hazard classification, site registry/validator,
+│   │                             #   workflow gates, GEE flood monitor
+│   └── tests/                    # 9 pytest modules (57 test functions)
 │
-├── frontend/                             # React 19 + TypeScript + Vite GIS Dashboard
-│   ├── src/
-│   │   ├── components/                   # MapView, PlaybackControls, HADRPanel, SPHPanel, etc.
-│   │   ├── hooks/                        # Custom animation and state hooks
-│   │   ├── services/                     # API client interface layer
-│   │   └── types/                        # TypeScript type definitions
-│   ├── package.json                      # Node dependencies & build scripts
-│   └── vite.config.ts                    # Vite bundler & API proxy configuration
+├── frontend/                     # React 19 + Vite + Leaflet dashboard
+│   └── src/components/           # MapView, SimulationPanel, HADRPanel, SPHPanel,
+│                                 #   EOPanel, ImpactReportTab, LayerPanel,
+│                                 #   SiteCapabilityPanel, Header
 │
-├── sites/                                # Multi-site configuration directory
-│   ├── bhavanisagar/                     # Primary demo site (Tamil Nadu)
-│   │   ├── site.yaml                     # Site parameters & bounding box
-│   │   ├── dam.yaml                      # Engineering dimensions & storage specs
-│   │   ├── breach.yaml                   # Empirical breach calculations
-│   │   ├── hydrology.yaml                # Catchment & inflow configuration
-│   │   ├── model.yaml                    # Solver resolution & timestep settings
-│   │   ├── monitoring.yaml               # Gauges & satellite observation specs
-│   │   └── source_manifest.json          # Data provenance record
-│   └── hirakud/                          # Generalization test site (Odisha)
-│       └── [site, dam, breach, hydrology, model, monitoring configs]
+├── sites/                        # One folder per dam (declarative onboarding)
+│   ├── bhavanisagar/             # site · dam · breach · hydrology · model · monitoring
+│   └── hirakud/                  #   + source_manifest.json
 │
-├── configs/                              # Global project configuration
-│   ├── paths.yaml                        # Base directory mappings & solver paths
-│   └── project.yaml                      # Project metadata & default CRS
+├── configs/                      # Global YAML: breach models, hydrograph, HADR,
+│                                 #   GEE monitoring, hybrid solver, paths, sites registry
 │
-├── data/                                 # Spatial datasets & model inputs
-│   ├── terrain/                          # Projected DEMs, slope & hillshades
-│   ├── hydrology/                        # Hydroconditioned DEM & stream network
-│   ├── hadr/                             # Buildings, roads & facility GPKGs
-│   ├── gee/                              # Satellite SAR backscatter GeoTIFFs
-│   ├── dflowfm/                          # D-Flow FM model setups & mesh files
-│   └── hirakud/                          # Hirakud generalization inputs
+├── data/                         # Rasters, GeoPackages, solver inputs
+│   ├── raw/                      # Unmodified provider data
+│   ├── hydrology/ · hadr/ · gee/ # Derived layers
+│   ├── dflowfm/                  # D-Flow FM model, boundaries, hydrographs
+│   ├── sph/                      # DualSPHysics case, gauges, output frames
+│   └── hirakud/                  # Second-site inputs
 │
-├── docs/                                 # Engineering documentation & jury guides
-│   ├── SIH_DEMO_SCRIPT.md                # 5-minute timed presentation script
-│   ├── SIH_JURY_QA.md                    # 25+ jury scientific defense Q&A
-│   ├── final_architecture.md             # System architecture documentation
-│   ├── final_data_lineage.md             # Data lineage & provenance specification
-│   ├── final_project_structure.md        # Comprehensive file tree description
-│   └── data_provenance.md                # Detailed dataset origins & citations
+├── outputs/
+│   ├── dashboard/                # 181 simulation frames, overlays, GeoJSON, screenshots
+│   ├── hadr/ · gee/ · comparison/# Exposure tables, SAR results, solver comparison
+│   ├── maps/ · reports/          # Figures and milestone reports (M3–M12)
+│   ├── validation/               # Audit manifests and the M12 freeze record
+│   └── final_demo/               # Demo video and clips
 │
-├── demo_package/                         # Lightweight standalone demonstration bundle
-│
-├── outputs/                              # Validated outputs & dashboard assets
-│   ├── dashboard/                        # Web-optimized simulation frames (181 PNGs), overlays, GeoJSONs
-│   ├── reports/                          # Compliance tables & impact reports
-│   └── validation/                       # Scientific truth manifests & audit matrices
-│
-├── scripts/                              # Automated data acquisition, modeling & validation scripts
-│   ├── preflight_demo.py                 # System preflight validator
-│   ├── validate_final_scientific_values.py # 33-point scientific consistency check
-│   ├── audit_final_claims.py             # Scientific claim auditor
-│   ├── validate_real_map.py              # Map projection & vector alignment tester
-│   ├── validate_dashboard.py             # API endpoint integration test
-│   ├── validate_m11_generalization.py    # Multi-site configuration integrity checker
-│   └── validate_m12_final.py             # Master M12 release validation gate
-│
-└── solver_tests/                         # Benchmark & standalone test cases
-    └── dflowfm_f34/                      # Deltares official F34 benchmark model
+├── scripts/                      # Acquisition, modelling, validation, audit, CLI
+├── docs/                         # Architecture, lineage, provenance, demo script, jury Q&A
+├── demo_package/                 # Lightweight copy of docs, reports and site configs
+└── solver_tests/dflowfm_f34/     # Deltares F34 benchmark case
 ```
 
 ---
 
-## 🚀 9. Installation & Setup
+## 10. 🚀 Getting Started
 
 ### Prerequisites
-- **Python:** 3.10 to 3.12 (Python 3.12.3 verified)
-- **Node.js:** v18 or later (v20+ recommended) & npm
-- **Git:** Git 2.30+
-- **OS:** Windows 10/11 (PowerShell / Command Prompt) or Linux
 
-### 1. Clone the Repository
+| Tool | Version |
+| :-- | :-- |
+| Python | 3.10 – 3.12 (3.12.3 used for the release) |
+| Node.js | 18+ (20+ recommended) |
+| Git | 2.30+ |
+| OS | Windows 10/11 for the launcher scripts; Linux/macOS work with the manual steps |
+
+> The dashboard serves **pre-computed** results, so **D-Flow FM, DualSPHysics, PostGIS and Earth Engine credentials are not needed** to run the demo.
+
+### 1. Clone
+
 ```bash
 git clone https://github.com/vishalgokul504/JalRakshak---HD.git
 cd JalRakshak---HD
 ```
 
-### 2. Backend Setup
-```bash
-# Create and activate Python virtual environment
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1    # On Linux/macOS: source .venv/bin/activate
+### 2. Backend
 
-# Install required Python dependencies
+```bash
+python -m venv .venv
+# Windows (PowerShell):  .\.venv\Scripts\Activate.ps1
+# Linux / macOS:         source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Frontend Setup
+### 3. Frontend
+
 ```bash
 cd frontend
 npm install
 cd ..
 ```
 
-### 4. Environment Configuration (Optional)
+### 4. Environment (optional)
+
 ```bash
-# Copy the environment template
-copy .env.example .env
+cp .env.example .env     # Windows: copy .env.example .env
 ```
-*(Default settings work out-of-the-box for local file-based offline demo mode without requiring external database or Google Earth Engine credentials).*
 
----
+Only needed for PostGIS (`POSTGRES_*`) or Earth Engine (`EARTH_ENGINE_PROJECT`). Never commit `.env`.
 
-## ▶️ 10. Running the Application
+### 5. Run
 
-### Option A: One-Click Startup (Recommended on Windows)
-Simply double-click:
+**Option A: one click (Windows)**
+
 ```cmd
 START_DEMO.bat
 ```
-*(Or in PowerShell: `.\start_jalrakshak.ps1`)*
 
-This script automatically verifies port availability, starts the FastAPI backend on `http://127.0.0.1:8000`, starts the Vite frontend on `http://localhost:5173`, and opens the browser.
+This checks ports 8000 and 5173, starts the backend and frontend if they aren't already running, and opens the browser.
 
-### Option B: Manual Startup
+**Option B: manual**
 
-**Terminal 1 — Backend:**
 ```bash
+# Terminal 1: backend
 python -m uvicorn backend.app.main:app --host 127.0.0.1 --port 8000 --reload
-```
-- API Documentation: `http://127.0.0.1:8000/docs`
-- Health Check: `http://127.0.0.1:8000/health`
 
-**Terminal 2 — Frontend:**
-```bash
+# Terminal 2: frontend
 cd frontend
 npm run dev
 ```
-- Web Application: `http://localhost:5173`
+
+| Service | URL |
+| :-- | :-- |
+| Dashboard | http://localhost:5173 |
+| API docs (Swagger) | http://127.0.0.1:8000/docs |
+| Health check | http://127.0.0.1:8000/health |
+
+The Vite dev server proxies `/api` to the backend on port 8000.
+
+### Dashboard tour
+
+1. **Simulation:** press play or drag the timeline (T+00:00 to T+30:00) to watch the flood front advance; click any point for depth, velocity, arrival time and hazard class.
+2. **HADR Exposure:** hazard-coloured inundation, population/building/road/bridge/facility counts and response sectors.
+3. **Near-Field SPH:** gauge results and front propagation of the particle model.
+4. **Earth Observation:** Sentinel-1 flood extent against the 2019 event.
+5. **Site switcher:** change between Bhavanisagar and Hirakud; unavailable modules show their true status.
+6. **Impact report:** per-timestep and final HTML reports of affected places.
+
+### Regenerating results (advanced)
+
+The scripts in `scripts/` rebuild the pipeline end to end (acquisition → hydrology → breach → hydrograph → D-Flow FM / DualSPHysics → HADR → EO → dashboard assets). Running the solver steps requires D-Flow FM and DualSPHysics installed locally and `configs/paths.yaml` edited to point to your install locations (it currently contains the authors' Windows paths).
 
 ---
 
-## 🧪 11. Verification & Automated Testing
+## 11. 🔌 API Reference
 
-Run the automated scientific validation and test suites:
+All routes are prefixed with `/api`. Interactive docs: `/docs`.
 
-```powershell
-# 1. Run all backend unit & integration tests (57 tests)
+| Area | Endpoints |
+| :-- | :-- |
+| **Sites** | `GET /sites` · `/sites/{id}` · `/sites/{id}/status` · `/sites/{id}/capability-matrix` |
+| **Project** | `GET /project` · `/scenario/BHV_BASE` |
+| **Simulation** | `GET /simulation/timeline` · `/meta` · `/frame/{i}` · `/hydrograph` · `/stations` |
+| **GIS layers** | `GET /gis/dam` · `/river` · `/reservoir` · `/inundation` · `/hazard` · `/hadr-zones` · `/critical-facilities` · `/historical-flood` · `/latest-water-change` · `/sph-reach` · `/sph-gauges` · `/bridges` · `/settlements` · `/roads` · `/buildings` |
+| **Point query** | `GET /analyze-point` (also `/gis/analyze-point`, `/gis/query-point`) |
+| **Raster overlays** | `GET /tiles/overlays/manifest` · `/tiles/overlays/{layer}` |
+| **HADR** | `GET /hadr/summary` · `/exposure/summary` · `/hazard/summary` · `/zones` · `/response-zones` |
+| **Near-field SPH** | `GET /sph/summary` · `/sph/gauges` · `/sph/front` · `/comparison/solvers` |
+| **Earth observation** | `GET /remote-sensing/historical` · `/latest` · `/summary` |
+| **Reports** | `GET /reports/impact/{frame}` · `/reports/final` · plus `/html` variants of each |
+| **Provenance** | `GET /provenance` |
+
+---
+
+## 12. 🧩 Multi-Site Onboarding
+
+Each dam lives in `sites/<site_id>/` as six YAML files plus a source manifest, registered in `configs/sites.yaml`. A site passes through eight readiness gates (A: location → H: Earth observation), and the API/UI report exactly which gates are ready or blocked.
+
+```bash
+# List registered sites
+python scripts/jalrakshak.py sites
+
+# Validate a site's configuration schema
+python scripts/jalrakshak.py validate-site hirakud
+
+# Evaluate readiness gates, data inventory, and full status
+python scripts/jalrakshak.py preflight hirakud
+python scripts/jalrakshak.py inventory hirakud
+python scripts/jalrakshak.py status hirakud
+
+# Scaffold a new site from basic dam facts
+python scripts/onboard_site.py --site-id <slug> --dam-name "<name>" --river "<river>" \
+    --state "<state>" --district "<district>" --lat <lat> --lon <lon> \
+    --height <m> --length <m> --storage <MCM>
+```
+
+---
+
+## 13. 🧪 Testing & Validation
+
+```bash
+# Backend unit and integration tests
 python -m pytest backend/tests -v
 
-# 2. Run scientific consistency and data integrity checks
+# Scientific and data-integrity checks
+python scripts/preflight_demo.py
 python scripts/validate_final_scientific_values.py
 python scripts/validate_dashboard.py
 python scripts/validate_m11_generalization.py
 python scripts/validate_m12_final.py
 
-# 3. Test frontend production build
-cd frontend
-npm run build
-cd ..
+# Frontend type-check and production build
+cd frontend && npm run build
 ```
 
----
-
-## 🔬 12. Scientific Baseline Summary (Bhavanisagar Dam)
-
-| Parameter | Value | Unit | Source / Validation Method |
-| :--- | :--- | :--- | :--- |
-| **Reservoir Storage at FRL ($V_w$)** | $780.50$ | $\text{MCM}$ | CWC NRLD 2023 / TN WRD Official |
-| **Dam Height ($H_{\text{dam}}$)** | $40.0$ | $\text{m}$ | CWC NRLD 2023 |
-| **Full Reservoir Level (FRL)** | $280.20$ | $\text{m MSL}$ | TN WRD Datum |
-| **Average Breach Width ($B_{\text{avg}}$)** | $219.28$ | $\text{m}$ | Froehlich (2008) Empirical Regression |
-| **Breach Formation Time ($t_f$)** | $14,095.59$ ($3.92\text{ hr}$) | $\text{s}$ | Froehlich (2008) Empirical Regression |
-| **Peak Breach Discharge ($Q_{\text{peak}}$)** | $18,742.38$ | $\text{m}^3/\text{s}$ | Parametric Hydrograph Peak |
-| **Hydrograph Conservation** | $780.50$ | $\text{MCM}$ | Mass Balance Verified ($0.00\%$ discrepancy) |
-| **Study Area Domain** | $818.37$ | $\text{km}^2$ | NASA SRTM 30m / HydroSHEDS Delineation |
-| **Max Inundated Extent** | $101.29$ | $\text{km}^2$ | D-Flow FM 2D Wet Cells ($d > 0.05\text{m}$) |
-| **Maximum Water Depth** | $22.02$ | $\text{m}$ | D-Flow FM 2D Numerical Simulation |
-| **Maximum Flow Velocity** | $11.79$ | $\text{m/s}$ | D-Flow FM 2D Numerical Simulation |
-| **DualSPHysics 3D Particles** | $10,982$ | $\text{particles}$ | SPH Lagrangian Splash Simulation |
-| **WorldPop Exposed Population** | $42,428$ | $\text{persons}$ | WorldPop 2020 UN-Adjusted Overlay |
-| **GHSL Exposed Population** | $84,501$ | $\text{persons}$ | Copernicus GHSL 2023 Overlay |
-| **Exposed Buildings** | $25,652$ | $\text{structures}$ | Google Open Buildings v3 & OSM |
-| **Affected Road Corridors** | $243.82$ | $\text{km}$ | OpenStreetMap Highway Network |
-| **Affected Bridges / Facilities** | $20 / 13$ | $\text{count}$ | OSM Overpass API Geocoded Entities |
+The M12 release freeze (`outputs/validation/M12_FINAL_FREEZE.json`) records the gate outcomes for `v1.0-SIH`, including the 33-point scientific regression, the final claim audit (0 violations), the dashboard API validation, the multi-site portability check and the frontend build.
 
 ---
 
-## ⚠️ 13. Limitations & Research Scope
+## 14. 📡 Data Sources
 
-1. **Screening Prototype:** JalRakshak-HD is a research prototype developed for hydrodynamic consequence screening, risk zoning, and humanitarian planning. It is not an official statutory early warning broadcast system.
-2. **Empirical Breach Uncertainty:** Breach formation parameters are derived from empirical regressions (Froehlich 2008), with inherent physical uncertainties ($\pm 25\text{–}35\%$).
-3. **Decoupled 3D/2D Hydrodynamics:** DualSPHysics (3D particle solver for near-dam splash) and D-Flow FM (2D shallow water mesh for downstream routing) share unified initial geometry but operate as decoupled simulation domains in the prototype.
-4. **Terrain Resolution:** Bathymetric channel geometry below the water surface is approximated based on NASA SRTM 30m terrain and HydroSHEDS drainage conditioning; localized riverbed scouring and micro-embankments may not be fully resolved.
-5. **Satellite Latency:** Sentinel-1 SAR observations depend on orbital revisit periods ($6\text{–}12\text{ days}$) and serve as post-event or historical flood benchmarks rather than continuous real-time telemetry.
+| Category | Source |
+| :-- | :-- |
+| Dam engineering & storage | CWC National Register of Large Dams (NRLD 2023); Tamil Nadu WRD |
+| Terrain | NASA SRTM 30 m DEM; HydroSHEDS drainage conditioning |
+| Land cover | ESA WorldCover 2021 (10 m) |
+| Buildings | Google Open Buildings v3 |
+| Roads, bridges, facilities | OpenStreetMap (Overpass API) |
+| Population | WorldPop 2020 (UN-adjusted, 100 m); Copernicus GHSL GHS-POP |
+| Satellite radar | ESA Copernicus Sentinel-1 C-band GRD via Google Earth Engine |
+| Surface water | JRC Global Surface Water (reservoir polygon) |
+| Hazard thresholds | AIDR Guideline 7-3 / Smith, Davey & Cox (2014), WRL Technical Report 2014/07 |
+| Breach regression | Froehlich (2008) |
+
+Full lineage: [`docs/data_provenance.md`](docs/data_provenance.md) and [`docs/final_data_lineage.md`](docs/final_data_lineage.md).
 
 ---
 
-*Developed for the Smart India Hackathon 2026 — JalRakshak-HD Team HealthXcel.*
+## 15. ⚠️ Limitations
+
+1. **Screening tool, not an early-warning system.** Results support planning and prioritisation, not statutory warnings.
+2. **Breach uncertainty.** Froehlich (2008) regressions carry roughly ±25–35 % uncertainty; peak discharge and timing should be read as a scenario.
+3. **Decoupled solvers.** The near-field SPH model is 2D (unit width) and is not boundary-coupled to the 2D D-Flow FM domain. Their velocities differ by design, and unit-width to full-width scaling is unresolved.
+4. **Terrain.** 30 m SRTM has no sub-surface channel bathymetry; the 100 m mesh and a single Manning n = 0.035 smooth local features.
+5. **Exposure, not casualties.** No loss-of-life model; population estimates from the two datasets differ by about 2×; bridge results are exposure flags that need surveyed deck elevations for a real rating.
+6. **Second site not simulated.** Hirakud has terrain, hydrology, geometry and a screening breach parameterisation only.
+7. **SAR revisit.** Sentinel-1 revisits every 6–12 days, so it serves as post-event benchmarking rather than live tracking.
+8. **Failure modes.** Landslide-dam and glacial-outburst scenarios exist at the config-schema level only; their physics is not implemented.
+
+---
+
+## 16. 🔭 Roadmap
+
+- Two-way boundary-flux coupling between the SPH near-field and 2D far-field models (500 m handoff candidate)
+- Full 3D SPH of the near-dam reach on GPU/HPC
+- Land-cover-distributed Manning roughness and sensitivity runs
+- Ensemble breach scenarios (piping vs. overtopping) with uncertainty bands
+- Live reservoir and rainfall telemetry plus automated Sentinel-1 ingestion
+- Loss-of-life and evacuation-time modelling
+- Running the 2D simulation for Hirakud and further CWC-registered dams
+
+---
+
+## 17. 👥 Contributors
+
+| # | Name |
+| :-: | :-- |
+| 1 | R B SHANJU VIKASHINI |
+| 2 | K VISHAL GOKUL BHORA |
+| 3 | PRASHANTHI SARUKKAI S |
+| 4 | KISHORE S |
+| 5 | S KAVIN |
+| 6 | MOHESH S |
+| 7 | ARJUN R K |
+
+---
+
+<div align="center">
+
+*Built for Smart India Hackathon 2026 · Problem Statement SIH26161*
+
+</div>
