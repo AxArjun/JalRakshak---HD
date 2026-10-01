@@ -374,4 +374,4 @@ cd ..
 
 ---
 
-*Developed for the Smart India Hackathon 2026 — JalRakshak-HD Team.*
+*Developed for the Smart India Hackathon 2026 — JalRakshak-HD Team HealthXcel.*
